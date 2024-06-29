@@ -24,7 +24,7 @@ export default {
      return {
         isMobile: "",
         headerHeightMax: false,
-        headline: 'Anamit',
+        headline: 'Matjo - Korean BBQ',
         showSubHeader: false,
         showBackground: false,
      };
@@ -40,7 +40,7 @@ export default {
   methods: {
      updateHeaderProps(route) {
         this.headerHeightMax = route.meta.headerHeightMax !== undefined ? route.meta.headerHeightMax : false;
-        this.headline = route.meta.headline || 'Anamit';
+        this.headline = route.meta.headline || 'Matjo';
         this.showSubHeader = route.meta.showSubHeader !== undefined ? route.meta.showSubHeader : false;
         this.showBackground = route.meta.showBackground !== undefined ? route.meta.showBackground : false;
      },
@@ -59,7 +59,7 @@ export default {
         const navbar = document.querySelector(".header");
         let prevScrollPos = window.pageYOffset;
 
-        if (currentScrollPos < 300) {
+        if (currentScrollPos < 100) {
            navbar.classList.remove('header--inverted');
            this.isInverted = false;
            return;
@@ -93,10 +93,9 @@ export default {
 .header {
   background-color: transparent;
   color: $color-white;
-  height: 85px;
   inset-inline: 0;
   position: absolute;
-  transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out, inset 0.25s ease-in-out, border-radius 0.25s;
   z-index: 100;
 
   @include for-tablet-portrait-up {
@@ -105,7 +104,10 @@ export default {
 }
 
 .header--inverted {
-  background-color: $color-white;
-  color: $color-header;
+   background-color: #ffffffde;
+   border-radius: 50px;
+   color: $color-header;
+   inset-inline: 50px;
+   inset-block-start: 10px;
 }
 </style>

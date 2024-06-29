@@ -1,14 +1,11 @@
 <template>
   <footer class="footer">
      <div class="restaurant__information">
-        <h3>ANAMIT – VIETNAMESE AUTHENTIC</h3>
+        <h3>MATJO - Korean BBQ</h3>
         <div class="footer__addresses">
            <p>
-              Louisenstraße 30<br>
+              Alaunstraße 1<br>
               01099 Dresden
-           </p>
-           <p>Tolkewitzer Straße 2<br>
-              01277 Dresden
            </p>
         </div>
         <div class="footer__opening-hours">
@@ -43,7 +40,7 @@
               <LinkRouter link="/impressum" label="Impressum" />
               <LinkRouter link="/contact" label="Kontakt" />
               <li>
-                 <a href="https://www.facebook.com/anamit.restaurant/">Anamit on Facebook</a>
+                 <a href="https://www.facebook.com/anamit.restaurant/">Matjo on Facebook</a>
               </li>
            </ul>
         </div>

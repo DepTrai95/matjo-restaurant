@@ -18,15 +18,6 @@
           Das E-Mail Feld darf nicht leer sein!
         </p>
       </div>
-      <!-- Restaurant selection -->
-      <div class="form-group">
-        <label for="select-restaurant"> Bitte ein Lokal auswählen <abbr title="Pflichtfeld">*</abbr> </label>
-        <select class="form-control" id="select-restaurant" name="select-restaurant" v-model="restaurant.val" required>
-          <option value="">--Bitte Auswahl treffen--</option>
-          <option value="Anamit - Neustadt">Anamit - Neustadt</option>
-          <option value="Anamit - am Blauen Wunder">Anamit - am Blauen Wunder</option>
-        </select>
-      </div>
       <!-- DATEPICKER -->
       <div class="form-group" :class="{ invalid: !selectedDate.isValid }">
         <label for="selectedDate">
@@ -83,10 +74,6 @@
           isValid: true,
         },
         email: {
-          val: "",
-          isValid: true,
-        },
-        restaurant: {
           val: "",
           isValid: true,
         },
@@ -172,7 +159,6 @@
           name: this.name.val,
           email: this.email.val,
           message: this.message.val,
-          restaurant: this.restaurant.val,
           date: this.formatDate(this.selectedDate.val),
         };
   
@@ -183,11 +169,10 @@
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              to: "info@anamit.de", // set email of receiver
+              to: "info@matjo.de", // set email of receiver
               name: formData.name,
               email: formData.email,
               text: formData.message,
-              restaurant: formData.restaurant,
               date: formData.date,
             }),
           });
@@ -261,7 +246,7 @@
     &:hover,
     &:focus,
     &:focus-visible {
-      border: 2px solid $color-secondary;
+      border: 2px solid $color-primary;
     }
   }
   
@@ -310,7 +295,7 @@
     &:hover,
     &:focus,
     &:focus-visible {
-      border: 2px solid $color-secondary !important;
+      border: 2px solid $color-primary !important;
     }
   }
   
@@ -331,7 +316,7 @@
     padding: 0.5rem 1rem;
   
     &:hover {
-      border-color: $color-secondary !important;
+      border-color: $color-primary !important;
     }
   }
   
@@ -339,7 +324,7 @@
     background: $color-header !important;
   
     &:hover {
-      background: $color-secondary !important;
+      background: $color-primary !important;
     }
   }
   

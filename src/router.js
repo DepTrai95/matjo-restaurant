@@ -13,21 +13,45 @@ const router = createRouter({
   routes: [
     { path: "/", 
       component: Home,
+      meta: {
+        headerHeightMax: true,
+        headline: 'Matjo - Korean BBQ',
+        showSubHeader: true,
+        showBackground: true,
+      }
     },
     { path: "/menu", 
       component: Menu, 
+      meta: { 
+        headline: 'Unser Menu',
+        showBackground: true,
+      } 
     },
     { path: "/contact", 
       component: Contact, 
+      meta: { 
+        headline: 'Contact us',
+        showBackground: true,
+      } 
     },
     { path: "/impressum", 
       component: Impress, 
+      meta: { 
+        headline: 'Impressum',
+      } 
     },
     { path: "/success", 
       component: Success, 
+      meta: { 
+        headline: 'Formular abgeschickt',
+      } 
     },
     { path: "/:notFound(.*)", 
       component: NotFound, 
+      meta: { 
+        headline: '404 - Page not found',
+        showBackground: false,
+      }
     },
   ],
   scrollBehavior(to, from, savedPosition) {

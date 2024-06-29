@@ -4,8 +4,8 @@
         <div class="logo__container">
            <div class="logo">
               <router-link to="/">
-                 <!-- <img v-if="!isInverted" src="/img/logo.webp" alt="zur Startseite" height="50" width="140" />
-                 <img v-else src="/img/logo-inverted.webp" alt="zur Startseite" height="50" width="140" /> -->
+                 <img v-if="!isInverted" src="../../assets/img/logo.webp" alt="zur Startseite" height="50" width="50" />
+                 <img v-else src="../../assets/img/logo.webp" alt="zur Startseite" height="50" width="50" />
               </router-link>
            </div>
         </div>
@@ -16,19 +16,11 @@
                  <LinkRouter link="/menu" label="Our Menu" />
                  <LinkRouter link="/contact" label="Contact" />
               </ul>
-              <ul class="list--unstyled social-media-menu">
-                 <li class="social-media-menu__item">
-                    <a href="http://www.facebook.com/anamit.restaurant">
-                       <span class="icon-container">
-                          <svg class="icon" aria-hidden="true" focusable="false">
-                             <use href="#icon-facebook"></use>
-                          </svg>
-                       </span>
-                       <span class="sr-only">Besuche uns auf Facebook</span>
-                    </a>
-                 </li>
-              </ul>
            </nav>
+        </div>
+
+        <div class="nav-cta__wrapper" v-if="!isMobile">
+         <LinkRouter link="/contact" label="Reserve" class="btn--primary"/>
         </div>
 
         <div class="mobile-navigation" v-if="isMobile">
@@ -43,7 +35,7 @@
               </span>
            </button>
 
-           <div class="nav-main__wrapper" v-if="isMenuExpanded" @click="toggleMenu">
+           <div class="nav-main__wrapper" :class="{'is-open': isMenuExpanded}" @click="toggleMenu">
               <nav class="nav-main">
                  <ul class="list--unstyled">
                     <LinkRouter link="/" label="Home" />
@@ -70,10 +62,12 @@
 
 <script>
 import LinkRouter from "../link/LinkRouter.vue";
+import BaseButton from "../button/BaseButton.vue";
 
 export default {
   components: {
      LinkRouter,
+     BaseButton,
   },
   data() {
      return {
@@ -150,26 +144,20 @@ export default {
      padding: 1rem;
      
      @include for-phone-only {
-        height: $header-height-mobile;
+         height: $header-height-mobile;
+         background: rgba(255, 255, 255, 0.4);
+         border-radius: 30px;
+         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+         backdrop-filter: blur(10px);
+         border: 1px solid rgba(255, 255, 255, 0.28);
      }
 
      @include for-tablet-portrait-up {
         flex-direction: row;
         justify-content: space-between;
-        inset-inline: 0;
-        padding: 1.5rem 2.5rem;
-        position: fixed;
+        padding: 1rem 2.5rem;
      }
   }
-}
-
-.is-open {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 1001;
 }
 
 .logo__container {
@@ -177,8 +165,10 @@ export default {
   display: flex;
   
   @include for-phone-only {
-     flex-grow: 1;
-     z-index: 1000;
+     left: 50%;
+     position: absolute;
+     top: 50%;
+     transform: translate(-50%, -50%);
   }
 
   .logo {
@@ -189,7 +179,6 @@ export default {
      img {
         @include for-phone-only {
            height: 50px;
-           width: 140px;
         }
      }
   }
@@ -199,24 +188,30 @@ export default {
   @include for-phone-only {
      align-items: center;
      display: flex;
-     flex-grow: 1;
-     position: relative;
   }
 
   .nav-main__wrapper {
      display: flex;
 
      @include for-phone-only {
-        align-items: center;
-        background: $color-header;
-        display: flex;
-        height: 100%;
-        justify-content: center;
-        left: 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 900;
+         justify-content: center;
+         display: none;
+         left: 0;
+         position: absolute;
+         top: calc($header-height-mobile + 10px);
+         width: 100%;
+         z-index: 900;
+         //glasmorph effect
+         background: rgba(185, 185, 185, 0.6);
+         border-radius: 30px;
+         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+         backdrop-filter: blur(4px);
+         border: 1px solid rgba(255, 255, 255, 0.28);
+         transition: height 0.3s ease-in-out;
+
+         &.is-open {
+            display: block;
+         }
      }
   }
 
@@ -295,7 +290,8 @@ export default {
   transform: translateY(-9px) rotate(45deg);
 }
 
-.nav-main__wrapper {
+.nav-main__wrapper,
+.nav-cta__wrapper {
   align-items: center;
   display: flex;
   justify-content: flex-end;

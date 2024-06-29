@@ -1,21 +1,22 @@
 <template>
     <div class="stage" :class="{ 'stage__half-height': !headerHeightMax }">
        <div class="stage__background">
+         <div class="blur"></div>
           <picture v-if="showBackground">
              <source 
                 type="image/webp" 
                 srcset="
-                   ../../assets/img/stage-background-small.webp 400w,
-                   ../../assets/img/stage-background-medium.webp 600w,
-                   ../../assets/img/stage-background-large.webp 1200w
+                   ../../assets/img/stage-img/stage-background-small.webp 400w,
+                   ../../assets/img/stage-img/stage-background-medium.webp 600w,
+                   ../../assets/img/stage-img/stage-background-large.webp 1200w
                 " 
                 sizes="(max-width: 599px) 400px, (max-width: 899px) 600px, 1200px" />
-             <img src="../../assets/img/stage-background-large.webp" width="1200" height="600" alt=""/>
+             <img src="../../assets/img/stage-img/stage-background-large.webp" width="1200" height="600" alt=""/>
           </picture>
        </div>
        <hgroup class="stage__headline">
           <h1>{{ headline }}</h1>
-          <h2 v-if="showSubHeader">Welcome - Xin chào</h2>
+          <h2 v-if="showSubHeader">안녕하세요</h2>
        </hgroup>
        <div v-if="showSubHeader" class="stage__arrow-down" @click="scrollToNextSection">
           <div class="arrow"></div>
@@ -105,6 +106,13 @@
        width: 100%;
     }
  }
+
+ .blur {
+   inset: 0;
+   position: absolute;
+   // background: linear-gradient(to right, rgba(243, 231, 233, 0.5), rgba(243, 231, 233, 0));
+   background: linear-gradient(to right, rgb(163 163 163 / 50%), rgb(35 35 35 / 40%))
+ }
  
  .stage__headline {
     display: flex;
@@ -113,20 +121,24 @@
     justify-content: center;
     padding-inline: 1.8rem;
     position: absolute;
+
+    @include for-tablet-landscape-up {
+      width: 50%;
+    }
  
     h1 {
        color: $color-white;
        margin: 0;
-       margin-block-start: -3rem;
+       margin-block-start: -1rem;
  
        @include for-tablet-landscape-up {
-          @include responsive-font-size(4.5rem, 4.8rem);
+          @include responsive-font-size(3.6rem, 4rem);
        }
     }
  
     h2 {
-      @include responsive-font-size(8.5rem, 9rem);
-       color: $color-secondary;
+      @include responsive-font-size(8rem, 9rem);
+       color: $color-primary;
        font-family: "HerrVonMuellerhoff", "Brush Script MT Italic", sans-serif;
        font-weight: 400;
        text-align: center;
