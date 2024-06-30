@@ -20,7 +20,7 @@
         </div>
 
         <div class="nav-cta__wrapper" v-if="!isMobile">
-         <LinkRouter link="/contact" label="Reserve" class="btn--primary"/>
+         <router-link class="btn--primary" to="/contact">Book Table</router-link>
         </div>
 
         <div class="mobile-navigation" v-if="isMobile">
@@ -149,7 +149,8 @@ export default {
          border-radius: 30px;
          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
          backdrop-filter: blur(10px);
-         border: 1px solid rgba(255, 255, 255, 0.28);
+         border: 1px solid rgba(255, 255, 255, 0.3);
+         padding: 0;
      }
 
      @include for-tablet-portrait-up {
@@ -188,29 +189,31 @@ export default {
   @include for-phone-only {
      align-items: center;
      display: flex;
+     margin-inline-end: 2rem;
   }
 
   .nav-main__wrapper {
-     display: flex;
 
      @include for-phone-only {
          justify-content: center;
-         display: none;
+         height: 0;
          left: 0;
+         overflow: hidden;
          position: absolute;
          top: calc($header-height-mobile + 10px);
+         transition: height 0.3s ease-in-out;
          width: 100%;
          z-index: 900;
          //glasmorph effect
-         background: rgba(185, 185, 185, 0.6);
+         background: rgba(255, 255, 255, 0.4);
          border-radius: 30px;
          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-         backdrop-filter: blur(4px);
-         border: 1px solid rgba(255, 255, 255, 0.28);
-         transition: height 0.3s ease-in-out;
+         backdrop-filter: blur(10px);
+         border: 0px solid rgba(255, 255, 255, 0.3);
 
          &.is-open {
-            display: block;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            height: 40vh;
          }
      }
   }

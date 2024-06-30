@@ -54,7 +54,7 @@
        },
        methods: {
           scrollToNextSection() {
-             const nextSection = document.querySelector('.content');
+             const nextSection = document.querySelector('.content-area');
              const headerHeight = document.querySelector('header').offsetHeight;
  
              if (nextSection) {

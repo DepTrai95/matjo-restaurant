@@ -104,7 +104,7 @@ export default {
 }
 
 .header--inverted {
-   background-color: #ffffffde;
+   background-color: rgba(255, 255, 255, 0.9);
    border-radius: 50px;
    color: $color-header;
    inset-inline: 50px;
