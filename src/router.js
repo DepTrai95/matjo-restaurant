@@ -15,7 +15,7 @@ const router = createRouter({
       component: Home,
       meta: {
         headerHeightMax: true,
-        headline: 'Matjo - Korean BBQ',
+        headline: 'Korean-BBQ and HotPot',
         showSubHeader: true,
         showBackground: true,
       }
@@ -23,7 +23,7 @@ const router = createRouter({
     { path: "/menu", 
       component: Menu, 
       meta: { 
-        headline: 'Unser Menu',
+        headline: 'Our Menu',
         showBackground: true,
       } 
     },

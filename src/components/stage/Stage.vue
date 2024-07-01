@@ -1,28 +1,25 @@
 <template>
-    <div class="stage" :class="{ 'stage__half-height': !headerHeightMax }">
-       <div class="stage__background">
+   <div class="stage" :class="{ 'stage__half-height': !headerHeightMax, 'stage__full-height': headerHeightMax }">
+      <div class="stage__background">
          <div class="blur"></div>
-          <picture v-if="showBackground">
-             <source 
-                type="image/webp" 
-                srcset="
+         <picture v-if="showBackground">
+            <source type="image/webp" srcset="
                    ../../assets/img/stage-img/stage-background-small.webp 400w,
                    ../../assets/img/stage-img/stage-background-medium.webp 600w,
                    ../../assets/img/stage-img/stage-background-large.webp 1200w
-                " 
-                sizes="(max-width: 599px) 400px, (max-width: 899px) 600px, 1200px" />
-             <img src="../../assets/img/stage-img/stage-background-large.webp" width="1200" height="600" alt=""/>
-          </picture>
-       </div>
-       <hgroup class="stage__headline">
-          <h1>{{ headline }}</h1>
-          <h2 v-if="showSubHeader">안녕하세요</h2>
-       </hgroup>
-       <div v-if="showSubHeader" class="stage__arrow-down" @click="scrollToNextSection">
-          <div class="arrow"></div>
-       </div>
-    </div>
- </template>
+                " sizes="(max-width: 599px) 400px, (max-width: 899px) 600px, 1200px" />
+            <img src="../../assets/img/stage-img/stage-background-large.webp" width="1200" height="600" alt="" />
+         </picture>
+      </div>
+      <hgroup class="stage__headline">
+         <h1>{{ headline }}</h1>
+         <h2 v-if="showSubHeader">안녕하세요</h2>
+      </hgroup>
+      <div v-if="showSubHeader" class="stage__arrow-down" @click="scrollToNextSection">
+         <div class="arrow"></div>
+      </div>
+   </div>
+</template>
  
  <script>
     export default {
@@ -88,6 +85,14 @@
     min-height: 100vh;
     min-height: 100dvh;
     position: relative;
+
+    &.stage__full-height {
+      .stage__headline {
+         @include for-tablet-landscape-up {
+            width: 50%;
+         }
+      }
+    }
  }
  
  .stage__half-height {
@@ -121,10 +126,6 @@
     justify-content: center;
     padding-inline: 1.8rem;
     position: absolute;
-
-    @include for-tablet-landscape-up {
-      width: 50%;
-    }
  
     h1 {
        color: $color-white;

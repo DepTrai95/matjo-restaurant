@@ -4,10 +4,10 @@
 // ==========================================================================
 
 .grid--default {
-    --content-padding: 40px;
+    --content-padding: 20px;
  
     @include for-tablet-landscape-up {
-       --content-padding: 60px;
+       --content-padding: 40px;
     }
  }
  

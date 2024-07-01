@@ -1,39 +1,21 @@
 <template>
-   <div :id="card.id" class="card">
-      <div class="card-container">
-         <div class="card__image">
+   <div :id="img.id" class="img">
+      <div class="img-container">
+         <div class="img__image">
             <picture>
-               <source type="image/webp" :srcset="generateSrcset(card.imgSrc, 'webp')"
+               <source type="image/webp" :srcset="generateSrcset(img.imgSrc, 'webp')"
                   sizes="(max-width: 599px) 400px, (max-width: 899px) 600px, 1200px" />
-               <img :src="generateImgSrc(card.imgSrc)" :width="card.width" loading="lazy" alt="" />
+               <img :src="generateImgSrc(img.imgSrc)" :width="img.width" loading="lazy" alt="" />
             </picture>
-         </div>
-         <div class="card__content">
-            <div class="card__header">
-               <h3>
-                  <a :href="card.imgUrl"></a>
-               </h3>
-            </div>
-            <div class="card__body">{{ card.body }}</div>
-            <div class="card__footer">{{ card.footer }}</div>
          </div>
       </div>
    </div>
 </template>
 
 <script>
-// How to use
-// cardContent: {
-//    id: 'test-card',
-//    imgSrc: '/img/bbq/bbq.webp',
-//    imgUrl: 'https://google.de',
-//    body: 'Das ist ein Test-Body',
-//    footer: 'Link'
-// },
-// <Card:card="cardContent"></Card>
 export default {
    props: {
-      card: {
+      img: {
          type: Object,
          required: true
       },
@@ -86,7 +68,7 @@ export default {
    }
 }
 
-.card {
+.img {
    --icon-wrapper-width: 45px;
    --content-padding-x: var(--content-padding);
    --content-padding-y: var(--content-padding);
@@ -96,7 +78,7 @@ export default {
    }
 
    background-color: $color-white;
-   border-radius: 8px;
+   border-radius: 30px;
    box-shadow: 0 20px 30px rgba(82, 82, 82, 0.05);
    display: flex;
    flex-direction: column;
@@ -110,10 +92,10 @@ export default {
    box-shadow $transition-timing;
 }
 
-.card__image {
+.img__image {
    border: 1px solid #000;
    border: 1px solid rgba(0, 0, 0, 0.3);
-   position: relative; // card__logo
+   position: relative; // img__logo
 
    img {
       border-radius: 0;
@@ -121,7 +103,7 @@ export default {
    }
 }
 
-.card__content {
+.img__content {
    border: 1px solid transparent;
    display: flex;
    flex-direction: column;
@@ -137,27 +119,8 @@ export default {
    }
 }
 
-.card__logo {
-   align-items: center;
-   background-color: $color-white;
-   border-radius: 50%;
-   display: flex;
-   height: var(--icon-wrapper-width);
-   justify-content: center;
-   padding: .75em;
-   position: absolute; // .card__content
-   top: 100%;
-   inset-inline-end: var(--content-padding-x);
-   transform: translateY(-50%);
-   width: var(--icon-wrapper-width);
-
-   @include for-tablet-landscape-down {
-      padding: .5em;
-   }
-}
-
-.card__header {
-   .card--with-logo & {
+.img__header {
+   .img--with-logo & {
       padding-inline-end: calc(5px + var(--icon-wrapper-width));
    }
 
@@ -180,7 +143,7 @@ export default {
          bottom: 0;
          content: "";
          left: 0;
-         position: absolute; // card__content
+         position: absolute; // img__content
          right: 0;
          top: 0;
          z-index: 1;
@@ -188,7 +151,7 @@ export default {
    }
 }
 
-.card__body {
+.img__body {
    @include responsive-font-size(1.6rem, 1.8rem);
    flex: 1 1 auto;
    line-height: 1.45;
@@ -198,7 +161,7 @@ export default {
    }
 }
 
-.card__footer {
+.img__footer {
    @include responsive-font-size (1.4rem, 1.8rem);
    margin-block-end: 0.5em;
 

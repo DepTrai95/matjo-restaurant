@@ -24,7 +24,7 @@ export default {
      return {
         isMobile: "",
         headerHeightMax: false,
-        headline: 'Matjo - Korean BBQ',
+        headline: 'Korean-BBQ and HotPot',
         showSubHeader: false,
         showBackground: false,
      };

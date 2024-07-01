@@ -1,3 +1,10 @@
+:root {
+   --content-area-padding-y: 1.5em;
+
+   @include for-tablet-portrait-up {
+      --content-area-padding-y: 3em;
+   }
+}
 * {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -38,6 +45,32 @@
     margin: 0 auto;
     max-width: $content-max-width - (2 * $content-padding);
     padding: 0 $content-padding;
+ }
+
+ .content-area {
+   padding: var(--content-area-padding-y) 0;
+
+   &--default {
+      &+& {
+         padding-top: 0;
+      }
+   }
+
+   >.inner {
+      >h2.text-center {
+         max-width: 35ch;
+         margin-left: auto;
+         margin-right: auto;
+
+         @include for-tablet-landscape-up {
+            margin-bottom: 1.25em;
+         }
+      }
+   }
+
+   .content-area {
+      padding-bottom: 0;
+   }
  }
  
  picture {
@@ -114,7 +147,6 @@
     }
  }
  
- 
  .router-link-active {
     color: $color-primary;
  
@@ -133,5 +165,4 @@
           width: 0;
        }
     }
- 
  }

@@ -1,51 +1,47 @@
 <template>
-  <footer class="footer">
-     <div class="restaurant__information">
-        <h3>MATJO - Korean BBQ</h3>
-        <div class="footer__addresses">
-           <p>
-              Alaunstraße 1<br>
-              01099 Dresden
-           </p>
-        </div>
-        <div class="footer__opening-hours">
-           <h3>ÖFFNUNGSZEITEN:</h3>
-           <p>
-              Montag - Freitag:<br>
-              12:30 - 14:30 Uhr<br>
-              17:00 - 22:30 Uhr
-           </p>
-           <p>Samstage und Feiertage:<br>
-              12:00 - 23:00 Uhr
-           </p>
-           <p>
-              Sonntage:<br>
-              12:00 - 22:30 Uhr
-           </p>
-        </div>
-     </div>
-     <div class="copyright__area">
-        <svg class="blurp--bottom" width="192" height="61" id="svg-footer-bottom" viewBox="0 0 160.7 61.5">
-           <path fill="#fff" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path>
-        </svg>
-        <div class="btn--top">
-           <a href="#" class="btn--top_text">
-              <span class="sr-only">Gehe zum Start der Seite</span>
-         <span class="btn__arrow btn__arrow--top"></span>
-         <span class="btn__arrow btn__arrow--bottom"></span>
-       </a>
-        </div>
-        <div class="copyright__area__container">
-           <ul class="copyright__area__container__list">
-              <LinkRouter link="/impressum" label="Impressum" />
-              <LinkRouter link="/contact" label="Kontakt" />
-              <li>
-                 <a href="https://www.facebook.com/anamit.restaurant/">Matjo on Facebook</a>
-              </li>
-           </ul>
-        </div>
-     </div>
-  </footer>
+   <footer class="footer">
+      <div class="restaurant__information">
+         <h3>MATJO - Korean BBQ</h3>
+         <div class="footer__addresses">
+            <a href="https://maps.app.goo.gl/GQEmGFkc8XoHixLH8/">
+               <span class="street">Alaunstraße 9</span>
+               <span class="postcode">01099 Dresden</span>
+            </a>
+         </div>
+         <div class="footer__opening-hours">
+            <h3>ÖFFNUNGSZEITEN:</h3>
+            <p>
+               Montag - Freitag:<br>
+               11:30 - 15:00 Uhr<br>
+               17:00 - 23:00 Uhr
+            </p>
+            <p>Samstag, Sonntag und Feiertage:<br>
+               11:00 - 23:00 Uhr
+            </p>
+         </div>
+      </div>
+      <div class="copyright__area">
+         <svg class="blurp--bottom" width="192" height="61" id="svg-footer-bottom" viewBox="0 0 160.7 61.5">
+            <path fill="#fff"
+               d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z">
+            </path>
+         </svg>
+         <div class="btn--top">
+            <a href="#" class="btn--top_text">
+               <span class="sr-only">Gehe zum Start der Seite</span>
+               <span class="btn__arrow btn__arrow--top"></span>
+               <span class="btn__arrow btn__arrow--bottom"></span>
+            </a>
+         </div>
+         <div class="copyright__area__container">
+            <ul class="copyright__area__container__list">
+               <li><span class="copyright-logo">© {{ getCurrentYear }} Matjo</span></li>
+               <LinkRouter link="/impressum" label="Impressum" />
+               <LinkRouter link="/contact" label="Kontakt" />
+            </ul>
+         </div>
+      </div>
+   </footer>
 </template>
 
 <script>
@@ -98,6 +94,12 @@ export default {
      this.scrollListener = this.handleScroll.bind(this);
      window.addEventListener('scroll', this.scrollListener);
   },
+  computed: {
+   getCurrentYear() {
+      const date = new Date();
+      return date.getFullYear();
+   }
+  }
 }
 </script>
 
@@ -109,7 +111,7 @@ export default {
   &__addresses,
   &__opening-hours {
      @include responsive-font-size(1.8rem, 2rem);
-     margin-block-end: 5rem;
+     margin-block-end: 3rem;
   }
 }
 
@@ -120,6 +122,23 @@ export default {
   @include for-tablet-portrait-up {
      margin: 0 auto;
      width: calc(100% / 3);
+  }
+
+  a {
+      align-items: start;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      padding-block: 0.5rem;
+      transition: color 0.2s ease-in;
+      width: auto;
+
+   &:hover,
+   &:focus {
+      color: $color-primary;
+   }
   }
 }
 
@@ -141,6 +160,19 @@ export default {
   justify-content: center;
   margin: 0;
   padding-inline: 3rem;
+
+  .copyright-logo {
+      @include responsive-font-size(1.2rem, 1.3rem);
+      align-items: start;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      letter-spacing: 1px;
+      line-height: 1.5;
+      margin-inline: 1rem;
+      padding-block: 0.5rem;
+      text-transform: uppercase;
+  }
 }
 
 // footer button to top
