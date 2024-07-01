@@ -1,16 +1,19 @@
 <template>
   <div>
     <Content :content="aboutUsText"></Content>
+    <Card :card="cardContent"></Card>
   </div>
 </template>
 
 <script>
 import Content from '../../components/content/Content.vue';
+import Card from '../../components/card/Card.vue';
 
 export default {
   name: 'Home',
   components: {
     Content,
+    Card,
   },
   data() {
     return {
@@ -26,6 +29,14 @@ export default {
             { id: '4', text: 'Hier im Anamit Restaurant bereiten wir die Gerichte ganz nach originalen Rezepten frisch und mit viel Liebe zu. Lassen Sie sich durch eine kulinarische Reise verführen, um eine andere Seite Vietnams zu entdecken'},
         ]
       },
+      cardContent: {
+        id: 'test-card',
+        imgSrc: '../../assets/img/bbq/bbq.webp',
+        imgUrl: 'https://google.de',
+        body: 'Das ist ein Test-Body',
+        footer: 'Link'
+      },
+      imgGallery: []
     }
   }
 }
