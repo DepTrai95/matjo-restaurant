@@ -46,21 +46,20 @@
   
   h1, h2, h3 {
     font-family: "TextMeOne", "Calibri", sans-serif;
+    font-weight: 700;
   }
   
   h1 {
-    @include responsive-font-size(3.8rem, 4.2rem);
+    @include responsive-font-size(4rem, 4.5rem);
     color: $color-header;
     letter-spacing: 0.15em;
     line-height: 1.1;
-    margin-block-start: -2.5rem;
-    margin-block-end: 0;
     text-align: center;
     text-transform: uppercase;
   }
   
   h2 {
-    @include responsive-font-size(2.7rem, 3rem);
+    @include responsive-font-size(4.5rem, 5rem);
     line-height: 1;
     margin: 0;
     margin-block-end: 1em;

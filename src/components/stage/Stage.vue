@@ -140,8 +140,8 @@
     h2 {
       @include responsive-font-size(8rem, 9rem);
        color: $color-primary;
-       font-family: "HerrVonMuellerhoff", "Brush Script MT Italic", sans-serif;
        font-weight: 400;
+       margin: 0;
        text-align: center;
  
        @include for-tablet-landscape-up {

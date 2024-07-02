@@ -232,7 +232,7 @@
   .form-control {
     @include responsive-font-size(1.8rem, 1.9rem);
     border: 2px solid #51515137;
-    border-radius: 4px;
+    border-radius: 30px;
     display: block;
     color: $color-body;
     font-family: inherit;
@@ -256,6 +256,7 @@
     display: block;
     font-weight: 500;
     margin-bottom: 1rem;
+    margin-inline-start: 1rem;
   }
   
   textarea {
@@ -282,7 +283,7 @@
   .customCalendarStyle input {
     @include responsive-font-size(1.6rem, 1.8rem);
     border: 2px solid #51515137;
-    border-radius: 4px;
+    border-radius: 30px;
     display: block;
     color: $color-body;
     font-family: inherit;

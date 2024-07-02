@@ -3,6 +3,7 @@ import { createWebHistory } from "vue-router";
 
 import Home from "./pages/home/Home.vue";
 import Menu from "./pages/menu/Menu.vue";
+import Career from "./pages/career/Career.vue";
 import Contact from "./pages/contact/Contact.vue";
 import Impress from "./pages/impress/Impressum.vue";
 import Success from "./pages/success/Success.vue";
@@ -24,6 +25,13 @@ const router = createRouter({
       component: Menu, 
       meta: { 
         headline: 'Our Menu',
+        showBackground: true,
+      } 
+    },
+    { path: "/career", 
+      component: Career, 
+      meta: { 
+        headline: 'Karriere',
         showBackground: true,
       } 
     },

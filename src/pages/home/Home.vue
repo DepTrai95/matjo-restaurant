@@ -1,15 +1,17 @@
 <template>
-  <div class="content-area">
-    <div class="img-gallery">
-      <div class="inner">
-        <h2>Unsere Meisterwerke</h2>
-        <div class="grid--default grid-2--tablet-portrait-up grid-4--tablet-landscape-up">
-          <div class="grid-item" v-for="img in imgGallery" :key="img.id">
-            <Img :img="img"></Img>
+  <div>
+    <section class="content-area content-area--tinted">
+      <div class="img-gallery">
+        <div class="inner">
+          <h2>Unsere Meisterwerke</h2>
+          <div class="grid--default grid-2--tablet-portrait-up grid-4--tablet-landscape-up">
+            <div class="grid-item" v-for="img in imgGallery" :key="img.id">
+              <Img :img="img"></Img>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <Content :content="aboutUsText"></Content>
   </div>
 </template>
@@ -49,9 +51,6 @@ export default {
 
 <style lang="scss" scoped>
 .img-gallery {
-  h2 {
-    @include responsive-font-size(4.5rem, 5rem);
-    text-align: center;
-  }
+  text-align: center; 
 }
 </style>

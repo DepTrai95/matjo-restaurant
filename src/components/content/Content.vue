@@ -51,7 +51,6 @@
  
  <style lang="scss" scoped>
  .content {
-    background-color: #FAF6E2;
     padding-block: 4.5rem;
  
     &.reverse {
@@ -97,15 +96,10 @@
     text-align: center;
  
     h2 {
-      @include responsive-font-size(8.5rem, 10rem);
        color: $color-primary;
        font-family: "TextMeOne", "Brush Script MT Italic", sans-serif;
        font-weight: 400;
        text-align: center;
- 
-       @include for-tablet-portrait-up {
-          @include responsive-font-size(10rem, 10.5rem);
-       }
     }
  }
  

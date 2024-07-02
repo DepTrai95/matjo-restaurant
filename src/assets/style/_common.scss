@@ -56,6 +56,14 @@
       }
    }
 
+   &--tinted {
+      background-color: $color-secondary;
+
+      &+& {
+         padding-top: 0;
+      }
+   }
+
    >.inner {
       >h2.text-center {
          max-width: 35ch;

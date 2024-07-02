@@ -1,63 +1,65 @@
 <template>
-  <div class="navbar" :class="{'is-open': isMenuExpanded && isMobile}">
-     <div class="inner">
-        <div class="logo__container">
-           <div class="logo">
-              <router-link to="/">
-                 <img v-if="!isInverted" src="../../assets/img/logo.webp" alt="zur Startseite" height="50" width="50" />
-                 <img v-else src="../../assets/img/logo.webp" alt="zur Startseite" height="50" width="50" />
-              </router-link>
-           </div>
-        </div>
-        <div class="nav-main__wrapper" v-if="!isMobile">
-           <nav class="nav-main">
-              <ul class="list--unstyled">
-                 <LinkRouter link="/" label="Home" />
-                 <LinkRouter link="/menu" label="Our Menu" />
-                 <LinkRouter link="/contact" label="Contact" />
-              </ul>
-           </nav>
-        </div>
+   <div class="navbar" :class="{'is-open': isMenuExpanded && isMobile}">
+      <div class="inner">
+         <div class="logo__container">
+            <div class="logo">
+               <router-link to="/">
+                  <img v-if="!isInverted" src="../../assets/img/logo.webp" alt="zur Startseite" height="50"
+                     width="50" />
+                  <img v-else src="../../assets/img/logo.webp" alt="zur Startseite" height="50" width="50" />
+               </router-link>
+            </div>
+         </div>
+         <div class="nav-main__wrapper" v-if="!isMobile">
+            <nav class="nav-main">
+               <ul class="list--unstyled">
+                  <LinkRouter link="/" label="Home" />
+                  <LinkRouter link="/menu" label="Menu" />
+                  <LinkRouter link="/career" label="Career" />
+                  <LinkRouter link="/contact" label="Contact" />
+               </ul>
+            </nav>
+         </div>
 
-        <div class="nav-cta__wrapper" v-if="!isMobile">
-         <router-link class="btn--primary" to="/contact">Book Table</router-link>
-        </div>
+         <div class="nav-cta__wrapper" v-if="!isMobile">
+            <router-link class="btn--primary" to="/contact">Book Table</router-link>
+         </div>
 
-        <div class="mobile-navigation" v-if="isMobile">
-           <button id="mobile-navigation-button" type="button" class="navigation__button--mobile menu-toggle"
-              :aria-expanded="isMenuExpanded ? 'true' : 'false'" aria-haspopup="true" aria-controls="mobile-navigation"
-              @click="toggleMenu">
-              <span class="sr-only">Hauptnavigation</span>
-              <span class="hamburger" :class="{ 'is-open': isMenuExpanded }">
-                 <span></span>
-                 <span></span>
-                 <span></span>
-              </span>
-           </button>
+         <div class="mobile-navigation" v-if="isMobile">
+            <button id="mobile-navigation-button" type="button" class="navigation__button--mobile menu-toggle"
+               :aria-expanded="isMenuExpanded ? 'true' : 'false'" aria-haspopup="true" aria-controls="mobile-navigation"
+               @click="toggleMenu">
+               <span class="sr-only">Hauptnavigation</span>
+               <span class="hamburger" :class="{ 'is-open': isMenuExpanded }">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </span>
+            </button>
 
-           <div class="nav-main__wrapper" :class="{'is-open': isMenuExpanded}" @click="toggleMenu">
-              <nav class="nav-main">
-                 <ul class="list--unstyled">
-                    <LinkRouter link="/" label="Home" />
-                    <LinkRouter link="/menu" label="Menu" />
-                    <LinkRouter link="/contact" label="Kontakt" />
-                 </ul>
-                 <ul class="list--unstyled social-media-menu">
-                    <li class="social-media-menu__item">
-                       <a href="">
-                          <span class="icon-container">
-                             <svg class="icon" aria-hidden="true" focusable="false">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
-                             </svg>
-                          </span>
-                       </a>
-                    </li>
-                 </ul>
-              </nav>
-           </div>
-        </div>
-     </div>
-  </div>
+            <div class="nav-main__wrapper" :class="{'is-open': isMenuExpanded}" @click="toggleMenu">
+               <nav class="nav-main">
+                  <ul class="list--unstyled">
+                     <LinkRouter link="/" label="Home" />
+                     <LinkRouter link="/menu" label="Menu" />
+                     <LinkRouter link="/contact" label="Kontakt" />
+                  </ul>
+                  <ul class="list--unstyled social-media-menu">
+                     <li class="social-media-menu__item">
+                        <a href="">
+                           <span class="icon-container">
+                              <svg class="icon" aria-hidden="true" focusable="false">
+                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
+                              </svg>
+                           </span>
+                        </a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
 </template>
 
 <script>
