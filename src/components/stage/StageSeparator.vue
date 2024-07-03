@@ -28,7 +28,7 @@
    }
 
    &--black {
-      background-image: url(../../assets/svg/stage-crack-black.svg);
+      background-image: url(../../assets/svg/stage-crack-dark.svg);
    }
 }
 </style>
