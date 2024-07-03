@@ -19,20 +19,14 @@
         </p>
       </div>
       <!-- DATEPICKER -->
-      <div class="form-group" :class="{ invalid: !selectedDate.isValid }">
-        <label for="selectedDate">
-          Datum und Zeit <abbr title="Pflichtfeld">*</abbr>
+      <div class="form-group" :class="{ invalid: !subject.isValid }">
+        <label for="subject">
+          Betreff <abbr title="Pflichtfeld">*</abbr>
         </label>
-        <VueDatePicker 
-          v-model="selectedDate.val"
-          class="customCalendarStyle"
-          :minDate="minDate" 
-          :maxDate="maxDate"
-          @blur="clearValidity('selectedDate')" placeholder="DD/MM/YYYY - HH:MM"
-        >
-        </VueDatePicker>
-        <p v-if="!selectedDate.isValid" :class="{ invalid: !selectedDate.isValid }">
-          Es muss ein Datum ausgewählt sein
+        <input class="form-control" type="text" id="subject" v-model.trim="subject.val" @blur="clearValidity('subject')"
+          placeholder="Betreff" />
+        <p v-if="!subject.isValid" :class="{ invalid: !subject.isValid }">
+          Das Betreff Feld darf nicht leer sein!
         </p>
       </div>
       <!-- MESSAGE -->
@@ -81,7 +75,7 @@
           val: "",
           isValid: true,
         },
-        selectedDate: {
+        subject: {
           val: "",
           isValid: true,
         },
@@ -110,8 +104,8 @@
           this.formIsValid = false;
         }
   
-        if (this.selectedDate.val === "") {
-          this.selectedDate.isValid = false;
+        if (this.subject.val === "") {
+          this.subject.isValid = false;
           this.formIsValid = false;
         }
         const correctAnswer = eval(this.mathProblem.example);
@@ -159,7 +153,7 @@
           name: this.name.val,
           email: this.email.val,
           message: this.message.val,
-          date: this.formatDate(this.selectedDate.val),
+          date: this.formatDate(this.subject.val),
         };
   
         try {
@@ -202,14 +196,6 @@
     const operator = '+';
     return `${num1} ${operator} ${num2}`;
   }
-  </script>
-  
-  <script setup>
-  import { ref } from 'vue';
-  import VueDatePicker from '@vuepic/vue-datepicker';
-  import '@vuepic/vue-datepicker/dist/main.css';
-  
-  const date = ref(null);
   </script>
   
   <style lang="scss" scoped>
@@ -275,69 +261,6 @@
     textarea {
       border: 1px solid $color-error;
     }
-  }
-  </style>
-  
-  <!-- Styling for Datepicker Component -->
-  <style lang="scss">
-  .customCalendarStyle input {
-    @include responsive-font-size(1.6rem, 1.8rem);
-    border: 2px solid #51515137;
-    border-radius: 30px;
-    display: block;
-    color: $color-body;
-    font-family: inherit;
-    min-height: 5rem;
-    outline: none;
-    padding: 1rem 3.5rem;
-    transition: border 0.3s;
-    width: 100%;
-  
-    &:hover,
-    &:focus,
-    &:focus-visible {
-      border: 2px solid $color-primary !important;
-    }
-  }
-  
-  .dp__menu {
-    min-width: 300px;
-  }
-  
-  .dp__menu_inner,
-  .dp__selection_preview {
-    @include responsive-font-size(1.6rem, 1.8rem);
-    max-width: unset !important;
-  }
-  
-  .dp__action_button {
-    @include responsive-font-size(1.8rem, 1.9rem);
-    height: unset;
-    margin-inline-start: 1rem;
-    padding: 0.5rem 1rem;
-  
-    &:hover {
-      border-color: $color-primary !important;
-    }
-  }
-  
-  .dp__action_select {
-    background: $color-header !important;
-  
-    &:hover {
-      background: $color-primary !important;
-    }
-  }
-  
-  .dp__input_icons {
-    @include responsive-font-size(1.8rem, 1.9rem);
-    height: 1.6rem;
-    width: 1.6rem;
-    padding-inline-end: 3rem;
-  }
-  
-  .dp--tp-wrap { //for clock-icon
-    max-width: unset;
   }
   </style>
   

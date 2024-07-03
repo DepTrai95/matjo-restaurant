@@ -1,44 +1,47 @@
 <template>
-    <div class="content-area">
-        <article class="content" :id="content.id">
-           <section class="content__content">
-              <div class="inner">
-                 <div class="grid-2--tablet-landscape-up">
-                    <div class="grid-item">
-                       <div class="content__content__heading">
-                          <hgroup>
-                             <h1>{{ content.heading }}</h1>
-                             <h2>{{ content.headingDescription }}</h2>
-                          </hgroup>
-                       </div>
-                       <div class="content__content__separator">✻</div>
-                       <div v-if="content.content.length > 1" class="content__content__text">
-                          <p v-for="content in content.content" :key="content.id">
-                             {{ content.text }}
-                          </p>
-                       </div>
-                       <div v-else class="content__content__text">
-                          <router-link to="/menu">Speisekarte / Menu</router-link>
-                       </div>
-                    </div>
-                    <div class="grid-item">
-                       <div class="grid-2--tablet-landscape-up grid-image-gallery">
-                          <slot id="image-gallery"></slot>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </section>
-         </article>
-    </div>
- </template>
+   <stage-separator class="stage__separator"></stage-separator>
+   <div class="content-area">
+      <article class="content" :id="content.id">
+         <section class="content__content">
+            <div class="inner">
+               <div class="grid-2--tablet-landscape-up">
+                  <div class="grid-item">
+                     <div class="content__content__heading">
+                        <hgroup>
+                           <h1>{{ content.heading }}</h1>
+                           <h2>{{ content.headingDescription }}</h2>
+                        </hgroup>
+                     </div>
+                     <div class="content__content__separator">✻</div>
+                     <div v-if="content.content.length > 1" class="content__content__text">
+                        <p v-for="content in content.content" :key="content.id">
+                           {{ content.text }}
+                        </p>
+                     </div>
+                     <div v-else class="content__content__text">
+                        <router-link to="/menu">Speisekarte / Menu</router-link>
+                     </div>
+                  </div>
+                  <div class="grid-item">
+                     <div class="grid-2--tablet-landscape-up grid-image-gallery">
+                        <slot id="image-gallery"></slot>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </article>
+   </div>
+</template>
  
  <script>
- import LinkRouter from '../link/LinkRouter.vue';
- 
+import LinkRouter from '../link/LinkRouter.vue';
+import StageSeparator from '../stage/StageSeparator.vue';
+
  export default {
     components: {
        LinkRouter,
+       StageSeparator,
     },
     props: {
        content: {

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <stage-separator class="stage__separator--tinted"></stage-separator>
     <section class="content-area content-area--tinted">
       <div class="img-gallery">
         <div class="inner">
@@ -19,12 +20,14 @@
 <script>
 import Content from '../../components/content/Content.vue';
 import Img from '../../components/img/Img.vue';
+import StageSeparator from '../../components/stage/StageSeparator.vue';
 
 export default {
   name: 'Home',
   components: {
     Content,
     Img,
+    StageSeparator,
   },
   data() {
     return {

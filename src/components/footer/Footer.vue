@@ -1,9 +1,10 @@
 <template>
    <footer class="footer">
+      <stage-separator class="stage__separator--black"></stage-separator>
       <div class="restaurant__information">
          <h3>MATJO - Korean BBQ</h3>
          <div class="footer__addresses">
-            <a href="https://maps.app.goo.gl/GQEmGFkc8XoHixLH8/">
+            <a href="https://maps.app.goo.gl/GQEmGFkc8XoHixLH8/" target="_blank" noopener noreferrer>
                <span class="street">Alaunstraße 9</span>
                <span class="postcode">01099 Dresden</span>
             </a>
@@ -46,10 +47,12 @@
 
 <script>
 import LinkRouter from '../link/LinkRouter.vue'
+import StageSeparator from '../stage/StageSeparator.vue';
 
 export default {
   components: {
      LinkRouter,
+     StageSeparator,
   },
   data() {
      return {
@@ -110,14 +113,14 @@ export default {
 
   &__addresses,
   &__opening-hours {
-     @include responsive-font-size(1.8rem, 2rem);
+     @include responsive-font-size(1.7rem, 1.8rem);
      margin-block-end: 3rem;
   }
 }
 
 .restaurant__information {
   margin-inline: 2rem;
-  padding-block: 5rem;
+  padding-block: 3rem 3.5rem;
 
   @include for-tablet-portrait-up {
      margin: 0 auto;
@@ -145,12 +148,17 @@ export default {
 .copyright__area {
   background-color: $color-background-copyright;
   color: $color-body-copyright;
-  padding-block: 4rem;
+  padding-block: 3rem;
   position: relative;
 
   @include for-tablet-portrait-up {
-     padding-block: 6rem 5rem;   
+     padding-block: 4rem;   
   }
+}
+
+.copyright__area__container {
+   position: relative;
+   z-index: 1;
 }
 
 .copyright__area__container__list {
@@ -159,11 +167,10 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0;
-  padding-inline: 3rem;
+  padding-inline: 0;
 
   .copyright-logo {
       @include responsive-font-size(1.2rem, 1.3rem);
-      align-items: start;
       color: inherit;
       display: flex;
       flex-direction: column;
@@ -190,7 +197,7 @@ export default {
   top: 0;
   left: 50%;
   margin-left: -96px;
-  margin-top: -50px;
+  margin-top: -35px;
 
   path {
      fill: $color-header;
@@ -204,8 +211,12 @@ export default {
   transform: translateY(-50%);
 }
 
+.btn--top_text .btn__arrow--top {
+   top: 20px;
+}
+
 .btn--top_text .btn__arrow--bottom {
-  top: 8px;
+  top: 15px;
 }
 
 .btn--top_text {
@@ -213,14 +224,14 @@ export default {
   display: block;
   font-size: 12px;
   font-weight: 700;
-  height: 60px;
+  height: 50px;
   left: 50%;
   letter-spacing: 2px;
   position: absolute;
   text-transform: uppercase;
-  top: 12px;
+  top: 0;
   transform: translate(-50%, -30%);
-  width: 60px;
+  width: 50px;
 }
 
 .btn--top_text .btn__arrow {
@@ -263,10 +274,12 @@ export default {
   display: flex;
 
   li {
+      align-items: center;
+
      @include for-tablet-landscape-up {
         &::after {
            content: "\2022";
-           font-size: 2rem;
+           font-size: 1.5rem;
            margin: 0 0.5rem;
         }
      }

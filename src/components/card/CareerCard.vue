@@ -24,19 +24,29 @@
             <span>{{ career.workingTime }}</span>
          </div>
       </div>
-      <a class="career__button btn--primary" href="info@matjo.de">Jetzt bewerben</a>
+      <a class="career__button btn--primary" :href="mailSubject">Jetzt bewerben</a>
    </div>
 </template>
 
 <script>
-   export default {
-      props: {
-         career: {
-            type: Object,
-            required: true
-         }
+export default {
+   props: {
+      career: {
+         type: Object,
+         required: true
+      },
+      mailSubject: {
+         type: String,
+         default: 'Bewerbung'
+      }
+   },
+   computed: {
+      mailSubject() {
+         const encodedSubject = encodeURIComponent(this.mailSubject);
+         return `mailto:info@matjo.de?subject=${encodedSubject}`;
       }
    }
+}
 </script>
 
 <style lang="scss" scoped>

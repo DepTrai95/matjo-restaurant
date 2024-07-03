@@ -1,6 +1,6 @@
 <template>
-   <div class="navbar" :class="{'is-open': isMenuExpanded && isMobile}">
-      <div class="inner">
+   <div class="inner">
+      <div class="navbar" :class="{'is-open': isMenuExpanded && isMobile}">
          <div class="logo__container">
             <div class="logo">
                <router-link to="/">
@@ -82,12 +82,6 @@ export default {
   methods: {
      toggleMenu() {
         this.isMenuExpanded = !this.isMenuExpanded;
-
-        if (this.isMenuExpanded) {
-           document.body.style.overflow = 'hidden';
-        } else {
-           document.body.removeAttribute('style');
-        }
      },
      throttledCheckIsMobile() {
         if (!this.throttleTimeout) {
@@ -135,23 +129,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navbar {
+.inner {
   .header--inverted & {
-     color: $color-header;
+      color: $color-header;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 50px;
   }
 
-  .inner {
-     display: flex;
-     flex-direction: row-reverse;
-     padding: 1rem;
-     
-     @include for-phone-only {
-         height: $header-height-mobile;
+  .navbar {
+      display: flex;
+      flex-direction: row-reverse;
+      padding: 1rem;
+      position: relative;
+   
+      &::before {
+         backdrop-filter: blur(10px);
          background: rgba(255, 255, 255, 0.4);
          border-radius: 30px;
-         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-         backdrop-filter: blur(10px);
+         content: "";
+         inset: 0;
+         position: absolute;
+      }
+   
+     @include for-phone-only {
+         height: $header-height-mobile;
          border: 1px solid rgba(255, 255, 255, 0.3);
+         border-radius: 30px;
+         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
          padding: 0;
      }
 
@@ -212,6 +216,12 @@ export default {
          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
          backdrop-filter: blur(10px);
          border: 0px solid rgba(255, 255, 255, 0.3);
+
+         &::before {
+            position: absolute;
+            inset: 0;
+            content: "";
+         }
 
          &.is-open {
             border: 1px solid rgba(255, 255, 255, 0.3);

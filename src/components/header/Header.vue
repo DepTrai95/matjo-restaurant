@@ -80,6 +80,7 @@ export default {
      //loading page check size
      this.checkIsMobile();
      window.addEventListener("scroll", () => {
+        this.checkIsMobile();
         if (!this.isMobile) {
            let currentScrollPos = window.pageYOffset;
            this.handleHeaderVisibility(currentScrollPos);
@@ -94,18 +95,17 @@ export default {
   background-color: transparent;
   color: $color-white;
   inset-inline: 0;
-  position: absolute;
+  position: fixed;
   transition: background-color 0.25s ease-in-out, inset 0.25s ease-in-out, border-radius 0.25s;
   z-index: 100;
 
-  @include for-tablet-portrait-up {
-     position: fixed;
+  @include for-phone-only {
+     inset-block-start: 10px;
+     inset-inline: 10px;
   }
 }
 
 .header--inverted {
-   background-color: rgba(255, 255, 255, 0.9);
-   border-radius: 50px;
    color: $color-header;
    inset-inline: 50px;
    inset-block-start: 10px;

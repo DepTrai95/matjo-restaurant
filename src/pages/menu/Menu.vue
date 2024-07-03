@@ -1,5 +1,6 @@
 <template>
   <div id="menu">
+    <stage-separator class="stage__separator"></stage-separator>
     <div class="content-area">
       <div class="inner">
         <div class="menu grid--default grid-2--tablet-portrait-up">
@@ -47,8 +48,13 @@
 </template>
 
 <script>
+import StageSeparator from '../../components/stage/StageSeparator.vue'
+
 export default {
   name: 'Menu',
+  components: {
+    StageSeparator
+  },
   data() {
     return {
       title: 'Menüseite'

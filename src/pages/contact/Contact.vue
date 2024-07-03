@@ -21,22 +21,17 @@
             <div class="reservation-info">
               <p>Matjo - Korean BBQ and Hotpot</p>
               <p class="center">
-                Wir nehmen jeden Tag gerne Reservierungen entgegen und sind zu
-                folgenden Öffnungszeiten telefonisch erreichbar:
+                Wir nehmen jeden Tag gerne Reservierungen entgegen, diese könnt ihr ganz bequem auf unserer Website buchen.
+              </p>
+              <p>
+                Alternativ sind wir zu folgenden Öffnungszeiten:
                 <span>{{ lunchTime }}</span>
                 <span>{{ dinnerTime }}</span>
-              </p>
-              <p class="center">
-                Alaunstraße 9, 01099 Dresden<br>
-                Tel.: <a :href="`tel:` + phoneNumber">{{ phoneNumber }}</a>
+                auch telefonisch erreichbar unter Tel: <a :href="`tel:` + phoneNumber">{{ phoneNumber }}</a>
               </p>
               <p>
-                Erreichen Sie uns direkt über E-Mail:
-                <a :href="`mailto:` + mailTo">{{ mailTo }}</a>
-              </p>
-              <p>
-                Wir freuen uns auf Ihre Kontaktaufnahme. Schreiben Sie uns und wir melden uns so schnell wie
-                möglich zurück. Vielen Dank!
+                Falls Sie ein anderes Anliegen als eine Reservierung haben, können Sie uns gerne jederzeit über das Kontaktformular auf dieser
+                Seite erreichen, oder uns direkt eine E-Mail senden an: <a :href="`mailto:` + mailTo">{{ mailTo }}</a>
               </p>
             </div>
           </div>
@@ -100,7 +95,7 @@ a {
 }
 
 p {
-  margin-block: 0 1.5rem;
+  margin-block: 0 2rem;
 }
 
 .border-waves-before {
