@@ -15,14 +15,14 @@
                <ul class="list--unstyled">
                   <LinkRouter link="/" label="Home" />
                   <LinkRouter link="/menu" label="Menu" />
-                  <LinkRouter link="/career" label="Career" />
-                  <LinkRouter link="/contact" label="Contact" />
+                  <LinkRouter link="/career" label="Karriere" />
+                  <LinkRouter link="/contact" label="Kontakt" />
                </ul>
             </nav>
          </div>
 
          <div class="nav-cta__wrapper" v-if="!isMobile">
-            <router-link class="btn--primary" to="/contact">Book Table</router-link>
+            <router-link class="btn--primary" to="/contact">Reservieren</router-link>
          </div>
 
          <div class="mobile-navigation" v-if="isMobile">
@@ -42,6 +42,7 @@
                   <ul class="list--unstyled">
                      <LinkRouter link="/" label="Home" />
                      <LinkRouter link="/menu" label="Menu" />
+                     <LinkRouter link="/career" label="Karriere" />
                      <LinkRouter link="/contact" label="Kontakt" />
                   </ul>
                   <ul class="list--unstyled social-media-menu">
@@ -226,7 +227,7 @@ export default {
 
          &.is-open {
             border: 1px solid rgba(255, 255, 255, 0.3);
-            height: 40vh;
+            height: 45vh;
          }
      }
   }
@@ -239,7 +240,7 @@ export default {
         @include responsive-font-size(1.8rem, 2rem);
         color: $color-white;
         justify-content: center;
-        padding: 10px;
+        padding: 5px;
         text-transform: uppercase;
         width: 100%;
 
