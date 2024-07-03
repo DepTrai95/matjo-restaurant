@@ -84,6 +84,7 @@ export default {
         if (!this.isMobile) {
            let currentScrollPos = window.pageYOffset;
            this.handleHeaderVisibility(currentScrollPos);
+           navbar.classList.remove('header--inverted');
         }
      });
   },
@@ -100,14 +101,17 @@ export default {
   z-index: 100;
 
   @include for-phone-only {
+     color: $color-black;
      inset-block-start: 10px;
-     inset-inline: 10px;
+     inset-inline: 0px;
   }
 }
 
 .header--inverted {
-   color: $color-header;
-   inset-inline: 50px;
-   inset-block-start: 10px;
+   @include for-tablet-portrait-up {
+      color: $color-header;
+      inset-inline: 50px;
+      inset-block-start: 10px;
+  }
 }
 </style>

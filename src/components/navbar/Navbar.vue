@@ -142,6 +142,14 @@ export default {
       padding: 1rem;
       position: relative;
    
+      
+      @include for-phone-only {
+         height: $header-height-mobile;
+         border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 30px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      padding: 0;
+      
       &::before {
          backdrop-filter: blur(10px);
          background: rgba(255, 255, 255, 0.4);
@@ -150,14 +158,7 @@ export default {
          inset: 0;
          position: absolute;
       }
-   
-     @include for-phone-only {
-         height: $header-height-mobile;
-         border: 1px solid rgba(255, 255, 255, 0.3);
-         border-radius: 30px;
-         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-         padding: 0;
-     }
+   }
 
      @include for-tablet-portrait-up {
         flex-direction: row;
@@ -241,6 +242,10 @@ export default {
         padding: 10px;
         text-transform: uppercase;
         width: 100%;
+
+        @include for-phone-only {
+         color: $color-black;
+        }
 
         .icon {
            height: 2rem;
