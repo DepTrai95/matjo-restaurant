@@ -84,7 +84,6 @@ export default {
         if (!this.isMobile) {
            let currentScrollPos = window.pageYOffset;
            this.handleHeaderVisibility(currentScrollPos);
-           navbar.classList.remove('header--inverted');
         }
      });
   },

@@ -115,12 +115,17 @@ export default {
   mounted() {
      //loading page check size
      this.checkIsMobile();
-     window.addEventListener("resize", this.checkIsMobile);
+     window.addEventListener("resize", () => {
+      this.checkIsMobile();
+      if (this.isMobile) {
+         document.querySelector(".header").classList.remove('header--inverted');
+      }
+     });
      window.addEventListener("scroll", () => {
         if (!this.checkIsMobile()) {
            let currentScrollPos = window.pageYOffset;
            this.handleHeaderVisibility(currentScrollPos);
-        }
+         }
      });
   },
   destroyed() {
