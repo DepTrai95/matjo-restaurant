@@ -1,30 +1,23 @@
 <template>
-   <stage-separator class="stage__separator"></stage-separator>
-   <div class="content-area">
+   <div>
+      <stage-separator class="stage__separator"></stage-separator>
       <article class="content" :id="content.id">
-         <section class="content__content">
+         <section class="content-area">
             <div class="inner">
+               <h2 class="text-center">{{ content.title }}</h2>
                <div class="grid-2--tablet-landscape-up">
                   <div class="grid-item">
-                     <div class="content__content__heading">
-                        <hgroup>
-                           <h1>{{ content.heading }}</h1>
-                           <h2>{{ content.headingDescription }}</h2>
-                        </hgroup>
+                     <div class="content__heading">
+                        <h3>{{ content.subTitle }}</h3>
                      </div>
-                     <div class="content__content__separator">✻</div>
-                     <div v-if="content.content.length > 1" class="content__content__text">
-                        <p v-for="content in content.content" :key="content.id">
-                           {{ content.text }}
-                        </p>
-                     </div>
-                     <div v-else class="content__content__text">
-                        <router-link to="/menu">Speisekarte / Menu</router-link>
+                     <div class="content__text">
+                        <p v-for="text in content.textContent" :key="text.id">{{ text }}</p>
+                        <router-link class="btn--primary" :to="content.callToAction.to">{{ content.callToAction.text }}</router-link>
                      </div>
                   </div>
                   <div class="grid-item">
-                     <div class="grid-2--tablet-landscape-up grid-image-gallery">
-                        <slot id="image-gallery"></slot>
+                     <div class="grid-2--tablet-landscape-up content__images">
+                        <Img v-for="img in content.images" :key="img.id" :img="img"></Img>
                      </div>
                   </div>
                </div>
@@ -34,127 +27,78 @@
    </div>
 </template>
  
- <script>
+<script>
 import LinkRouter from '../link/LinkRouter.vue';
 import StageSeparator from '../stage/StageSeparator.vue';
+import Img from '../../components/img/Img.vue';
 
- export default {
-    components: {
-       LinkRouter,
-       StageSeparator,
-    },
-    props: {
-       content: {
-          type: Object,
-          required: true
-       },
-    },
- };
- </script>
+export default {
+   components: {
+      LinkRouter,
+      StageSeparator,
+      Img,
+   },
+   props: {
+      content: {
+         type: Object,
+         required: true
+      },
+   },
+};
+</script>
  
- <style lang="scss" scoped>
- .content {
-    padding-block: 4.5rem;
+<style lang="scss">
+.content {
+
+&.reverse {
+   .grid-2--tablet-landscape-up {
+      display: flex;
+      flex-direction: column-reverse;
+
+      @include for-tablet-landscape-up {
+         flex-direction: row-reverse;
+      }
+   }
+}
+}
  
-    &.reverse {
-       .grid-2--tablet-landscape-up {
-          display: flex;
-          flex-direction: column-reverse;
- 
-          @include for-tablet-landscape-up {
-             flex-direction: row-reverse;
-          }
-       }
-    }
- 
-    .grid-2--tablet-landscape-up {
-       @include for-tablet-landscape-up {
-          gap: 3rem;
-       }
-    }
- 
-    .grid-item:first-child {
-       @include for-tablet-landscape-up {
-          padding-inline: 2rem;
-       }
-    }
- 
-    .grid-item:nth-child(2) {
-       @include for-tablet-landscape-up {
-          padding-inline-start: 3rem;
-       }
-    }
- 
-    .grid-image-gallery {
-       @include for-tablet-portrait-down {
-          display: flex;
-          flex-direction: column;
-          gap: 3rem;
-          margin-block: 3rem;
-       }
-    }
- }
- 
- .content__content__heading {
-    text-align: center;
- 
-    h2 {
-       color: $color-primary;
-       font-family: "TextMeOne", "Brush Script MT Italic", sans-serif;
-       font-weight: 400;
-       text-align: center;
-    }
- }
- 
- .content__content__separator {
-    @include responsive-font-size(1.7rem, 1.8rem);
-    font-family: serif;
-    margin-block: 2.4rem;
-    opacity: 0.8;
-    text-align: center;
- }
- 
- .content__content__text {
-    @include responsive-font-size(1.8rem, 1.9rem);
-    text-align: center;
- 
-    a {
-       @include responsive-font-size(2rem, 2.1rem);
-       color: $color-primary-dark;
-       text-transform: uppercase;
-       overflow: hidden;
-       padding-block: 1rem;
-       position: relative;
-       text-decoration-line: none;
-       transition: color 0.2s ease-in;
-       width: auto;
- 
-       &:hover,
-       &:focus {
-          color: $color-primary;
-       }
- 
-       &::before {
-          border: 1px solid currentColor;
-          bottom: 0;
-          content: "";
-          left: 0;
-          position: absolute;
-          transform-origin: center left;
-          transform: scale3d(0, 1, 1);
-          transition-delay: 3s;
-          transition: transform .3s cubic-bezier(.22, .61, .36, 1);
-          width: 0;
-       }
- 
-       &:hover::before,
-       &:focus::before {
-          transition-delay: 0s;
-          transform: scale3d(1, 1, 1);
-          width: 100%;
-       }
-    }
-    
- }
- </style>
+
+.content__heading {
+   h3 {
+      @include responsive-font-size(3.5rem, 4rem);
+      margin-block-start: 0;
+   }
+}
+
+.content__text {
+
+}
+
+.content__images {
+   height: 500px;
+   padding: 1rem;
+   position: relative;
+
+   .img:first-child {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translate(25%, 0%);
+
+      img {
+         height: 400px;
+      }
+   }
+
+   .img:last-child {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      img {
+         height: 400px;
+      }
+   }
+}
+</style>
  

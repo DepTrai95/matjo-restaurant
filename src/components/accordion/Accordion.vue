@@ -87,10 +87,12 @@ export default {
    background-color: $color-white;
    border: 1px solid $color-white;
    border-radius: 30px;
+   border-end-end-radius: 0;
+   border-end-start-radius: 0;
    cursor: pointer;
    display: flex;
    justify-content: space-between;
-   padding-block: 30px;
+   padding-block: 30px 10px;
    padding-inline: 20px;
    text-align: left;
    transition:  padding 0.3s ease-in-out; 
@@ -99,23 +101,30 @@ export default {
    &[aria-expanded="true"] {
       border-end-end-radius: 0;
       border-end-start-radius: 0;
-      padding-block: 20px 0;
+      padding-block: 30px 0;
    }
 }
-
 
 .accordion__content {
    @include responsive-font-size(1.8rem, 2rem);
    background-color: $color-white;
    border-end-end-radius: 30px;
    border-end-start-radius: 30px;
+   min-height: 20px;
    overflow: hidden;
    transition: max-height 0.3s ease-in-out;
+
+   &[aria-hidden="false"] {
+      .accordion__content-inner {
+         padding-block: 20px 30px;
+      }
+   }
 }
 
 .accordion__content-inner {
-   padding-block: 15px 30px;
+   padding-block: 30px;
    padding-inline: 20px;
+   transition: padding 0.3s ease-in-out;
 }
 
 .accordion-icon {
