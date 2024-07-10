@@ -54,8 +54,8 @@ export default {
         ],
         callToAction: { to: '/menu', text: 'Speisekarte/Menu' },
         images: [
-          { id: 'img-bbq', imgSrc: '/img/bbq/bbq.webp' },
-          { id: 'img-bbq', imgSrc: '/img/bbq/bbq.webp' },
+          { id: 'img-korean-pot', imgSrc: '/img/korean-pot/korean-pot.webp' },
+          { id: 'img-tischgrill', imgSrc: '/img/tischgrill/tischgrill.webp' },
         ]
       },
       faqItems: [

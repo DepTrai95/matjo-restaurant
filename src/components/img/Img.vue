@@ -50,9 +50,9 @@ export default {
          threshold: [0.7],
       });
 
-      const headline = this.$el.querySelector("hgroup");
-      if (headline) {
-         observer.observe(headline);
+      const image = this.$el;
+      if (image) {
+         observer.observe(image);
       }
    }
 
@@ -86,10 +86,16 @@ export default {
    overflow: hidden;
    position: relative;
    transform: translateY(0px);
-   transition: background-color $transition-timing,
-   transform $transition-timing,
-   color $transition-timing,
-   box-shadow $transition-timing;
+   transition: background-color $transition-timing, transform $transition-timing, color $transition-timing, box-shadow $transition-timing;
+   
+   opacity: 0;
+   transform: translateY(30px);
+   transition: opacity 0.25s ease-in, transform 0.25s ease-in;
+
+   &.fade-in {
+      opacity: 1;
+      transform: translateY(0);
+   }
 }
 
 .img__image {
