@@ -24,7 +24,7 @@ const router = createRouter({
     { path: "/menu", 
       component: Menu, 
       meta: { 
-        headline: 'Our Menu',
+        headline: 'Menu',
         showBackground: true,
       } 
     },
@@ -38,7 +38,7 @@ const router = createRouter({
     { path: "/contact", 
       component: Contact, 
       meta: { 
-        headline: 'Contact us',
+        headline: 'Kontakt',
         showBackground: true,
       } 
     },

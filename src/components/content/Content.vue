@@ -1,7 +1,7 @@
 <template>
    <div>
       <stage-separator class="stage__separator"></stage-separator>
-      <article class="content" :id="content.id">
+      <article class="content" :class="{ reverse: content.reverse }" :id="content.id">
          <section class="content-area">
             <div class="inner">
                <h2 class="text-center">{{ content.title }}</h2>
@@ -12,7 +12,8 @@
                      </div>
                      <div class="content__text">
                         <p v-for="text in content.textContent" :key="text.id">{{ text }}</p>
-                        <router-link class="btn--primary" :to="content.callToAction.to">{{ content.callToAction.text }}</router-link>
+                        <router-link class="btn--primary" :to="content.callToAction.to">{{ content.callToAction.text
+                           }}</router-link>
                      </div>
                   </div>
                   <div class="grid-item">
@@ -115,7 +116,21 @@ export default {
          @include for-tablet-landscape-up {
             flex-direction: row-reverse;
          }
+
+         &>.grid-item {
+   
+            &:first-child::after {
+               inset-inline-start: 0;
+            }
+            
+            &:last-child::before {
+               inset-inline-end: 0;
+               inset-inline-start: 100%;
+               width: 3px;
+            }
+         }
       }
+
    }
 
    .content-area {

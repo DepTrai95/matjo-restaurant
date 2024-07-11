@@ -1,5 +1,8 @@
 <template>
   <div>
+    <stage-separator class="stage__separator"></stage-separator>
+    <Content :content="introduction"></Content>
+
     <stage-separator class="stage__separator--tinted"></stage-separator>
     <section class="content-area content-area--tinted">
       <div class="img-gallery">
@@ -13,9 +16,10 @@
         </div>
       </div>
     </section>
-    <Content :content="introduction"></Content>
 
-    <stage-separator class="stage__separator--tinted"></stage-separator>
+    <stage-separator class="stage__separator"></stage-separator>
+    <Content :content="koreanBbqIntro"></Content>
+
     <section class="content-area content-area--tinted">
       <div class="inner">
         <h2 class="text-center">Häufige Fragen</h2>
@@ -58,6 +62,25 @@ export default {
           { id: 'img-tischgrill', imgSrc: '/img/tischgrill/tischgrill.webp' },
         ]
       },
+
+      koreanBbqIntro: {
+        id: 'intro',
+        title: 'BBQ und Hotpot',
+        subTitle: 'Unsere Delikatessen',
+        textContent: [
+          'In jedem koreanischen Restaurant steht das Ziel, eine außergewöhnliche kulinarische Erfahrung zu bieten.',
+          'Bei Matjo werden die Gerichte für euch nach saisonalen Charakteristiken gestaltet und nur die frischesten und hochwertigsten Zutaten verwendet.',
+          'Unsere Atmossphäre ist traditionell, gleichzeitig aber modern. Jedes Gericht ist eine spannende Komposition, die ein zugängliches kulinarisches Abenteuer bietet.',
+          'Besuchen Sie uns und lassen sich verzaubern.',
+        ],
+        reverse: true,
+        callToAction: { to: '/contact', text: 'Jetzt Reservieren' },
+        images: [
+          { id: 'img-korean-pot', imgSrc: '/img/korean-pot/korean-pot.webp' },
+          { id: 'img-tischgrill', imgSrc: '/img/tischgrill/tischgrill.webp' },
+        ]
+      },
+
       faqItems: [
         { title: 'Was ist Korean BBQ?', content: 'Korean BBQ ist eine mittlerweile fast weltweit populäre Art des Grillens von direkt am Tisch. Es ist eine tolle Dining Experience, in welcher die Speisen selber frisch gegrillt werden.' },
         { title: 'Was für Fleisch ist typisch für koreanische BBQs?', content: 'Typischerweise werden Fleischsorten wie Bulgogi (mariniertes Rind), Galbi (marinierte Rippchen), Samgyeopsal (Schweinebauch) und Dak-Galbi (scharf mariniertes Hühnchen).' },
