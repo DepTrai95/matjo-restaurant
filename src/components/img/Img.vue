@@ -5,7 +5,7 @@
             <picture>
                <source type="image/webp" :srcset="generateSrcset(img.imgSrc, 'webp')"
                   sizes="(max-width: 599px) 400px, (max-width: 899px) 600px, 1200px" />
-               <img :src="generateImgSrc(img.imgSrc)" :width="img.width" loading="lazy" alt="" />
+               <img :src="generateImgSrc(img.imgSrc)" height :width="img.width" loading="lazy" alt="" />
             </picture>
          </div>
       </div>

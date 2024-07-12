@@ -4,11 +4,11 @@
          <div class="blur"></div>
          <picture v-if="showBackground">
             <source type="image/webp" srcset="
-                   ../../assets/img/stage-img/stage-background-small.webp 400w,
-                   ../../assets/img/stage-img/stage-background-medium.webp 600w,
-                   ../../assets/img/stage-img/stage-background-large.webp 1200w
-                " sizes="(max-width: 599px) 400px, (max-width: 899px) 600px, 1200px" />
-            <img src="../../assets/img/stage-img/stage-background-large.webp" width="1200" height="600" alt="" />
+                  ../../assets/img/stage-img/stage-background-small.webp 400w,
+                  ../../assets/img/stage-img/stage-background-medium.webp 600w,
+                  ../../assets/img/stage-img/stage-background-large.webp 1200w
+               " sizes="(max-width: 599px) 400px, (max-width: 899px) 600px, 1200px" />
+            <img src="../../assets/img/stage-img/stage-background-large.webp" width="1920" height="1200" alt="" />
          </picture>
       </div>
       <hgroup class="stage__headline">
