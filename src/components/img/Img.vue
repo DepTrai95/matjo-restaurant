@@ -102,6 +102,14 @@ export default {
    border: 1px solid #000;
    border: 1px solid rgba(0, 0, 0, 0.3);
    position: relative; // img__logo
+   
+   picture {
+      transition: transform $transition-timing;
+
+      &:hover {
+         transform: scale(1.1);
+      }
+   }
 
    img {
       border-radius: 0;

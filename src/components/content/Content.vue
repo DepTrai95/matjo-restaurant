@@ -102,7 +102,6 @@ export default {
       }
       window.removeEventListener('resize', this.handleResize);
    }
-
 };
 </script>
  

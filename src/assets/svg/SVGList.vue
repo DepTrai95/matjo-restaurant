@@ -17,6 +17,9 @@
                d="M12 12C13.1046 12 14 11.1046 14 10C14 8.89543 13.1046 8 12 8C10.8954 8 10 8.89543 10 10C10 11.1046 10.8954 12 12 12Z"
                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
          </symbol>
+         <symbol id="icon-arrow-down" viewBox="0 0 24 24">
+            <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+         </symbol>
          <symbol id="icon-time" viewBox="0 0 24 24">
             <path
                d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z">

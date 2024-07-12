@@ -76,8 +76,8 @@ export default {
         reverse: true,
         callToAction: { to: '/contact', text: 'Jetzt Reservieren' },
         images: [
-          { id: 'img-korean-pot', imgSrc: '/img/korean-pot/korean-pot.webp' },
-          { id: 'img-tischgrill', imgSrc: '/img/tischgrill/tischgrill.webp' },
+          { id: 'img-bbq-table', imgSrc: '/img/bbq-table/bbq-table.webp' },
+          { id: 'img-bbq-hotpot', imgSrc: '/img/bbq-hotpot/bbq-hotpot.webp' },
         ]
       },
 

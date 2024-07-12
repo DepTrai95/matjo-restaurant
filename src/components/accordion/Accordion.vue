@@ -11,8 +11,10 @@
                :aria-controls="`accordion__content__${index}`"
             >
                {{ item.title }}
-               <span class="accordion-icon" aria-hidden="true">
-                  {{ activeIndex === index ? '−' : '+' }}
+               <span class="icon-container">
+                  <svg class="icon accordion-icon" aria-hidden="true" focusable="false">
+                     <use href="#icon-arrow-down"></use>     
+                  </svg>
                </span>
             </button>
          </h3>
@@ -58,11 +60,65 @@ export default {
          this.$refs.content.forEach((el, index) => {
             this.contentHeight[index] = this.activeIndex === index ? `${el.scrollHeight}px` : '0px'
          })
+      },
+      observeElement(entries, observer) {
+         entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+               entry.target.classList.add('fade-in');
+               observer.unobserve(entry.target);
+            }
+         });
+      },
+      getThreshold() {
+         const width = window.innerWidth;
+         if (width < 768) {
+            return 0.5; // Mobile devices
+         } else if (width < 1024) {
+            return 0.7; // Tablets
+         } else {
+            return 0.9; // Desktops
+         }
+      },
+      createObserver() {
+         if (this.observer) {
+            this.observer.disconnect();
+         }
+
+         this.observer = new IntersectionObserver(this.observeElement, {
+            threshold: [this.getThreshold()],
+         });
+
+         this.observeElements();
+      },
+      observeElements() {
+         const headline = this.$el.querySelector('h2');
+         if (headline) {
+            this.observer.observe(headline);
+         }
+
+         const contentBlocks = this.$el.querySelectorAll('.accordion-item');
+         if (contentBlocks) {
+            contentBlocks.forEach(block => {
+               this.observer.observe(block);
+            });
+         }
+      },
+      handleResize() {
+         this.createObserver();
       }
    },
    mounted() {
       this.updateContentHeight()
       window.addEventListener('resize', this.updateContentHeight)
+
+      this.createObserver();
+      window.addEventListener('resize', this.handleResize);
+   },
+   beforeUnmount() {
+      if (this.observer) {
+         this.observer.disconnect();
+      }
+      window.removeEventListener('resize', this.handleResize);
    },
    beforeDestroy() {
       window.removeEventListener('resize', this.updateContentHeight)
@@ -74,6 +130,14 @@ export default {
 .accordion-item {
    border: 1px solid transparent;
    margin-bottom: 1rem;
+   opacity: 0;
+   transform: translateY(30px);
+   transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+
+   &.fade-in {
+      opacity: 1;
+      transform: translateY(0);
+   }
 }
 
 .accordion__header {
@@ -97,11 +161,22 @@ export default {
    text-align: left;
    transition:  padding 0.3s ease-in-out; 
    width: 100%;
+
+   .accordion-icon {
+      height: 28px;
+      transform: rotate(0);
+      transition: transform 0.25s ease-in-out;
+      width: 28px;
+   }
    
    &[aria-expanded="true"] {
       border-end-end-radius: 0;
       border-end-start-radius: 0;
       padding-block: 30px 0;
+
+      .accordion-icon {
+         transform: rotate(180deg);
+      }
    }
 }
 
