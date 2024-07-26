@@ -1,5 +1,6 @@
 <template>
   <SVGList></SVGList>
+  <LogoScreen></LogoScreen>
   <Header></Header>
   <main class="main">
     <router-view v-slot="slotProps">
@@ -15,12 +16,14 @@
 import SVGList from './assets/svg/SVGList.vue';
 import Header from './components/header/Header.vue';
 import Footer from './components/footer/Footer.vue';
+import LogoScreen from './components/logoscreen/LogoScreen.vue';
 
 export default {
   components: {
     SVGList,
     Header,
     Footer,
+    LogoScreen,
   },
 };
 </script>
