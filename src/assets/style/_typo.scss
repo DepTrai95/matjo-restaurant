@@ -27,7 +27,7 @@
     font-family: "TextMeOne";
     font-weight: 400;
     font-display: swap;
-    src: url("/fonts/TextMeOne.ttf") format("truetype");
+    src: url("/fonts/TextMeOne-Regular.ttf") format("truetype");
   }
   
   @font-face {
@@ -45,7 +45,8 @@
   }
   
   h1, h2, h3 {
-    font-family: "TextMeOne", "Calibri", sans-serif;
+    // font-family: "TextMeOne", "Calibri", sans-serif;
+    font-family: "Calibri", sans-serif;
     font-weight: 700;
   }
   

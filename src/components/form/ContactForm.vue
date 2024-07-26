@@ -108,7 +108,8 @@
           this.subject.isValid = false;
           this.formIsValid = false;
         }
-        const correctAnswer = eval(this.mathProblem.example);
+        // const correctAnswer = eval(this.mathProblem.example);
+        const correctAnswer = calculate(this.mathProblem.example);
         if (parseInt(this.mathProblem.val, 10) !== correctAnswer) {
           this.mathProblem.isValid = false;
           this.formIsValid = false;
@@ -195,6 +196,45 @@
     const num2 = Math.floor(Math.random() * 10) + 1;
     const operator = '+';
     return `${num1} ${operator} ${num2}`;
+  }
+
+  function calculate(expression) {
+    const parts = expression.split(' '); // Split by spaces
+
+    // Basic error handling
+    if (parts.length < 3) {
+      return NaN; // Or handle the error differently
+    }
+
+    let result = parseFloat(parts[0]);
+    for (let i = 1; i < parts.length; i += 2) {
+      const operator = parts[i];
+      const number = parseFloat(parts[i + 1]);
+
+      switch (operator) {
+        case '+':
+          result += number;
+          break;
+        case '-':
+          result -= number;
+          break;
+        case '*':
+          result *= number;
+          break;
+        case '/':
+          if (number === 0) {
+            // Handle division by zero
+            return NaN; // Or handle the error differently
+          }
+          result /= number;
+          break;
+        default:
+          // Handle unknown operator
+          return NaN; // Or handle the error differently
+      }
+    }
+
+    return result;
   }
   </script>
   

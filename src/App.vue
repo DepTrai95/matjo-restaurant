@@ -4,7 +4,7 @@
   <Header></Header>
   <main class="main">
     <router-view v-slot="slotProps">
-      <transition name="route" mode="out-in" @before-enter="beforeEnter">
+      <transition name="route" mode="out-in">
         <component :is="slotProps.Component"></component>
       </transition>
     </router-view>

@@ -35,14 +35,14 @@ export default {
          type: Object,
          required: true
       },
-      mailSubject: {
+      subject: {
          type: String,
          default: 'Bewerbung'
       }
    },
    computed: {
       mailSubject() {
-         const encodedSubject = encodeURIComponent(this.mailSubject);
+         const encodedSubject = encodeURIComponent(this.subject);
          return `mailto:info@matjo.de?subject=${encodedSubject}`;
       }
    }
