@@ -56,6 +56,12 @@
        @include grid(4);
     }
  }
+
+ .grid-5--tablet-landscape-up {
+    @include for-tablet-landscape-up {
+       @include grid(5);
+    }
+ }
  
  .grid-2--desktop-up {
     @include for-desktop-up {

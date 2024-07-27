@@ -2,7 +2,8 @@ import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 const apiKeys = [
-  'SENDGRID_API_KEY',
+  'APP_ID',
+  'INSTAGRAM_API',
 ];
 
 // https://vitejs.dev/config/

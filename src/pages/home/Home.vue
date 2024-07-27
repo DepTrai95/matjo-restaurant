@@ -20,6 +20,8 @@
     <stage-separator class="stage__separator"></stage-separator>
     <Content :content="koreanBbqIntro"></Content>
 
+    <InstagramGallery></InstagramGallery>
+
     <section class="content-area content-area--tinted">
       <div class="inner">
         <h2 class="text-center">Häufige Fragen</h2>
@@ -34,6 +36,7 @@ import Accordion from '../../components/accordion/Accordion.vue';
 import Content from '../../components/content/Content.vue';
 import Img from '../../components/img/Img.vue';
 import StageSeparator from '../../components/stage/StageSeparator.vue';
+import InstagramGallery from '../../components/instagram-gallery/InstagramGallery.vue';
 
 export default {
   name: 'Home',
@@ -41,6 +44,7 @@ export default {
     Accordion,
     Content,
     Img,
+    InstagramGallery,
     StageSeparator,
   },
   data() {

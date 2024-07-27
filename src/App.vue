@@ -10,6 +10,7 @@
     </router-view>
   </main>
   <Footer></Footer>
+  <Toast></Toast>
 </template>
 
 <script>
@@ -17,6 +18,7 @@ import SVGList from './assets/svg/SVGList.vue';
 import Header from './components/header/Header.vue';
 import Footer from './components/footer/Footer.vue';
 import LogoScreen from './components/logoscreen/LogoScreen.vue';
+import Toast from './components/toast/Toast.vue';
 
 export default {
   components: {
@@ -24,6 +26,7 @@ export default {
     Header,
     Footer,
     LogoScreen,
+    Toast,
   },
 };
 </script>
