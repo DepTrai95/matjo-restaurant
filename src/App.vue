@@ -9,15 +9,17 @@
       </transition>
     </router-view>
   </main>
+  <SocialMedia></SocialMedia>
   <Footer></Footer>
   <Toast></Toast>
 </template>
 
 <script>
 import SVGList from './assets/svg/SVGList.vue';
+import LogoScreen from './components/logoscreen/LogoScreen.vue';
 import Header from './components/header/Header.vue';
 import Footer from './components/footer/Footer.vue';
-import LogoScreen from './components/logoscreen/LogoScreen.vue';
+import SocialMedia from './components/socialmedia/SocialMedia.vue';
 import Toast from './components/toast/Toast.vue';
 
 export default {
@@ -26,6 +28,7 @@ export default {
     Header,
     Footer,
     LogoScreen,
+    SocialMedia,
     Toast,
   },
 };

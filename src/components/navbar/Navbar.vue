@@ -48,11 +48,13 @@
                   <ul class="list--unstyled social-media-menu">
                      <li class="social-media-menu__item">
                         <a href="">
-                           <span class="icon-container">
-                              <svg class="icon" aria-hidden="true" focusable="false">
-                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
-                              </svg>
-                           </span>
+                           <Icon :icon="'facebook'"></Icon>
+                        </a>
+                        <a href="">
+                           <Icon :icon="'instagram'"></Icon>
+                        </a>
+                        <a href="">
+                           <Icon :icon="'tiktok'"></Icon>
                         </a>
                      </li>
                   </ul>
@@ -66,11 +68,13 @@
 <script>
 import LinkRouter from "../link/LinkRouter.vue";
 import BaseButton from "../button/BaseButton.vue";
+import Icon from '../../assets/svg/Icon.vue';
 
 export default {
   components: {
      LinkRouter,
      BaseButton,
+     Icon,
   },
   data() {
      return {

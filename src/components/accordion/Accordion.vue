@@ -3,29 +3,15 @@
    <div class="accordion">
       <div v-for="(item, index) in items" :key="index" class="accordion-item">
          <h3 class="accordion__header">
-            <button 
-               :id="`accordion__header__${index}`"
-               class="accordion__header__button" 
-               @click="toggleItem(index)" 
-               :aria-expanded="activeIndex === index"
-               :aria-controls="`accordion__content__${index}`"
-            >
+            <button :id="`accordion__header__${index}`" class="accordion__header__button" @click="toggleItem(index)"
+               :aria-expanded="activeIndex === index" :aria-controls="`accordion__content__${index}`">
                {{ item.title }}
-               <span class="icon-container">
-                  <svg class="icon accordion-icon" aria-hidden="true" focusable="false">
-                     <use href="#icon-arrow-down"></use>     
-                  </svg>
-               </span>
+               <Icon :icon="'arrow-down'" :iconClass="'accordion-icon'"></Icon>
             </button>
          </h3>
-         <div 
-            :id="`accordion__content__${index}`" 
-            class="accordion__content"
-            :style="{ maxHeight: activeIndex === index ? contentHeight[index] : '0px' }" 
-            role="region"
-            :aria-labelledby="`accordion-header-${index}`"
-            :aria-hidden="activeIndex !== index"
-         >
+         <div :id="`accordion__content__${index}`" class="accordion__content"
+            :style="{ maxHeight: activeIndex === index ? contentHeight[index] : '0px' }" role="region"
+            :aria-labelledby="`accordion-header-${index}`" :aria-hidden="activeIndex !== index">
             <div class="accordion__content-inner" ref="content">
                {{ item.content }}
             </div>
@@ -35,8 +21,13 @@
 </template>
 
 <script>
+import Icon from '../../assets/svg/Icon.vue'
+
 export default {
    name: 'Accordion',
+   components: {
+      Icon,
+   },
    props: {
       items: {
          type: Array,
@@ -126,7 +117,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .accordion-item {
    border: 1px solid transparent;
    margin-bottom: 1rem;

@@ -8,19 +8,11 @@
       </div>
       <div class="career__info">
          <div class="career__info__location">
-            <span class="icon-container">
-               <svg class="icon" aria-hidden="true" focusable="false">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-location"></use>
-               </svg>
-            </span>
+            <Icon :icon="'location'"></Icon>
             <span>Dresden</span>
          </div>
          <div class="career__info__time">
-            <span class="icon-container">
-               <svg class="icon" aria-hidden="true" focusable="false">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-time"></use>
-               </svg>
-            </span>
+            <Icon :icon="'time'"></Icon>
             <span>{{ career.workingTime }}</span>
          </div>
       </div>
@@ -29,7 +21,12 @@
 </template>
 
 <script>
+import Icon from '../../assets/svg/Icon.vue';
+
 export default {
+   components: {
+      Icon,
+   },
    props: {
       career: {
          type: Object,

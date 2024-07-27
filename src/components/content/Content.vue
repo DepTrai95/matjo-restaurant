@@ -1,31 +1,29 @@
 <template>
-   <div>
+   <section class="content-area">
       <stage-separator class="stage__separator"></stage-separator>
       <article class="content" :class="{ reverse: content.reverse }" :id="content.id">
-         <section class="content-area">
-            <div class="inner">
-               <h2 class="text-center">{{ content.title }}</h2>
-               <div class="grid-2--tablet-landscape-up">
-                  <div class="grid-item">
-                     <div class="content__heading">
-                        <h3>{{ content.subTitle }}</h3>
-                     </div>
-                     <div class="content__text">
-                        <p v-for="text in content.textContent" :key="text.id">{{ text }}</p>
-                        <router-link class="btn--primary" :to="content.callToAction.to">{{ content.callToAction.text
-                           }}</router-link>
-                     </div>
+         <div class="inner">
+            <h2 class="text-center">{{ content.title }}</h2>
+            <div class="grid-2--tablet-landscape-up">
+               <div class="grid-item">
+                  <div class="content__heading">
+                     <h3>{{ content.subTitle }}</h3>
                   </div>
-                  <div class="grid-item">
-                     <div class="grid-2--tablet-landscape-up content__images">
-                        <Img v-for="img in content.images" :key="img.id" :img="img"></Img>
-                     </div>
+                  <div class="content__text">
+                     <p v-for="text in content.textContent" :key="text.id">{{ text }}</p>
+                     <router-link class="btn--primary" :to="content.callToAction.to">{{ content.callToAction.text
+                        }}</router-link>
+                  </div>
+               </div>
+               <div class="grid-item">
+                  <div class="grid-2--tablet-landscape-up content__images">
+                     <Img v-for="img in content.images" :key="img.id" :img="img"></Img>
                   </div>
                </div>
             </div>
-         </section>
+         </div>
       </article>
-   </div>
+   </section>
 </template>
  
 <script>
@@ -132,32 +130,31 @@ export default {
 
    }
 
-   .content-area {
-      >.inner >h2 {
-         // border-bottom: 4px solid $color-primary;
-         margin-bottom: 0;
-         padding-bottom: 5rem;
-         position: relative;
+   >.inner >h2 {
+      // border-bottom: 4px solid $color-primary;
+      margin-bottom: 0;
+      padding-bottom: 5rem;
+      position: relative;
 
-         &.fade-in {
-            &::after {
-               width: 100%;
-            }
-         }
-
+      &.fade-in {
          &::after {
-            background-color: $color-primary;
-            content: "";
-            height: 3px;
-            inset-block-end: 0;
-            inset-inline-start: 50%;
-            transform: translateX(-50%);
-            position: absolute;
-            transition: width 0.3s ease-in;
-            width: 0;
+            width: 100%;
          }
       }
+
+      &::after {
+         background-color: $color-primary;
+         content: "";
+         height: 3px;
+         inset-block-end: 0;
+         inset-inline-start: 50%;
+         transform: translateX(-50%);
+         position: absolute;
+         transition: width 0.3s ease-in;
+         width: 0;
+      }
    }
+   
 
    .grid-2--tablet-landscape-up>.grid-item {
       opacity: 0;

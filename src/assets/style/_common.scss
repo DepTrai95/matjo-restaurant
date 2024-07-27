@@ -94,21 +94,6 @@
     width: 100%;
  }
  
- .icon-container {
-    display: inline-block;
-    line-height: 1;
-    vertical-align: top;
- 
-    .icon {
-       color: currentColor;
-       display: inline-block;
-       fill: currentColor;
-       height: 1.8rem;
-       vertical-align: middle;
-       width: 1.8rem;
-    }
- }
- 
  .link {
     color: $color-primary;
     margin-block: 2rem;
