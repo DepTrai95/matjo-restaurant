@@ -1,7 +1,7 @@
 <template>
   <div id="menu">
     <stage-separator class="stage__separator"></stage-separator>
-    <div class="content-area">
+    <section class="content-area">
       <div class="inner">
         <div class="menu grid--default grid-2--tablet-portrait-up">
           <div class="grid-item">
@@ -43,21 +43,42 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
+    <stage-separator class="stage__separator--tinted"></stage-separator>
+    <section class="content-area content-area--tinted">
+      <div class="img-gallery">
+        <div class="inner">
+          <h2 class="text-center">Unsere Meisterwerke</h2>
+          <div class="grid--default grid-2--tablet-portrait-up grid-4--tablet-landscape-up">
+            <div class="grid-item" v-for="img in imgGallery" :key="img.id">
+              <Img :img="img"></Img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
+import Img from '../../components/img/Img.vue'
 import StageSeparator from '../../components/stage/StageSeparator.vue'
 
 export default {
   name: 'Menu',
   components: {
+    Img,
     StageSeparator
   },
   data() {
     return {
-      title: 'Menüseite'
+      title: 'Menüseite',
+      imgGallery: [
+        { id: 'img-bbq', imgSrc: '/img/bbq/bbq.webp' },
+        { id: 'img-bbq-steak', imgSrc: '/img/bbq-steak/bbq-steak.webp' },
+        { id: 'img-porkbelly', imgSrc: '/img/porkbelly/porkbelly.webp' },
+        { id: 'img-streetfood', imgSrc: '/img/streetfood/streetfood.webp' },
+      ]
     }
   }
 }

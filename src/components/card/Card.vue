@@ -73,7 +73,6 @@ export default {
          observer.observe(headline);
       }
    }
-
 };
 </script>
 

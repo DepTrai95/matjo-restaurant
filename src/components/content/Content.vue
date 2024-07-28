@@ -1,6 +1,5 @@
 <template>
    <section class="content-area">
-      <stage-separator class="stage__separator"></stage-separator>
       <article class="content" :class="{ reverse: content.reverse }" :id="content.id">
          <div class="inner">
             <h2 class="text-center">{{ content.title }}</h2>
@@ -57,9 +56,9 @@ export default {
          if (width < 768) {
             return 0.5; // Mobile devices
          } else if (width < 1024) {
-            return 0.7; // Tablets
+            return 0.5; // Tablets
          } else {
-            return 0.9; // Desktops
+            return 0.5; // Desktops
          }
       },
       createObserver() {

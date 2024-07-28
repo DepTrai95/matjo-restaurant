@@ -1,18 +1,18 @@
 <template>
-   <div class="social-media-container">
+   <div class="social-media-container" :class="{'scrolled': pageIsScrolled}">
       <ul class="social-media-list">
          <li class="social-media-list__item">
-            <a href="" class="facebook-icon">
+            <a href="https://www.facebook.com/nguyenducanh95" class="facebook-icon" target="_blank" rel="noopener noreferrer">
                <Icon :icon="'facebook'"></Icon>
             </a>
          </li>
          <li class="social-media-list__item">
-            <a href="" class="instagram-icon">
+            <a href="https://www.instagram.com/ducvnh_nguyen/" class="instagram-icon" target="_blank" rel="noopener noreferrer">
                <Icon :icon="'instagram'"></Icon>
             </a>
          </li>
          <li class="social-media-list__item">
-            <a href="" class="tiktok-icon">
+            <a href="https://www.tiktok.com/@anja_nguyen" class="tiktok-icon" target="_blank" rel="noopener noreferrer">
                <Icon :icon="'tiktok'"></Icon>
             </a>
          </li>
@@ -22,11 +22,26 @@
 
 <script>
 import Icon from '../../assets/svg/Icon.vue'
+import debounce from '../../utils';
 
 export default {
    components: {
       Icon,
-   }
+   },
+   data() {
+      return {
+         pageIsScrolled: false,
+      }
+   },
+   mounted() {
+      window.addEventListener('scroll', this.handleScroll);
+   },
+   methods: {
+      handleScroll: debounce(function () {
+         const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+         (scrollPosition > 100) ? this.pageIsScrolled = true : this.pageIsScrolled = false;
+      }, 100)
+   },
 }
 </script>
 
@@ -51,25 +66,41 @@ export default {
 
 .social-media-list__item {
    a {
-      color: $color-primary;
+      color: $color-white;
+      transition: color 0.1s ease-in-out;
 
       &:before,
       &:after {
          content: none;
       }
+
+      
+      .scrolled & {
+         color: $color-primary;
+         
+         &:hover {
+            color: $color-primary-dark;
+         }
+      }
    }
 
-   .facebook-icon {
+   // .facebook-icon {
+   //    &:hover {
+   //       color: #4267B2;
+   //    }
+   // }
 
-   }
+   // .instagram-icon {
+   //    &:hover {
+   //       color: #C13584;
+   //    }
+   // }
 
-   .instagram-icon {
-
-   }
-
-   .tiktok-icon {
-
-   }
+   // .tiktok-icon {
+   //    &:hover {
+   //       color: #009E60;
+   //    }
+   // }
 
    .icon-container {
       .icon {

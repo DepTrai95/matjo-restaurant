@@ -17,6 +17,7 @@
       </hgroup>
       <div v-if="showSubHeader" class="stage__arrow-down" @click="scrollToNextSection">
          <div class="arrow"></div>
+         <div class="arrow arrow__second"></div>
       </div>
    </div>
 </template>
@@ -194,16 +195,49 @@
  }
  
  .stage__arrow-down .arrow {
-    border-bottom: 3px solid white;
-    border-right: 3px solid white;
-    height: 24px;
-    left: 50%;
-    margin-left: -12px;
-    margin-top: -12px;
-    position: absolute;
-    top: 50%;
-    transform: rotate(45deg);
-    width: 24px;
+   // animation: jumpyOne 3s infinite;
+   border-bottom: 3px solid white;
+   border-right: 3px solid white;
+   height: 20px;
+   left: 50%;
+   margin-left: -12px;
+   margin-top: -12px;
+   position: absolute;
+   top: 50%;
+   transform: rotate(45deg);
+   width: 20px;
  }
- 
+
+ .stage__arrow-down .arrow__second {
+   // animation: jumpyTwo 3s infinite;
+   top: 60%;
+ }
+
+@keyframes jumpyOne {
+   0% {
+      transform: rotate(45deg) translate(0px);
+   }
+
+   50% {
+      transform: rotate(45deg) translate(-5px, -5px);
+   }
+
+   100% {
+      transform: rotate(45deg) translate(0px);
+   }
+}
+
+@keyframes jumpyTwo {
+   0% {
+      transform: rotate(45deg) translate(0px);
+   }
+
+   50% {
+      transform: rotate(45deg) translate(-7px, -7px);
+   }
+
+   100% {
+      transform: rotate(45deg) translate(0px);
+   }
+}
 </style>

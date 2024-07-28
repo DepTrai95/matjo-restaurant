@@ -1,18 +1,15 @@
 <template>
-   <div>
-      <stage-separator class="stage__separator stage__separator--tinted"></stage-separator>
-      <section class="content-area content-area--tinted">
-         <h2 class="text-center">Folge uns auf Instagram</h2>
-         <div class="grid-5--tablet-landscape-up">
-            <div class="grid-item" v-for="img in images" :key="img.id">
-               <a class="instagram-img__container" :href="img.permalink" target="_blank" rel="noopener noreferrer">
-                  <img class="instagram-img" :src="img.media_url" :id="img.id" alt="Bild aus Instagram" height="260"
-                     width="260">
-               </a>
-            </div>
+   <section class="content-area">
+      <h2 class="text-center">Folge uns auf Instagram</h2>
+      <div class="grid-5--tablet-landscape-up">
+         <div class="grid-item" v-for="img in images" :key="img.id">
+            <a class="instagram-img__container" :href="img.permalink" target="_blank" rel="noopener noreferrer">
+               <img class="instagram-img" :src="img.media_url" :id="img.id" alt="Bild aus Instagram" height="260"
+                  width="260">
+            </a>
          </div>
-      </section>
-   </div>
+      </div>
+   </section>
 </template>
 
 <script>
