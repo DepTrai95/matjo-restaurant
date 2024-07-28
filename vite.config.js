@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 const apiKeys = [
   'APP_ID',
   'INSTAGRAM_API',
+  'SENDGRID_API_KEY',
 ];
 
 // https://vitejs.dev/config/

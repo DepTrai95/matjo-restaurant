@@ -2,7 +2,7 @@
    <div>
       <stage-separator class="stage__separator stage__separator--tinted"></stage-separator>
       <section class="content-area content-area--tinted">
-         <h2 class="text-center">Aktuelle Einblicke, Events und mehr!</h2>
+         <h2 class="text-center">Folge uns auf Instagram</h2>
          <div class="grid-5--tablet-landscape-up">
             <div class="grid-item" v-for="img in images" :key="img.id">
                <a class="instagram-img__container" :href="img.permalink" target="_blank" rel="noopener noreferrer">

@@ -246,7 +246,7 @@ export default {
       transform: translate(0, 0%);
 
       @include for-tablet-landscape-up {
-         transform: translate(50px, 25px);
+         transform: translate(25px, 25px)
       }
 
       @include for-desktop-up {

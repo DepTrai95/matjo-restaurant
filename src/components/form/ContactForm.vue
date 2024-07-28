@@ -18,7 +18,7 @@
           Das E-Mail Feld darf nicht leer sein!
         </p>
       </div>
-      <!-- DATEPICKER -->
+      <!-- SUBJECT -->
       <div class="form-group" :class="{ invalid: !subject.isValid }">
         <label for="subject">
           Betreff <abbr title="Pflichtfeld">*</abbr>
@@ -153,8 +153,9 @@
         const formData = {
           name: this.name.val,
           email: this.email.val,
+          subject: this.subject.val,
           message: this.message.val,
-          date: this.formatDate(this.subject.val),
+          // date: this.formatDate(this.subject.val),
         };
   
         try {
@@ -167,8 +168,9 @@
               to: "info@matjo.de", // set email of receiver
               name: formData.name,
               email: formData.email,
+              subject: formData.subject,
               text: formData.message,
-              date: formData.date,
+              // date: formData.date,
             }),
           });
   
@@ -241,22 +243,22 @@
   <style lang="scss" scoped>
   .form {
     padding-top: 3rem;
-  
+
     @include for-tablet-portrait-up {
       padding: 3.5rem;
     }
-  
+
     @include for-tablet-landscape-up {
       margin: -3rem;
     }
   }
-  
+
   .form-group {
     margin-bottom: 2rem;
   }
-  
+
   .form-control {
-    @include responsive-font-size(1.8rem, 1.9rem);
+    @include responsive-font-size(1.7rem, 1.8rem);
     border: 2px solid #51515137;
     border-radius: 30px;
     display: block;
@@ -268,39 +270,40 @@
     padding: 1rem 2rem;
     transition: border 0.3s;
     width: 100%;
-  
+
     &:hover,
     &:focus,
     &:focus-visible {
       border: 2px solid $color-primary;
     }
   }
-  
+
   label {
-    @include responsive-font-size(1.8rem, 1.9rem);
+    @include responsive-font-size(1.7rem, 1.8rem);
     color: $color-body;
     display: block;
     font-weight: 500;
     margin-bottom: 1rem;
     margin-inline-start: 1rem;
   }
-  
+
   textarea {
     resize: vertical;
   }
-  
+
   .invalid {
+
     label,
     p {
-      @include responsive-font-size(1.8rem, 1.9rem);
+      @include responsive-font-size(1.7rem, 1.8rem);
       color: $color-error;
       margin-top: 0.5rem;
     }
-  
+
     input,
     textarea {
       border: 1px solid $color-error;
     }
   }
-  </style>
+</style>
   
