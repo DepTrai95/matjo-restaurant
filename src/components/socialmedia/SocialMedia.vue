@@ -35,17 +35,16 @@ export default {
    },
    mounted() {
       const isHomepage = window.location.pathname === '/' || window.location.pathname === '';
-      if (!isHomepage) {
-         this.pageIsScrolled = true;
-      } else {
-         window.addEventListener('scroll', this.handleScroll);
-      }
+      if (!isHomepage) this.pageIsScrolled = true;
+      window.addEventListener('scroll', this.handleScroll);
    },
    methods: {
       handleScroll: debounce(function () {
          const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
          const isHomepage = window.location.pathname === '/' || window.location.pathname === '';
-         (isHomepage && scrollPosition > 100) ? this.pageIsScrolled = true : this.pageIsScrolled = false;
+         if (!isHomepage) this.pageIsScrolled = true;
+         if (isHomepage && scrollPosition > 100) this.pageIsScrolled = true;
+         if (isHomepage && scrollPosition <= 100) this.pageIsScrolled = false;
       }, 100),
    },
 }
