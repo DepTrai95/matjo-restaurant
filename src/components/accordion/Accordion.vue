@@ -141,12 +141,13 @@ export default {
    align-items: center;
    background-color: $color-white;
    border: 1px solid $color-white;
-   border-radius: 30px;
+   border-radius: 25px;
    border-end-end-radius: 0;
    border-end-start-radius: 0;
    cursor: pointer;
    display: flex;
    justify-content: space-between;
+   line-height: 1.3;
    padding-block: 30px 10px;
    padding-inline: 20px;
    text-align: left;
@@ -188,6 +189,7 @@ export default {
 }
 
 .accordion__content-inner {
+   line-height: 1.3;
    padding-block: 30px;
    padding-inline: 20px;
    transition: padding 0.3s ease-in-out;

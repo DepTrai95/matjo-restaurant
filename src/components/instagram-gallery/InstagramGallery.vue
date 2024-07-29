@@ -1,11 +1,10 @@
 <template>
    <section class="content-area">
       <h2 class="text-center">Folge uns auf Instagram</h2>
-      <div class="grid-5--tablet-landscape-up">
+      <div class="grid-instagram grid-2 grid-3--tablet-portrait-up grid-5--tablet-landscape-up">
          <div class="grid-item" v-for="img in images" :key="img.id">
             <a class="instagram-img__container" :href="img.permalink" target="_blank" rel="noopener noreferrer">
-               <img class="instagram-img" :src="img.media_url" :id="img.id" alt="Bild aus Instagram" height="260"
-                  width="260">
+               <img class="instagram-img" :src="img.media_url" :id="img.id" alt="Bild aus Instagram" height="260" width="260">
             </a>
          </div>
       </div>
@@ -14,6 +13,7 @@
 
 <script>
 import { toastStore } from '../../store/store.js';
+import debounce from '../../utils.js';
 import StageSeparator from '../stage/StageSeparator.vue';
 
 export default {
@@ -45,24 +45,56 @@ export default {
             console.error(error);
          }
       },
+      handleResize: debounce(function() {
+         this.calculateImageHeight();
+      }, 250),
+      calculateImageHeight() {
+         const gridItemWidth = document.querySelector('.instagram-img').offsetWidth;
+         const instagramImages = document.querySelectorAll('.instagram-img');
+         instagramImages.forEach(img => {
+            img.style.height = `${gridItemWidth}px`;
+         });
+      }
    },
    mounted() {
       this.fetchInstagramImages();
-   }
+      window.addEventListener('resize', this.handleResize);
+   },
 }
 </script>
 
 <style lang="scss" scoped>
+.grid-instagram {
+   @include for-tablet-portrait-only {
+      .grid-item:nth-child(10) {
+         display: none;
+      }
+   }
+}
+
 .instagram-img__container {
    align-items: center;
    display: flex;
    overflow: hidden;
+
 }
 
 .instagram-img {
-   height: 280px;
+   min-height: 190px;
    object-fit: cover;
    transition: filter .3s ease-in-out;
+
+   @include for-tablet-portrait-up {
+      height: 250px;
+   }
+
+   @include for-tablet-landscape-up {
+      height: 200px;
+   }
+
+   @include for-desktop-up {
+      height: 285px;
+   }
 
    &:hover {
       filter: brightness(1.2);

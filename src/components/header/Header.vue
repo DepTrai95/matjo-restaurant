@@ -97,7 +97,7 @@ export default {
   inset-inline: 0;
   position: fixed;
   transition: background-color 0.25s ease-in-out, inset 0.25s ease-in-out, border-radius 0.25s;
-  z-index: 100;
+  z-index: 101;
 
   @include for-phone-only {
      color: $color-black;

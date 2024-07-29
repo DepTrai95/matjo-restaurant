@@ -2,7 +2,7 @@
    <footer class="footer">
       <stage-separator class="stage__separator--black"></stage-separator>
       <div class="restaurant__information">
-         <h3>MATJO - Korean BBQ</h3>
+         <h3>MATJO - Korean BBQ und Hotpot</h3>
          <div class="footer__addresses">
             <a href="https://maps.app.goo.gl/GQEmGFkc8XoHixLH8/" target="_blank" noopener noreferrer>
                <span class="street">Alaunstraße 9</span>

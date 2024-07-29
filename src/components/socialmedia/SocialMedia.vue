@@ -34,13 +34,19 @@ export default {
       }
    },
    mounted() {
-      window.addEventListener('scroll', this.handleScroll);
+      const isHomepage = window.location.pathname === '/' || window.location.pathname === '';
+      if (!isHomepage) {
+         this.pageIsScrolled = true;
+      } else {
+         window.addEventListener('scroll', this.handleScroll);
+      }
    },
    methods: {
       handleScroll: debounce(function () {
          const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-         (scrollPosition > 100) ? this.pageIsScrolled = true : this.pageIsScrolled = false;
-      }, 100)
+         const isHomepage = window.location.pathname === '/' || window.location.pathname === '';
+         (isHomepage && scrollPosition > 100) ? this.pageIsScrolled = true : this.pageIsScrolled = false;
+      }, 100),
    },
 }
 </script>
@@ -52,7 +58,7 @@ export default {
    @include for-tablet-portrait-up {
       display: block;
       position: fixed;
-      right: 30px;
+      right: 20px;
       top: 50%;
       z-index: 100;
    }

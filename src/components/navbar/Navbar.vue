@@ -210,7 +210,6 @@ export default {
   }
 
   .nav-main__wrapper {
-
      @include for-phone-only {
          justify-content: center;
          height: 0;
@@ -236,7 +235,7 @@ export default {
 
          &.is-open {
             border: 1px solid rgba(255, 255, 255, 0.3);
-            height: 45vh;
+            height: 40vh;
          }
      }
   }
@@ -249,6 +248,7 @@ export default {
         @include responsive-font-size(1.8rem, 2rem);
         color: $color-white;
         justify-content: center;
+        gap: 1rem;
         padding: 5px;
         text-transform: uppercase;
         width: 100%;
@@ -339,5 +339,14 @@ export default {
      text-align: center;
      text-transform: uppercase;
   }
+}
+</style>
+
+<style lang="scss">
+.social-media-menu__item {
+   .icon-container .icon {
+      height: 2.5rem;
+      width: 2.5rem;
+   }
 }
 </style>

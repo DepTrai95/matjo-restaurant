@@ -34,7 +34,7 @@
               <div class="grid-item">
                 <div class="menu-item">
                   <a href="#">
-                    <img src="/img/lunch/lunch-large.webp" alt="Bild für Mittagsgerichte">
+                    <img src="/img/lunch/lunch-large.webp" height alt="Bild für Mittagsgerichte">
                     <span class="menu-category">Mittagskarte</span>
                   </a>
                 </div>
@@ -86,13 +86,15 @@ export default {
 
 <style lang="scss" scoped>
   .menu.grid--default {
-    >.grid-item:first-child {
-      width: 40%;
-    }
-
-    >.grid-item:last-child {
-      margin-top: 50px;
-      width: 60%;
+    @include for-tablet-portrait-up {
+      >.grid-item:first-child {
+        width: 40%;
+      }
+  
+      >.grid-item:last-child {
+        margin-top: 50px;
+        width: 60%;
+      }
     }
   } 
 
@@ -122,6 +124,11 @@ export default {
       display: block;
       padding: 1rem;
       transition: padding 0.4s ease-in-out;
+      
+      @include for-phone-only {
+        aspect-ratio: 1;
+        object-fit: cover;
+      }
     }
 
     .menu-category {

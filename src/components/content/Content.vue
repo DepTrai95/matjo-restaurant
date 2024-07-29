@@ -129,11 +129,15 @@ export default {
 
    }
 
-   >.inner >h2 {
+   > .inner > h2 {
       // border-bottom: 4px solid $color-primary;
       margin-bottom: 0;
-      padding-bottom: 5rem;
+      padding-bottom: 3rem;
       position: relative;
+
+      @include for-tablet-landscape-up {
+         padding-bottom: 5rem;
+      }
 
       &.fade-in {
          &::after {
@@ -155,9 +159,9 @@ export default {
    }
    
 
-   .grid-2--tablet-landscape-up>.grid-item {
+   .grid-2--tablet-landscape-up > .grid-item {
       opacity: 0;
-      padding: 3rem;
+      padding-block: 3rem;
       position: relative;
       transform: translateY(30px);
       transition: opacity 0.3s ease-in, transform 0.3s ease-in;
@@ -213,7 +217,7 @@ export default {
 
 .content__heading {
    h3 {
-      @include responsive-font-size(3.5rem, 4rem);
+      @include responsive-font-size(3rem, 4rem);
       margin-block-start: 0;
    }
 }

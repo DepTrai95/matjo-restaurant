@@ -2,7 +2,7 @@
    <section class="content-area">
       <div class="inner">
          <h2 class="text-center">{{ heading }}</h2>
-         <div class="grid--default icon-list" :class="`grid-${iconList.length}--tablet-portrait-up`">
+         <div class="grid--default icon-list grid-2--tablet-portrait-down" :class="`grid-${iconList.length}--tablet-portrait-up`">
             <div class="grid-item" v-for="iconListItem in iconList" :key="iconListItem.id">
                <Icon :icon="iconListItem.icon"></Icon>
                <h3>{{ iconListItem.heading }}</h3>
