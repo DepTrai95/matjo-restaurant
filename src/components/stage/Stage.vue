@@ -12,7 +12,7 @@
          </picture>
       </div>
       <hgroup class="stage__headline">
-         <div class="stage__cta__wrapper" v-if="!isMobile">
+         <div class="stage__cta__wrapper" v-if="!isMobile && showSubHeader">
             <router-link class="btn--primary" to="/menu">Zum Menü</router-link>
             <router-link class="btn--primary" to="/contact">Zur Reservierung</router-link>
          </div>

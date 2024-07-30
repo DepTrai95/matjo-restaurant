@@ -148,12 +148,17 @@ a {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.3s ease-in, transform 0.3s ease-in;
-  
+
+    @include for-phone-only {
+      margin-block-end: 2rem;
+    }  
+
     &.fade-in {
       opacity: 1;
       transform: translateY(0);
     }
   }
 }
+
 </style>
   

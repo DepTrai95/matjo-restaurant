@@ -22,7 +22,7 @@
          </div>
 
          <div class="nav-cta__wrapper" v-if="!isMobile">
-            <router-link class="btn--primary" to="/contact">Bestellen</router-link>
+            <router-link class="btn--primary" to="/contact">Jetzt Bestellen</router-link>
          </div>
 
          <div class="mobile-navigation" v-if="isMobile">
@@ -44,6 +44,7 @@
                      <LinkRouter link="/menu" label="Menu" />
                      <LinkRouter link="/career" label="Karriere" />
                      <LinkRouter link="/contact" label="Kontakt" />
+                     <LinkRouter link="/contact" label="Jetzt Bestellen" />
                   </ul>
                   <ul class="list--unstyled social-media-menu">
                      <li class="social-media-menu__item">
@@ -179,27 +180,31 @@ export default {
 }
 
 .logo__container {
-  align-items: center;
-  display: flex;
+   align-items: center;
+   display: flex;
   
-  @include for-phone-only {
-     left: 50%;
-     position: absolute;
-     top: 50%;
-     transform: translate(-50%, -50%);
-  }
+   @include for-phone-only {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+   }
 
-  .logo {
-     a {
-        display: block;
-     }
+   @include for-tablet-portrait-up {
+      min-width: 150px;
+   }
 
-     img {
-        @include for-phone-only {
-           height: 50px;
-        }
-     }
-  }
+   .logo {
+      a {
+         display: block;
+      }
+
+      img {
+         @include for-phone-only {
+            height: 50px;
+         }
+      }
+   }
 }
 
 .mobile-navigation {
@@ -235,7 +240,7 @@ export default {
 
          &.is-open {
             border: 1px solid rgba(255, 255, 255, 0.3);
-            height: 40vh;
+            height: 45vh;
          }
      }
   }

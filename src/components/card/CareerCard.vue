@@ -69,6 +69,7 @@ export default {
 
 .career__body {
    flex-grow: 1;
+   line-height: 1.5;
    margin-block-end: 2rem;
 }
 
