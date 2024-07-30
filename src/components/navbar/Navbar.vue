@@ -22,7 +22,7 @@
          </div>
 
          <div class="nav-cta__wrapper" v-if="!isMobile">
-            <router-link class="btn--primary" to="/contact">Reservieren</router-link>
+            <router-link class="btn--primary" to="/contact">Bestellen</router-link>
          </div>
 
          <div class="mobile-navigation" v-if="isMobile">

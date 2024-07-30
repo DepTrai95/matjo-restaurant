@@ -12,6 +12,10 @@
          </picture>
       </div>
       <hgroup class="stage__headline">
+         <div class="stage__cta__wrapper" v-if="!isMobile">
+            <router-link class="btn--primary" to="/menu">Zum Menü</router-link>
+            <router-link class="btn--primary" to="/contact">Zur Reservierung</router-link>
+         </div>
          <h1>{{ headline }}</h1>
          <h2 v-if="showSubHeader">안녕하세요</h2>
       </hgroup>
@@ -22,134 +26,149 @@
    </div>
 </template>
  
- <script>
-    export default {
-       props: {
-          headerHeightMax: {
-             type: Boolean,
-             default: false,
-          },
-          headline: {
-             type: String,
-             required: true,
-          },
-          showSubHeader: {
-             type: Boolean,
-             default: false,
-          },
-          showBackground: {
-             type: Boolean,
-             default: false,
-          },
-       },
-       watch: {
-          '$route': {
-             immediate: true,
-             handler(to) {
-                this.animateStageHeadline();
-             }
-          }
-       },
-       methods: {
-          scrollToNextSection() {
-             const nextSection = document.querySelector('.content-area');
-             const headerHeight = document.querySelector('header').offsetHeight;
- 
-             if (nextSection) {
-                window.scrollTo({
-                   top: nextSection.offsetTop - headerHeight,
-                   behavior: 'smooth'
-                });
-             }
-          },
-          animateStageHeadline() {
-             const header = document.querySelector('h1');
- 
-             setTimeout(() => {
-                header?.classList.add('visible');
-             }, 250);
- 
-             setTimeout(() => {
-                const headerDescr = document.querySelector('h2');
-                const arrow = document.querySelector('.stage__arrow-down');
- 
-                headerDescr?.classList.add('visible');
-                arrow?.classList.add('visible');
-             }, 400);
-          }
-       },
-    }
- </script>
- 
- <style lang="scss" scoped>
- .stage {
-    min-height: 100vh;
-    min-height: 100dvh;
-    position: relative;
+<script>
+export default {
+   props: {
+      headerHeightMax: {
+         type: Boolean,
+         default: false,
+      },
+      headline: {
+         type: String,
+         required: true,
+      },
+      showSubHeader: {
+         type: Boolean,
+         default: false,
+      },
+      showBackground: {
+         type: Boolean,
+         default: false,
+      },
+   },
+   watch: {
+      '$route': {
+         immediate: true,
+         handler(to) {
+            this.animateStageHeadline();
+         }
+      }
+   },
+   methods: {
+      scrollToNextSection() {
+         const nextSection = document.querySelector('.content-area');
+         const headerHeight = document.querySelector('header').offsetHeight;
 
-    &.stage__full-height {
+         if (nextSection) {
+            window.scrollTo({
+               top: nextSection.offsetTop - headerHeight,
+               behavior: 'smooth'
+            });
+         }
+      },
+      animateStageHeadline() {
+         const header = document.querySelector('h1');
+
+         setTimeout(() => {
+            header?.classList.add('visible');
+         }, 250);
+
+         setTimeout(() => {
+            const headerDescr = document.querySelector('h2');
+            const arrow = document.querySelector('.stage__arrow-down');
+
+            headerDescr?.classList.add('visible');
+            arrow?.classList.add('visible');
+         }, 400);
+      }
+   },
+}
+</script>
+ 
+<style lang="scss" scoped>
+.stage {
+   min-height: 100vh;
+   // min-height: 100dvh;
+   position: relative;
+
+   &.stage__full-height {
       .stage__headline {
          @include for-tablet-landscape-up {
             width: 50%;
          }
       }
-    }
+   }
  }
  
- .stage__half-height {
-    min-height: 50vh;
-    min-height: 50dvh;
- }
+.stage__half-height {
+   min-height: 50vh;
+   // min-height: 50dvh;
+}
  
- .stage__background {
-    background-color: #333;
-    inset: 0;
-    position: absolute;
- 
-    img {
-       height: 100%;
-       object-fit: cover;
-       width: 100%;
-    }
- }
-
- .blur {
+.stage__background {
+   background-color: #333;
    inset: 0;
    position: absolute;
-   // background: linear-gradient(to right, rgba(243, 231, 233, 0.5), rgba(243, 231, 233, 0));
-   background: linear-gradient(to right, rgb(163 163 163 / 50%), rgb(35 35 35 / 40%))
- }
+
+   img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+   }
+}
+
+.blur {
+inset: 0;
+position: absolute;
+// background: linear-gradient(to right, rgba(243, 231, 233, 0.5), rgba(243, 231, 233, 0));
+background: linear-gradient(to right, rgb(163 163 163 / 50%), rgb(35 35 35 / 40%))
+}
  
- .stage__headline {
-    display: flex;
-    flex-direction: column-reverse;
-    inset: 0;
-    justify-content: center;
-    padding-inline: 1.8rem;
-    position: absolute;
- 
-    h1 {
-       color: $color-white;
-       margin: 0;
-       margin-block-start: -1rem;
- 
-       @include for-tablet-landscape-up {
-          @include responsive-font-size(3.6rem, 4rem);
-       }
-    }
- 
-    h2 {
-      @include responsive-font-size(8rem, 9rem);
-       color: $color-primary;
-       font-weight: 400;
-       margin: 0;
-       text-align: center;
- 
-       @include for-tablet-landscape-up {
-          @include responsive-font-size(10rem, 10.5rem);
-       }
-    }
- }
+.stage__headline {
+   display: flex;
+   flex-direction: column-reverse;
+   inset: 0;
+   justify-content: center;
+   padding-inline: 1.8rem;
+   position: absolute;
+
+   h1 {
+      color: $color-white;
+      margin: 0;
+      margin-block-start: -1rem;
+
+      @include for-tablet-landscape-up {
+         @include responsive-font-size(3.6rem, 4rem);
+      }
+   }
+
+   h2 {
+   @include responsive-font-size(8rem, 9rem);
+      color: $color-primary;
+      font-weight: 400;
+      margin: 0;
+      text-align: center;
+
+      @include for-tablet-landscape-up {
+         @include responsive-font-size(10rem, 10.5rem);
+      }
+   }
+}
+
+.stage__cta__wrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin-block-start: 1.5rem;
+   
+   .btn--primary {
+      min-width: 150px;
+   }
+
+   .btn--primary + .btn--primary{
+      margin-inline: 1rem;
+   }
+}
  
  // animation h1 and h2
  h1 {
