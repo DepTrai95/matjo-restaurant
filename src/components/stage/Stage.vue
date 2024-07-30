@@ -162,7 +162,10 @@ background: linear-gradient(to right, rgb(163 163 163 / 50%), rgb(35 35 35 / 40%
    margin-block-start: 1.5rem;
    
    .btn--primary {
+      @include responsive-font-size(1.6rem, 1.7rem);
       min-width: 150px;
+      padding: 10px;
+      text-align: center;
    }
 
    .btn--primary + .btn--primary{
