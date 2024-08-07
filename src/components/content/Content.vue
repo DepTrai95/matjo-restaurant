@@ -246,7 +246,7 @@ export default {
       position: absolute;
       left: 0;
       top: 0;
-      transform: translate(0, 0%);
+      transform: translate(5%, -5%);
 
       @include for-tablet-landscape-up {
          transform: translate(25px, 25px)

@@ -134,8 +134,9 @@ background: linear-gradient(to right, rgb(163 163 163 / 50%), rgb(35 35 35 / 40%
 
    h1 {
       color: $color-white;
+      font-family: "TextMeOne", "Calibri", sans-serif;
       margin: 0;
-      margin-block-start: -1rem;
+      margin-block-start: -1.5rem;
 
       @include for-tablet-landscape-up {
          @include responsive-font-size(3.6rem, 4rem);
@@ -145,6 +146,7 @@ background: linear-gradient(to right, rgb(163 163 163 / 50%), rgb(35 35 35 / 40%
    h2 {
    @include responsive-font-size(8rem, 9rem);
       color: $color-primary;
+      font-family: "TextMeOne", "Calibri", sans-serif;
       font-weight: 400;
       margin: 0;
       text-align: center;
