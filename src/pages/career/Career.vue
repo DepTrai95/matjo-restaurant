@@ -5,9 +5,8 @@
       <div class="inner">
         <div class="career">
           <h2>WERDE TEIL UNSERES TEAMS</h2>
-          <p>Du servierst gerne in einem dynamischen, schnellen und abwechslungsreichen Arbeitsumfeld fantastische
-            koreanische Speisen?</p>
-          <p>Dann kontaktiere uns! Bei Matjo freuen wir uns immer auf talentiertes, allen voran aber freundliches und
+          <p>Du servierst gerne in einem dynamischen, schnellen und abwechslungsreichen Arbeitsumfeld fantastische Speisen?</p>
+          <p>Dann kontaktiere uns! Bei MATJO freuen wir uns immer auf talentiertes, allen voran aber freundliches und
             engagiertes Service-, Bar- und Küchenpersonal</p>
           <p>Wir freuen uns auf Deine Bewerbung mit Lebenslauf und kurzem Anschreiben an <a
               href="info@matjo.de">info@matjo.de</a>
@@ -42,26 +41,14 @@ export default {
         { 
           title: 'Servicekraft',
           description: 'Eine Servicekraft ist ein/e Fachmann/-frau in der Gastronomie, der/die sich mit der Betreuung, Beratung und Bewirtung von Gästen in gastronomischen Einrichtungen befasst.',
-          workingTime: 'Vollzeit',
+          workingTime: 'Vollzeit/Teilzeit',
           subject: 'Bewerbung als Servicekraft in Vollzeit'
         },
         {
-          title: 'Servicekraft',
-          description: 'Eine Servicekraft ist ein/e Fachmann/-frau in der Gastronomie, der/die sich mit der Betreuung, Beratung und Bewirtung von Gästen in gastronomischen Einrichtungen befasst.',
-          workingTime: 'Teilzeit',
-          subject: 'Bewerbung als Servicekraft in Teilzeit'
-        },
-        {
           title: 'Koch/Köchin',
           description: 'Ein/e Koch/Köchin ist ein/e Fachmann/-frau in der Küche, der/die sich mit der Zubereitung, Verfeinerung und Präsentation von Speisen in gastronomischen Betrieben befasst',
-          workingTime: 'Vollzeit',
+          workingTime: 'Vollzeit/Teilzeit',
           subject: 'Bewerbung als Koch/Köchin in Vollzeit'
-        },
-        {
-          title: 'Koch/Köchin',
-          description: 'Ein/e Koch/Köchin ist ein/e Fachmann/-frau in der Küche, der/die sich mit der Zubereitung, Verfeinerung und Präsentation von Speisen in gastronomischen Betrieben befasst',
-          workingTime: 'Teilzeit',
-          subject: 'Bewerbung als Koch/Köchin in Teilzeit'
         },
         {
           title: 'Content Creator',

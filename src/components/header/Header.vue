@@ -24,7 +24,7 @@ export default {
      return {
         isMobile: "",
         headerHeightMax: false,
-        headline: 'Korean-BBQ and HotPot',
+        headline: 'BBQ & HotPot',
         showSubHeader: false,
         showBackground: false,
      };
@@ -40,7 +40,7 @@ export default {
   methods: {
      updateHeaderProps(route) {
         this.headerHeightMax = route.meta.headerHeightMax !== undefined ? route.meta.headerHeightMax : false;
-        this.headline = route.meta.headline || 'Matjo';
+        this.headline = route.meta.headline || 'MATJO';
         this.showSubHeader = route.meta.showSubHeader !== undefined ? route.meta.showSubHeader : false;
         this.showBackground = route.meta.showBackground !== undefined ? route.meta.showBackground : false;
      },
@@ -92,12 +92,12 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  background-color: transparent;
-  color: $color-white;
-  inset-inline: 0;
-  position: fixed;
-  transition: background-color 0.25s ease-in-out, inset 0.25s ease-in-out, border-radius 0.25s;
-  z-index: 101;
+   background-color: transparent;
+   color: $color-white;
+   inset-inline: 0;
+   position: fixed;
+   transition: background-color 0.25s ease-in-out, inset 0.25s ease-in-out, border-radius 0.25s;
+   z-index: 101;
 
   @include for-phone-only {
      color: $color-black;
@@ -107,10 +107,12 @@ export default {
 }
 
 .header--inverted {
+   background-color: rgba(255, 255, 255, 0.9);
+   
    @include for-tablet-portrait-up {
       color: $color-header;
-      inset-inline: 50px;
-      inset-block-start: 10px;
+      // inset-inline: 50px;
+      // inset-block-start: 10px;
   }
 }
 </style>

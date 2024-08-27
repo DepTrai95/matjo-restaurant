@@ -16,7 +16,7 @@
                   <LinkRouter link="/" label="Home" />
                   <LinkRouter link="/menu" label="Menu" />
                   <LinkRouter link="/career" label="Karriere" />
-                  <LinkRouter link="/contact" label="Kontakt" />
+                  <!-- <LinkRouter link="/contact" label="Kontakt" /> -->
                </ul>
             </nav>
          </div>
@@ -43,7 +43,7 @@
                      <LinkRouter link="/" label="Home" />
                      <LinkRouter link="/menu" label="Menu" />
                      <LinkRouter link="/career" label="Karriere" />
-                     <LinkRouter link="/contact" label="Kontakt" />
+                     <!-- <LinkRouter link="/contact" label="Kontakt" /> -->
                      <LinkRouter link="/contact" label="Jetzt Bestellen" />
                   </ul>
                   <ul class="list--unstyled social-media-menu">
@@ -51,9 +51,13 @@
                         <a href="">
                            <Icon :icon="'facebook'"></Icon>
                         </a>
+                     </li>
+                     <li class="social-media-menu__item">
                         <a href="">
                            <Icon :icon="'instagram'"></Icon>
                         </a>
+                     </li>
+                     <li class="social-media-menu__item">
                         <a href="">
                            <Icon :icon="'tiktok'"></Icon>
                         </a>
@@ -143,7 +147,7 @@ export default {
 .inner {
   .header--inverted & {
       color: $color-header;
-      background-color: rgba(255, 255, 255, 0.9);
+      // background-color: rgba(255, 255, 255, 0.9);
       border-radius: 50px;
   }
 
@@ -157,9 +161,9 @@ export default {
       @include for-phone-only {
          height: $header-height-mobile;
          border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 30px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      padding: 0;
+         border-radius: 30px;
+         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+         padding: 0;
       
       &::before {
          backdrop-filter: blur(10px);
@@ -267,6 +271,10 @@ export default {
            width: 2rem;
         }
      }
+
+      .social-media-menu__item {
+         width: auto;
+      }
   }
 }
 
@@ -348,6 +356,12 @@ export default {
 </style>
 
 <style lang="scss">
+.social-media-menu {
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+}
+
 .social-media-menu__item {
    .icon-container .icon {
       height: 2.5rem;

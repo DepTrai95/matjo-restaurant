@@ -6,8 +6,24 @@
     <stage-separator class="stage__separator "></stage-separator>
     <IconList :heading="ourValues.heading" :iconList="ourValues.iconList"></IconList>
 
-    <stage-separator class="stage__separator stage__separator--tinted"></stage-separator>
-    <Content class="content-area--tinted" :content="koreanBbqIntro"></Content>
+    <!-- <stage-separator class="stage__separator stage__separator--tinted"></stage-separator>
+    <Content class="content-area--tinted" :content="koreanBbqIntro"></Content> -->
+
+
+    <stage-separator class="stage__separator--tinted"></stage-separator>
+    <section class="content-area content-area--tinted">
+      <div class="img-gallery">
+        <div class="inner">
+          <h2 class="text-center">Unsere Meisterwerke</h2>
+          <div class="grid--default grid-2--tablet-portrait-up grid-4--tablet-landscape-up">
+            <div class="grid-item" v-for="img in imgGallery" :key="img.id">
+              <Img :img="img"></Img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <stage-separator class="stage__separator"></stage-separator>
     <InstagramGallery></InstagramGallery>
@@ -29,6 +45,7 @@ import IconList from '../../components/icon-text-list/IconList.vue';
 import Icon from '../../assets/svg/Icon.vue';
 import StageSeparator from '../../components/stage/StageSeparator.vue';
 import InstagramGallery from '../../components/instagram-gallery/InstagramGallery.vue';
+import Img from '../../components/img/Img.vue'
 
 export default {
   name: 'Home',
@@ -37,6 +54,7 @@ export default {
     Content,
     IconList,
     Icon,
+    Img,
     InstagramGallery,
     StageSeparator,
   },
@@ -59,7 +77,7 @@ export default {
           {
             icon: 'bulb',
             heading: 'Einzigartig',
-            description: 'Erleben Sie ausgefallene und kreative koreanische Gerichte, die Sie so bisher nicht kannten.',
+            description: 'Erleben Sie ausgefallene und kreative Gerichte, die Sie so bisher nicht kannten.',
           },
           {
             icon: 'group',
@@ -73,9 +91,9 @@ export default {
         title: 'Über uns',
         subTitle: 'Unser Versprechen',
         textContent: [
-          'Matjo ist ein koreanisches Restaurant am Eingang von Dresdens schöner Neustadt.',
+          'MATJO ist ein asiatisches Restaurant am Eingang von Dresdens schöner Neustadt.',
           'Entdecken Sie bei uns eine Fusion von Aromen in unserem BBQ- und Hotpot-Lokalm in welchem Tradition auf Geschmack trifft.',
-          'Seit unserer Eröffnung im August 2024 sind wir bestrebt exzellenten Service und eine kulinarische Reise durch die koreanische Küche zu bieten.',
+          'Seit unserer Eröffnung im August 2024 sind wir bestrebt exzellenten Service und eine kulinarische Reise durch die asiatisches Küche zu bieten.',
           'Schauen Sie sich unsere Karte an und buchen Sie jetzt Ihren Tisch und lassen Sie sich von magischem Geschmack verzaubern.',
         ],
         callToAction: { to: '/menu', text: 'Speisekarte/Menu' },
@@ -84,14 +102,19 @@ export default {
           { id: 'img-tischgrill', imgSrc: '/img/tischgrill/tischgrill.webp' },
         ]
       },
-
+      imgGallery: [
+        { id: 'img-bbq', imgSrc: '/img/bbq/bbq.webp' },
+        { id: 'img-bbq-steak', imgSrc: '/img/bbq-steak/bbq-steak.webp' },
+        { id: 'img-porkbelly', imgSrc: '/img/porkbelly/porkbelly.webp' },
+        { id: 'img-streetfood', imgSrc: '/img/streetfood/streetfood.webp' },
+      ],
       koreanBbqIntro: {
         id: 'intro',
         title: 'BBQ und Hotpot',
         subTitle: 'Unsere Delikatessen',
         textContent: [
-          'In jedem koreanischen Restaurant steht das Ziel, eine außergewöhnliche kulinarische Erfahrung zu bieten.',
-          'Bei Matjo werden die Gerichte für euch nach saisonalen Charakteristiken gestaltet und nur die frischesten und hochwertigsten Zutaten verwendet.',
+          'In jedem Restaurant steht das Ziel, eine außergewöhnliche kulinarische Erfahrung zu bieten.',
+          'Bei MATJO werden die Gerichte für euch nach saisonalen Charakteristiken gestaltet und nur die frischesten und hochwertigsten Zutaten verwendet.',
           'Unsere Atmossphäre ist traditionell, gleichzeitig aber modern. Jedes Gericht ist eine spannende Komposition, die ein zugängliches kulinarisches Abenteuer bietet.',
           'Besuchen Sie uns und lassen sich verzaubern.',
         ],

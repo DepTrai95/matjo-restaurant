@@ -19,7 +19,7 @@
         <div class="grid--default grid-2--tablet-landscape-up">
           <div class="grid-item">
             <div class="reservation-info">
-              <p>Matjo - Korean BBQ and Hotpot</p>
+              <p>MATJO - Korean BBQ & Hotpot</p>
               <p class="center">
                 Wir nehmen jeden Tag gerne Reservierungen entgegen, diese könnt ihr ganz bequem auf unserer Website buchen.
               </p>

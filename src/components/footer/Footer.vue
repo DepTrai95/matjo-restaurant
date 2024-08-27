@@ -2,9 +2,10 @@
    <footer class="footer">
       <stage-separator class="stage__separator--black"></stage-separator>
       <div class="restaurant__information">
-         <h3>MATJO - Korean BBQ und Hotpot</h3>
          <div class="footer__addresses">
+            <h3>Kontakt</h3>
             <a href="https://maps.app.goo.gl/GQEmGFkc8XoHixLH8/" target="_blank" noopener noreferrer>
+               <span>MATJO - BBQ & Hotpot</span>
                <span class="street">Alaunstraße 9</span>
                <span class="postcode">01099 Dresden</span>
             </a>
@@ -19,6 +20,26 @@
             <p>Samstag, Sonntag und Feiertage:<br>
                11:00 - 23:00 Uhr
             </p>
+         </div>
+         <div v-if="isMobile" class="footer__social-media">
+            <h3>Social Media:</h3>
+            <ul class="list--unstyled social-media-list">
+               <li class="social-media-list__item">
+                  <a href="">
+                     <Icon :icon="'facebook'"></Icon>
+                  </a>
+               </li>
+               <li class="social-media-list__item">
+                  <a href="">
+                     <Icon :icon="'instagram'"></Icon>
+                  </a>
+               </li>
+               <li class="social-media-list__item">
+                  <a href="">
+                     <Icon :icon="'tiktok'"></Icon>
+                  </a>
+               </li>
+            </ul>
          </div>
       </div>
       <div class="copyright__area">
@@ -48,16 +69,19 @@
 <script>
 import LinkRouter from '../link/LinkRouter.vue'
 import StageSeparator from '../stage/StageSeparator.vue';
+import Icon from '../../assets/svg/Icon.vue';
 
 export default {
   components: {
      LinkRouter,
      StageSeparator,
+     Icon,
   },
   data() {
      return {
         scrollListener: null,
         throttleTimeout: null,
+        isMobile: "",
      };
   },
   methods: {
@@ -91,9 +115,13 @@ export default {
               arrow.classList.remove('bouncing');
            }, index * 250);
         })
-     }
+     },
+     checkIsMobile() {
+        this.isMobile = window.innerWidth <= 599;
+     },
   },
   mounted() {
+     this.checkIsMobile();
      this.scrollListener = this.handleScroll.bind(this);
      window.addEventListener('scroll', this.scrollListener);
   },
@@ -115,17 +143,30 @@ export default {
   &__opening-hours {
      @include responsive-font-size(1.7rem, 1.8rem);
      margin-block-end: 3rem;
+
+     @include for-tablet-portrait-up {
+         width: 50%;
+     }
   }
 }
 
 .restaurant__information {
-  margin-inline: 2rem;
-  padding-block: 3rem 3.5rem;
+   margin-inline: 3rem;
+   padding-block: 3rem 3.5rem;
 
-  @include for-tablet-portrait-up {
-     margin: 0 auto;
-     width: calc(100% / 3);
-  }
+   @include for-tablet-portrait-up {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 3rem;
+      margin: 0 auto;
+      max-width: $content-max-width - (2 * $content-padding);
+      width: calc(100% / 1.5);
+   }
+
+   @include for-tablet-landscape-up {
+      width: calc(100% / 3);
+   }
 
   a {
       align-items: start;

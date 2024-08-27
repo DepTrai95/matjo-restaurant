@@ -49,7 +49,7 @@ export default {
 <style lang="scss" scoped>
 .career__container {
    // background-color: $color-white;
-   background-color: #fffdf2;
+   background-color: #f2f1ee;
    border: 2px solid $color-primary;
    border-radius: 30px;
    display: flex;

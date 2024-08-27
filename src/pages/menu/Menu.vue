@@ -5,7 +5,7 @@
       <div class="inner">
         <div class="menu grid--default grid-2--tablet-portrait-up">
           <div class="grid-item">
-            <h2>Matjo's Menü</h2>
+            <h2>Menü</h2>
             <p>Um einen Einblick unserer Gerichte zu verschaffen, findest du hier unsere angebotene Speise- und
               Getränkekarte im Restaurant.</p>
             <p>Wir bereiten alle Speisen frisch zu! Vor euren Augen werden unsere Speisen zu Delikatessen.</p>
@@ -44,19 +44,6 @@
         </div>
       </div>
     </section>
-    <stage-separator class="stage__separator--tinted"></stage-separator>
-    <section class="content-area content-area--tinted">
-      <div class="img-gallery">
-        <div class="inner">
-          <h2 class="text-center">Unsere Meisterwerke</h2>
-          <div class="grid--default grid-2--tablet-portrait-up grid-4--tablet-landscape-up">
-            <div class="grid-item" v-for="img in imgGallery" :key="img.id">
-              <Img :img="img"></Img>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
@@ -73,12 +60,6 @@ export default {
   data() {
     return {
       title: 'Menüseite',
-      imgGallery: [
-        { id: 'img-bbq', imgSrc: '/img/bbq/bbq.webp' },
-        { id: 'img-bbq-steak', imgSrc: '/img/bbq-steak/bbq-steak.webp' },
-        { id: 'img-porkbelly', imgSrc: '/img/porkbelly/porkbelly.webp' },
-        { id: 'img-streetfood', imgSrc: '/img/streetfood/streetfood.webp' },
-      ]
     }
   }
 }

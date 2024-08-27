@@ -13,11 +13,11 @@
       </div>
       <hgroup class="stage__headline">
          <div class="stage__cta__wrapper" v-if="!isMobile && showSubHeader">
-            <router-link class="btn--primary" to="/menu">Zum Menü</router-link>
-            <router-link class="btn--primary" to="/contact">Zur Reservierung</router-link>
+            <router-link class="btn--primary" to="/menu">Menü</router-link>
+            <router-link class="btn--primary" to="/contact">Reservierung</router-link>
          </div>
          <h1>{{ headline }}</h1>
-         <h2 v-if="showSubHeader">안녕하세요</h2>
+         <h2 v-if="showSubHeader">MATJO</h2>
       </hgroup>
       <div v-if="showSubHeader" class="stage__arrow-down" @click="scrollToNextSection">
          <div class="arrow"></div>
