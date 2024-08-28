@@ -41,8 +41,9 @@ export default {
             const images = data.data.slice(0, 10);
             this.images = images;
          } catch (error) {
-            toastStore().showToast('error', 'Bilder konnten nicht geladen werden')
+            toastStore().showToast('error', 'Fehler beim Laden der Instagram Bilder')
             console.error(error);
+            throw error;
          }
       },
       handleResize: debounce(function() {

@@ -2,17 +2,20 @@
    <div class="social-media-container" :class="{'scrolled': pageIsScrolled}">
       <ul class="social-media-list">
          <li class="social-media-list__item">
-            <a href="https://www.facebook.com/nguyenducanh95" class="facebook-icon" target="_blank" rel="noopener noreferrer">
+            <a aria-label="Besuche uns auf Facebook" href="https://www.facebook.com/nguyenducanh95" class="facebook-icon"
+               target="_blank" rel="noopener noreferrer">
                <Icon :icon="'facebook'"></Icon>
             </a>
          </li>
          <li class="social-media-list__item">
-            <a href="https://www.instagram.com/ducvnh_nguyen/" class="instagram-icon" target="_blank" rel="noopener noreferrer">
+            <a aria-label="Besuche uns auf Instagram" href="https://www.instagram.com/ducvnh_nguyen/"
+               class="instagram-icon" target="_blank" rel="noopener noreferrer">
                <Icon :icon="'instagram'"></Icon>
             </a>
          </li>
          <li class="social-media-list__item">
-            <a href="https://www.tiktok.com/@anja_nguyen" class="tiktok-icon" target="_blank" rel="noopener noreferrer">
+            <a aria-label="Besuche uns auf TikTok" href="https://www.tiktok.com/@anja_nguyen" class="tiktok-icon"
+               target="_blank" rel="noopener noreferrer">
                <Icon :icon="'tiktok'"></Icon>
             </a>
          </li>

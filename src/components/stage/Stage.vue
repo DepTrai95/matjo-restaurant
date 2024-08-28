@@ -14,7 +14,7 @@
       <hgroup class="stage__headline">
          <div class="stage__cta__wrapper" v-if="!isMobile && showSubHeader">
             <router-link class="btn--primary" to="/menu">Menü</router-link>
-            <router-link class="btn--primary" to="/contact">Reservierung</router-link>
+            <router-link class="btn--primary" to="/contact">Reservieren</router-link>
          </div>
          <h1>{{ headline }}</h1>
          <h2 v-if="showSubHeader">MATJO</h2>
@@ -118,10 +118,11 @@ export default {
 }
 
 .blur {
-inset: 0;
-position: absolute;
-// background: linear-gradient(to right, rgba(243, 231, 233, 0.5), rgba(243, 231, 233, 0));
-background: linear-gradient(to right, rgb(163 163 163 / 50%), rgb(35 35 35 / 40%))
+   inset: 0;
+   position: absolute;
+   // background: linear-gradient(to right, rgba(243, 231, 233, 0.5), rgba(243, 231, 233, 0));
+   background: linear-gradient(to right, rgb(163 163 163 / 50%), rgb(35 35 35 / 40%));
+   background: linear-gradient(to right, rgb(151 150 150 / 50%), rgb(51 50 50 / 40%));
 }
  
 .stage__headline {
@@ -165,8 +166,8 @@ background: linear-gradient(to right, rgb(163 163 163 / 50%), rgb(35 35 35 / 40%
    
    .btn--primary {
       @include responsive-font-size(1.6rem, 1.7rem);
+      box-shadow: 0px 5px 15px 8px rgba(150, 150, 150, 0.3);
       min-width: 150px;
-      padding: 10px;
       text-align: center;
    }
 

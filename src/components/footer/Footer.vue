@@ -25,17 +25,17 @@
             <h3>Social Media:</h3>
             <ul class="list--unstyled social-media-list">
                <li class="social-media-list__item">
-                  <a href="">
+                  <a aria-label="Besuche uns auf Facebook" href="" target="_blank" rel="noopener noreferrer">
                      <Icon :icon="'facebook'"></Icon>
                   </a>
                </li>
                <li class="social-media-list__item">
-                  <a href="">
+                  <a aria-label="Besuche uns auf Instagram" href="" target="_blank" rel="noopener noreferrer">
                      <Icon :icon="'instagram'"></Icon>
                   </a>
                </li>
                <li class="social-media-list__item">
-                  <a href="">
+                  <a aria-label="Besuche uns auf TikTok" href="" target="_blank" rel="noopener noreferrer">
                      <Icon :icon="'tiktok'"></Icon>
                   </a>
                </li>
@@ -84,53 +84,64 @@ export default {
         isMobile: "",
      };
   },
-  methods: {
-     handleScroll() {
-        if (this.throttleTimeout) {
-           return;
-        }
-        this.throttleTimeout = setTimeout(() => {
-           const scrollPosition = window.scrollY + window.innerHeight;
-           const bottomPosition = document.documentElement.scrollHeight - 150;
-           if (scrollPosition >= bottomPosition) {
-              this.onScrollEnd();
-           } else {
-              this.onScrollBack();
-           }
-           this.throttleTimeout = null;
-        }, 150); 
-     },
-     onScrollEnd() {
-        document.querySelector('.blurp--bottom').classList.add('fade-in');
-        document.querySelectorAll('.btn__arrow').forEach((arrow, index) => {
-           setTimeout(() => {
-              arrow.classList.add('bouncing');
-           }, index * 250);
-        })
-     },
-     onScrollBack() {
-        document.querySelector('.blurp--bottom').classList.remove('fade-in');
-        document.querySelectorAll('.btn__arrow').forEach((arrow, index) => {
-           setTimeout(() => {
-              arrow.classList.remove('bouncing');
-           }, index * 250);
-        })
-     },
-     checkIsMobile() {
-        this.isMobile = window.innerWidth <= 599;
-     },
-  },
-  mounted() {
-     this.checkIsMobile();
-     this.scrollListener = this.handleScroll.bind(this);
-     window.addEventListener('scroll', this.scrollListener);
-  },
-  computed: {
-   getCurrentYear() {
-      const date = new Date();
-      return date.getFullYear();
-   }
-  }
+   methods: {
+      handleScroll() {
+         if (this.throttleTimeout) {
+            return;
+         }
+         this.throttleTimeout = setTimeout(() => {
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const bottomPosition = document.documentElement.scrollHeight - 150;
+            if (scrollPosition >= bottomPosition) {
+               this.onScrollEnd();
+            } else {
+               this.onScrollBack();
+            }
+            this.throttleTimeout = null;
+         }, 150); 
+      },
+      onScrollEnd() {
+         document.querySelector('.blurp--bottom').classList.add('fade-in');
+         document.querySelectorAll('.btn__arrow').forEach((arrow, index) => {
+            setTimeout(() => {
+               arrow.classList.add('bouncing');
+            }, index * 250);
+         })
+      },
+      onScrollBack() {
+         document.querySelector('.blurp--bottom').classList.remove('fade-in');
+         document.querySelectorAll('.btn__arrow').forEach((arrow, index) => {
+            setTimeout(() => {
+               arrow.classList.remove('bouncing');
+            }, index * 250);
+         })
+      },
+      throttledCheckIsMobile() {
+         if (!this.throttleTimeout) {
+            this.throttleTimeout = setTimeout(() => {
+               this.checkIsMobile();
+               this.throttleTimeout = null;
+            }, 250);
+         }
+      },
+      checkIsMobile() {
+         this.isMobile = window.innerWidth <= 599;
+      },
+   },
+   computed: {
+      getCurrentYear() {
+         const date = new Date();
+         return date.getFullYear();
+      }
+   },
+   mounted() {
+      window.addEventListener("resize", () => this.throttledCheckIsMobile());
+      this.scrollListener = this.handleScroll.bind(this);
+      window.addEventListener('scroll', this.scrollListener);
+   },
+   destroyed() {
+      window.removeEventListener("resize", this.throttledCheckIsMobile);
+   },
 }
 </script>
 
@@ -147,6 +158,14 @@ export default {
      @include for-tablet-portrait-up {
          width: 50%;
      }
+  }
+
+  &__social-media {
+   .social-media-list {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+   }
   }
 }
 

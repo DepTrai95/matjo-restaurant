@@ -22,7 +22,7 @@
          </div>
 
          <div class="nav-cta__wrapper" v-if="!isMobile">
-            <router-link class="btn--primary" to="/contact">Jetzt Bestellen</router-link>
+            <router-link class="btn--primary" to="/contact">Reservieren</router-link>
          </div>
 
          <div class="mobile-navigation" v-if="isMobile">
@@ -44,21 +44,21 @@
                      <LinkRouter link="/menu" label="Menu" />
                      <LinkRouter link="/career" label="Karriere" />
                      <!-- <LinkRouter link="/contact" label="Kontakt" /> -->
-                     <LinkRouter link="/contact" label="Jetzt Bestellen" />
+                     <LinkRouter link="/contact" label="Reservieren" />
                   </ul>
                   <ul class="list--unstyled social-media-menu">
                      <li class="social-media-menu__item">
-                        <a href="">
+                        <a aria-label="Besuche uns auf Facebook" href="" target="_blank" rel="noopener noreferrer">
                            <Icon :icon="'facebook'"></Icon>
                         </a>
                      </li>
                      <li class="social-media-menu__item">
-                        <a href="">
+                        <a aria-label="Besuche uns auf Instagram" href="" target="_blank" rel="noopener noreferrer">
                            <Icon :icon="'instagram'"></Icon>
                         </a>
                      </li>
                      <li class="social-media-menu__item">
-                        <a href="">
+                        <a aria-label="Besuche uns auf TikTok" href="" target="_blank" rel="noopener noreferrer">
                            <Icon :icon="'tiktok'"></Icon>
                         </a>
                      </li>
@@ -125,7 +125,7 @@ export default {
      //loading page check size
      this.checkIsMobile();
      window.addEventListener("resize", () => {
-      this.checkIsMobile();
+      this.throttledCheckIsMobile();
       if (this.isMobile) {
          document.querySelector(".header").classList.remove('header--inverted');
       }
@@ -152,6 +152,7 @@ export default {
   }
 
   .navbar {
+      --navbar-height: 80px;
       display: flex;
       flex-direction: row-reverse;
       padding: 1rem;
@@ -176,9 +177,10 @@ export default {
    }
 
      @include for-tablet-portrait-up {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem 2.5rem;
+         flex-direction: row;
+         justify-content: space-between;
+         min-height: var(--navbar-height);
+         padding: 1rem 2.5rem;
      }
   }
 }

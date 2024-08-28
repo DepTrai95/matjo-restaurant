@@ -1,7 +1,7 @@
 import sgMail from '@sendgrid/mail';
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-console.log(process.env.SENDGRID_API_KEY)
+
 export const handler = async (event, context) => {
   try {
    const { to, name, email, subject, text } = JSON.parse(event.body);
