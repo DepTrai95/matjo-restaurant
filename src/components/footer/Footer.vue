@@ -153,7 +153,7 @@ export default {
   &__addresses,
   &__opening-hours {
      @include responsive-font-size(1.7rem, 1.8rem);
-     margin-block-end: 3rem;
+     margin-block-end: 4rem;
 
      @include for-tablet-portrait-up {
          width: 50%;
@@ -171,7 +171,6 @@ export default {
 
 .restaurant__information {
    margin-inline: 3rem;
-   padding-block: 3rem 3.5rem;
 
    @include for-tablet-portrait-up {
       display: flex;
@@ -184,6 +183,10 @@ export default {
    }
 
    @include for-tablet-landscape-up {
+      width: calc(100% / 2);
+   }
+
+   @include for-desktop-up {
       width: calc(100% / 3);
    }
 
@@ -208,12 +211,8 @@ export default {
 .copyright__area {
   background-color: $color-background-copyright;
   color: $color-body-copyright;
-  padding-block: 3rem;
+  padding-block: 2.5rem;
   position: relative;
-
-  @include for-tablet-portrait-up {
-     padding-block: 4rem;   
-  }
 }
 
 .copyright__area__container {
@@ -244,11 +243,11 @@ export default {
 
 // footer button to top
 .blurp--bottom {
-  transform: translateY(50px);
+  transform: translateY(50px) scale(0);
   transition: transform 0.3s ease-in-out;
 
   &.fade-in {
-     transform: translateY(0);
+     transform: translateY(0) scale(0.9);
   }
 }
 

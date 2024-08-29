@@ -59,7 +59,7 @@ export default {
         const navbar = document.querySelector(".header");
         let prevScrollPos = window.pageYOffset;
 
-        if (currentScrollPos < 100) {
+        if (currentScrollPos < 150) {
            navbar.classList.remove('header--inverted');
            this.isInverted = false;
            return;
@@ -103,7 +103,12 @@ export default {
      color: $color-black;
      inset-block-start: 10px;
      inset-inline: 0px;
+     
+     .inner {
+      padding: 0;
+     }
   }
+
 }
 
 .header--inverted {

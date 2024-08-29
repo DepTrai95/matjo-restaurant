@@ -2,8 +2,8 @@
    <div v-if="showTransitionItem" class="transition" :class="{'transitioned' : isTransitioned}">
       <div class="transition-content">
          <div class="transition-logo-container">
-            <img class="logo" src="../../assets/img/logo.webp" alt="" height="230" width="230">
-            <p>Best Korean Food in Town</p>
+            <img class="logo" src="../../assets/img/logo-transparent-big.webp" alt="" height="300" width="300">
+            <p>Best BBQ & Hotpot in Town</p>
          </div>
       </div>
    </div>
@@ -61,12 +61,22 @@
    flex-direction: column;
 
    .logo {
-      height: 100px;
-      width: 100px;
+      height: 150px;
+      width: 150px;
 
       @include for-tablet-portrait-up {
-         height: 160px;
-         width: 160px;
+         height: 180px;
+         width: 180px;
+      }
+
+      @include for-tablet-portrait-up {
+         height: 240px;
+         width: 240px;
+      }
+
+      @include for-desktop-up {
+         height: 300px;
+         width: 300px;
       }
    }
 

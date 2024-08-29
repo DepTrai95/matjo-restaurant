@@ -49,6 +49,13 @@
     font-display: swap;
     src: url("/fonts/TextMeOne-Regular.ttf") format("truetype");
   }
+
+  @font-face {
+    font-family: "Baron";
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/Baron-Regular.otf") format("opentype");
+  }
   
   body {
     @include responsive-font-size(1.7rem, 1.8rem);

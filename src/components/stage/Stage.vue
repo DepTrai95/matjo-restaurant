@@ -147,8 +147,9 @@ export default {
    h2 {
    @include responsive-font-size(8rem, 9rem);
       color: $color-primary;
-      font-family: "TextMeOne", "Calibri", sans-serif;
+      font-family: "Baron", "Calibri", sans-serif;
       font-weight: 400;
+      letter-spacing: 30px;
       margin: 0;
       text-align: center;
 

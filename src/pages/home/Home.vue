@@ -92,8 +92,8 @@ export default {
         subTitle: 'Unser Versprechen',
         textContent: [
           'MATJO ist ein asiatisches Restaurant am Eingang von Dresdens schöner Neustadt.',
-          'Entdecken Sie bei uns eine Fusion von Aromen in unserem BBQ- und Hotpot-Lokalm in welchem Tradition auf Geschmack trifft.',
-          'Seit unserer Eröffnung im August 2024 sind wir bestrebt exzellenten Service und eine kulinarische Reise durch die asiatisches Küche zu bieten.',
+          'Entdecken Sie bei uns eine Fusion von Aromen in unserem BBQ- und Hotpot-Lokal in welchem Tradition auf Geschmack trifft.',
+          'Seit unserer Eröffnung im August 2024 sind wir bestrebt exzellenten Service und eine kulinarische Reise durch die asiatische Küche zu bieten.',
           'Schauen Sie sich unsere Karte an und buchen Sie jetzt Ihren Tisch und lassen Sie sich von magischem Geschmack verzaubern.',
         ],
         callToAction: { to: '/menu', text: 'Speisekarte/Menu' },
@@ -127,12 +127,10 @@ export default {
       },
 
       faqItems: [
-        { title: 'Was ist Korean BBQ?', content: 'Korean BBQ ist eine mittlerweile fast weltweit populäre Art des Grillens von direkt am Tisch. Es ist eine tolle Dining Experience, in welcher die Speisen selber frisch gegrillt werden.' },
-        { title: 'Was für Fleisch ist typisch für koreanische BBQs?', content: 'Typischerweise werden Fleischsorten wie Bulgogi (mariniertes Rind), Galbi (marinierte Rippchen), Samgyeopsal (Schweinebauch) und Dak-Galbi (scharf mariniertes Hühnchen).' },
-        { title: 'Wie wird Korean BBQ serviert?', content: 'Zu den zahlreichen Fleisch-/Gemüsespeisen und Gerichten werden viele Beilagen serviert, auch bekannt als "Banchan", diese schließen ein: Kimchi, eingelegtes Gemüse und Reis. Die gegrillten Speisen werden in Salatblättern gewickelt und mit Saucen und Gewürzen gedipped.' },
+        { title: 'Wie wird unser BBQ serviert?', content: 'Zu den zahlreichen Fleisch-/Gemüsespeisen und Gerichten werden viele Beilagen serviert, im koreanischen bspw. auch bekannt als "Banchan", diese schließen ein: Kimchi, eingelegtes Gemüse und Reis. Die gegrillten Speisen werden in Salatblättern gewickelt und mit Saucen und Gewürzen gedipped.' },
         { title: 'Welche Zutaten sind im Hotpot?', content: 'Unser Hotpot enthält eine Vielzahl frischer Zutaten wie Gemüse, Fleisch und Nudeln, die Sie nach Belieben kombinieren können.' },
         { title: 'Gibt es vegetarische Optionen?', content: 'Ja, wir bieten Auswahl an vegetarischen Zutaten für den Hotpot, so wie spezielle vegetarische BBQ-Gerichte an.' },
-        { title: 'Können Allergien berücksichtig werden?', content: 'Selbstverständlich! Bitte informieren Sie unser Personal über Ihre Allergien, damit wir Ihnen eine sichere und köstliche Mahlzeit zubereiten können.' },
+        { title: 'Können Allergien berücksichtigt werden?', content: 'Selbstverständlich! Bitte informieren Sie unser Personal über Ihre Allergien, damit wir Ihnen eine sichere und köstliche Mahlzeit zubereiten können.' },
         { title: 'Sind Reservierungen erforderlich?', content: 'Wir empfehlen Reservierungen, besonders an Wochenenden, um sicherzustellen, dass Sie einen Tisch bekommen. Aber spontane Besuche sind auch willkommen!' },
       ],
     }

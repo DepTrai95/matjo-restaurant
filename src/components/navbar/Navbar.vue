@@ -4,9 +4,8 @@
          <div class="logo__container">
             <div class="logo">
                <router-link to="/">
-                  <img v-if="!isInverted" src="../../assets/img/logo.webp" alt="zur Startseite" height="50"
-                     width="50" />
-                  <img v-else src="../../assets/img/logo.webp" alt="zur Startseite" height="50" width="50" />
+                  <img v-if="!isInverted" src="../../assets/img/logo.webp" alt="zur Startseite" height="70" width="70" />
+                  <img v-else src="../../assets/img/logo-transparent.webp" alt="zur Startseite" height="70" width="70" />
                </router-link>
             </div>
          </div>
@@ -107,7 +106,7 @@ export default {
      handleHeaderVisibility (currentScrollPos) {
         let prevScrollPos = window.pageYOffset;
 
-        if (currentScrollPos < 300) {
+        if (currentScrollPos < 150) {
            this.isInverted = false;
            return;
         }
