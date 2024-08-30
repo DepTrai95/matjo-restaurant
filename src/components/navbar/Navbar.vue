@@ -102,6 +102,7 @@ export default {
      },
      checkIsMobile() {
         this.isMobile = window.innerWidth <= 599;
+        this.isInverted = true;
      },
      handleHeaderVisibility (currentScrollPos) {
         let prevScrollPos = window.pageYOffset;
@@ -130,7 +131,7 @@ export default {
       }
      });
      window.addEventListener("scroll", () => {
-        if (!this.checkIsMobile()) {
+        if (!this.isMobile) {
            let currentScrollPos = window.pageYOffset;
            this.handleHeaderVisibility(currentScrollPos);
          }

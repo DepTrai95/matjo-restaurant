@@ -22,11 +22,12 @@ export default {
   },
   data() {
      return {
-        isMobile: "",
+        isMobile: null,
         headerHeightMax: false,
         headline: 'BBQ & HotPot',
         showSubHeader: false,
         showBackground: false,
+        throttleTimeout: null,
      };
   },
   watch: {
@@ -80,13 +81,16 @@ export default {
      //loading page check size
      this.checkIsMobile();
      window.addEventListener("scroll", () => {
-        this.checkIsMobile();
+        this.throttledCheckIsMobile();
         if (!this.isMobile) {
            let currentScrollPos = window.pageYOffset;
            this.handleHeaderVisibility(currentScrollPos);
         }
      });
   },
+   destroyed() {
+      window.removeEventListener("resize", this.throttledCheckIsMobile);
+   },
 }
 </script>
 
@@ -112,9 +116,8 @@ export default {
 }
 
 .header--inverted {
-   background-color: rgba(255, 255, 255, 0.9);
-   
    @include for-tablet-portrait-up {
+      background-color: rgba(255, 255, 255, 0.9);
       color: $color-header;
       // inset-inline: 50px;
       // inset-block-start: 10px;
