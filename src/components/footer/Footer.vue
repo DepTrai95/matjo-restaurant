@@ -161,11 +161,12 @@ export default {
   }
 
   &__social-media {
-   .social-media-list {
-      display: flex;
-      flex-direction: row;
-      gap: 1.5rem;
-   }
+      .social-media-list {
+         display: flex;
+         flex-direction: row;
+         gap: 1.5rem;
+         margin-block-end: 5rem;
+      }
   }
 }
 
