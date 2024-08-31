@@ -1,5 +1,6 @@
 <template>
   <div>
+    <skip-links></skip-links>
     <stage-separator class="stage__separator stage__separator--tinted"></stage-separator>
     <Content class="content-area--tinted" :content="introduction"></Content>
 
@@ -29,7 +30,7 @@
     <InstagramGallery></InstagramGallery>
 
     <stage-separator class="stage__separator stage__separator--tinted"></stage-separator>
-    <section class="content-area content-area--tinted">
+    <section id="faq" class="content-area content-area--tinted">
       <div class="inner">
         <h2 class="text-center">Häufige Fragen</h2>
         <Accordion :items="faqItems"></Accordion>
@@ -39,17 +40,19 @@
 </template>
 
 <script>
+import SkipLinks from '../../components/skiplinks/SkipLinks.vue';
 import Accordion from '../../components/accordion/Accordion.vue';
 import Content from '../../components/content/Content.vue';
 import IconList from '../../components/icon-text-list/IconList.vue';
 import Icon from '../../assets/svg/Icon.vue';
 import StageSeparator from '../../components/stage/StageSeparator.vue';
 import InstagramGallery from '../../components/instagram-gallery/InstagramGallery.vue';
-import Img from '../../components/img/Img.vue'
+import Img from '../../components/img/Img.vue';
 
 export default {
   name: 'Home',
   components: {
+    SkipLinks,
     Accordion,
     Content,
     IconList,
@@ -59,6 +62,7 @@ export default {
     StageSeparator,
   },
   data() {
+    SkipLinks
     return {
       title: 'Homepage',
       ourValues: {

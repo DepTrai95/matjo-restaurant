@@ -1,5 +1,6 @@
 <template>
   <SVGList></SVGList>
+  <div id="skip-links-home"></div>
   <LogoScreen></LogoScreen>
   <Header></Header>
   <main class="main">
