@@ -9,9 +9,8 @@
                      <h3>{{ content.subTitle }}</h3>
                   </div>
                   <div class="content__text">
-                     <p v-for="text in content.textContent" :key="text.id">{{ text }}</p>
-                     <router-link class="btn--primary" :to="content.callToAction.to">{{ content.callToAction.text
-                        }}</router-link>
+                     <p v-for="text in content.description" :key="text.id">{{ text }}</p>
+                     <router-link class="btn--primary" :to="content.callToAction.to">{{ content.callToAction.text}}</router-link>
                   </div>
                </div>
                <div class="grid-item">

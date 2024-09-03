@@ -1,6 +1,6 @@
 <template>
    <section class="content-area">
-      <h2 class="text-center">Folge uns auf Instagram</h2>
+      <h2 class="text-center">{{ $t('instagram') }}</h2>
       <div class="grid-instagram grid-2 grid-3--tablet-portrait-up grid-5--tablet-landscape-up">
          <div class="grid-item" v-for="img in images" :key="img.id">
             <a class="instagram-img__container" :href="img.permalink" target="_blank" rel="noopener noreferrer">

@@ -1,0 +1,85 @@
+{
+   "home": {
+      "menuButton": "Menu",
+      "reserveButton": "Reserve"
+   },
+   "navigation": {
+      "home": "Home",
+      "menu": "Menu",
+      "career": "Career",
+      "reservation": "Reserve"
+   },
+   "aboutUs": {
+      "title": "About Us",
+      "subTitle": "Our Promise",
+      "description": [
+         "MATJO is an Asian restaurant at the entrance to Dresden's beautiful Neustadt.",
+         "Discover with us a fusion of flavors in our BBQ and hotpot restaurant where tradition meets taste.",
+         "Since our opening in August 2024, we have been committed to providing excellent service and a culinary journey through Asian cuisine.",
+         "Check out our menu and book your table now and let yourself be enchanted by magical flavors."
+      ],
+      "callToAction": {
+         "text": "Our Menu"
+      }
+  },
+   "ourValues": {
+      "title": "Our Values",
+      "valueList": [
+         {
+            "icon": "food-menu",
+            "heading": "Authentic",
+            "description": "Enjoy bold, diverse, and above all, our authentic recipes."
+         },
+         {
+            "icon": "dish",
+            "heading": "High Quality",
+            "description": "We select only the best ingredients and serve them fresh on the same day."
+         },
+         {
+            "icon": "bulb",
+            "heading": "Unique",
+            "description": "Experience creative and unique dishes you haven't seen before."
+         },
+         {
+            "icon": "group",
+            "heading": "Groups",
+            "description": "BBQ and Hotpot focus on a shared experience and the enjoyment of delicacies."
+         }
+      ]
+   },
+   "faq": {
+      "title": "Frequently Asked Questions",
+      "faqList": [
+         {
+            "title": "How is our BBQ served?",
+            "content": "Alongside the numerous meat/vegetable dishes and other items, many side dishes are served, known in Korean cuisine as 'Banchan'. These include kimchi, pickled vegetables, and rice. The grilled dishes are wrapped in lettuce leaves and dipped in sauces and spices."
+         },
+         {
+            "title": "What ingredients are in the hotpot?",
+            "content": "Our hotpot contains a variety of fresh ingredients such as vegetables, meat, and noodles, which you can combine as you like."
+         },
+         {
+            "title": "Are there vegetarian options?",
+            "content": "Yes, we offer a selection of vegetarian ingredients for the hotpot, as well as special vegetarian BBQ dishes."
+         },
+         {
+            "title": "Can allergies be accommodated?",
+            "content": "Absolutely! Please inform our staff about your allergies so that we can prepare a safe and delicious meal for you."
+         },
+         {
+            "title": "Are reservations required?",
+            "content": "We recommend making reservations, especially on weekends, to ensure you get a table. However, walk-ins are also welcome!"
+         }
+      ]
+   },
+   "footer": {
+      "contact": "Contact",
+      "openingHours": "Opening Hours",
+      "monday": "Monday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "holiday": "Holidays",
+      "hours": "h"
+   }
+}

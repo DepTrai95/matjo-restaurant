@@ -13,8 +13,8 @@
       </div>
       <hgroup class="stage__headline">
          <div class="stage__cta__wrapper" v-if="!isMobile && showSubHeader">
-            <router-link class="btn--primary" to="/menu">Menü</router-link>
-            <router-link class="btn--primary" to="/contact">Reservieren</router-link>
+            <router-link class="btn--primary" to="/menu">{{ $t('home.home.menuButton') }}</router-link>
+            <router-link class="btn--primary" to="/contact">{{ $t('home.home.reserveButton') }}</router-link>
          </div>
          <h1>{{ headline }}</h1>
          <h2 v-if="showSubHeader">MATJO</h2>

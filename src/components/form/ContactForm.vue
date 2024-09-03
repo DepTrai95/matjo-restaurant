@@ -1,65 +1,75 @@
 <template>
-    <form @submit.prevent="submitForm" class="form">
-      <!-- NAME -->
-      <div class="form-group" :class="{ invalid: !name.isValid }">
-        <label for="name"> Name <abbr title="Pflichtfeld">*</abbr> </label>
-        <input class="form-control" type="text" id="name" v-model.trim="name.val" @blur="clearValidity('name')"
-          placeholder="Name" />
-        <p v-if="!name.isValid" :class="{ invalid: !message.isValid }">
-          Bitte geben Sie Ihren Namen an.
-        </p>
-      </div>
-      <!-- EMAIL -->
-      <div class="form-group" :class="{ invalid: !email.isValid }">
-        <label for="email"> E-Mail <abbr title="Pflichtfeld">*</abbr> </label>
-        <input class="form-control" type="email" id="email" v-model.trim="email.val" @blur="clearValidity('email')"
-          placeholder="E-Mail" />
-        <p v-if="!email.isValid" :class="{ invalid: !message.isValid }">
-          Das E-Mail Feld darf nicht leer sein!
-        </p>
-      </div>
-      <!-- SUBJECT -->
-      <div class="form-group" :class="{ invalid: !subject.isValid }">
-        <label for="subject">
-          Betreff <abbr title="Pflichtfeld">*</abbr>
-        </label>
-        <input class="form-control" type="text" id="subject" v-model.trim="subject.val" @blur="clearValidity('subject')"
-          placeholder="Betreff" />
-        <p v-if="!subject.isValid" :class="{ invalid: !subject.isValid }">
-          Das Betreff Feld darf nicht leer sein!
-        </p>
-      </div>
-      <!-- MESSAGE -->
-      <div class="form-group" :class="{ invalid: !message.isValid }">
-        <label for="message">
-          Ihre Nachricht <abbr title="Pflichtfeld">*</abbr>
-        </label>
-        <textarea class="form-control" id="message" rows="7" v-model.trim="message.val" @blur="clearValidity('message')"
-          placeholder="Ihre Nachricht"></textarea>
-        <p v-if="!message.isValid" :class="{ invalid: !message.isValid }">
-          Nachricht darf nicht leer sein
-        </p>
-      </div>
-      <!-- RECHENAUFGABE -->
-      <div class="form-group" :class="{ invalid: !mathProblem.isValid }">
-        <label for="mathProblem">Rechenaufgabe: {{ mathProblem.example }} <abbr title="Pflichtfeld">*</abbr></label>
-        <input class="form-control" type="number" id="mathProblem" v-model.trim="mathProblem.val"
-          @blur="clearValidity('mathProblem')" placeholder="Lösen Sie die Rechenaufgabe" />
-        <p v-if="!mathProblem.isValid" :class="{ invalid: !mathProblem.isValid }">
-          Bitte lösen Sie die Rechenaufgabe korrekt.
-        </p>
-      </div>
-      <p v-if="!formIsValid">Bitte überprüfen Sie noch einmal ihre Angaben.</p>
-      <base-button mode="btn--primary">Nachricht abschicken</base-button>
-    </form>
-  </template>
+  <form @submit.prevent="submitForm" class="form">
+    <!-- NAME -->
+    <div class="form-group" :class="{ invalid: !name.isValid }">
+      <label for="name"> Name <abbr title="Pflichtfeld">*</abbr> </label>
+      <input class="form-control" type="text" id="name" v-model.trim="name.val" @blur="clearValidity('name')"
+        placeholder="Name" />
+      <p v-if="!name.isValid" :class="{ invalid: !message.isValid }">
+        Bitte geben Sie Ihren Namen an.
+      </p>
+    </div>
+    <!-- EMAIL -->
+    <div class="form-group" :class="{ invalid: !email.isValid }">
+      <label for="email"> E-Mail <abbr title="Pflichtfeld">*</abbr> </label>
+      <input class="form-control" type="email" id="email" v-model.trim="email.val" @blur="clearValidity('email')"
+        placeholder="E-Mail" />
+      <p v-if="!email.isValid" :class="{ invalid: !message.isValid }">
+        Das E-Mail Feld darf nicht leer sein!
+      </p>
+    </div>
+    <!-- SUBJECT -->
+    <div class="form-group" :class="{ invalid: !subject.isValid }">
+      <label for="subject">
+        Betreff <abbr title="Pflichtfeld">*</abbr>
+      </label>
+      <input class="form-control" type="text" id="subject" v-model.trim="subject.val" @blur="clearValidity('subject')"
+        placeholder="Betreff" />
+      <p v-if="!subject.isValid" :class="{ invalid: !subject.isValid }">
+        Das Betreff Feld darf nicht leer sein!
+      </p>
+    </div>
+    <div v-if="1 === 2" class="form-group form-select">
+      <!-- this one just kept for future purposes -->
+      <label class="form-label" for="language">Sprache</label>
+      <select class="form-control" id="language" name="select-restaurant" v-model="$i18n.locale" required>
+        <option value="de">Deutsch</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    <!-- MESSAGE -->
+    <div class="form-group" :class="{ invalid: !message.isValid }">
+      <label for="message">
+        Ihre Nachricht <abbr title="Pflichtfeld">*</abbr>
+      </label>
+      <textarea class="form-control" id="message" rows="7" v-model.trim="message.val" @blur="clearValidity('message')"
+        placeholder="Ihre Nachricht"></textarea>
+      <p v-if="!message.isValid" :class="{ invalid: !message.isValid }">
+        Nachricht darf nicht leer sein
+      </p>
+    </div>
+    <!-- RECHENAUFGABE -->
+    <div class="form-group" :class="{ invalid: !mathProblem.isValid }">
+      <label for="mathProblem">Rechenaufgabe: {{ mathProblem.example }} <abbr title="Pflichtfeld">*</abbr></label>
+      <input class="form-control" type="number" id="mathProblem" v-model.trim="mathProblem.val"
+        @blur="clearValidity('mathProblem')" placeholder="Lösen Sie die Rechenaufgabe" />
+      <p v-if="!mathProblem.isValid" :class="{ invalid: !mathProblem.isValid }">
+        Bitte lösen Sie die Rechenaufgabe korrekt.
+      </p>
+    </div>
+    <p v-if="!formIsValid">Bitte überprüfen Sie noch einmal ihre Angaben.</p>
+    <base-button mode="btn--primary">Nachricht abschicken</base-button>
+  </form>
+</template>
   
-  <script>
+<script>
   import BaseButton from '../button/BaseButton.vue';
+  import Icon from '../../assets/svg/Icon.vue';
   
   export default {
     components: {
       BaseButton,
+      Icon,
     },
     data() {
       return {
@@ -238,7 +248,7 @@
 
     return result;
   }
-  </script>
+</script>
   
   <style lang="scss" scoped>
   .form {
@@ -255,6 +265,29 @@
 
   .form-group {
     margin-bottom: 2rem;
+  }
+
+  .form-select {
+    position: relative;
+
+    select {
+      appearance: none;
+    }
+
+    &::after {
+      background-image: url("../../assets/svg/icon-arrow-down.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 20px 20px;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 5rem;
+      inset-inline-end: 0;
+      position: absolute;
+      pointer-events: none;
+      width: 5rem;
+    }
   }
 
   .form-control {

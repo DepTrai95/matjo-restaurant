@@ -3,7 +3,7 @@
       <stage-separator class="stage__separator--black"></stage-separator>
       <div class="restaurant__information">
          <div class="footer__addresses">
-            <h3>Kontakt</h3>
+            <h3>{{ localizedFooter.footer.contact }}</h3>
             <a href="https://maps.app.goo.gl/GQEmGFkc8XoHixLH8/" target="_blank" noopener noreferrer>
                <span>MATJO - BBQ & Hotpot</span>
                <span class="street">Alaunstraße 9</span>
@@ -11,14 +11,15 @@
             </a>
          </div>
          <div class="footer__opening-hours">
-            <h3>ÖFFNUNGSZEITEN:</h3>
+            <h3>{{ localizedFooter.footer.openingHours }}:</h3>
             <p>
-               Montag - Freitag:<br>
-               11:30 - 15:00 Uhr<br>
-               17:00 - 23:00 Uhr
+               {{ localizedFooter.footer.monday }} - {{ localizedFooter.footer.friday }}:<br>
+               11:30 - 15:00 {{ localizedFooter.footer.hours }}<br>
+               17:00 - 23:00 {{ localizedFooter.footer.hours }}
             </p>
-            <p>Samstag, Sonntag und Feiertage:<br>
-               11:00 - 23:00 Uhr
+            <p>{{ localizedFooter.footer.saturday }}, {{ localizedFooter.footer.sunday }} {{ $t('and') }}
+               {{ localizedFooter.footer.holiday }}:<br>
+               11:00 - 23:00 {{ localizedFooter.footer.hours }}
             </p>
          </div>
          <div v-if="isMobile" class="footer__social-media">
@@ -58,8 +59,8 @@
          <div class="copyright__area__container">
             <ul class="copyright__area__container__list">
                <li><span class="copyright-logo">© {{ getCurrentYear }} Matjo</span></li>
-               <LinkRouter link="/impressum" label="Impressum" />
-               <LinkRouter link="/contact" label="Kontakt" />
+               <LinkRouter link="/impressum" :label="$t('Impress')" />
+               <LinkRouter link="/contact" :label="$t('Contact')" />
             </ul>
          </div>
       </div>
@@ -132,6 +133,14 @@ export default {
       getCurrentYear() {
          const date = new Date();
          return date.getFullYear();
+      },
+      localizedFooter() {
+         const currentLocale = this.$i18n.locale;
+         const localizedObject = this.$i18n.getLocaleMessage(currentLocale).home;
+
+         return {
+            footer: localizedObject.footer,
+         }
       }
    },
    mounted() {
@@ -147,18 +156,22 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  background-color: $color-background;
-  color: $color-white;
+   background-color: $color-background;
+   color: $color-white;
 
-  &__addresses,
-  &__opening-hours {
-     @include responsive-font-size(1.7rem, 1.8rem);
-     margin-block-end: 4rem;
+   &__addresses,
+   &__opening-hours {
+      @include responsive-font-size(1.7rem, 1.8rem);
+      margin-block-end: 4rem;
 
-     @include for-tablet-portrait-up {
+      @include for-tablet-portrait-up {
          width: 50%;
-     }
-  }
+      }
+
+      h3 {
+         text-transform: uppercase;
+      }
+   }
 
   &__social-media {
       .social-media-list {

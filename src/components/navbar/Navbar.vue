@@ -4,24 +4,32 @@
          <div class="logo__container">
             <div class="logo">
                <router-link to="/">
-                  <img v-if="!isInverted" src="../../assets/img/logo.webp" alt="zur Startseite" height="70" width="70" />
-                  <img v-else src="../../assets/img/logo-transparent.webp" alt="zur Startseite" height="70" width="70" />
+                  <img v-if="!isInverted" src="../../assets/img/logo.webp" alt="zur Startseite" height="70"
+                     width="70" />
+                  <img v-else src="../../assets/img/logo-transparent.webp" alt="zur Startseite" height="70"
+                     width="70" />
                </router-link>
             </div>
          </div>
          <div class="nav-main__wrapper" v-if="!isMobile">
             <nav class="nav-main">
                <ul class="list--unstyled">
-                  <LinkRouter link="/" label="Home" />
-                  <LinkRouter link="/menu" label="Menu" />
-                  <LinkRouter link="/career" label="Karriere" />
-                  <!-- <LinkRouter link="/contact" label="Kontakt" /> -->
+                  <LinkRouter link="/" :label="$t('home.navigation.home')" />
+                  <LinkRouter link="/menu" :label="$t('home.navigation.menu')" />
+                  <LinkRouter link="/career" :label="$t('home.navigation.career')" />
+                  <li class="form-group form-select">
+                     <label for="language"></label>
+                     <select class="form-control" id="language" name="language" v-model="$i18n.locale">
+                        <option value="de">{{ $t('German') }}</option>
+                        <option value="en">{{ $t('English') }}</option>
+                     </select>
+                  </li>
                </ul>
             </nav>
          </div>
 
          <div class="nav-cta__wrapper" v-if="!isMobile">
-            <router-link class="btn--primary" to="/contact">Reservieren</router-link>
+            <router-link class="btn--primary" to="/contact">{{ $t('home.navigation.reservation') }}</router-link>
          </div>
 
          <div class="mobile-navigation" v-if="isMobile">
@@ -36,14 +44,19 @@
                </span>
             </button>
 
-            <div class="nav-main__wrapper" :class="{'is-open': isMenuExpanded}" @click="toggleMenu">
+            <div class="nav-main__wrapper" :class="{'is-open': isMenuExpanded}">
                <nav class="nav-main">
                   <ul class="list--unstyled">
-                     <LinkRouter link="/" label="Home" />
-                     <LinkRouter link="/menu" label="Menu" />
-                     <LinkRouter link="/career" label="Karriere" />
-                     <!-- <LinkRouter link="/contact" label="Kontakt" /> -->
-                     <LinkRouter link="/contact" label="Reservieren" />
+                     <LinkRouter link="/" :label="$t('home.navigation.home')" />
+                     <LinkRouter link="/menu" :label="$t('home.navigation.menu')" />
+                     <LinkRouter link="/career" :label="$t('home.navigation.career')" />
+                     <li class="form-group form-select">
+                        <label for="language"></label>
+                        <select class="form-control" id="language" name="language" v-model="$i18n.locale">
+                           <option value="de">Deutsch</option>
+                           <option value="en">English</option>
+                        </select>
+                     </li>
                   </ul>
                   <ul class="list--unstyled social-media-menu">
                      <li class="social-media-menu__item">
@@ -166,22 +179,25 @@ export default {
          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
          padding: 0;
       
-      &::before {
-         backdrop-filter: blur(10px);
-         background: rgba(255, 255, 255, 0.4);
-         border-radius: 30px;
-         content: "";
-         inset: 0;
-         position: absolute;
+         &::before {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 30px;
+            content: "";
+            inset: 0;
+            position: absolute;
+         }
       }
-   }
 
-     @include for-tablet-portrait-up {
+      @include for-tablet-portrait-up {
          flex-direction: row;
          justify-content: space-between;
          min-height: var(--navbar-height);
+      }
+
+      @include for-tablet-landscape-up {
          padding: 1rem 2.5rem;
-     }
+      }
   }
 }
 
@@ -197,6 +213,10 @@ export default {
    }
 
    @include for-tablet-portrait-up {
+      min-width: 75px;
+   }
+
+   @include for-tablet-landscape-up {
       min-width: 150px;
    }
 
@@ -346,14 +366,72 @@ export default {
   display: flex;
   flex-direction: row;
 
+  @include for-tablet-portrait-up {
+     ul {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+     }
+  }
+
+
   li {
      @include responsive-font-size(1.3rem, 1.5rem);
      font-weight: 500;
      letter-spacing: 1px;
-     padding-inline: 1.5rem;
      text-align: center;
      text-transform: uppercase;
+
+      @include for-tablet-portrait-up {
+         margin-inline: 1.5rem;
+      }
   }
+}
+
+.form-select {
+   position: relative;
+
+   @include for-tablet-portrait-up {
+      &::after {
+         background-image: url("../../assets/svg/icon-arrow-down.svg");
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: 20px 20px;
+         bottom: 0;
+         content: "";
+         display: block;
+         height: 4rem;
+         inset-inline-end: 0;
+         position: absolute;
+         pointer-events: none;
+         width: 4rem;
+      }
+   }
+
+   select {
+      min-height: 4rem;
+      width: 100px;
+
+      @include for-tablet-portrait-up {
+         appearance: none;
+      }
+   }
+
+   .form-control {
+      @include responsive-font-size(1.5rem, 1.6rem);
+      border: 1px solid transparent;
+      border-radius: 5px;
+      font-family: "Cabin", "Calibri", Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      padding-block: 0.75rem;
+      padding-inline: 1rem;
+      transition: border 0.3s ease-in-out;
+
+      .header--inverted & {
+         border: 1px solid #000;
+         border: 1px solid #0000006b;
+      }
+   }
 }
 </style>
 
