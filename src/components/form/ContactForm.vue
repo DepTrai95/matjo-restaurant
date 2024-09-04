@@ -6,7 +6,7 @@
       <input class="form-control" type="text" id="name" v-model.trim="name.val" @blur="clearValidity('name')"
         placeholder="Name" />
       <p v-if="!name.isValid" :class="{ invalid: !message.isValid }">
-        Bitte geben Sie Ihren Namen an.
+        {{ $t('contact.contactFormValidation.name') }}
       </p>
     </div>
     <!-- EMAIL -->
@@ -15,18 +15,18 @@
       <input class="form-control" type="email" id="email" v-model.trim="email.val" @blur="clearValidity('email')"
         placeholder="E-Mail" />
       <p v-if="!email.isValid" :class="{ invalid: !message.isValid }">
-        Das E-Mail Feld darf nicht leer sein!
+        {{ $t('contact.contactFormValidation.mail') }}
       </p>
     </div>
     <!-- SUBJECT -->
     <div class="form-group" :class="{ invalid: !subject.isValid }">
       <label for="subject">
-        Betreff <abbr title="Pflichtfeld">*</abbr>
+        {{ $t('contact.contactForm.subject') }} <abbr title="Pflichtfeld">*</abbr>
       </label>
       <input class="form-control" type="text" id="subject" v-model.trim="subject.val" @blur="clearValidity('subject')"
-        placeholder="Betreff" />
+        :placeholder="$t('contact.contactForm.subject')" />
       <p v-if="!subject.isValid" :class="{ invalid: !subject.isValid }">
-        Das Betreff Feld darf nicht leer sein!
+        {{ $t('contact.contactFormValidation.subject') }}
       </p>
     </div>
     <div v-if="1 === 2" class="form-group form-select">
@@ -40,25 +40,26 @@
     <!-- MESSAGE -->
     <div class="form-group" :class="{ invalid: !message.isValid }">
       <label for="message">
-        Ihre Nachricht <abbr title="Pflichtfeld">*</abbr>
+        {{ $t('contact.contactForm.message') }} <abbr title="Pflichtfeld">*</abbr>
       </label>
       <textarea class="form-control" id="message" rows="7" v-model.trim="message.val" @blur="clearValidity('message')"
-        placeholder="Ihre Nachricht"></textarea>
+        :placeholder="$t('contact.contactForm.message') "></textarea>
       <p v-if="!message.isValid" :class="{ invalid: !message.isValid }">
-        Nachricht darf nicht leer sein
+        {{ $t('contact.contactFormValidation.message') }}
       </p>
     </div>
     <!-- RECHENAUFGABE -->
     <div class="form-group" :class="{ invalid: !mathProblem.isValid }">
-      <label for="mathProblem">Rechenaufgabe: {{ mathProblem.example }} <abbr title="Pflichtfeld">*</abbr></label>
+      <label for="mathProblem">{{ $t('contact.contactForm.calc') }}: {{ mathProblem.example }} <abbr
+          title="Pflichtfeld">*</abbr></label>
       <input class="form-control" type="number" id="mathProblem" v-model.trim="mathProblem.val"
-        @blur="clearValidity('mathProblem')" placeholder="Lösen Sie die Rechenaufgabe" />
+        @blur="clearValidity('mathProblem')" :placeholder="$t('contact.contactForm.calcPlaceholder') " />
       <p v-if="!mathProblem.isValid" :class="{ invalid: !mathProblem.isValid }">
-        Bitte lösen Sie die Rechenaufgabe korrekt.
+        {{ $t('contact.contactFormValidation.calc') }}
       </p>
     </div>
-    <p v-if="!formIsValid">Bitte überprüfen Sie noch einmal ihre Angaben.</p>
-    <base-button mode="btn--primary">Nachricht abschicken</base-button>
+    <p v-if="!formIsValid">{{ $t('contact.contactFormValidation.check') }}</p>
+    <base-button mode="btn--primary">{{ $t('contact.contactForm.submit') }}</base-button>
   </form>
 </template>
   
@@ -330,7 +331,8 @@
     p {
       @include responsive-font-size(1.7rem, 1.8rem);
       color: $color-error;
-      margin-top: 0.5rem;
+      margin-block-start: 0.5rem;
+      margin-inline-start: 1rem;
     }
 
     input,

@@ -4,7 +4,7 @@
   </header>
   <the-stage 
      :headerHeightMax="headerHeightMax"
-     :headline="headline" 
+     :headline="$t(headline)" 
      :showSubHeader="showSubHeader" 
      :showBackground="showBackground"
   >
@@ -41,6 +41,7 @@ export default {
   methods: {
      updateHeaderProps(route) {
         this.headerHeightMax = route.meta.headerHeightMax !== undefined ? route.meta.headerHeightMax : false;
+
         this.headline = route.meta.headline || 'MATJO';
         this.showSubHeader = route.meta.showSubHeader !== undefined ? route.meta.showSubHeader : false;
         this.showBackground = route.meta.showBackground !== undefined ? route.meta.showBackground : false;

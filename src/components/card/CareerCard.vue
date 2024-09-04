@@ -16,7 +16,7 @@
             <span>{{ career.workingTime }}</span>
          </div>
       </div>
-      <a class="career__button btn--primary" :href="mailSubject">Jetzt bewerben</a>
+      <a class="career__button btn--primary" :href="mailSubject">{{ $t('career.applyNow') }}</a>
    </div>
 </template>
 
@@ -80,6 +80,7 @@ export default {
 
    &__location,
    &__time {
+      text-align: center;
       .icon-container {
          margin-inline-end: 0.5rem;
       }

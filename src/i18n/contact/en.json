@@ -1,0 +1,23 @@
+{
+  "reservationInfo": {
+    "intro": "We gladly accept reservations every day, which you can conveniently book on our website.",
+    "alternative": "Alternatively, we are reachable during the following opening hours",
+    "contactPhone": "also reachable by phone at Tel: ",
+    "otherInquiry": "If you have any other concerns besides a reservation, you can reach us anytime via the contact form on this page or send us an email directly at:"
+  },
+  "contactForm": {
+    "subject": "Subject",
+    "message": "Your Message",
+    "calc": "Calculation Task",
+    "calcPlaceholder": "Solve the calculation task",
+    "submit": "Submit"
+  },
+  "contactFormValidation": {
+    "name": "Please enter your name.",
+    "mail": "The email field cannot be empty!",
+    "subject": "The subject field cannot be empty!",
+    "message": "Message cannot be empty.",
+    "calc": "Please solve the calculation task correctly.",
+    "check": "Please check your information again."
+  }
+}

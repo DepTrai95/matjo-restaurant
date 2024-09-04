@@ -153,6 +153,17 @@ export default {
   destroyed() {
      window.removeEventListener("resize", this.throttledCheckIsMobile);
   },
+   watch: {
+      '$i18n.locale'(newLocale) {
+         localStorage.setItem('matjoLang', newLocale);
+      }
+   },
+   created() {
+      const savedLocale = localStorage.getItem('matjoLang');
+      if (savedLocale) {
+         this.$i18n.locale = savedLocale;
+      }
+   }
 };
 </script>
 

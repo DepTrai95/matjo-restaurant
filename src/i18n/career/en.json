@@ -1,0 +1,35 @@
+{
+  "joinTeam": {
+    "heading": "BECOME PART OF OUR TEAM",
+    "paragraph1": "Do you enjoy serving fantastic dishes in a dynamic, fast-paced, and varied work environment?",
+    "paragraph2": "Then contact us! At MATJO, we are always looking for talented, and above all, friendly and dedicated service, bar, and kitchen staff.",
+    "coverletter": "We look forward to receiving your application with a resume and a brief cover letter at "
+  },
+  "jobs": [
+    { 
+      "title": "Service Staff",
+      "description": "A service staff member is a professional in the hospitality industry who is involved in the care, advising, and serving of guests in gastronomic establishments.",
+      "workingTime": "Full-time/Part-time",
+      "subject": "Application for Full-time Service Staff"
+    },
+    {
+      "title": "Cook/Chef",
+      "description": "A cook/chef is a professional in the kitchen, responsible for the preparation, refinement, and presentation of dishes in gastronomic businesses.",
+      "workingTime": "Full-time/Part-time",
+      "subject": "Application for Full-time Cook/Chef"
+    },
+    {
+      "title": "Content Creator",
+      "description": "A content creator is a digital professional who specializes in creating, designing, and distributing multimedia content for various online platforms and social media.",
+      "workingTime": "Part-time",
+      "subject": "Application for Part-time Content Creator"
+    },
+    {
+      "title": "Accountant",
+      "description": "An accountant is a finance professional who is responsible for recording, classifying, and summarizing financial transactions.",
+      "workingTime": "Full-time",
+      "subject": "Application for Full-time Accountant"
+    }
+  ],
+  "applyNow": "Apply Now"
+}

@@ -20,19 +20,14 @@
           <div class="grid-item">
             <div class="reservation-info">
               <p>MATJO - Korean BBQ & Hotpot</p>
-              <p class="center">
-                Wir nehmen jeden Tag gerne Reservierungen entgegen, diese könnt ihr ganz bequem auf unserer Website buchen.
-              </p>
+              <p class="center">{{ $t('contact.reservationInfo.intro') }}</p>
               <p>
-                Alternativ sind wir zu folgenden Öffnungszeiten:
+                {{ $t('contact.reservationInfo.alternative') }}:
                 <span>{{ lunchTime }}</span>
                 <span>{{ dinnerTime }}</span>
-                auch telefonisch erreichbar unter Tel: <a :href="`tel:` + phoneNumber">{{ phoneNumber }}</a>
+                {{ $t('contact.reservationInfo.contactPhone') }} <a :href="`tel:` + phoneNumber">{{ phoneNumber }}</a>
               </p>
-              <p>
-                Falls Sie ein anderes Anliegen als eine Reservierung haben, können Sie uns gerne jederzeit über das Kontaktformular auf dieser
-                Seite erreichen, oder uns direkt eine E-Mail senden an: <a :href="`mailto:` + mailTo">{{ mailTo }}</a>
-              </p>
+              <p>{{ $t('contact.reservationInfo.otherInquiry') }} <a :href="`mailto:` + mailTo">{{ mailTo }}</a></p>
             </div>
           </div>
           <div class=" grid-item">

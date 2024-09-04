@@ -19,5 +19,22 @@
   "Your Email": "Ihre E-Mail",
   "and": "und",
   "imageGalleryHeader": "Unsere Meisterwerke",
-  "instagram": "Folge uns auf Instagram"
+  "instagram": "Folge uns auf Instagram",
+  "routes": {
+    "menu": {
+      "headline": "Menü"
+    },
+    "career": {
+      "headline": "Karriere"
+    },
+    "contact": {
+      "headline": "Kontakt"
+    },
+    "impress": {
+      "headline": "Impressum"
+    },
+    "success": {
+      "headline": "Formular abgeschickt"
+    }
+  }
 }

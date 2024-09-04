@@ -4,15 +4,23 @@ import de from './i18n/de.json';
 import en from './i18n/en.json';
 import deHome from './i18n/home/de.json';
 import enHome from './i18n/home/en.json';
+import deCareer from './i18n/career/de.json';
+import enCareer from './i18n/career/en.json';
+import deContact from './i18n/contact/de.json';
+import enContact from './i18n/contact/en.json';
 
 const messages = {
   de: {
     ...de, 
-    home: deHome
+    home: deHome,
+    career: deCareer,
+    contact: deContact,
   },
   en: {
     ...en, 
-    home: enHome
+    home: enHome,
+    career: enCareer,
+    contact: enContact,
   }
 };
 

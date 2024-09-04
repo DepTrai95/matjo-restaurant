@@ -24,34 +24,34 @@ const router = createRouter({
     { path: "/menu", 
       component: Menu, 
       meta: { 
-        headline: 'Menu',
+        headline: 'routes.menu.headline',
         showBackground: true,
       } 
     },
     { path: "/career", 
       component: Career, 
       meta: { 
-        headline: 'Karriere',
+        headline: 'routes.career.headline',
         showBackground: true,
       } 
     },
     { path: "/contact", 
       component: Contact, 
       meta: { 
-        headline: 'Kontakt',
+        headline: 'routes.contact.headline',
         showBackground: true,
       } 
     },
     { path: "/impressum", 
       component: Impress, 
       meta: { 
-        headline: 'Impressum',
+        headline: 'routes.impress.headline',
       } 
     },
     { path: "/success", 
       component: Success, 
       meta: { 
-        headline: 'Formular abgeschickt',
+        headline: 'routes.success.headline',
       } 
     },
     { path: "/:notFound(.*)", 

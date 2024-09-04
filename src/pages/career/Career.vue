@@ -4,20 +4,19 @@
     <div class="content-area content-area--tinted">
       <div class="inner">
         <div class="career">
-          <h2>WERDE TEIL UNSERES TEAMS</h2>
-          <p>Du servierst gerne in einem dynamischen, schnellen und abwechslungsreichen Arbeitsumfeld fantastische Speisen?</p>
-          <p>Dann kontaktiere uns! Bei MATJO freuen wir uns immer auf talentiertes, allen voran aber freundliches und
-            engagiertes Service-, Bar- und Küchenpersonal</p>
-          <p>Wir freuen uns auf Deine Bewerbung mit Lebenslauf und kurzem Anschreiben an <a
-              href="info@matjo.de">info@matjo.de</a>
-          </p>
+          <h2>{{ $t('career.joinTeam.heading') }}</h2>
+          <p>{{ $t('career.joinTeam.paragraph1') }}</p>
+          <p>{{ $t('career.joinTeam.paragraph2') }}</p>
+          <p>{{ $t('career.joinTeam.coverletter') }} <a href="info@matjo.de">info@matjo.de</a></p>
+
           <div class="career__jobs">
             <div class="grid--default grid-2--tablet-portrait-up">
-              <div class="grid-item career__jobs__item" v-for="job in jobs" :key="job.id">
+              <div class="grid-item career__jobs__item" v-for="job in localizedJobs.jobs" :key="job.id">
                 <CareerCard :career="job" :mailSubject="job.subject"></CareerCard>
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -119,6 +118,16 @@ export default {
       this.observer.disconnect();
     }
     window.removeEventListener('resize', this.handleResize);
+  },
+  computed: {
+    localizedJobs() {
+      const currentLocale = this.$i18n.locale;
+      const localizedObject = this.$i18n.getLocaleMessage(currentLocale).career;
+
+      return {
+        jobs: localizedObject.jobs,
+      }
+    }
   }
 }
 </script>
