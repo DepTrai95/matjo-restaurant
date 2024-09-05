@@ -18,12 +18,15 @@ export default defineConfig(({ mode }) => {
     css: { 
       preprocessorOptions: {
         scss: {
-          additionalData: `@import "./src/assets/style/style.scss";`,
+          additionalData: `@import "./src/assets/style/style_global.scss";`,
         },
       },
     },
     define: {
       'process.env': processEnv,
+    },
+    build: {
+      cssCodeSplit: true,
     },
   }
 })

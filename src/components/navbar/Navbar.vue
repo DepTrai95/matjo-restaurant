@@ -18,7 +18,7 @@
                   <LinkRouter link="/menu" :label="$t('home.navigation.menu')" />
                   <LinkRouter link="/career" :label="$t('home.navigation.career')" />
                   <li class="form-group form-select">
-                     <label for="language"></label>
+                     <label class="sr-only" for="language">Sprache wechseln</label>
                      <select class="form-control" id="language" name="language" v-model="$i18n.locale">
                         <option value="de">{{ $t('German') }}</option>
                         <option value="en">{{ $t('English') }}</option>
@@ -51,7 +51,7 @@
                      <LinkRouter link="/menu" :label="$t('home.navigation.menu')" />
                      <LinkRouter link="/career" :label="$t('home.navigation.career')" />
                      <li class="form-group form-select">
-                        <label for="language"></label>
+                        <label class="sr-only" for="language">Sprache wechseln</label>
                         <select class="form-control" id="language" name="language" v-model="$i18n.locale">
                            <option value="de">Deutsch</option>
                            <option value="en">English</option>
@@ -431,12 +431,19 @@ export default {
    .form-control {
       @include responsive-font-size(1.5rem, 1.6rem);
       border: 1px solid transparent;
+      border: 1px solid #0000006b;
+      background-color: rgba(255, 255, 255, 0.5);
       border-radius: 5px;
       font-family: "Cabin", "Calibri", Helvetica, Arial, sans-serif;
       line-height: 1.5;
       padding-block: 0.75rem;
       padding-inline: 1rem;
       transition: border 0.3s ease-in-out;
+
+      @include for-phone-only {
+         @include responsive-font-size(1.6rem, 1.7rem);
+         background-color: transparent;
+      }
 
       .header--inverted & {
          border: 1px solid #000;

@@ -36,32 +36,6 @@ export default {
   data() {
     return {
       title: 'Karriereseite',
-      jobs: [
-        { 
-          title: 'Servicekraft',
-          description: 'Eine Servicekraft ist ein/e Fachmann/-frau in der Gastronomie, der/die sich mit der Betreuung, Beratung und Bewirtung von Gästen in gastronomischen Einrichtungen befasst.',
-          workingTime: 'Vollzeit/Teilzeit',
-          subject: 'Bewerbung als Servicekraft in Vollzeit'
-        },
-        {
-          title: 'Koch/Köchin',
-          description: 'Ein/e Koch/Köchin ist ein/e Fachmann/-frau in der Küche, der/die sich mit der Zubereitung, Verfeinerung und Präsentation von Speisen in gastronomischen Betrieben befasst',
-          workingTime: 'Vollzeit/Teilzeit',
-          subject: 'Bewerbung als Koch/Köchin in Vollzeit'
-        },
-        {
-          title: 'Content Creator',
-          description: 'Ein/e Content Creator ist ein/e Fachmann/-frau im digitalen Bereich, der/die sich mit der Erstellung, Gestaltung und Verbreitung von multimedialen Inhalten für verschiedene Online-Plattformen und soziale Medien befasst.',
-          workingTime: 'Teilzeit',
-          subject: 'Bewerbung als Content Creator in Teilzeit'
-        },
-        {
-          title: 'Buchhalter/in',
-          description: 'Ein/e Buchhalter/in ist ein Fachmann/-frau im Finanzwesen, der/die sich mit der Erfassung, Klassifizierung und Zusammenfassung finanzieller Transaktionen befasst',
-          workingTime: 'Vollzeit',
-          subject: 'Bewerbung als Buchhalter/in in Vollzeit'
-        }
-      ]
     }
   },
   methods: {
