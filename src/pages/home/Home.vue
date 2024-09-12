@@ -15,7 +15,7 @@
       <div class="img-gallery">
         <div class="inner">
           <h2 class="text-center">{{ $t('imageGalleryHeader') }}</h2>
-          <div class="grid--default grid-2--tablet-portrait-up grid-4--tablet-landscape-up">
+          <div class="grid--default grid-2 grid-4--tablet-landscape-up">
             <div class="grid-item" v-for="img in imgGallery" :key="img.id">
               <Img :img="img"></Img>
             </div>
