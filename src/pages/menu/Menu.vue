@@ -17,7 +17,7 @@
             <div class="menu-container grid--default grid-3--tablet-portrait-up">
               <div class="grid-item">
                 <div class="menu-item">
-                  <a href="#">
+                  <a href="#" @click.prevent="openMenuModal">
                     <img src="/img/bbq/bbq-large.webp" height alt="Bild für Hauptspeisen">
                     <span class="menu-category">Speisen</span>
                   </a>
@@ -25,7 +25,7 @@
               </div>
               <div class="grid-item">
                 <div class="menu-item">
-                  <a href="#">
+                  <a href="#" @click.prevent="openMenuModal">
                     <img src="/img/drinks/drinks-large.webp" height alt="Bild für Getränke">
                     <span class="menu-category">Getränke</span>
                   </a>
@@ -33,7 +33,7 @@
               </div>
               <div class="grid-item">
                 <div class="menu-item">
-                  <a href="#">
+                  <a href="#" @click.prevent="openMenuModal">
                     <img src="/img/lunch/lunch-large.webp" height alt="Bild für Mittagsgerichte">
                     <span class="menu-category">Mittagskarte</span>
                   </a>
@@ -44,22 +44,38 @@
         </div>
       </div>
     </section>
+    <Dialog :dialogIsOpen="isDialogOpen" @update:dialogIsOpen="isDialogOpen = $event">
+      <template v-slot:dialogHeader>
+        Menü noch nicht verfügbar
+      </template>
+      <template v-slot:dialogBody>
+        Unser Menü wird bald für euch veröffentlicht, bitte habt etwas Geduld!
+      </template>
+    </Dialog>
   </div>
 </template>
 
 <script>
 import Img from '../../components/img/Img.vue'
+import Dialog from '../../components/dialog/Dialog.vue'
 import StageSeparator from '../../components/stage/StageSeparator.vue'
 
 export default {
   name: 'Menu',
   components: {
     Img,
+    Dialog,
     StageSeparator
   },
   data() {
     return {
       title: 'Menüseite',
+      isDialogOpen: false,
+    }
+  },
+  methods: {
+    openMenuModal() {
+      this.isDialogOpen = true;
     }
   }
 }
@@ -125,4 +141,3 @@ export default {
     }
   }
 </style>
-  

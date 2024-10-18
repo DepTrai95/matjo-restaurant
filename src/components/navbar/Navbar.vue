@@ -60,17 +60,20 @@
                   </ul>
                   <ul class="list--unstyled social-media-menu">
                      <li class="social-media-menu__item">
-                        <a aria-label="Besuche uns auf Facebook" href="" target="_blank" rel="noopener noreferrer">
+                        <a aria-label="Besuche uns auf Facebook" href="https://www.facebook.com/matjo.dresden"
+                           target="_blank" rel="noopener noreferrer">
                            <Icon :icon="'facebook'"></Icon>
                         </a>
                      </li>
                      <li class="social-media-menu__item">
-                        <a aria-label="Besuche uns auf Instagram" href="" target="_blank" rel="noopener noreferrer">
+                        <a aria-label="Besuche uns auf Instagram" href="https://www.instagram.com/matjo.dresden/"
+                           target="_blank" rel="noopener noreferrer">
                            <Icon :icon="'instagram'"></Icon>
                         </a>
                      </li>
                      <li class="social-media-menu__item">
-                        <a aria-label="Besuche uns auf TikTok" href="" target="_blank" rel="noopener noreferrer">
+                        <a aria-label="Besuche uns auf TikTok" href="https://www.tiktok.com/@matjo.dresden"
+                           target="_blank" rel="noopener noreferrer">
                            <Icon :icon="'tiktok'"></Icon>
                         </a>
                      </li>

@@ -2,19 +2,19 @@
    <div class="social-media-container" :class="{'scrolled': pageIsScrolled}">
       <ul class="social-media-list">
          <li class="social-media-list__item">
-            <a aria-label="Besuche uns auf Facebook" href="https://www.facebook.com/nguyenducanh95" class="facebook-icon"
+            <a aria-label="Besuche uns auf Facebook" href="https://www.facebook.com/matjo.dresden" class="facebook-icon"
                target="_blank" rel="noopener noreferrer">
                <Icon :icon="'facebook'"></Icon>
             </a>
          </li>
          <li class="social-media-list__item">
-            <a aria-label="Besuche uns auf Instagram" href="https://www.instagram.com/ducvnh_nguyen/"
+            <a aria-label="Besuche uns auf Instagram" href="https://www.instagram.com/matjo.dresden/"
                class="instagram-icon" target="_blank" rel="noopener noreferrer">
                <Icon :icon="'instagram'"></Icon>
             </a>
          </li>
          <li class="social-media-list__item">
-            <a aria-label="Besuche uns auf TikTok" href="https://www.tiktok.com/@anja_nguyen" class="tiktok-icon"
+            <a aria-label="Besuche uns auf TikTok" href="https://www.tiktok.com/@matjo.dresden" class="tiktok-icon"
                target="_blank" rel="noopener noreferrer">
                <Icon :icon="'tiktok'"></Icon>
             </a>

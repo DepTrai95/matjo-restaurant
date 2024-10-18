@@ -38,11 +38,11 @@ a {
 }
 
 .btn--primary {
-  background-color: transparent;
+  background-color: $color-primary;
   border: 2px solid transparent;
-  border-radius: 4px;
+  border-radius: 50px;
   box-shadow: 0px 5px 20px 5px rgba(80, 80, 80, 0.2);
-  color: inherit;
+  color: $color-white;
   cursor: pointer;
   font-size: inherit;
   height: unset !important;
@@ -58,15 +58,6 @@ a {
 
   +.btn--primary {
      margin-inline: 2rem;
-  }
-}
-
-.btn--primary {
-  background-color: $color-header;
-  color: $color-white;
-
-  &:hover {
-     box-shadow: 0px 5px 15px 3px rgba(80, 80, 80, 0.3)
   }
 }
 </style>

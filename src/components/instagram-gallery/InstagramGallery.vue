@@ -38,7 +38,7 @@ export default {
             const res = await fetch(url);
             if (!res.ok) throw new Error('Fehler beim Laden der Instagram Bilder');
             const data = await res.json();
-            const images = data.data.slice(0, 10);
+            const images = data.data.filter(image => image.media_type === 'IMAGE').slice(0, 10);
             this.images = images;
          } catch (error) {
             toastStore().showToast('error', 'Fehler beim Laden der Instagram Bilder')

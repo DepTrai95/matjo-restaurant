@@ -2,7 +2,7 @@
   <SVGList></SVGList>
   <div id="skip-links-home"></div>
   <LogoScreen></LogoScreen>
-  <!-- <Header></Header>
+  <Header></Header>
   <main class="main">
     <router-view v-slot="slotProps">
       <transition name="route" mode="out-in">
@@ -12,7 +12,7 @@
   </main>
   <SocialMedia></SocialMedia>
   <Footer></Footer>
-  <Toast></Toast> -->
+  <Toast></Toast>
 </template>
 
 <script>

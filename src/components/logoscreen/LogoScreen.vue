@@ -2,10 +2,9 @@
    <div v-if="showTransitionItem" class="transition" :class="{'transitioned' : isTransitioned}">
       <div class="transition-content">
          <div class="transition-logo-container">
-            <img v-if="0 == 1" class="logo" src="../../assets/img/logo-transparent-big.webp" alt="" height="300"
+            <img class="logo" src="../../assets/img/logo-transparent-big.webp" alt="" height="300"
                width="300">
-            <p v-if="0 == 1">Best BBQ & Hotpot in Town</p>
-            Stay tuned, soon we're there for you
+            <p>Best BBQ & Hotpot in Town</p>
          </div>
       </div>
    </div>
@@ -20,12 +19,12 @@
          }
       },
       mounted() {
-         // setTimeout(() => {
-         //    this.isTransitioned = true;
-         //    setTimeout(() => {
-         //       this.showTransitionItem = false;
-         //    }, 300);
-         // }, 700);
+         setTimeout(() => {
+            this.isTransitioned = true;
+            setTimeout(() => {
+               this.showTransitionItem = false;
+            }, 300);
+         }, 700);
       }
    }
 </script>
