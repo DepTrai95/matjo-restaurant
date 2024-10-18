@@ -47,16 +47,16 @@
             <div class="nav-main__wrapper" :class="{'is-open': isMenuExpanded}">
                <nav class="nav-main">
                   <ul class="list--unstyled">
-                     <LinkRouter link="/" :label="$t('home.navigation.home')" />
-                     <LinkRouter link="/menu" :label="$t('home.navigation.menu')" />
-                     <LinkRouter link="/career" :label="$t('home.navigation.career')" />
-                     <li class="form-group form-select">
+                     <LinkRouter link="/" :label="$t('home.navigation.home')" @click="closeMenu" />
+                     <LinkRouter link="/menu" :label="$t('home.navigation.menu')" @click="closeMenu"/>
+                     <LinkRouter link="/career" :label="$t('home.navigation.career')" @click="closeMenu"/>
+                     <li class=" form-group form-select">
                         <label class="sr-only" for="language">Sprache wechseln</label>
                         <select class="form-control" id="language" name="language" v-model="$i18n.locale">
                            <option value="de">Deutsch</option>
                            <option value="en">English</option>
                         </select>
-                     </li>
+                        </li>
                   </ul>
                   <ul class="list--unstyled social-media-menu">
                      <li class="social-media-menu__item">
@@ -105,57 +105,66 @@ export default {
      };
   },
   methods: {
-     toggleMenu() {
-        this.isMenuExpanded = !this.isMenuExpanded;
-     },
-     throttledCheckIsMobile() {
-        if (!this.throttleTimeout) {
-           this.throttleTimeout = setTimeout(() => {
-              this.checkIsMobile();
-              this.throttleTimeout = null;
-           }, 250);
-        }
-     },
-     checkIsMobile() {
-         this.isMobile = window.innerWidth <= 599;
-         this.isInverted = window.innerWidth <= 599;
-     },
-     handleHeaderVisibility (currentScrollPos) {
-        let prevScrollPos = window.pageYOffset;
-
-        if (currentScrollPos < 150) {
-           this.isInverted = false;
-           return;
-        }
-
-        if (prevScrollPos > currentScrollPos) {
-           this.isInverted = false;
-        } else {
-           this.isInverted = true;
-        }
-
-        prevScrollPos = currentScrollPos;
-     },
-  },
-  mounted() {
-     //loading page check size
-     this.checkIsMobile();
-     window.addEventListener("resize", () => {
-      this.throttledCheckIsMobile();
-      if (this.isMobile) {
-         document.querySelector(".header").classList.remove('header--inverted');
-      }
-     });
-     window.addEventListener("scroll", () => {
-        if (!this.isMobile) {
-           let currentScrollPos = window.pageYOffset;
-           this.handleHeaderVisibility(currentScrollPos);
+      toggleMenu() {
+         this.isMenuExpanded = !this.isMenuExpanded;
+         window.addEventListener('keydown', this.handleKeydown);
+      },
+      handleKeydown(event) {
+         if (event.key === 'Escape') {
+            this.closeMenu();
          }
-     });
-  },
-  destroyed() {
-     window.removeEventListener("resize", this.throttledCheckIsMobile);
-  },
+      },
+      closeMenu() {
+         this.isMenuExpanded = false;
+      },
+      throttledCheckIsMobile() {
+         if (!this.throttleTimeout) {
+            this.throttleTimeout = setTimeout(() => {
+               this.checkIsMobile();
+               this.throttleTimeout = null;
+            }, 250);
+         }
+      },
+      checkIsMobile() {
+            this.isMobile = window.innerWidth <= 599;
+            this.isInverted = window.innerWidth <= 599;
+      },
+      handleHeaderVisibility (currentScrollPos) {
+         let prevScrollPos = window.pageYOffset;
+
+         if (currentScrollPos < 150) {
+            this.isInverted = false;
+            return;
+         }
+
+         if (prevScrollPos > currentScrollPos) {
+            this.isInverted = false;
+         } else {
+            this.isInverted = true;
+         }
+
+         prevScrollPos = currentScrollPos;
+      },
+   },
+   mounted() {
+      //loading page check size
+      this.checkIsMobile();
+      window.addEventListener("resize", () => {
+         this.throttledCheckIsMobile();
+         if (this.isMobile) {
+            document.querySelector(".header").classList.remove('header--inverted');
+         }
+      });
+      window.addEventListener("scroll", () => {
+         if (!this.isMobile) {
+            let currentScrollPos = window.pageYOffset;
+            this.handleHeaderVisibility(currentScrollPos);
+            }
+      });
+   },
+   destroyed() {
+      window.removeEventListener("resize", this.throttledCheckIsMobile);
+   },
    watch: {
       '$i18n.locale'(newLocale) {
          localStorage.setItem('matjoLang', newLocale);

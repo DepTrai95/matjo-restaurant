@@ -93,14 +93,24 @@ export default {
         width: 60%;
       }
     }
-  } 
+  }
+  
+  .menu-container {
+    
+    .grid-item {
+      margin-block: 1.5rem;
+    }
+  }
 
   .menu-item {
     border: 2px solid $color-primary;
     border-radius: 5px;
-    max-height: 280px;
     overflow: hidden;
     position: relative;
+    
+    @include for-tablet-portrait-up {
+      max-height: 280px;
+    }
     
     a {
       vertical-align: bottom;

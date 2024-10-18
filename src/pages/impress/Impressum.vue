@@ -16,8 +16,9 @@
 
       <h3>Registereintrag</h3>
       <p>Eintragung im Handelsregister. Registergericht: Amtsgericht Dresden.</p>
-      <p>Registernummer: HRB 35581</p>
-      <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE 307 261 051</p>
+      <p>Wird bald ergänzt</p>
+      <!-- <p>Registernummer: HRB 35581</p>
+      <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE 307 261 051</p> -->
 
       <h3>Aufsichtsbehörde:</h3>
       <p>Landratsamt Dresden</p>
