@@ -4,7 +4,7 @@
       <div class="restaurant__information">
          <div class="footer__addresses">
             <h3>{{ localizedFooter.footer.contact }}</h3>
-            <a href="https://maps.app.goo.gl/GQEmGFkc8XoHixLH8/" target="_blank" noopener noreferrer>
+            <a href="https://maps.app.goo.gl/3DXUeW2gvcD2YbBx8/" target="_blank" noopener noreferrer>
                <span>MATJO - BBQ & Hotpot</span>
                <span class="street">Alaunstraße 9</span>
                <span class="postcode">01099 Dresden</span>
