@@ -66,6 +66,7 @@
 <script>
   import BaseButton from '../button/BaseButton.vue';
   import Icon from '../../assets/svg/Icon.vue';
+  import { toastStore } from '../../store/store.js';
   
   export default {
     components: {
@@ -189,6 +190,7 @@
           this.$router.push("/success");
         } catch (error) {
           console.error("Fehler beim Abschicken des Kontaktformulars:", error);
+          toastStore().showToast('error', 'Fehler beim Verschicken des Formulars');
         }
   
       },

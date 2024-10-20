@@ -19,7 +19,7 @@
         <div class="grid--default grid-2--tablet-landscape-up">
           <div class="grid-item">
             <div class="reservation-info">
-              <p>MATJO - Korean BBQ & Hotpot</p>
+              <p>MATJO - BBQ & Hotpot</p>
               <p class="center">{{ $t('contact.reservationInfo.intro') }}</p>
               <p>
                 {{ $t('contact.reservationInfo.alternative') }}:

@@ -41,7 +41,7 @@ export default {
             const images = data.data.filter(image => image.media_type === 'IMAGE').slice(0, 10);
             this.images = images;
          } catch (error) {
-            toastStore().showToast('error', 'Fehler beim Laden der Instagram Bilder')
+            toastStore().showToast('error', 'Fehler beim Laden der Instagram Bilder');
             console.error(error);
             throw error;
          }
