@@ -48,7 +48,7 @@ export default {
   },
   data() {
     return {
-      phoneNumber: "0351 12312312",
+      phoneNumber: "",
       lunchTime: "12:00 - 14:30",
       dinnerTime: "17:00 - 23:00",
       mailTo: "info@matjo.de"

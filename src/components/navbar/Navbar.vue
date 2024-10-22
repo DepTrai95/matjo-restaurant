@@ -249,8 +249,11 @@ export default {
       }
 
       img {
+         width: unset;
+         
          @include for-phone-only {
             height: 50px;
+            width: 50px;
          }
       }
    }
