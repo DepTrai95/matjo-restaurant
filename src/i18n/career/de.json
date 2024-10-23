@@ -1,34 +1,46 @@
 {
   "joinTeam": {
-    "heading": "WERDE TEIL UNSERES TEAMS",
-    "paragraph1": "Du servierst gerne in einem dynamischen, schnellen und abwechslungsreichen Arbeitsumfeld fantastische Speisen?",
-    "paragraph2": "Dann kontaktiere uns! Bei MATJO freuen wir uns immer auf talentiertes, allen voran aber freundliches und engagiertes Service-, Bar- und Küchenpersonal.",
-    "coverletter": "Wir freuen uns auf Deine Bewerbung mit Lebenslauf und kurzem Anschreiben an "
+    "heading": "WERDE TEIL UNSERES TEAMS!",
+    "paragraph1": "Arbeiten bei MATJO ist spannend und macht Spaß. Du erhältst von Anfang an die Unterstützung, die du brauchst – und hast viele Möglichkeiten, deine Karriere in unserem Unternehmen voranzubringen.",
+    "paragraph2": "Bei MATJO gibt es zahlreiche Arbeitsbereiche und Karrierechancen. Egal, ob du in der Küche arbeiten möchtest, lieber im Bar- oder Serviceteam aktiv bist oder dich in einer Führungsposition siehst – bei uns findest du den passenden Platz.",
+    "coverletter": "Worauf wartest du noch? Schau dir unsere offenen Stellen an und bewirb dich mit Lebenslauf und kurzem Anschreiben an "
   },
   "jobs": [
     { 
-      "title": "Servicekraft",
-      "description": "Eine Servicekraft ist ein/e Fachmann/-frau in der Gastronomie, der/die sich mit der Betreuung, Beratung und Bewirtung von Gästen in gastronomischen Einrichtungen befasst.",
+      "title": "Koch (m/w/d)",
+      "description": "Kreiere mit uns kulinarische Highlights und bringe deine Leidenschaft für gutes Essen in die Küche",
       "workingTime": "Vollzeit/Teilzeit",
-      "subject": "Bewerbung als Servicekraft in Vollzeit"
+      "subject": "Bewerbung als Koch (m/w/d)"
     },
     {
-      "title": "Koch/Köchin",
-      "description": "Ein/e Koch/Köchin ist ein/e Fachmann/-frau in der Küche, der/die sich mit der Zubereitung, Verfeinerung und Präsentation von Speisen in gastronomischen Betrieben befasst.",
+      "title": "Küchenpersonal (m/w/d)",
+      "description": "Sorge hinter den Kulissen für glänzendes Geschirr und werde unser unsichtbarer Held",
       "workingTime": "Vollzeit/Teilzeit",
-      "subject": "Bewerbung als Koch/Köchin in Vollzeit"
+      "subject": "Bewerbung als Küchenpersonal (m/w/d)"
     },
     {
-      "title": "Content Creator",
-      "description": "Ein/e Content Creator ist ein/e Fachmann/-frau im digitalen Bereich, der/die sich mit der Erstellung, Gestaltung und Verbreitung von multimedialen Inhalten für verschiedene Online-Plattformen und soziale Medien befasst.",
-      "workingTime": "Teilzeit",
-      "subject": "Bewerbung als Content Creator in Teilzeit"
+      "title": "Servicekraft (m/w/d)",
+      "description": "Betreue unsere Gäste mit Charme und bringe ihre Bestellungen auf den Punkt",
+      "workingTime": "Vollzeit/Teilzeit",
+      "subject": "Bewerbung als Servicekraft (m/w/d) in Teilzeit"
     },
     {
-      "title": "Buchhalter/in",
-      "description": "Ein/e Buchhalter/in ist ein/e Fachmann/-frau im Finanzwesen, der/die sich mit der Erfassung, Klassifizierung und Zusammenfassung finanzieller Transaktionen befasst.",
-      "workingTime": "Vollzeit",
-      "subject": "Bewerbung als Buchhalter/in in Vollzeit"
+      "title": "Barpersonal (m/w/d)",
+      "description": "Mixe leckere Drinks und verbreite gute Laune an unserer Bar",
+      "workingTime": "Vollzeit/Teilzeit",
+      "subject": "Bewerbung als Barpersonal (m/w/d) in Vollzeit"
+    },
+    {
+      "title": "Social Media – Content Creator (m/w/d)",
+      "description": "Lass deiner Kreativität freien Lauf und erstelle, gestalte und verbreite spannende Inhalte, die MATJO auf Social Media zum Strahlen bringen",
+      "workingTime": "Vollzeit/Teilzeit",
+      "subject": "Bewerbung als Content Creator (m/w/d) in Vollzeit"
+    },
+    {
+      "title": "Initiativbewerbung",
+      "description": "Nichts Passendes gefunden? Wir sind dennoch immer auf der Suche nach Personal, deren Herz für die Gastronomie schlägt.",
+      "workingTime": "Vollzeit/Teilzeit",
+      "subject": "Initiativbewerbung"
     }
   ],
   "applyNow": "Jetzt bewerben"

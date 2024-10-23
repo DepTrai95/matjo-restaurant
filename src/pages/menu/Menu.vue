@@ -5,13 +5,10 @@
       <div class="inner">
         <div class="menu grid--default grid-2--tablet-portrait-up">
           <div class="grid-item">
-            <h2>Menü</h2>
-            <p>Um einen Einblick unserer Gerichte zu verschaffen, findest du hier unsere angebotene Speise- und
-              Getränkekarte im Restaurant.</p>
-            <p>Wir bereiten alle Speisen frisch zu! Vor euren Augen werden unsere Speisen zu Delikatessen.</p>
-            <p>Werft einen Blick auf unser Menü oder lasst euch vor Ort einfach von uns überraschen oder beraten!</p>
-            <p>Falls ihr nicht alles schaffen solltet, kann beim BBQ der Rest (aus Hygiene- und Gesundheitsgründen) auch
-              gegrillt eingepackt werden!</p>
+            <h2>{{ $t('menu.menuIntro.headline') }}</h2>
+            <p>{{ $t('menu.menuIntro.paragraphOne') }}</p>
+            <p>{{ $t('menu.menuIntro.paragraphTwo') }}</p>
+            <p>{{ $t('menu.menuIntro.paragraphThree') }}</p>
           </div>
           <div class="grid-item">
             <div class="menu-container grid--default grid-3--tablet-portrait-up">
@@ -19,7 +16,7 @@
                 <div class="menu-item">
                   <a href="#" @click.prevent="openMenuModal">
                     <img src="/img/bbq/bbq-large.webp" height alt="Bild für Hauptspeisen">
-                    <span class="menu-category">Speisen</span>
+                    <span class="menu-category">{{ $t('menu.menuButtons.food') }}</span>
                   </a>
                 </div>
               </div>
@@ -27,7 +24,7 @@
                 <div class="menu-item">
                   <a href="#" @click.prevent="openMenuModal">
                     <img src="/img/drinks/drinks-large.webp" height alt="Bild für Getränke">
-                    <span class="menu-category">Getränke</span>
+                    <span class="menu-category">{{ $t('menu.menuButtons.drinks') }}</span>
                   </a>
                 </div>
               </div>
@@ -35,7 +32,7 @@
                 <div class="menu-item">
                   <a href="#" @click.prevent="openMenuModal">
                     <img src="/img/lunch/lunch-large.webp" height alt="Bild für Mittagsgerichte">
-                    <span class="menu-category">Mittagskarte</span>
+                    <span class="menu-category">{{ $t('menu.menuButtons.lunch') }}</span>
                   </a>
                 </div>
               </div>

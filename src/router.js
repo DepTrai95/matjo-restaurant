@@ -16,7 +16,7 @@ const router = createRouter({
       component: Home,
       meta: {
         headerHeightMax: true,
-        headline: 'BBQ & HotPot',
+        headline: 'BBQ & HOTPOT',
         showSubHeader: true,
         showBackground: true,
       }

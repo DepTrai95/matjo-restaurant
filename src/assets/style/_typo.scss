@@ -2,27 +2,6 @@
 // = TYPO
 // ==========================================================================
   @font-face {
-    font-family: "Cabin";
-    font-weight: 400;
-    font-display: swap;
-    src: url("/fonts/Cabin-Regular.ttf") format("truetype");
-  }
-
-  @font-face {
-    font-family: "Cabin";
-    font-weight: 500;
-    font-display: swap;
-    src: url("/fonts/Cabin-Medium.ttf") format("truetype");
-  }
-
-  @font-face {
-    font-family: "Cabin";
-    font-weight: 700;
-    font-display: swap;
-    src: url("/fonts/Cabin-Bold.ttf") format("truetype");
-  }
-
-  @font-face {
     font-family: "Roboto";
     font-weight: 400;
     font-display: swap;
@@ -42,13 +21,6 @@
     font-display: swap;
     src: url("/fonts/Roboto-Bold.ttf") format("truetype");
   }
-  
-  @font-face {
-    font-family: "TextMeOne";
-    font-weight: 400;
-    font-display: swap;
-    src: url("/fonts/TextMeOne-Regular.ttf") format("truetype");
-  }
 
   @font-face {
     font-family: "Baron";
@@ -56,17 +28,38 @@
     font-display: swap;
     src: url("/fonts/Baron-Regular.otf") format("opentype");
   }
+
+  @font-face {
+    font-family: "JosefinSans";
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/JosefinSans-Regular.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "JosefinSans";
+    font-weight: 500;
+    font-display: swap;
+    src: url("/fonts/JosefinSans-Medium.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "JosefinSans";
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/JosefinSans-Bold.otf") format("opentype");
+  }
   
   body {
     @include responsive-font-size(1.7rem, 1.8rem);
-    font-family: "Cabin", "Calibri", Helvetica, Arial, sans-serif;
+    font-family: "Roboto", "Calibri", Helvetica, Arial, sans-serif;
     font-weight: 400;
     line-height: 1.2;
   }
   
   h1, h2, h3 {
-    font-family: "Roboto", "Calibri", sans-serif;
-    font-weight: 500;
+    font-family: "JosefinSans", "Calibri", sans-serif;
+    font-weight: 700;
   }
   
   h1 {

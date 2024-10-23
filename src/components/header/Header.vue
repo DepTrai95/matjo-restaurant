@@ -24,7 +24,7 @@ export default {
      return {
         isMobile: null,
         headerHeightMax: false,
-        headline: 'BBQ & HotPot',
+        headline: 'BBQ & HOTPOT',
         showSubHeader: false,
         showBackground: false,
         throttleTimeout: null,

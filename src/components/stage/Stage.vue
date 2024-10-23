@@ -17,7 +17,6 @@
             <router-link class="btn--primary" to="/contact">{{ $t('home.home.reserveButton') }}</router-link>
          </div>
          <h1>{{ headline }}</h1>
-         <!-- <h1>{{ $t($route.meta.headlineKey) }}</h1> -->
          <h2 v-if="showSubHeader">MATJO</h2>
       </hgroup>
       <div v-if="showSubHeader" class="stage__arrow-down" @click="scrollToNextSection">
@@ -136,7 +135,7 @@ export default {
 
    h1 {
       color: $color-white;
-      font-family: "TextMeOne", "Calibri", sans-serif;
+      font-family: "JosefinSans", "Calibri", sans-serif;
       margin: 0;
       margin-block-start: -1.5rem;
 

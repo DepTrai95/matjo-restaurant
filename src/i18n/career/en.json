@@ -1,34 +1,46 @@
 {
   "joinTeam": {
-    "heading": "BECOME PART OF OUR TEAM",
-    "paragraph1": "Do you enjoy serving fantastic dishes in a dynamic, fast-paced, and varied work environment?",
-    "paragraph2": "Then contact us! At MATJO, we are always looking for talented, and above all, friendly and dedicated service, bar, and kitchen staff.",
-    "coverletter": "We look forward to receiving your application with a resume and a brief cover letter at "
+    "heading": "BECOME PART OF OUR TEAM!",
+    "paragraph1": "Working at MATJO is exciting and fun. From the very beginning, you will receive the support you need – and you’ll have many opportunities to advance your career within our company.",
+    "paragraph2": "At MATJO, there are numerous job roles and career opportunities. Whether you want to work in the kitchen, prefer to be active in the bar or service team, or see yourself in a leadership position – you'll find the right place with us.",
+    "coverletter": "What are you waiting for? Check out our open positions and apply with a resume and a short cover letter to "
   },
   "jobs": [
     { 
-      "title": "Service Staff",
-      "description": "A service staff member is a professional in the hospitality industry who is involved in the care, advising, and serving of guests in gastronomic establishments.",
+      "title": "Cook (m/f/d)",
+      "description": "Create culinary highlights with us and bring your passion for great food into the kitchen",
       "workingTime": "Full-time/Part-time",
-      "subject": "Application for Full-time Service Staff"
+      "subject": "Application for Cook (m/f/d)"
     },
     {
-      "title": "Cook/Chef",
-      "description": "A cook/chef is a professional in the kitchen, responsible for the preparation, refinement, and presentation of dishes in gastronomic businesses.",
+      "title": "Kitchen Staff (m/f/d)",
+      "description": "Ensure sparkling dishes behind the scenes and become our invisible hero",
       "workingTime": "Full-time/Part-time",
-      "subject": "Application for Full-time Cook/Chef"
+      "subject": "Application for Kitchen Staff (m/f/d)"
     },
     {
-      "title": "Content Creator",
-      "description": "A content creator is a digital professional who specializes in creating, designing, and distributing multimedia content for various online platforms and social media.",
-      "workingTime": "Part-time",
-      "subject": "Application for Part-time Content Creator"
+      "title": "Service Staff (m/f/d)",
+      "description": "Charm our guests and deliver their orders perfectly",
+      "workingTime": "Full-time/Part-time",
+      "subject": "Application for Service Staff (m/f/d) in Part-time"
     },
     {
-      "title": "Accountant",
-      "description": "An accountant is a finance professional who is responsible for recording, classifying, and summarizing financial transactions.",
-      "workingTime": "Full-time",
-      "subject": "Application for Full-time Accountant"
+      "title": "Bar Staff (m/f/d)",
+      "description": "Mix delicious drinks and spread good vibes at our bar",
+      "workingTime": "Full-time/Part-time",
+      "subject": "Application for Bar Staff (m/f/d) in Full-time"
+    },
+    {
+      "title": "Social Media – Content Creator (m/f/d)",
+      "description": "Unleash your creativity by creating, designing, and sharing engaging content that makes MATJO shine on social media",
+      "workingTime": "Full-time/Part-time",
+      "subject": "Application for Content Creator (m/f/d) in Full-time"
+    },
+    {
+      "title": "Unsolicited Application",
+      "description": "Didn't find a suitable position? We are always looking for people passionate about gastronomy.",
+      "workingTime": "Full-time/Part-time",
+      "subject": "Unsolicited Application"
     }
   ],
   "applyNow": "Apply Now"

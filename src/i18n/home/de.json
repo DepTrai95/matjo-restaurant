@@ -3,23 +3,17 @@
       "menuButton": "Menü",
       "reserveButton": "Reservieren"
    },
-   "navigation": {
-      "home": "Home",
-      "menu": "Menü",
-      "career": "Karriere",
-      "reservation": "Reservieren"
-   },
    "aboutUs": {
-      "title": "Über uns",
+      "title": "ÜBER UNS",
       "subTitle": "Unser Versprechen",
       "description": [
-         "MATJO ist ein asiatisches Restaurant am Eingang von Dresdens schöner Neustadt.",
-         "Entdecken Sie bei uns eine Fusion von Aromen in unserem BBQ- und Hotpot-Lokal, in dem Tradition auf Geschmack trifft.",
-         "Seit unserer Eröffnung im Dezember 2024 sind wir bestrebt, exzellenten Service und eine kulinarische Reise durch die asiatische Küche zu bieten.",
-         "Schauen Sie sich unsere Karte an, buchen Sie jetzt Ihren Tisch und lassen Sie sich von magischem Geschmack verzaubern."
+         "Willkommen bei MATJO - BBQ & HOTPOT in der Dresdner Neustadt.",
+         "Unser Restaurant vereint die besten Traditionen des BBQ und Hotpots, um dir ein einzigartiges kulinarisches Erlebnis zu bieten.",
+         "Bei uns gestaltest du dein Essen nach deinem Geschmack! Frische Zutaten, authentische Aromen und ein herzlicher Service erwarten dich in entspannter Atmosphäre.",
+         "Verbringe hier einen unvergesslichen Abend mit deinen Liebsten und erlebe die Vielfalt von MATJO's Küche / unserer asiatischen Küche!"
       ],
       "callToAction": {
-         "text": "Menu/Speisekarte"
+         "text": "Zum Menü"
       }
    },
    "ourValues": {
@@ -28,22 +22,22 @@
          {
             "icon": "food-menu",
             "heading": "Authentisch",
-            "description": "Genießen Sie kräftige, vielfältige und vor allem unsere authentischen Rezepte"
+            "description": "Wir legen Wert auf traditionelle Zubereitungsmethoden und Rezepte, um dir ein authentisches Erlebnis zu bieten."
          },
          {
             "icon": "dish",
-            "heading": "Hochwertig",
-            "description": "Beim Einkauf werden bei uns nur die besten Zutaten ausgewählt und frisch noch am selben Tag serviert."
+            "heading": "Qualität",
+            "description": "Wir setzen auf frische, hochwertige Zutaten, um ein erstklassiges Geschmackserlebnis zu garantieren"
          },
          {
             "icon": "bulb",
             "heading": "Einzigartig",
-            "description": "Erleben Sie ausgefallene und kreative Gerichte, die Sie so bisher nicht kannten."
+            "description": "Herzlichkeit und Freundlichkeit sind das Herzstück unseres Services, damit du dich bei uns wie zu Hause fühlst."
          },
          {
             "icon": "group",
             "heading": "Gruppen",
-            "description": "Beim BBQ und Hotpot liegt der Fokus auf dem gemeinsamen Erlebnis und Genuss der Köstlichkeiten."
+            "description": "Essen verbindet Menschen, und bei MATJO steht das gemeinsame Genießen im Mittelpunkt."
          }
       ]
    },

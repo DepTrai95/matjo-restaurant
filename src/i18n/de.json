@@ -20,12 +20,28 @@
   "and": "und",
   "imageGalleryHeader": "Unsere Meisterwerke",
   "instagram": "Folge uns auf Instagram",
+
+  "navigation": {
+    "home": "Home",
+    "menu": "Menü",
+    "bbq": "BBQ",
+    "hotpot": "HOTPOT",
+    "career": "Karriere",
+    "reservation": "Reservieren"
+  },
+
   "routes": {
     "menu": {
       "headline": "Menü"
     },
     "career": {
       "headline": "Karriere"
+    },
+    "bbq": {
+      "headline": "BBQ"
+    },
+    "hotpot": {
+      "headline": "HOTPOT"
     },
     "contact": {
       "headline": "Kontakt"

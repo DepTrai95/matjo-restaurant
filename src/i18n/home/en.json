@@ -3,14 +3,8 @@
       "menuButton": "Menu",
       "reserveButton": "Reserve"
    },
-   "navigation": {
-      "home": "Home",
-      "menu": "Menu",
-      "career": "Career",
-      "reservation": "Reserve"
-   },
    "aboutUs": {
-      "title": "About Us",
+      "title": "ABOUT US",
       "subTitle": "Our Promise",
       "description": [
          "MATJO is an Asian restaurant at the entrance to Dresden's beautiful Neustadt.",

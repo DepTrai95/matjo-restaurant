@@ -6,35 +6,35 @@
     <stage-separator class="stage__separator "></stage-separator>
     <IconList :heading="localizedValues.title" :iconList="localizedValues.iconList"></IconList>
 
-    <!-- <stage-separator class="stage__separator stage__separator--tinted"></stage-separator>
-    <Content class="content-area--tinted" :content="koreanBbqIntro"></Content> -->
-
-
-    <stage-separator class="stage__separator--tinted"></stage-separator>
-    <section class="content-area content-area--tinted">
-      <div class="img-gallery">
-        <div class="inner">
-          <h2 class="text-center">{{ $t('imageGalleryHeader') }}</h2>
-          <div class="grid--default grid-2 grid-4--tablet-landscape-up">
-            <div class="grid-item" v-for="img in imgGallery" :key="img.id">
-              <Img :img="img"></Img>
+    <div v-if="1 == 0">
+      <stage-separator class="stage__separator--tinted"></stage-separator>
+      <section class="content-area content-area--tinted">
+        <div class="img-gallery">
+          <div class="inner">
+            <h2 class="text-center">{{ $t('imageGalleryHeader') }}</h2>
+            <div class="grid--default grid-2 grid-4--tablet-landscape-up">
+              <div class="grid-item" v-for="img in imgGallery" :key="img.id">
+                <Img :img="img"></Img>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
+    <stage-separator class="stage__separator--tinted"></stage-separator>
+    <InstagramGallery class="content-area--tinted"></InstagramGallery>
 
-    <stage-separator class="stage__separator"></stage-separator>
-    <InstagramGallery></InstagramGallery>
-
-    <stage-separator class="stage__separator stage__separator--tinted"></stage-separator>
-    <section id="faq" class="content-area content-area--tinted">
-      <div class="inner">
-        <h2 class="text-center">{{ localizedFaq.title }}</h2>
-        <Accordion :items="localizedFaq.faqList"></Accordion>
-      </div>
-    </section>
+    <div v-if="1 == 0">
+      <!-- hide this block -->
+      <stage-separator class="stage__separator stage__separator--tinted"></stage-separator>
+      <section id="faq" class="content-area content-area--tinted">
+        <div class="inner">
+          <h2 class="text-center">{{ localizedFaq.title }}</h2>
+          <Accordion :items="localizedFaq.faqList"></Accordion>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 

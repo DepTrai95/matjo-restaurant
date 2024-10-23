@@ -7,12 +7,11 @@
       <p>01099 Dresden</p>
 
       <h3>Vertreten durch:</h3>
-      <p>Geschäftsführer: Frau Anja Ngoc Anh Nguyen</p>
-      <p>Gesellschafter: Herr Tien Nguyen Van</p>
+      <p>Geschäftsführer: Frau Anja Nguyen</p>
 
       <h3>Kontakt:</h3>
       <p>Telefon: +49 (0) 351 123 123 123</p>
-      <p>E-Mail: info@matjo.de</p>
+      <a href="mailto:info@matjo.de" class="link">E-Mail: info@matjo.de</a>
 
       <h3>Registereintrag</h3>
       <p>Eintragung im Handelsregister. Registergericht: Amtsgericht Dresden.</p>
@@ -87,8 +86,9 @@ h3 {
   @include responsive-font-size(2.4rem, 2.6rem);
 }
 
-p {
+p,
+.link {
   line-height: 1.6;
-  margin-block-end: 2rem;
+  margin-block: 1rem;
 }
 </style>

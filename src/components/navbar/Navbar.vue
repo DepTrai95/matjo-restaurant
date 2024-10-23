@@ -14,9 +14,9 @@
          <div class="nav-main__wrapper" v-if="!isMobile">
             <nav class="nav-main">
                <ul class="list--unstyled">
-                  <LinkRouter link="/" :label="$t('home.navigation.home')" />
-                  <LinkRouter link="/menu" :label="$t('home.navigation.menu')" />
-                  <LinkRouter link="/career" :label="$t('home.navigation.career')" />
+                  <LinkRouter link="/" :label="$t('navigation.home')" />
+                  <LinkRouter link="/menu" :label="$t('navigation.menu')" />
+                  <LinkRouter link="/career" :label="$t('navigation.career')" />
                   <li class="form-group form-select">
                      <label class="sr-only" for="language">Sprache wechseln</label>
                      <select class="form-control" id="language" name="language" v-model="$i18n.locale">
@@ -29,7 +29,7 @@
          </div>
 
          <div class="nav-cta__wrapper" v-if="!isMobile">
-            <router-link class="btn--primary" to="/contact">{{ $t('home.navigation.reservation') }}</router-link>
+            <router-link class="btn--primary" to="/contact">{{ $t('navigation.reservation') }}</router-link>
          </div>
 
          <div class="mobile-navigation" v-if="isMobile">
@@ -47,16 +47,16 @@
             <div class="nav-main__wrapper" :class="{'is-open': isMenuExpanded}">
                <nav class="nav-main">
                   <ul class="list--unstyled">
-                     <LinkRouter link="/" :label="$t('home.navigation.home')" @click="closeMenu" />
-                     <LinkRouter link="/menu" :label="$t('home.navigation.menu')" @click="closeMenu"/>
-                     <LinkRouter link="/career" :label="$t('home.navigation.career')" @click="closeMenu"/>
+                     <LinkRouter link="/" :label="$t('navigation.home')" @click="closeMenu" />
+                     <LinkRouter link="/menu" :label="$t('navigation.menu')" @click="closeMenu" />
+                     <LinkRouter link="/career" :label="$t('navigation.career')" @click="closeMenu" />
                      <li class=" form-group form-select">
                         <label class="sr-only" for="language">Sprache wechseln</label>
                         <select class="form-control" id="language" name="language" v-model="$i18n.locale">
                            <option value="de">Deutsch</option>
                            <option value="en">English</option>
                         </select>
-                        </li>
+                     </li>
                   </ul>
                   <ul class="list--unstyled social-media-menu">
                      <li class="social-media-menu__item">

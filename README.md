@@ -1,6 +1,6 @@
-# Matjo - Hotpot & BBQ
+# Matjo - BBQ & HOTPOT
 
-This is a simple website for a BBQ and Hotpot restaurant, which is built using Vue 3 with Vite and plain CSS/SCSS. It is super performant and reaches 100 in each relevant category in a Lighthouse Test.
+This is a simple website for a BBQ and HOTPOT restaurant, which is built using Vue 3 with Vite and plain CSS/SCSS. It is super performant and reaches 100 in each relevant category in a Lighthouse Test.
 
 This project was generated and is powered by [Vite.js](https://vitejs.dev/)
 
