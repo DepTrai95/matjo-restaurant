@@ -3,7 +3,7 @@
       <p id="skiplinks" class="skiplinks">
          <em class="sr-only">Springen Sie direkt:</em>
          <a href="#about-us">Zum Inhalt</a>
-         <a href="#faq">Zur FAQ</a>
+         <a href="#instagram">Zur Instagram-Galerie</a>
       </p>
    </Teleport>
 </template>

@@ -23,7 +23,7 @@
     </div>
 
     <stage-separator class="stage__separator--tinted"></stage-separator>
-    <InstagramGallery class="content-area--tinted"></InstagramGallery>
+    <InstagramGallery id="instagram" class="content-area--tinted"></InstagramGallery>
 
     <div v-if="1 == 0">
       <!-- hide this block -->
