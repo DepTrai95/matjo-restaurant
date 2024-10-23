@@ -1,58 +1,45 @@
 <template>
   <section class="impress">
     <div class="inner">
-      <h2>Angaben gemäss §5 TMG</h2>
-      <p>MATJO - BBQ & HOTPOT</p>
-      <p>Alaunstraße 9</p>
-      <p>01099 Dresden</p>
+      <h2>{{ $t('imprint.imprint.headline') }}</h2>
+      <p>{{ $t('imprint.imprint.companyName') }}</p>
+      <p>{{ $t('imprint.imprint.address.street') }}</p>
+      <p>{{ $t('imprint.imprint.address.city') }}</p>
 
-      <h3>Vertreten durch:</h3>
-      <p>Geschäftsführer: Frau Anja Nguyen</p>
+      <h3>{{ $t('imprint.imprint.representedBy.headline') }}</h3>
+      <p>{{ $t('imprint.imprint.representedBy.name') }}</p>
 
-      <h3>Kontakt:</h3>
-      <p>Telefon: +49 (0) 351 123 123 123</p>
-      <a href="mailto:info@matjo.de" class="link">E-Mail: info@matjo.de</a>
+      <h3>{{ $t('imprint.imprint.contact.headline') }}</h3>
+      <p>
+        {{ $t('imprint.imprint.contact.phone') }}
+        <a :href="'tel:' + $t('imprint.imprint.contact.phoneLink')" class="link">{{ $t('imprint.imprint.contact.phoneLink') }}</a>
+      </p>
+      <p>
+        {{ $t('imprint.imprint.contact.email') }}
+        <a :href="'mailto:' + $t('imprint.imprint.contact.emailLink')" class="link">{{ $t('imprint.imprint.contact.emailLink') }}</a>
+      </p>
 
-      <h3>Registereintrag</h3>
-      <p>Eintragung im Handelsregister. Registergericht: Amtsgericht Dresden.</p>
-      <p>Wird bald ergänzt</p>
-      <!-- <p>Registernummer: HRB 35581</p>
-      <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE 307 261 051</p> -->
+      <h3>{{ $t('imprint.imprint.registerEntry.headline') }}</h3>
+      <p>{{ $t('imprint.imprint.registerEntry.court') }}</p>
+      <p>{{ $t('imprint.imprint.registerEntry.info') }}</p>
+      <!-- <p>{{ $t('imprint.imprint.registerEntry.registerNumber') }}</p>
+      <p>{{ $t('imprint.imprint.registerEntry.taxId') }}</p> -->
 
-      <h3>Aufsichtsbehörde:</h3>
-      <p>Landratsamt Dresden</p>
-      <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
-        Verbraucherschlichtungsstelle teilzunehmen.</p>
+      <h3>{{ $t('imprint.imprint.supervisoryAuthority.headline') }}</h3>
+      <p>{{ $t('imprint.imprint.supervisoryAuthority.name') }}</p>
+      <p>{{ $t('imprint.imprint.supervisoryAuthority.note') }}</p>
 
-      <h3 class="h2">Haftung für Inhalte</h3>
-      <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen
-        Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet,
-        übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die
-        auf eine rechtswidrige Tätigkeit hinweisen.</p>
-      <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen
-        bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer
-        konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir
-        diese Inhalte umgehend entfernen.</p>
+      <h3>{{ $t('imprint.imprint.liabilityForContent.headline') }}</h3>
+      <p>{{ $t('imprint.imprint.liabilityForContent.paragraphOne') }}</p>
+      <p>{{ $t('imprint.imprint.liabilityForContent.paragraphTwo') }}</p>
 
-      <h3 class="h2">Haftung für Links</h3>
-      <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben.
-        Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
-        verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten
-        Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte
-        waren zum Zeitpunkt der Verlinkung nicht erkennbar.</p>
-      <p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer
-        Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links
-        umgehend entfernen.</p>
+      <h3>{{ $t('imprint.imprint.liabilityForLinks.headline') }}</h3>
+      <p>{{ $t('imprint.imprint.liabilityForLinks.paragraphOne') }}</p>
+      <p>{{ $t('imprint.imprint.liabilityForLinks.paragraphTwo') }}</p>
 
-      <h3 class="h2">Urheberrecht</h3>
-      <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
-        Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
-        Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-        Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
-      <p>Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter
-        beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine
-        Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von
-        Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+      <h3>{{ $t('imprint.imprint.copyright.headline') }}</h3>
+      <p>{{ $t('imprint.imprint.copyright.paragraphOne') }}</p>
+      <p>{{ $t('imprint.imprint.copyright.paragraphTwo') }}</p>
     </div>
   </section>
 </template>
@@ -74,7 +61,7 @@ export default {
 h2,
 h3 {
   margin-block: 4rem 3rem;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 }
 
 h2,
@@ -83,12 +70,16 @@ h2,
 }
 
 h3 {
-  @include responsive-font-size(2.4rem, 2.6rem);
+  @include responsive-font-size(2.6rem, 2.8rem);
+  margin-block: 1em;
 }
 
-p,
-.link {
+p {
   line-height: 1.6;
   margin-block: 1rem;
+}
+
+.link {
+  margin-block: 0;
 }
 </style>

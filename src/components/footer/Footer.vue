@@ -3,12 +3,25 @@
       <stage-separator class="stage__separator--black"></stage-separator>
       <div class="restaurant__information">
          <div class="footer__addresses">
-            <h3>{{ localizedFooter.footer.contact }}</h3>
+            <h3>{{ localizedFooter.footer.address }}</h3>
             <a href="https://maps.app.goo.gl/3DXUeW2gvcD2YbBx8/" target="_blank" noopener noreferrer>
                <span>MATJO - BBQ & HOTPOT</span>
                <span class="street">Alaunstraße 9</span>
                <span class="postcode">01099 Dresden</span>
             </a>
+
+            <div class="footer__contact">
+               <h3>{{ localizedFooter.footer.contact }}</h3>
+               <a href="tel:+4935181040272">
+                  <Icon :icon='"phone"'></Icon>
+                  0351 81040272
+               </a>
+               <a href="mailto:info@matjo.de">
+                  <Icon :icon='"mail"'></Icon>
+                  info@matjo.de
+               </a>
+            </div>
+
          </div>
          <div class="footer__opening-hours">
             <h3>{{ localizedFooter.footer.openingHours }}:</h3>
@@ -161,7 +174,7 @@ export default {
 
    &__addresses,
    &__opening-hours {
-      @include responsive-font-size(1.7rem, 1.8rem);
+      @include responsive-font-size(1.6rem, 1.7rem);
       margin-block-end: 4rem;
 
       @include for-tablet-portrait-up {
@@ -204,22 +217,29 @@ export default {
       width: calc(100% / 3);
    }
 
-  a {
+   a {
       align-items: start;
       color: inherit;
       display: flex;
       flex-direction: column;
       letter-spacing: 1px;
       line-height: 1.5;
-      padding-block: 0.5rem;
       transition: color 0.2s ease-in;
       width: auto;
 
-   &:hover,
-   &:focus {
-      color: $color-primary;
+      &:hover,
+      &:focus {
+         color: $color-primary;
+      }
    }
-  }
+
+   .footer__contact {
+      a {
+         align-items: center;
+         flex-direction: row;
+         gap: 0.5rem;
+      }
+   }
 }
 
 .copyright__area {

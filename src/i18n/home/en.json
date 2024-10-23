@@ -67,6 +67,7 @@
       ]
    },
    "footer": {
+      "address": "Address",
       "contact": "Contact",
       "openingHours": "Opening Hours",
       "monday": "Monday",

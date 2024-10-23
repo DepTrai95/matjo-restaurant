@@ -3,6 +3,8 @@ import { createWebHistory } from "vue-router";
 
 import Home from "./pages/home/Home.vue";
 import Menu from "./pages/menu/Menu.vue";
+import BBQ from "./pages/bbq/BBQ.vue";
+import Hotpot from "./pages/hotpot/Hotpot.vue";
 import Career from "./pages/career/Career.vue";
 import Contact from "./pages/contact/Contact.vue";
 import Impress from "./pages/impress/Impressum.vue";
@@ -26,21 +28,35 @@ const router = createRouter({
       meta: { 
         headline: 'routes.menu.headline',
         showBackground: true,
-      } 
+      }
+    },
+    { path: "/bbq", 
+      component: BBQ, 
+      meta: { 
+        headline: 'routes.bbq.headline',
+        showBackground: true,
+      }
+    },
+    { path: "/hotpot", 
+      component: Hotpot, 
+      meta: { 
+        headline: 'routes.hotpot.headline',
+        showBackground: true,
+      }
     },
     { path: "/career", 
       component: Career, 
       meta: { 
         headline: 'routes.career.headline',
         showBackground: true,
-      } 
+      }
     },
     { path: "/contact", 
       component: Contact, 
       meta: { 
         headline: 'routes.contact.headline',
         showBackground: true,
-      } 
+      }
     },
     { path: "/impressum", 
       component: Impress, 

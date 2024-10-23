@@ -3,7 +3,7 @@
       <div class="transition-content">
          <div class="transition-logo-container">
             <img class="logo" src="../../assets/img/logo-transparent-big.webp" alt="" height="300" width="300">
-            <p>BEST BBQ & HOTPOT IN TOWN</p>
+            <p>Best BBQ & HOTPOT in Town</p>
          </div>
       </div>
    </div>

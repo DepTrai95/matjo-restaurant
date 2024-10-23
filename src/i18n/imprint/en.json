@@ -1,0 +1,48 @@
+{
+  "imprint": {
+    "headline": "Information according to §5 TMG",
+    "companyName": "MATJO - BBQ & HOTPOT",
+    "address": {
+      "street": "Alaunstraße 9",
+      "city": "01099 Dresden"
+    },
+    "representedBy": {
+      "headline": "Represented by:",
+      "name": "Managing Director: Ms. Anja Nguyen"
+    },
+    "contact": {
+      "headline": "Contact:",
+      "phone": "Phone: ",
+      "phoneLink": "+4935181040272",
+      "email": "Email: ",
+      "emailLink": "info@matjo.de"
+    },
+    "registerEntry": {
+      "headline": "Register Entry",
+      "court": "Registration at the commercial register. Register court: District Court Dresden.",
+      "info": "To be added soon.",
+      "registerNumber": "Registration number: HRB 35581",
+      "taxId": "VAT identification number according to §27 a of the VAT Act: DE 307 261 051"
+    },
+    "supervisoryAuthority": {
+      "headline": "Supervisory Authority:",
+      "name": "District Office Dresden",
+      "note": "We are neither willing nor obligated to participate in dispute resolution procedures before a consumer arbitration board."
+    },
+    "liabilityForContent": {
+      "headline": "Liability for Content",
+      "paragraphOne": "As service providers, we are responsible for our own content on these pages in accordance with § 7 para. 1 TMG under general laws. However, according to §§ 8 to 10 TMG, we are not obliged as service providers to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.",
+      "paragraphTwo": "Obligations to remove or block the use of information according to general laws remain unaffected by this. However, liability in this respect is only possible from the time of knowledge of a specific legal violation. Upon becoming aware of such violations, we will remove this content immediately."
+    },
+    "liabilityForLinks": {
+      "headline": "Liability for Links",
+      "paragraphOne": "Our offer contains links to external websites of third parties, on whose content we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the content of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking.",
+      "paragraphTwo": "A permanent content control of the linked pages is not reasonable without concrete evidence of a violation of the law. Upon becoming aware of violations of the law, we will remove such links immediately."
+    },
+    "copyright": {
+      "headline": "Copyright",
+      "paragraphOne": "The content and works created by the site operators on these pages are subject to German copyright law. The duplication, editing, distribution, and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use.",
+      "paragraphTwo": "As far as the contents on this site were not created by the operator, the copyrights of third parties are respected. In particular, third-party content is marked as such. Should you nevertheless become aware of a copyright infringement, we ask for a corresponding notice. Upon becoming aware of violations of the law, we will remove such content immediately."
+    }
+  }
+}

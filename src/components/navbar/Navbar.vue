@@ -16,6 +16,8 @@
                <ul class="list--unstyled">
                   <LinkRouter link="/" :label="$t('navigation.home')" />
                   <LinkRouter link="/menu" :label="$t('navigation.menu')" />
+                  <LinkRouter link="/bbq" :label="$t('navigation.bbq')" />
+                  <LinkRouter link="/hotpot" :label="$t('navigation.hotpot')" />
                   <LinkRouter link="/career" :label="$t('navigation.career')" />
                   <li class="form-group form-select">
                      <label class="sr-only" for="language">Sprache wechseln</label>
@@ -49,10 +51,12 @@
                   <ul class="list--unstyled">
                      <LinkRouter link="/" :label="$t('navigation.home')" @click="closeMenu" />
                      <LinkRouter link="/menu" :label="$t('navigation.menu')" @click="closeMenu" />
+                     <LinkRouter link="/bbq" :label="$t('navigation.bbq')" @click="closeMenu" />
+                     <LinkRouter link="/hotpot" :label="$t('navigation.hotpot')" @click="closeMenu" />
                      <LinkRouter link="/career" :label="$t('navigation.career')" @click="closeMenu" />
                      <li class=" form-group form-select">
                         <label class="sr-only" for="language">Sprache wechseln</label>
-                        <select class="form-control" id="language" name="language" v-model="$i18n.locale">
+                        <select class="form-control" id="language" name="language" aria-label="Sprache ändern" v-model="$i18n.locale">
                            <option value="de">Deutsch</option>
                            <option value="en">English</option>
                         </select>
@@ -449,7 +453,7 @@ export default {
       border: 1px solid #0000006b;
       background-color: rgba(255, 255, 255, 0.5);
       border-radius: 5px;
-      font-family: "Cabin", "Calibri", Helvetica, Arial, sans-serif;
+      font-family: "Roboto", "Calibri", Helvetica, Arial, sans-serif;
       line-height: 1.5;
       padding-block: 0.75rem;
       padding-inline: 1rem;
