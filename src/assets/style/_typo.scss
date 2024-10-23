@@ -57,9 +57,14 @@
     line-height: 1.2;
   }
   
-  h1, h2, h3 {
-    font-family: "JosefinSans", "Calibri", sans-serif;
-    font-weight: 700;
+  h1 {
+    font-family: "JosefinSans", "Roboto", "Calibri", sans-serif;
+    font-weight: 500;
+  }
+
+  h2, h3 {
+    font-family: "Roboto", "Calibri", sans-serif;
+    font-weight: 500;
   }
   
   h1 {
