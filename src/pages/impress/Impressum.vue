@@ -16,7 +16,7 @@
       </p>
       <p>
         {{ $t('imprint.imprint.contact.email') }}
-        <a :href="'mailto:' + $t('imprint.imprint.contact.emailLink')" class="link">{{ $t('imprint.imprint.contact.emailLink') }}</a>
+        <a href="mailto:info@matjo.de" class="link">info@matjo.de</a>
       </p>
 
       <h3>{{ $t('imprint.imprint.registerEntry.headline') }}</h3>
