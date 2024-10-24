@@ -3,7 +3,8 @@
   "English": "English",
   "About": "About",
   "Policy": "Policy",
-  "Impress": "Impress",
+  "Imprint": "Imprint",
+  "privacy": "Data Privacy",
   "Contact": "Contact",
   "Address": "Address",
   "Language": "Language",
@@ -27,7 +28,7 @@
     "bbq": "BBQ",
     "hotpot": "Hotpot",
     "career": "Career",
-    "reservation": "Reserve"
+    "reservation": "Reserve"  
   },
   
   "routes": {
@@ -46,8 +47,8 @@
     "contact": {
       "headline": "Contact"
     },
-    "impress": {
-      "headline": "Impress"
+    "imprint": {
+      "headline": "Imprint"
     },
     "success": {
       "headline": "Formular sent"

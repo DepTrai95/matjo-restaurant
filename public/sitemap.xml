@@ -23,13 +23,16 @@
   <url>
     <loc>https://matjo.de/contact</loc>
     <changefreq>weekly</changefreq>
-  </url>
   <url>
-    <loc>https://matjo.de/reservation</loc>
+    <loc>https://matjo.de/impressum</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://matjo.de/impressum</loc>
+    <loc>https://matjo.de/privacy</loc>
+    <changefreq>weekly</changefreq>
+  </url>
+  </url>
+    <loc>https://matjo.de/reservation</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

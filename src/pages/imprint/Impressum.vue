@@ -1,5 +1,5 @@
 <template>
-  <section class="impress">
+  <section class="Imprint">
     <div class="inner">
       <h2>{{ $t('imprint.imprint.headline') }}</h2>
       <p>{{ $t('imprint.imprint.companyName') }}</p>
@@ -46,7 +46,7 @@
   
 <script>
 export default {
-  name: 'Impress',
+  name: 'Imprint',
   data() {
     return {}
   }
@@ -54,7 +54,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.impress {
+.Imprint {
   padding-block: 5rem;
 }
 

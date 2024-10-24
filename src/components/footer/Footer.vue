@@ -72,7 +72,8 @@
          <div class="copyright__area__container">
             <ul class="copyright__area__container__list">
                <li><span class="copyright-logo">© {{ getCurrentYear }} MATJO</span></li>
-               <LinkRouter link="/impressum" :label="$t('Impress')" />
+               <LinkRouter link="/impressum" :label="$t('Imprint')" />
+               <LinkRouter link="/privacy" :label="$t('Privacy')" />
                <LinkRouter link="/contact" :label="$t('Contact')" />
             </ul>
          </div>

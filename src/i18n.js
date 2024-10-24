@@ -16,6 +16,8 @@ import deContact from './i18n/contact/de.json';
 import enContact from './i18n/contact/en.json';
 import deImprint from './i18n/imprint/de.json';
 import enImprint from './i18n/imprint/en.json';
+import dePrivacy from './i18n/privacy/de.json';
+import enPrivacy from './i18n/privacy/en.json';
 
 const messages = {
   de: {
@@ -27,6 +29,7 @@ const messages = {
     career: deCareer,
     contact: deContact,
     imprint: deImprint,
+    privacy: dePrivacy,
   },
   en: {
     ...en, 
@@ -37,6 +40,7 @@ const messages = {
     career: enCareer,
     contact: enContact,
     imprint: enImprint,
+    privacy: enPrivacy,
   }
 };
 

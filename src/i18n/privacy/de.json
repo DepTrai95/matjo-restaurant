@@ -1,0 +1,40 @@
+{
+  "privacyPolicy": {
+    "headline": "Datenschutzerklärung",
+    "intro": {
+      "paragraphOne": "Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. Diese Datenschutzerklärung informiert Sie darüber, wie wir personenbezogene Daten auf unserer Website verarbeiten."
+    },
+    "responsible": {
+      "subHeadline": "Verantwortlicher",
+      "paragraphOne": "Verantwortlich für die Datenverarbeitung auf dieser Website ist:",
+      "companyName": "MATJO - BBQ & HOTPOT",
+      "address": {
+        "street": "Alaunstraße 9",
+        "city": "01099 Dresden"
+      },
+      "email": "E-Mail: info@matjo.de",
+      "phone": "Telefon: +49(0) 351 81040272"
+    },
+    "dataProcessing": {
+      "subHeadline": "Verarbeitung personenbezogener Daten",
+      "paragraphOne": "Personenbezogene Daten werden auf unserer Website ausschließlich durch das Kontaktformular erfasst. Hierbei handelt es sich um Daten wie Name, E-Mail-Adresse und ggf. weitere Informationen, die Sie freiwillig angeben.",
+      "paragraphTwo": "Die Erhebung dieser Daten erfolgt, um Ihre Anfragen zu beantworten. Die Daten werden nicht an Dritte weitergegeben, es sei denn, Sie haben ausdrücklich eingewilligt oder es besteht eine gesetzliche Verpflichtung."
+    },
+    "dataRetention": {
+      "subHeadline": "Speicherdauer",
+      "paragraphOne": "Ihre im Kontaktformular angegebenen Daten werden für die Dauer der Bearbeitung Ihrer Anfrage gespeichert. Danach werden diese gelöscht, es sei denn, gesetzliche Aufbewahrungsfristen verlangen eine längere Speicherung."
+    },
+    "rights": {
+      "subHeadline": "Ihre Rechte",
+      "paragraphOne": "Sie haben das Recht, jederzeit Auskunft über die bei uns gespeicherten personenbezogenen Daten zu erhalten, deren Berichtigung, Löschung oder Einschränkung der Verarbeitung zu verlangen, sowie der Verarbeitung Ihrer Daten zu widersprechen. Wenden Sie sich dazu bitte an die oben genannte Kontaktadresse."
+    },
+    "consent": {
+      "subHeadline": "Einwilligung",
+      "paragraphOne": "Mit der Nutzung des Kontaktformulars stimmen Sie der Verarbeitung Ihrer Daten gemäß dieser Datenschutzerklärung zu."
+    },
+    "finalNotes": {
+      "subHeadline": "Änderungen der Datenschutzerklärung",
+      "paragraphOne": "Wir behalten uns vor, diese Datenschutzerklärung gelegentlich anzupassen, um sie an aktuelle rechtliche Anforderungen oder Änderungen in unseren Leistungen anzupassen."
+    }
+  }
+}

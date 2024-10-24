@@ -3,7 +3,8 @@
   "English": "Englisch",
   "About": "Über uns",
   "Policy": "Richtlinien",
-  "Impress": "Impressum",
+  "Imprint": "Impressum",
+  "Privacy": "Datenschutz",
   "Contact": "Kontakt",
   "Address": "Adresse",
   "Language": "Sprache",
@@ -46,8 +47,11 @@
     "contact": {
       "headline": "Kontakt"
     },
-    "impress": {
+    "imprint": {
       "headline": "Impressum"
+    },
+    "privacy": {
+      "headline": "Datenschutz"
     },
     "success": {
       "headline": "Formular abgeschickt"

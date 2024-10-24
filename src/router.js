@@ -7,7 +7,8 @@ import BBQ from "./pages/bbq/BBQ.vue";
 import Hotpot from "./pages/hotpot/Hotpot.vue";
 import Career from "./pages/career/Career.vue";
 import Contact from "./pages/contact/Contact.vue";
-import Impress from "./pages/impress/Impressum.vue";
+import Imprint from "./pages/imprint/Impressum.vue";
+import Privacy from "./pages/privacy/Privacy.vue";
 import Success from "./pages/success/Success.vue";
 import NotFound from "./pages/NotFound.vue";
 
@@ -59,9 +60,15 @@ const router = createRouter({
       }
     },
     { path: "/impressum", 
-      component: Impress, 
+      component: Imprint, 
       meta: { 
-        headline: 'routes.impress.headline',
+        headline: 'routes.imprint.headline',
+      } 
+    },
+    { path: "/privacy", 
+      component: Privacy, 
+      meta: { 
+        headline: 'routes.privacy.headline',
       } 
     },
     { path: "/success", 
