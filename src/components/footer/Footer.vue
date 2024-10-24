@@ -169,19 +169,28 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
+   @include responsive-font-size(1.5rem, 1.6rem);
    background-color: $color-background;
    color: $color-white;
+   letter-spacing: 1px;
 
    &__addresses,
    &__opening-hours {
-      margin-block-end: 4rem;
+      @include responsive-font-size(1.5rem, 1.6rem);
+      margin-block-end: 5rem;
 
       @include for-tablet-portrait-up {
          width: 50%;
       }
 
       h3 {
+         @include responsive-font-size(1.7rem, 1.8rem);
          text-transform: uppercase;
+      }
+
+      p {
+         margin-block-end: 1rem;
+         margin-block-start: 0;
       }
    }
 
@@ -221,7 +230,6 @@ export default {
       color: inherit;
       display: flex;
       flex-direction: column;
-      letter-spacing: 1px;
       line-height: 1.5;
       transition: color 0.2s ease-in;
       width: auto;

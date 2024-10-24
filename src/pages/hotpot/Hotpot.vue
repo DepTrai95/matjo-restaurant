@@ -63,6 +63,7 @@ p + h3 {
 }
 
 p {
+  @include responsive-font-size(1.5rem, 1.6rem);
   margin-block: 1rem;
 }
 </style>

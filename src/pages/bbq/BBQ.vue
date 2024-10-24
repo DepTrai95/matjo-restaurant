@@ -59,4 +59,9 @@ h3 {
 p + h3 {
   margin-top: 3rem;
 }
+
+p {
+  @include responsive-font-size(1.5rem, 1.6rem);
+  margin-block: 1rem;
+}
 </style>
