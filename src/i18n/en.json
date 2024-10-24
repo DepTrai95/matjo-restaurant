@@ -50,6 +50,9 @@
     "imprint": {
       "headline": "Imprint"
     },
+    "privacy": {
+      "headline": "Data Privacy"
+    },
     "success": {
       "headline": "Formular sent"
     }

@@ -11,8 +11,14 @@
       <p>{{ $t('privacy.privacyPolicy.responsible.companyName') }}</p>
       <p>{{ $t('privacy.privacyPolicy.responsible.address.street') }}</p>
       <p>{{ $t('privacy.privacyPolicy.responsible.address.city') }}</p>
-      <p>{{ $t('privacy.privacyPolicy.responsible.phone') }}</p>
-      <p>{{ $t('privacy.privacyPolicy.responsible.email') }}</p>
+      <p>
+        {{ $t('privacy.privacyPolicy.responsible.phone') }}
+        <a :href="'tel:' + $t('privacy.privacyPolicy.responsible.phoneLink')" class="link">{{ $t('privacy.privacyPolicy.responsible.phoneLink') }}</a>
+      </p>
+      <p>
+        {{ $t('privacy.privacyPolicy.responsible.email') }}
+        <a href="mailto:info@matjo.de" class="link">info@matjo.de</a>
+      </p>
 
       <h3>{{ $t('privacy.privacyPolicy.dataProcessing.subHeadline') }}</h3>
       <p>{{ $t('privacy.privacyPolicy.dataProcessing.paragraphOne') }}</p>

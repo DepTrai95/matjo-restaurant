@@ -12,8 +12,9 @@
         "street": "Alaunstraße 9",
         "city": "01099 Dresden"
       },
-      "email": "Email: info@matjo.de",
-      "phone": "Phone: +49(0) 351 81040272"
+      "phone": "Phone: ",
+      "phoneLink": "0351 81040272",
+      "email": "E-Mail: "
     },
     "dataProcessing": {
       "subHeadline": "Processing of Personal Data",
