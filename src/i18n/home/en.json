@@ -7,10 +7,10 @@
       "title": "ABOUT US",
       "subTitle": "Our Promise",
       "description": [
-         "MATJO is an Asian restaurant at the entrance to Dresden's beautiful Neustadt.",
-         "Discover with us a fusion of flavors in our BBQ and hotpot restaurant where tradition meets taste.",
-         "Since our opening in December 2024, we have been committed to providing excellent service and a culinary journey through Asian cuisine.",
-         "Check out our menu and book your table now and let yourself be enchanted by magical flavors."
+         "Welcome to MATJO - BBQ & HOTPOT in Dresden Neustadt.",
+         "Our restaurant combines the best traditions of BBQ and hotpots to offer you a unique culinary experience.",
+         "With us, you create your meal according to your taste! Fresh ingredients, authentic flavors, and warm service await you in a relaxed atmosphere.",
+         "Spend an unforgettable evening here with your loved ones and experience the variety of our Asian cuisine!"
       ],
       "callToAction": {
          "text": "Our Menu"
@@ -20,24 +20,24 @@
       "title": "Our Values",
       "valueList": [
          {
-            "icon": "food-menu",
-            "heading": "Authentic",
-            "description": "Enjoy bold, diverse, and above all, our authentic recipes."
-         },
-         {
             "icon": "dish",
-            "heading": "High Quality",
-            "description": "We select only the best ingredients and serve them fresh on the same day."
+            "heading": "Quality",
+            "description": "We focus on fresh, high-quality ingredients to guarantee an exceptional taste experience."
          },
          {
-            "icon": "bulb",
-            "heading": "Unique",
-            "description": "Experience creative and unique dishes you haven't seen before."
+            "icon": "food-menu",
+            "heading": "Authenticity",
+            "description": "We value traditional preparation methods and recipes to offer you an authentic experience."
+         },
+         {
+            "icon": "hospitality",
+            "heading": "Hospitality",
+            "description": "Warmth and friendliness are the heart of our service, so you feel right at home with us."
          },
          {
             "icon": "group",
-            "heading": "Groups",
-            "description": "BBQ and Hotpot focus on a shared experience and the enjoyment of delicacies."
+            "heading": "Community",
+            "description": "Food brings people together, and at MATJO, sharing and enjoying is at the core of our experience."
          }
       ]
    },

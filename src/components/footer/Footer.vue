@@ -71,7 +71,7 @@
          </div>
          <div class="copyright__area__container">
             <ul class="copyright__area__container__list">
-               <li><span class="copyright-logo">© {{ getCurrentYear }} Matjo</span></li>
+               <li><span class="copyright-logo">© {{ getCurrentYear }} MATJO</span></li>
                <LinkRouter link="/impressum" :label="$t('Impress')" />
                <LinkRouter link="/contact" :label="$t('Contact')" />
             </ul>
@@ -174,7 +174,6 @@ export default {
 
    &__addresses,
    &__opening-hours {
-      @include responsive-font-size(1.6rem, 1.7rem);
       margin-block-end: 4rem;
 
       @include for-tablet-portrait-up {

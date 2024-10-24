@@ -1,4 +1,4 @@
-# Matjo - BBQ & HOTPOT
+# MATJO - BBQ & HOTPOT
 
 This is a simple website for a BBQ and HOTPOT restaurant, which is built using Vue 3 with Vite and plain CSS/SCSS. It is super performant and reaches 100 in each relevant category in a Lighthouse Test.
 

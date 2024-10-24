@@ -19,10 +19,10 @@
         <a href="mailto:info@matjo.de" class="link">info@matjo.de</a>
       </p>
 
-      <h3>{{ $t('imprint.imprint.registerEntry.headline') }}</h3>
+      <!-- <h3>{{ $t('imprint.imprint.registerEntry.headline') }}</h3>
       <p>{{ $t('imprint.imprint.registerEntry.court') }}</p>
       <p>{{ $t('imprint.imprint.registerEntry.info') }}</p>
-      <!-- <p>{{ $t('imprint.imprint.registerEntry.registerNumber') }}</p>
+      <p>{{ $t('imprint.imprint.registerEntry.registerNumber') }}</p>
       <p>{{ $t('imprint.imprint.registerEntry.taxId') }}</p> -->
 
       <h3>{{ $t('imprint.imprint.supervisoryAuthority.headline') }}</h3>
@@ -60,23 +60,17 @@ export default {
 
 h2,
 h3 {
-  margin-block: 4rem 3rem;
-  // text-transform: uppercase;
+  margin-block: 1.5rem;
 }
 
 h2,
 .h2 {
-  @include responsive-font-size(3.5rem, 4rem);
-}
-
-h3 {
-  @include responsive-font-size(2.6rem, 2.8rem);
-  margin-block: 1em;
+  @include responsive-font-size(2.2rem, 2.4rem);
 }
 
 p {
   line-height: 1.6;
-  margin-block: 1rem;
+  margin-block: 0;
 }
 
 .link {

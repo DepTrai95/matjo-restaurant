@@ -188,7 +188,7 @@ export default {
 }
 
 .card__body {
-   @include responsive-font-size(1.7rem, 1.8rem);
+   @include responsive-font-size(1.6rem, 1.7rem);
    flex: 1 1 auto;
    line-height: 1.45;
 

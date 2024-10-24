@@ -294,7 +294,7 @@
   }
 
   .form-control {
-    @include responsive-font-size(1.7rem, 1.8rem);
+    @include responsive-font-size(1.6rem, 1.7rem);
     border: 2px solid #51515137;
     border-radius: 30px;
     display: block;
@@ -315,7 +315,7 @@
   }
 
   label {
-    @include responsive-font-size(1.7rem, 1.8rem);
+    @include responsive-font-size(1.6rem, 1.7rem);
     color: $color-body;
     display: block;
     font-weight: 500;
@@ -331,7 +331,7 @@
 
     label,
     p {
-      @include responsive-font-size(1.7rem, 1.8rem);
+      @include responsive-font-size(1.6rem, 1.7rem);
       color: $color-error;
       margin-block-start: 0.5rem;
       margin-inline-start: 1rem;

@@ -10,7 +10,7 @@
          "Willkommen bei MATJO - BBQ & HOTPOT in der Dresdner Neustadt.",
          "Unser Restaurant vereint die besten Traditionen des BBQ und Hotpots, um dir ein einzigartiges kulinarisches Erlebnis zu bieten.",
          "Bei uns gestaltest du dein Essen nach deinem Geschmack! Frische Zutaten, authentische Aromen und ein herzlicher Service erwarten dich in entspannter Atmosphäre.",
-         "Verbringe hier einen unvergesslichen Abend mit deinen Liebsten und erlebe die Vielfalt von MATJO's Küche / unserer asiatischen Küche!"
+         "Verbringe hier einen unvergesslichen Abend mit deinen Liebsten und erlebe die Vielfalt von unserer asiatischen Küche!"
       ],
       "callToAction": {
          "text": "Zum Menü"
@@ -20,23 +20,23 @@
       "title": "Unsere Werte",
       "valueList": [
          {
-            "icon": "food-menu",
-            "heading": "Authentisch",
-            "description": "Wir legen Wert auf traditionelle Zubereitungsmethoden und Rezepte, um dir ein authentisches Erlebnis zu bieten."
-         },
-         {
             "icon": "dish",
             "heading": "Qualität",
             "description": "Wir setzen auf frische, hochwertige Zutaten, um ein erstklassiges Geschmackserlebnis zu garantieren"
          },
          {
-            "icon": "bulb",
-            "heading": "Einzigartig",
+            "icon": "food-menu",
+            "heading": "Authentizität",
+            "description": "Wir legen Wert auf traditionelle Zubereitungsmethoden und Rezepte, um dir ein authentisches Erlebnis zu bieten."
+         },
+         {
+            "icon": "hospitality",
+            "heading": "Gastfreundschaft",
             "description": "Herzlichkeit und Freundlichkeit sind das Herzstück unseres Services, damit du dich bei uns wie zu Hause fühlst."
          },
          {
             "icon": "group",
-            "heading": "Gruppen",
+            "heading": "Gemeinschaft",
             "description": "Essen verbindet Menschen, und bei MATJO steht das gemeinsame Genießen im Mittelpunkt."
          }
       ]

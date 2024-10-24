@@ -83,10 +83,6 @@
    p {
       @include responsive-font-size(2rem, 2.4rem);
       font-weight: 500;
-
-      @include for-tablet-portrait-up {
-         @include responsive-font-size(3rem, 3.4rem);
-      }
    }
 }
 </style>

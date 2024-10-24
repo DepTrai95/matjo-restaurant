@@ -23,11 +23,11 @@
 
   "navigation": {
     "home": "Home",
-    "menu": "Menü",
+    "menu": "Menu",
     "bbq": "BBQ",
-    "hotpot": "HOTPOT",
-    "career": "Karriere",
-    "reservation": "Reservieren"
+    "hotpot": "Hotpot",
+    "career": "Career",
+    "reservation": "Reserve"
   },
   
   "routes": {
