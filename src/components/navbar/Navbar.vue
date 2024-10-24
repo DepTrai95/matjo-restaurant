@@ -207,6 +207,7 @@ export default {
          padding: 0;
       
          &::before {
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             background: rgba(255, 255, 255, 0.4);
             border-radius: 30px;
@@ -285,6 +286,7 @@ export default {
          background: rgba(255, 255, 255, 0.4);
          border-radius: 30px;
          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+         -webkit-backdrop-filter: blur(10px);
          backdrop-filter: blur(10px);
          border: 0px solid rgba(255, 255, 255, 0.3);
 

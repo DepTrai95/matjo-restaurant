@@ -246,6 +246,7 @@ export default {
          align-items: center;
          flex-direction: row;
          gap: 0.5rem;
+         padding-block: 0.25rem;
       }
    }
 }
