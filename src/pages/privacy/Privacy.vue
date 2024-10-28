@@ -13,7 +13,8 @@
       <p>{{ $t('privacy.privacyPolicy.responsible.address.city') }}</p>
       <p>
         {{ $t('privacy.privacyPolicy.responsible.phone') }}
-        <a :href="'tel:' + $t('privacy.privacyPolicy.responsible.phoneLink')" class="link">{{ $t('privacy.privacyPolicy.responsible.phoneLink') }}</a>
+        <a :href="'tel:' + $t('privacy.privacyPolicy.responsible.phoneLink')" class="link">{{
+          $t('privacy.privacyPolicy.responsible.phoneLink') }}</a>
       </p>
       <p>
         {{ $t('privacy.privacyPolicy.responsible.email') }}
@@ -23,6 +24,16 @@
       <h3>{{ $t('privacy.privacyPolicy.dataProcessing.subHeadline') }}</h3>
       <p>{{ $t('privacy.privacyPolicy.dataProcessing.paragraphOne') }}</p>
       <p>{{ $t('privacy.privacyPolicy.dataProcessing.paragraphTwo') }}</p>
+
+      <h3>{{ $t('privacy.privacyPolicy.instagramAPI.subHeadline') }}</h3>
+      <p>{{ $t('privacy.privacyPolicy.instagramAPI.paragraphOne') }}</p>
+      <p>{{ $t('privacy.privacyPolicy.instagramAPI.paragraphTwo') }}</p>
+      <p>
+        {{ $t('privacy.privacyPolicy.instagramAPI.paragraphThree') }}
+        <a href="https://privacycenter.instagram.com/policy/" class="link" target="_blank"
+          rel="noopener noreferrer">{{ $t('privacy.privacyPolicy.instagramAPI.instagramDataPolicy') }}</a>.
+      </p>
+
 
       <h3>{{ $t('privacy.privacyPolicy.dataRetention.subHeadline') }}</h3>
       <p>{{ $t('privacy.privacyPolicy.dataRetention.paragraphOne') }}</p>

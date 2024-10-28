@@ -21,6 +21,13 @@
       "paragraphOne": "Personenbezogene Daten werden auf unserer Website ausschließlich durch das Kontaktformular erfasst. Hierbei handelt es sich um Daten wie Name, E-Mail-Adresse und ggf. weitere Informationen, die Sie freiwillig angeben.",
       "paragraphTwo": "Die Erhebung dieser Daten erfolgt, um Ihre Anfragen zu beantworten. Die Daten werden nicht an Dritte weitergegeben, es sei denn, Sie haben ausdrücklich eingewilligt oder es besteht eine gesetzliche Verpflichtung."
     },
+    "instagramAPI": {
+      "subHeadline": "Nutzung der Instagram Basic Display API",
+      "paragraphOne": "Auf unserer Website nutzen wir die Instagram Basic Display API, um Ihnen Inhalte und Bilder unseres Instagram-Profils anzuzeigen. Beim Laden dieser Inhalte wird eine Verbindung zu den Servern von Meta Platforms, Inc. (dem Betreiber von Instagram) hergestellt.",
+      "paragraphTwo": "Dabei kann Ihre IP-Adresse und gegebenenfalls weitere technische Daten an Meta Platforms übermittelt werden. Diese Daten werden durch Meta Platforms gemäß deren Datenschutzrichtlinie verarbeitet.",
+      "paragraphThree": "Weitere Informationen zur Datenverarbeitung durch Meta Platforms und Instagram finden Sie in der ",
+      "instagramDataPolicy": "Instagram-Datenschutzerklärung"
+    },
     "dataRetention": {
       "subHeadline": "Speicherdauer",
       "paragraphOne": "Ihre im Kontaktformular angegebenen Daten werden für die Dauer der Bearbeitung Ihrer Anfrage gespeichert. Danach werden diese gelöscht, es sei denn, gesetzliche Aufbewahrungsfristen verlangen eine längere Speicherung."

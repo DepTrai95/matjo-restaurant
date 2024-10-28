@@ -21,9 +21,8 @@
 
       <!-- <h3>{{ $t('imprint.imprint.registerEntry.headline') }}</h3>
       <p>{{ $t('imprint.imprint.registerEntry.court') }}</p>
-      <p>{{ $t('imprint.imprint.registerEntry.info') }}</p>
-      <p>{{ $t('imprint.imprint.registerEntry.registerNumber') }}</p>
-      <p>{{ $t('imprint.imprint.registerEntry.taxId') }}</p> -->
+      <p>{{ $t('imprint.imprint.registerEntry.registerNumber') }}</p> -->
+      <p>{{ $t('imprint.imprint.registerEntry.taxId') }}</p>
 
       <h3>{{ $t('imprint.imprint.supervisoryAuthority.headline') }}</h3>
       <p>{{ $t('imprint.imprint.supervisoryAuthority.name') }}</p>

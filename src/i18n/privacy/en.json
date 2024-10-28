@@ -21,6 +21,13 @@
       "paragraphOne": "Personal data is collected on our website exclusively through the contact form. This includes data such as your name, email address, and any additional information you voluntarily provide.",
       "paragraphTwo": "The collection of this data is intended to respond to your inquiries. The data will not be shared with third parties unless you have explicitly consented or there is a legal obligation to do so."
     },
+    "instagramAPI": {
+      "subHeadline": "Use of the Instagram Basic Display API",
+      "paragraphOne": "We use the Instagram Basic Display API on our website to display content and images from our Instagram profile. When this content is loaded, a connection is established with Meta Platforms, Inc. (Instagram's operator).",
+      "paragraphTwo": "In this process, your IP address and possibly other technical data may be transmitted to Meta Platforms. This data is processed by Meta Platforms according to their privacy policy.",
+      "paragraphThree": "For more information on data processing by Meta Platforms and Instagram, please refer to the ",
+      "instagramDataPolicy": "Instagram Privacy Policy"
+    },
     "dataRetention": {
       "subHeadline": "Data Retention",
       "paragraphOne": "Your contact form data will be stored for the duration of processing your inquiry. Afterwards, the data will be deleted unless legal retention periods require longer storage."
