@@ -26,12 +26,10 @@
 
 <script>
 import BaseButton from '../button/BaseButton.vue';
-import Icon from '../../assets/svg/Icon.vue';
 
 export default {
    components: {
       BaseButton,
-      Icon
    },
    methods: {
       openDialog() {
