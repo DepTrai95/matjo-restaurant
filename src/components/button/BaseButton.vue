@@ -52,7 +52,7 @@ a {
   min-height: 3rem;
   min-width: 170px;
   outline: 1px solid transparent;
-  padding: 8px;
+  padding: 1rem 1.5rem;
   text-decoration: none;
   transition: background-color 0.2s ease-in, border-color 0.2s ease-in, box-shadow 0.3s ease-in, color 0.3s ease-in-out, outline 0.3s ease-in-out;
 
