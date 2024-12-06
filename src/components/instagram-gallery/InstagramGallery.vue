@@ -4,7 +4,15 @@
       <div class="grid-instagram grid-2 grid-3--tablet-portrait-up grid-5--tablet-landscape-up">
          <div class="grid-item" v-for="img in images" :key="img.id">
             <a class="instagram-img__container" :href="img.permalink" target="_blank" rel="noopener noreferrer">
-               <img class="instagram-img" :src="img.media_url" :id="img.id" alt="Bild aus Instagram" height="260" width="260">
+               <img 
+                  class="instagram-img"
+                  :src="img.media_type === 'IMAGE' ? img.media_url : img.thumbnail_url" 
+                  :id="img.id" 
+                  alt="Bild aus Instagram" 
+                  height="260" 
+                  width="260"
+               >
+               <Icon v-if="img.media_type === 'VIDEO'" class="instagram-video" :icon="'play'"></Icon>
             </a>
          </div>
       </div>
@@ -15,10 +23,12 @@
 import { toastStore } from '../../store/store.js';
 import debounce from '../../utils.js';
 import StageSeparator from '../stage/StageSeparator.vue';
+import Icon from '../../assets/svg/Icon.vue';
 
 export default {
    components: {
       StageSeparator,
+      Icon,
    },
    data() {
       return {
@@ -33,12 +43,21 @@ export default {
          return data;
       },
       async fetchInstagramImages () {
-         const url = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,permalink&access_token=${process.env.INSTAGRAM_API}`;
+         const url = `https://graph.instagram.com/v21.0/${process.env.INSTAGRAM_ACCOUNT_ID}/media?access_token=${process.env.INSTAGRAM_API}`;
          try {
             const res = await fetch(url);
             if (!res.ok) throw new Error('Fehler beim Laden der Instagram Bilder');
             const data = await res.json();
-            const images = data.data.filter(image => image.media_type === 'IMAGE').slice(0, 10);
+            const details = await Promise.all(
+               data.data.map(async (item) => {
+                  const detailUrl = `https://graph.instagram.com/v21.0/${item.id}?fields=media_url,media_type,permalink,thumbnail_url&access_token=${process.env.INSTAGRAM_API}`;
+                  const detailRes = await fetch(detailUrl);
+                  if (!detailRes.ok) throw new Error("Fehler beim Laden der Bilddetails");
+                  return detailRes.json();
+               })
+            );
+            // const images = details.filter(image => image.media_type === 'IMAGE').slice(0, 10);
+            const images = details.slice(0, 10);
             this.images = images;
          } catch (error) {
             toastStore().showToast('error', 'Fehler beim Laden der Instagram Bilder');
@@ -75,9 +94,10 @@ export default {
 
 .instagram-img__container {
    align-items: center;
+   color: $color-white;
    display: flex;
    overflow: hidden;
-
+   position: relative;
 }
 
 .instagram-img {
@@ -101,4 +121,16 @@ export default {
       filter: brightness(1.2);
    }
 }
+
+.instagram-video {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+
+   :first-child {
+      height: 7.5rem;
+      width: 7.5rem;
+   }
+} 
 </style>
