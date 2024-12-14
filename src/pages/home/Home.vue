@@ -47,6 +47,7 @@ import Icon from '../../assets/svg/Icon.vue';
 import StageSeparator from '../../components/stage/StageSeparator.vue';
 import InstagramGallery from '../../components/instagram-gallery/InstagramGallery.vue';
 import Img from '../../components/img/Img.vue';
+import Dialog from '../../components/dialog/Dialog.vue';
 
 export default {
   name: 'Home',
@@ -59,7 +60,11 @@ export default {
     Img,
     InstagramGallery,
     StageSeparator,
+    Dialog,
   },
+  // mounted() {
+  //   this.$refs.dialogHomeRef.openDialog();
+  // },
   data() {
     return {
       title: 'Homepage',

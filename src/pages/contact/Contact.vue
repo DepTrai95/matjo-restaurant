@@ -37,12 +37,11 @@
       </section>
     </div>
     <Dialog ref="dialogRef">
-      <template v-slot:dialogHeader>Wir haben bald für euch geöffnet</template>
+      <template v-slot:dialogHeader>{{ $t('contactInfo.soonOpenHeader') }}</template>
       <template v-slot:dialogBody>
-          Vielen Dank für eure Vorfreude und eure Geduld!<br>
-          Wir freuen uns dass ihr hier gelandet seid und ihr gespannt seid auf unseren Laden.<br>
-          Wir können es ebenfalls kaum erwarten, euch als unsere Gäste willkommen zu heißen.<br>
-          Leider müssen wir uns noch ein wenig gedulden, da wir auf Hochtouren arbeiten, um die letzten Vorbereitungen abzuschließen.
+        {{ $t('contactInfo.soonOpenBody.firstLine') }}<br>
+        {{ $t('contactInfo.soonOpenBody.secondLine') }}<br>
+        {{ $t('contactInfo.soonOpenBody.thirdLine') }}
       </template>
     </Dialog>
   </section>

@@ -1,5 +1,6 @@
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path'
 
 const apiKeys = [
   'INSTAGRAM_APP_ID',
@@ -17,10 +18,15 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [vue()],
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, 'src'), 
+      },
+    },
     css: { 
       preprocessorOptions: {
         scss: {
-          additionalData: `@import "./src/assets/style/global.scss";`,
+          additionalData: `@import "@/assets/style/global.scss";`,
         },
       },
     },

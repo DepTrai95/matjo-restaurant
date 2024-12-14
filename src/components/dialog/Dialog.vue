@@ -19,7 +19,7 @@
                <slot name="dialogBody"></slot>
             </p>
          </div>
-         <base-button mode="btn--primary" @click="closeDialog">Schließen</base-button>
+         <base-button mode="btn--primary" @click="closeDialog">{{ $t('close') }}</base-button>
       </dialog>
    </Teleport>
 </template>
