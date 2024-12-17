@@ -14,25 +14,25 @@
             <div class="menu-container grid--default grid-3--tablet-portrait-up">
               <div class="grid-item">
                 <div class="menu-item">
-                  <a href="#" @click.prevent="openMenuModal">
-                    <img src="/img/bbq/bbq-large.webp" height alt="Bild für Hauptspeisen">
-                    <span class="menu-category">{{ $t('menu.menuButtons.food') }}</span>
+                  <a href="/fileadmin/A-la-carte.pdf">
+                    <img src="/img/lunch/lunch-large.webp" height alt="Bild für Hauptspeisen und Getränke">
+                    <span class="menu-category">{{ $t('menu.menuButtons.mainDishes') }}</span>
                   </a>
                 </div>
               </div>
               <div class="grid-item">
                 <div class="menu-item">
-                  <a href="#" @click.prevent="openMenuModal">
-                    <img src="/img/drinks/drinks-large.webp" height alt="Bild für Getränke">
-                    <span class="menu-category">{{ $t('menu.menuButtons.drinks') }}</span>
+                  <a href="/fileadmin/BBQ-Menu.pdf">
+                    <img src="/img/bbq-menu/bbq-menu-large.webp" height alt="Bild für BBQ Gerichte">
+                    <span class="menu-category">{{ $t('menu.menuButtons.bbq') }}</span>
                   </a>
                 </div>
               </div>
               <div class="grid-item">
                 <div class="menu-item">
-                  <a href="#" @click.prevent="openMenuModal">
-                    <img src="/img/lunch/lunch-large.webp" height alt="Bild für Mittagsgerichte">
-                    <span class="menu-category">{{ $t('menu.menuButtons.lunch') }}</span>
+                  <a href="/fileadmin/Hotpot-Menu.pdf">
+                    <img src="/img/hotpot-vertical/hotpot-large.webp" height alt="Bild für Hotpot Gerichte">
+                    <span class="menu-category">{{ $t('menu.menuButtons.hotpot') }}</span>
                   </a>
                 </div>
               </div>
@@ -41,14 +41,6 @@
         </div>
       </div>
     </section>
-    <Dialog :dialogIsOpen="isDialogOpen" @update:dialogIsOpen="isDialogOpen = $event">
-      <template v-slot:dialogHeader>
-        Menü noch nicht verfügbar
-      </template>
-      <template v-slot:dialogBody>
-        Unser Menü wird bald für euch veröffentlicht, bitte habt etwas Geduld!
-      </template>
-    </Dialog>
   </div>
 </template>
 
@@ -67,12 +59,6 @@ export default {
   data() {
     return {
       title: 'Menüseite',
-      isDialogOpen: false,
-    }
-  },
-  methods: {
-    openMenuModal() {
-      this.isDialogOpen = true;
     }
   }
 }

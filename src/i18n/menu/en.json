@@ -6,8 +6,8 @@
     "paragraphThree": "If you have any intolerances or special requests, let us know – we always do our best!"
   },
   "menuButtons": {
-    "food": "Food",
-    "drinks": "Drinks",
-    "lunch": "Lunch"
+    "mainDishes": "Main Dishes",
+    "bbq": "BBQ",
+    "hotpot": "Hotpot"
   }
 }

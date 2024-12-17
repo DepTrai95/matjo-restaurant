@@ -27,12 +27,12 @@
             <h3>{{ localizedFooter.footer.openingHours }}:</h3>
             <p>
                {{ localizedFooter.footer.monday }} - {{ localizedFooter.footer.friday }}:<br>
-               11:30 - 15:00 {{ localizedFooter.footer.hours }}<br>
+               12:00 - 15:00 {{ localizedFooter.footer.hours }}<br>
                17:00 - 23:00 {{ localizedFooter.footer.hours }}
             </p>
             <p>{{ localizedFooter.footer.saturday }}, {{ localizedFooter.footer.sunday }} {{ $t('and') }}
                {{ localizedFooter.footer.holiday }}:<br>
-               11:00 - 23:00 {{ localizedFooter.footer.hours }}
+               12:00 - 23:00 {{ localizedFooter.footer.hours }}
             </p>
          </div>
          <div v-if="isMobile" class="footer__social-media">

@@ -6,8 +6,8 @@
     "paragraphThree": "Wenn du Unverträglichkeiten oder besondere Wünsche hast, lass es uns wissen – wir geben immer unser Bestes!"
   },
   "menuButtons": {
-    "food": "Speisen",
-    "drinks": "Getränke",
-    "lunch": "Mittagskarte"
+    "mainDishes": "Hauptgerichte",
+    "bbq": "BBQ",
+    "hotpot": "Hotpot"
   }
 }

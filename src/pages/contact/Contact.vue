@@ -59,7 +59,7 @@ export default {
   data() {
     return {
       phoneNumber: "0351 81040272",
-      lunchTime: "12:00 - 14:30",
+      lunchTime: "12:00 - 15:00",
       dinnerTime: "17:00 - 23:00",
       mailTo: "info@matjo.de"
     };
