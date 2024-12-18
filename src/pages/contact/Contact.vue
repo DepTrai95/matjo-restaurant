@@ -36,25 +36,15 @@
         </div>
       </section>
     </div>
-    <Dialog ref="dialogRef">
-      <template v-slot:dialogHeader>{{ $t('contactInfo.soonOpenHeader') }}</template>
-      <template v-slot:dialogBody>
-        {{ $t('contactInfo.soonOpenBody.firstLine') }}<br>
-        {{ $t('contactInfo.soonOpenBody.secondLine') }}<br>
-        {{ $t('contactInfo.soonOpenBody.thirdLine') }}
-      </template>
-    </Dialog>
   </section>
 </template>
 
 <script>
 import ContactForm from "../../components/form/ContactForm.vue";
-import Dialog from "../../components/dialog/Dialog.vue";
 
 export default {
   components: {
     ContactForm,
-    Dialog
   },
   data() {
     return {
@@ -64,9 +54,6 @@ export default {
       mailTo: "info@matjo.de"
     };
   },
-  mounted() {
-    this.$refs.dialogRef.openDialog();
-  }
 };
 </script>
 
