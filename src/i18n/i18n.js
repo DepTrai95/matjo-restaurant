@@ -14,6 +14,8 @@ import deCareer from './career/de.json';
 import enCareer from './career/en.json';
 import deContact from './contact/de.json';
 import enContact from './contact/en.json';
+import deReservation from './reservation/de.json';
+import enReservation from './reservation/en.json';
 import deImprint from './imprint/de.json';
 import enImprint from './imprint/en.json';
 import dePrivacy from './privacy/de.json';
@@ -31,6 +33,7 @@ const messages = {
     hotpot: deHotpot,
     career: deCareer,
     contact: deContact,
+    reservation: deReservation,
     imprint: deImprint,
     privacy: dePrivacy,
     contactInfo: deDialog,
@@ -43,6 +46,7 @@ const messages = {
     hotpot: enHotpot,
     career: enCareer,
     contact: enContact,
+    reservation: enReservation,
     imprint: enImprint,
     privacy: enPrivacy,
     contactInfo: enDialog,

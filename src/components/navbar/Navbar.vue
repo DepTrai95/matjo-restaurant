@@ -31,7 +31,7 @@
          </div>
 
          <div class="nav-cta__wrapper" v-if="!isMobile">
-            <router-link class="btn--primary" to="/contact">{{ $t('navigation.reservation') }}</router-link>
+            <router-link class="btn--primary" to="/reservation">{{ $t('navigation.reservation') }}</router-link>
          </div>
 
          <div class="mobile-navigation" v-if="isMobile">

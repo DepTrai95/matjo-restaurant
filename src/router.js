@@ -11,6 +11,7 @@ import Imprint from "./pages/imprint/Impressum.vue";
 import Privacy from "./pages/privacy/Privacy.vue";
 import Success from "./pages/success/Success.vue";
 import NotFound from "./pages/NotFound.vue";
+import Reservation from "./pages/reservation/Reservation.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -60,9 +61,9 @@ const router = createRouter({
       }
     },
     { path: "/reservation", 
-      component: Contact, 
+      component: Reservation, 
       meta: { 
-        headline: 'routes.contact.headline',
+        headline: 'routes.reservation.headline',
         showBackground: true,
       }
     },

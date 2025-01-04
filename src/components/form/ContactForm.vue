@@ -6,7 +6,7 @@
       <input class="form-control" type="text" id="name" v-model.trim="name.val" @blur="clearValidity('name')"
         placeholder="Name" />
       <p v-if="!name.isValid" :class="{ invalid: !message.isValid }">
-        {{ $t('contact.contactFormValidation.name') }}
+        {{ $t('reservation.contactFormValidation.name') }}
       </p>
     </div>
     <!-- EMAIL -->
@@ -15,18 +15,18 @@
       <input class="form-control" type="email" id="email" v-model.trim="email.val" @blur="clearValidity('email')"
         placeholder="E-Mail" />
       <p v-if="!email.isValid" :class="{ invalid: !message.isValid }">
-        {{ $t('contact.contactFormValidation.mail') }}
+        {{ $t('reservation.contactFormValidation.mail') }}
       </p>
     </div>
     <!-- SUBJECT -->
     <div class="form-group" :class="{ invalid: !subject.isValid }">
       <label for="subject">
-        {{ $t('contact.contactForm.subject') }} <abbr title="Pflichtfeld">*</abbr>
+        {{ $t('reservation.contactForm.subject') }} <abbr title="Pflichtfeld">*</abbr>
       </label>
       <input class="form-control" type="text" id="subject" v-model.trim="subject.val" @blur="clearValidity('subject')"
-        :placeholder="$t('contact.contactForm.subject')" />
+        :placeholder="$t('reservation.contactForm.subject')" />
       <p v-if="!subject.isValid" :class="{ invalid: !subject.isValid }">
-        {{ $t('contact.contactFormValidation.subject') }}
+        {{ $t('reservation.contactFormValidation.subject') }}
       </p>
     </div>
     <div v-if="1 === 2" class="form-group form-select">
@@ -40,26 +40,26 @@
     <!-- MESSAGE -->
     <div class="form-group" :class="{ invalid: !message.isValid }">
       <label for="message">
-        {{ $t('contact.contactForm.message') }} <abbr title="Pflichtfeld">*</abbr>
+        {{ $t('reservation.contactForm.message') }} <abbr title="Pflichtfeld">*</abbr>
       </label>
       <textarea class="form-control" id="message" rows="7" v-model.trim="message.val" @blur="clearValidity('message')"
-        :placeholder="$t('contact.contactForm.message') "></textarea>
+        :placeholder="$t('reservation.contactForm.message') "></textarea>
       <p v-if="!message.isValid" :class="{ invalid: !message.isValid }">
-        {{ $t('contact.contactFormValidation.message') }}
+        {{ $t('reservation.contactFormValidation.message') }}
       </p>
     </div>
     <!-- RECHENAUFGABE -->
     <div class="form-group" :class="{ invalid: !mathProblem.isValid }">
-      <label for="mathProblem">{{ $t('contact.contactForm.calc') }}: {{ mathProblem.example }} <abbr
+      <label for="mathProblem">{{ $t('reservation.contactForm.calc') }}: {{ mathProblem.example }} <abbr
           title="Pflichtfeld">*</abbr></label>
       <input class="form-control" type="number" id="mathProblem" v-model.trim="mathProblem.val"
-        @blur="clearValidity('mathProblem')" :placeholder="$t('contact.contactForm.calcPlaceholder') " />
+        @blur="clearValidity('mathProblem')" :placeholder="$t('reservation.contactForm.calcPlaceholder') " />
       <p v-if="!mathProblem.isValid" :class="{ invalid: !mathProblem.isValid }">
-        {{ $t('contact.contactFormValidation.calc') }}
+        {{ $t('reservation.contactFormValidation.calc') }}
       </p>
     </div>
-    <p v-if="!formIsValid">{{ $t('contact.contactFormValidation.check') }}</p>
-    <base-button mode="btn--primary">{{ $t('contact.contactForm.submit') }}</base-button>
+    <p v-if="!formIsValid">{{ $t('reservation.contactFormValidation.check') }}</p>
+    <base-button mode="btn--primary">{{ $t('reservation.contactForm.submit') }}</base-button>
   </form>
 </template>
   

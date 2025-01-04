@@ -22,6 +22,12 @@
   "close": "Close",
   "imageGalleryHeader": "Our Masterpieces",
   "instagram": "Follow us on Instagram",
+  "goBack": "Back to Homepage",
+  "successMessage": {
+    "firstLine": "Your reservation/request has been successfully submitted.",
+    "secondLine": "We will get back to you as soon as possible!",
+    "thirdLine": "Please note that the reservation is only considered confirmed once we respond."
+  },
 
   "navigation": {
     "home": "Home",
@@ -47,6 +53,9 @@
     },
     "contact": {
       "headline": "Contact"
+    },
+    "reservation": {
+      "headline": "Reservation"
     },
     "imprint": {
       "headline": "Imprint"

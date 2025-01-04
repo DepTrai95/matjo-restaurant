@@ -10,7 +10,7 @@
     "message": "Your Message",
     "calc": "Calculation Task",
     "calcPlaceholder": "Solve the calculation task",
-    "submit": "Submit"
+    "submit": "Submit reservation request"
   },
   "contactFormValidation": {
     "name": "Please enter your name.",

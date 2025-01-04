@@ -74,7 +74,7 @@
                <li><span class="copyright-logo">© {{ getCurrentYear }} MATJO</span></li>
                <LinkRouter link="/impressum" :label="$t('Imprint')" />
                <LinkRouter link="/privacy" :label="$t('Privacy')" />
-               <LinkRouter link="/contact" :label="$t('Contact')" />
+               <LinkRouter v-if="1 === 0" link="/contact" :label="$t('Contact')" />
             </ul>
          </div>
       </div>
