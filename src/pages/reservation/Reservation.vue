@@ -31,7 +31,7 @@
             </div>
           </div>
           <div class=" grid-item">
-            <contact-form></contact-form>
+            <reservation-form></reservation-form>
           </div>
         </div>
       </section>
@@ -40,11 +40,11 @@
 </template>
 
 <script>
-import ContactForm from "../../components/form/ContactForm.vue";
+import ReservationForm from "../../components/form/ReservationForm.vue";
 
 export default {
   components: {
-    ContactForm,
+    ReservationForm,
   },
   data() {
     return {

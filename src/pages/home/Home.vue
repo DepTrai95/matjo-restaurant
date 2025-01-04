@@ -85,7 +85,7 @@ export default {
           'Besuchen Sie uns und lassen sich verzaubern.',
         ],
         reverse: true,
-        callToAction: { to: '/contact', text: 'Jetzt Reservieren' },
+        callToAction: { to: '/reservation', text: 'Jetzt Reservieren' },
         images: [
           { id: 'img-bbq-table', imgSrc: '/img/bbq-table/bbq-table.webp' },
           { id: 'img-bbq-hotpot', imgSrc: '/img/bbq-hotpot/bbq-hotpot.webp' },
