@@ -1,9 +1,11 @@
 {
   "reservationInfo": {
-    "intro": "Wir nehmen jeden Tag gerne Reservierungen entgegen, diese könnt ihr ganz bequem auf unserer Website buchen. Bitte berücksichtigt, dass diese erst nach Rückmeldung von als bestätigt gilt.",
-    "alternative": "Alternativ sind wir zu folgenden Öffnungszeiten erreichbar",
-    "contactPhone": "auch telefonisch erreichbar unter Tel: ",
-    "otherInquiry": "Falls Sie uns telefonisch nicht erreichen, können Sie uns gerne jederzeit über das Kontaktformular auf dieser Seite erreichen, oder uns direkt eine E-Mail senden an:"
+    "introHeader": "Liebe Gäste,",
+    "intro": "aufgrund der hohen Anzahl an Nachrichten, die uns aktuell erreichen, schaffen wir es leider nicht, alle Anfragen rechtzeitig zu bearbeiten.",
+    "introSecondLine": "Um sicherzustellen, dass Ihre Reservierungen zuverlässig und ohne Verzögerung vorgenommen werden können, bitten wir Sie, vorerst ausschließlich telefonisch zu reservieren.",
+    "contactPhone": "Unser Team steht Ihnen während unserer Öffnungszeiten:",
+    "contactPhoneNumber": "telefonisch unter folgender Nummer:",
+    "available": "zur Verfügung."
   },
   "contactForm": {
     "subject": "Betreff",

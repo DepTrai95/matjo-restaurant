@@ -1,9 +1,11 @@
 {
   "reservationInfo": {
-    "intro": "We gladly accept reservations every day, which you can conveniently book on our website. Please note that this is only considered confirmed after feedback from us.",
-    "alternative": "Alternatively, we are reachable during the following opening hours",
-    "contactPhone": "also reachable by phone at Tel: ",
-    "otherInquiry": "If you can't reach us via phone, you can reach us anytime via the contact form on this page or send us an email directly at:"
+    "introHeader": "Dear Guests,",
+    "intro": "Due to the high number of messages we are currently receiving, we unfortunately cannot process all inquiries in a timely manner.",
+    "introSecondLine": "To ensure that your reservations can be made reliably and without delay, we kindly ask you to reserve exclusively by phone for the time being.",
+    "contactPhone": "Our team is available during our opening hours:",
+    "contactPhoneNumber": "by phone at the following number:",
+    "available": "available."
   },
   "contactForm": {
     "subject": "Subject",

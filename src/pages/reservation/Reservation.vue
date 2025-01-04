@@ -1,5 +1,5 @@
 <template>
-  <section class="contact" id="reservation-page">
+  <section class="reservation" id="reservation-page">
     <div class="border-waves-before">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 38 28" width="19px" height="14px">
@@ -15,26 +15,17 @@
       </svg>
     </div>
     <div class="inner">
-      <section class="reservation" id="reservation">
-        <div class="grid--default grid-2--tablet-landscape-up">
-          <div class="grid-item">
-            <div class="reservation-info">
-              <p>MATJO - BBQ & Hotpot</p>
-              <p class="center">{{ $t('contact.reservationInfo.intro') }}</p>
-              <p>
-                {{ $t('contact.reservationInfo.alternative') }}:
-                <span>{{ lunchTime }}</span>
-                <span>{{ dinnerTime }}</span>
-                {{ $t('contact.reservationInfo.contactPhone') }} <a :href="`tel:` + phoneNumber">{{ phoneNumber }}</a>
-              </p>
-              <p>{{ $t('contact.reservationInfo.otherInquiry') }} <a :href="`mailto:` + mailTo">{{ mailTo }}</a></p>
-            </div>
-          </div>
-          <div class=" grid-item">
-            <reservation-form></reservation-form>
-          </div>
-        </div>
-      </section>
+      <div class="reservation-info">
+        <p class="center">{{ $t('reservation.reservationInfo.introHeader') }}</p>
+        <p class="center">{{ $t('reservation.reservationInfo.intro') }}</p>
+        <p>
+          {{ $t('reservation.reservationInfo.contactPhone') }}
+          <span>{{ lunchTime }}</span>
+          <span>{{ dinnerTime }}</span>
+          {{ $t('reservation.reservationInfo.contactPhoneNumber') }} <a :href="`tel:` + phoneNumber">{{ phoneNumber
+            }}</a> {{ $t('reservation.reservationInfo.available') }}
+        </p>
+      </div>
     </div>
   </section>
 </template>
