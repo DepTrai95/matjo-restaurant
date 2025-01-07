@@ -18,6 +18,7 @@
       <div class="reservation-info">
         <p class="center">{{ $t('reservation.reservationInfo.introHeader') }}</p>
         <p class="center">{{ $t('reservation.reservationInfo.intro') }}</p>
+        <p class="center">{{ $t('reservation.reservationInfo.introSecondLine') }}</p>
         <p>
           {{ $t('reservation.reservationInfo.contactPhone') }}
           <span>{{ lunchTime }}</span>

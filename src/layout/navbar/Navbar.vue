@@ -90,9 +90,9 @@
 </template>
 
 <script>
-import LinkRouter from "../link/LinkRouter.vue";
-import BaseButton from "../button/BaseButton.vue";
-import Icon from '../../assets/svg/Icon.vue';
+import LinkRouter from "@/components/link/LinkRouter.vue";
+import BaseButton from "@/components/button/BaseButton.vue";
+import Icon from '@/assets/svg/Icon.vue';
 
 export default {
   components: {

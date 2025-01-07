@@ -13,7 +13,7 @@
 
 <script>
 import TheNavbar from '../navbar/Navbar.vue';
-import TheStage from '../stage/Stage.vue';
+import TheStage from '@/components/stage/Stage.vue';
 
 export default {
   components: {

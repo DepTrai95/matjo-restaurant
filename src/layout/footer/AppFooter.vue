@@ -82,9 +82,9 @@
 </template>
 
 <script>
-import LinkRouter from '../link/LinkRouter.vue'
-import StageSeparator from '../stage/StageSeparator.vue';
-import Icon from '../../assets/svg/Icon.vue';
+import LinkRouter from '@/components/link/LinkRouter.vue'
+import StageSeparator from '@/components/stage/StageSeparator.vue';
+import Icon from '@/assets/svg/Icon.vue';
 
 export default {
   components: {
