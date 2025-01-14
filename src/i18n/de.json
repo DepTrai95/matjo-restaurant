@@ -24,9 +24,9 @@
   "instagram": "Folge uns auf Instagram",
   "goBack": "Zurück zur Homepage",
   "successMessage": {
-    "firstLine": "Ihre Reservierung/Anfrage wurde erfolgreich abgeschickt.",
+    "firstLine": "Ihre Anfrage wurde erfolgreich abgeschickt.",
     "secondLine": "Wir melden uns bei Ihnen so schnell es geht!",
-    "thirdLine": "Bitte beachtet, dass die Reservierung erst bei Rückmeldung von uns als bestätigt gilt."
+    "thirdLine": "Bitte beachtet, dass bei Reservierungen, diese erst bei Rückmeldung von uns als bestätigt gilt."
   },
 
   "navigation": {

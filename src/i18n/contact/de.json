@@ -1,9 +1,9 @@
 {
   "reservationInfo": {
-    "intro": "Wir nehmen jeden Tag gerne Reservierungen entgegen, diese könnt ihr ganz bequem auf unserer Website buchen. Bitte berücksichtigt, dass diese erst nach Rückmeldung von als bestätigt gilt.",
+    "intro": "Wir sind für alle möglichen Anliegen über dieses Kontaktformular erreichbar. Sobald Sie uns geschrieben haben, werden wir versuchen uns schnellstmöglich bei Ihnen zu melden.",
     "alternative": "Alternativ sind wir zu folgenden Öffnungszeiten erreichbar",
     "contactPhone": "auch telefonisch erreichbar unter Tel: ",
-    "otherInquiry": "Falls Sie uns telefonisch nicht erreichen, können Sie uns gerne jederzeit über das Kontaktformular auf dieser Seite erreichen, oder uns direkt eine E-Mail senden an:"
+    "otherInquiry": "Falls das Kontaktformular Probleme haben sollte, können Sie uns auch direkt eine E-Mail senden an:"
   },
   "contactForm": {
     "subject": "Betreff",
@@ -19,5 +19,12 @@
     "message": "Nachricht darf nicht leer sein",
     "calc": "Bitte lösen Sie die Rechenaufgabe korrekt.",
     "check": "Bitte überprüfen Sie noch einmal ihre Angaben."
+  },
+  "contactSubjects": {
+    "select": "Betreff auswählen",
+    "question": "Frage",
+    "complaint": "Beschwerde",
+    "application": "Bewerbung",
+    "other": "Anderes"
   }
 }

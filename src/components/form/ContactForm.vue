@@ -19,7 +19,7 @@
       </p>
     </div>
     <!-- SUBJECT -->
-    <div class="form-group" :class="{ invalid: !subject.isValid }">
+    <div v-if="1 === 0" class="form-group" :class="{ invalid: !subject.isValid }">
       <label for="subject">
         {{ $t('contact.contactForm.subject') }} <abbr title="Pflichtfeld">*</abbr>
       </label>
@@ -29,13 +29,20 @@
         {{ $t('contact.contactFormValidation.subject') }}
       </p>
     </div>
-    <div v-if="1 === 2" class="form-group form-select">
-      <!-- this one just kept for future purposes -->
-      <label class="form-label" for="language">Sprache</label>
-      <select class="form-control" id="language" name="select-restaurant" v-model="$i18n.locale" required>
-        <option value="de">Deutsch</option>
-        <option value="en">English</option>
+    <div class="form-group form-select">
+      <label class="form-label" for="subject">
+        {{ $t('contact.contactForm.subject') }} <abbr title="Pflichtfeld">*</abbr>
+      </label>
+      <select class="form-control" id="subject" name="subject" v-model="subject.val" required>
+        <option value="" selected disabled hidden>{{ $t('contact.contactSubjects.select') }}</option>
+        <option :value="$t('contact.contactSubjects.question')">{{ $t('contact.contactSubjects.question') }}</option>
+        <option :value="$t('contact.contactSubjects.complaint')">{{ $t('contact.contactSubjects.complaint') }}</option>
+        <option :value="$t('contact.contactSubjects.application')">{{ $t('contact.contactSubjects.application') }}</option>
+        <option :value="$t('contact.contactSubjects.other')">{{ $t('contact.contactSubjects.other') }}</option>
       </select>
+      <p v-if="!subject.isValid" :class="{ invalid: !subject.isValid }">
+        {{ $t('contact.contactFormValidation.subject') }}
+      </p>
     </div>
     <!-- MESSAGE -->
     <div class="form-group" :class="{ invalid: !message.isValid }">

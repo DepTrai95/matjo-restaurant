@@ -1,9 +1,9 @@
 {
   "reservationInfo": {
-    "intro": "We gladly accept reservations every day, which you can conveniently book on our website. Please note that this is only considered confirmed after feedback from us.",
+    "intro": "We available for any issues through this contact form. We will try to get back to you as soon as possible.",
     "alternative": "Alternatively, we are reachable during the following opening hours",
     "contactPhone": "also reachable by phone at Tel: ",
-    "otherInquiry": "If you can't reach us via phone, you can reach us anytime via the contact form on this page or send us an email directly at:"
+    "otherInquiry": "If the contact form should have any problems, you can also contact us directly via E-Mail:"
   },
   "contactForm": {
     "subject": "Subject",
@@ -19,5 +19,12 @@
     "message": "Message cannot be empty.",
     "calc": "Please solve the calculation task correctly.",
     "check": "Please check your information again."
+  },
+  "contactSubjects": {
+    "select": "Select Subject",
+    "question": "Question",
+    "complaint": "Complaint",
+    "application": "Application",
+    "other": "Other"
   }
 }

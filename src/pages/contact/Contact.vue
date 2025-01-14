@@ -21,12 +21,6 @@
             <div class="reservation-info">
               <p>MATJO - BBQ & Hotpot</p>
               <p class="center">{{ $t('contact.reservationInfo.intro') }}</p>
-              <p>
-                {{ $t('contact.reservationInfo.alternative') }}:
-                <span>{{ lunchTime }}</span>
-                <span>{{ dinnerTime }}</span>
-                {{ $t('contact.reservationInfo.contactPhone') }} <a :href="`tel:` + phoneNumber">{{ phoneNumber }}</a>
-              </p>
               <p>{{ $t('contact.reservationInfo.otherInquiry') }} <a :href="`mailto:` + mailTo">{{ mailTo }}</a></p>
             </div>
           </div>
