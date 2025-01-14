@@ -187,7 +187,7 @@
               to: "info@matjo.de", // set email of receiver
               name: formData.name,
               email: formData.email,
-              subject: formData.subject,
+              subject: 'Kontakt Formular: ' + formData.subject,
               text: formData.message,
               // date: formData.date,
             }),
