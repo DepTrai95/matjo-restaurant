@@ -22,7 +22,7 @@ a {
   outline: 1px solid transparent;
   padding: 1rem 1.5rem;
   text-decoration: none;
-  transition: background-color 0.2s ease-in, border-color 0.2s ease-in, box-shadow 0.3s ease-in, color 0.3s ease-in-out, outline 0.3s ease-in-out;
+  transition: background-color 0.2s ease-in, border-color 0.2s ease-in, box-shadow 0.3s ease-in, color 0.3s ease-in-out;
 
   +.btn--primary {
      margin-inline: 2rem;
@@ -36,5 +36,11 @@ a {
   &:hover {
     background-color: $color-primary-dark;
     box-shadow: 0px 5px 15px 3px rgba(80, 80, 80, 0.3)
+  }
+
+  &:focus-visible {
+    background-color: $color-primary-dark;
+    box-shadow: 0px 5px 15px 3px rgba(80, 80, 80, 0.3);
+    outline: 3px solid $color-black;
   }
 }

@@ -35,7 +35,9 @@
     "bbq": "BBQ",
     "hotpot": "Hotpot",
     "career": "Karriere",
-    "reservation": "Reservieren"
+    "reservation": "Reservieren",
+    "open": "Menu öffnen",
+    "close": "Menu schließen"
   },
 
   "routes": {

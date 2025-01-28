@@ -12,7 +12,7 @@
             </div>
          </div>
          <div class="nav-main__wrapper" v-if="!isMobile">
-            <nav class="nav-main">
+            <nav class="nav-main" aria-label="Hauptnavigation">
                <ul class="list--unstyled">
                   <LinkRouter link="/" :label="$t('navigation.home')" />
                   <LinkRouter link="/menu" :label="$t('navigation.menu')" />
@@ -38,7 +38,7 @@
             <button id="mobile-navigation-button" type="button" class="navigation__button--mobile menu-toggle"
                :aria-expanded="isMenuExpanded ? 'true' : 'false'" aria-haspopup="true" aria-controls="mobile-navigation"
                @click="toggleMenu">
-               <span class="sr-only">Hauptnavigation</span>
+               <span class="sr-only">{{ isMenuExpanded ? $t('navigation.close') : $t('navigation.open') }}</span>
                <span class="hamburger" :class="{ 'is-open': isMenuExpanded }">
                   <span></span>
                   <span></span>
@@ -46,7 +46,8 @@
                </span>
             </button>
 
-            <div class="nav-main__wrapper" :class="{'is-open': isMenuExpanded}">
+            <div class="nav-main__wrapper" id="mobile-navigation" :class="{'is-open': isMenuExpanded}"
+               :aria-hidden="!isMenuExpanded">
                <nav class="nav-main">
                   <ul class="list--unstyled">
                      <LinkRouter link="/" :label="$t('navigation.home')" @click="closeMenu" />
@@ -56,7 +57,8 @@
                      <LinkRouter link="/career" :label="$t('navigation.career')" @click="closeMenu" />
                      <li class=" form-group form-select">
                         <label class="sr-only" for="language">Sprache wechseln</label>
-                        <select class="form-control" id="language" name="language" aria-label="Sprache ändern" v-model="$i18n.locale">
+                        <select class="form-control" id="language" name="language" aria-label="Sprache ändern"
+                           v-model="$i18n.locale">
                            <option value="de">Deutsch</option>
                            <option value="en">English</option>
                         </select>
@@ -272,7 +274,7 @@ export default {
   }
 
   .nav-main__wrapper {
-     @include for-phone-only {
+      @include for-phone-only {
          justify-content: center;
          height: 0;
          left: 0;
@@ -300,7 +302,15 @@ export default {
             border: 1px solid rgba(255, 255, 255, 0.3);
             height: 45vh;
          }
-     }
+      }
+
+      &[aria-hidden="true"] {
+         li, li a {
+            pointer-events: none;
+            visibility: hidden;
+         }
+      }
+
   }
 
   .nav-main {
