@@ -36,8 +36,8 @@
 
          <div class="mobile-navigation" v-if="isMobile">
             <button id="mobile-navigation-button" type="button" class="navigation__button--mobile menu-toggle"
-               :aria-expanded="isMenuExpanded ? 'true' : 'false'" aria-haspopup="true" aria-controls="mobile-navigation"
-               @click="toggleMenu">
+               :aria-expanded="isMenuExpanded ? 'true' : 'false'" aria-haspopup="true" 
+               aria-controls="mobile-navigation" aria-owns="mobile-navigation" @click="toggleMenu">
                <span class="sr-only">{{ isMenuExpanded ? $t('navigation.close') : $t('navigation.open') }}</span>
                <span class="hamburger" :class="{ 'is-open': isMenuExpanded }">
                   <span></span>
