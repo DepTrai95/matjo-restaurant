@@ -1,19 +1,26 @@
-import postmark from 'postmark';
-const client = new postmark.ServerClient(process.env.POSTMARK_API_KEY);
+import sgMail from '@sendgrid/mail';
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export const handler = async (event, context) => {
   try {
    const { to, name, email, subject, text } = JSON.parse(event.body);
 
     const msg = {
-      "To": "info@matjo.de", // set email of receiver
-      "From": `"${name}" <info@matjo.de>`, // set email of sender
-      "Subject": subject,
-      "TextBody": text,
-      "ReplyTo": `"${name}" <${email}>`,
-      "MessageStream": "matjo"
+      to: to,
+      from: {
+        email: 'info@matjo.de',
+        name: name, 
+      },
+      subject: subject,
+      text: text,
+      replyTo: {
+         email: email,
+         name: name,
+      },
     };
-    await client.sendEmail(msg);
+
+    await sgMail.send(msg);
     console.log('Email erfolgreich verschickt.');
 
     return {

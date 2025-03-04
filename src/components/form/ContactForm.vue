@@ -184,7 +184,6 @@
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
-              to: "info@matjo.de", // set email of receiver
               name: formData.name,
               email: formData.email,
               subject: 'Kontakt Formular: ' + formData.subject,

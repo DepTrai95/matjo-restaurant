@@ -8,6 +8,7 @@ const apiKeys = [
   'INSTAGRAM_ACCOUNT_ID',
   'INSTAGRAM_API',
   'SENDGRID_API_KEY',
+  'POSTMARK_API_KEY'
 ];
 
 // https://vitejs.dev/config/
@@ -26,6 +27,7 @@ export default defineConfig(({ mode }) => {
     css: { 
       preprocessorOptions: {
         scss: {
+          api: 'modern',
           additionalData: `@import "@/assets/style/global.scss";`,
         },
       },

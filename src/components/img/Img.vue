@@ -73,10 +73,6 @@ export default {
    --content-padding-x: var(--content-padding);
    --content-padding-y: var(--content-padding);
 
-   @include for-desktop-up {
-      --icon-wrapper-width: 60px;
-   }
-
    background-color: $color-white;
    border-radius: 30px;
    box-shadow: 0 20px 30px rgba(82, 82, 82, 0.05);
@@ -92,6 +88,10 @@ export default {
    transform: translateY(30px);
    transition: opacity 0.25s ease-in, transform 0.25s ease-in;
 
+   @include for-desktop-up {
+      --icon-wrapper-width: 60px;
+   }
+   
    &.fade-in {
       opacity: 1;
       transform: translateY(0);
