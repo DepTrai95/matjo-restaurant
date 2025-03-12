@@ -14,7 +14,7 @@
             <div class="menu-container grid--default grid-3--tablet-portrait-up">
               <div class="grid-item">
                 <div class="menu-item">
-                  <a href="/fileadmin/A-la-carte.pdf">
+                  <a href="/fileadmin/a-la-carte.pdf" title="Stand 17.12.2024">
                     <img src="/img/lunch/lunch-large.webp" height alt="Bild für Hauptspeisen und Getränke">
                     <span class="menu-category">{{ $t('menu.menuButtons.mainDishes') }}</span>
                   </a>
@@ -22,7 +22,7 @@
               </div>
               <div class="grid-item">
                 <div class="menu-item">
-                  <a href="/fileadmin/BBQ-Menu.pdf">
+                  <a href="/fileadmin/bbq_menu.pdf" title="Stand 12.03.2025">
                     <img src="/img/bbq-menu/bbq-menu-large.webp" height alt="Bild für BBQ Gerichte">
                     <span class="menu-category">{{ $t('menu.menuButtons.bbq') }}</span>
                   </a>
@@ -30,7 +30,7 @@
               </div>
               <div class="grid-item">
                 <div class="menu-item">
-                  <a href="/fileadmin/Hotpot-Menu.pdf">
+                  <a href="/fileadmin/hotpot_menu.pdf" title="Stand 12.03.2025">
                     <img src="/img/hotpot-vertical/hotpot-large.webp" height alt="Bild für Hotpot Gerichte">
                     <span class="menu-category">{{ $t('menu.menuButtons.hotpot') }}</span>
                   </a>
