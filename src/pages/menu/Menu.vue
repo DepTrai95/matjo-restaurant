@@ -22,7 +22,7 @@
               </div>
               <div class="grid-item">
                 <div class="menu-item">
-                  <a href="/fileadmin/bbq_menu.pdf" title="Stand 12.03.2025">
+                  <a href="/fileadmin/bbq-menu.pdf" title="Stand 12.03.2025">
                     <img src="/img/bbq-menu/bbq-menu-large.webp" height alt="Bild für BBQ Gerichte">
                     <span class="menu-category">{{ $t('menu.menuButtons.bbq') }}</span>
                   </a>
@@ -30,7 +30,7 @@
               </div>
               <div class="grid-item">
                 <div class="menu-item">
-                  <a href="/fileadmin/hotpot_menu.pdf" title="Stand 12.03.2025">
+                  <a href="/fileadmin/hotpot-menu.pdf" title="Stand 12.03.2025">
                     <img src="/img/hotpot-vertical/hotpot-large.webp" height alt="Bild für Hotpot Gerichte">
                     <span class="menu-category">{{ $t('menu.menuButtons.hotpot') }}</span>
                   </a>
