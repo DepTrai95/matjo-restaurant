@@ -1,11 +1,11 @@
 {
   "reservationInfo": {
-    "introHeader": "Dear Guests,",
-    "intro": "Due to the high number of messages we are currently receiving, we unfortunately cannot process all inquiries in a timely manner.",
-    "introSecondLine": "To ensure that your reservations can be made reliably and without delay, we kindly ask you to reserve exclusively by phone for the time being.",
-    "contactPhone": "Our team is available during our opening hours:",
-    "contactPhoneNumber": "by phone at the following number:",
-    "available": "available."
+    "introHeader": "Dear guests,",
+    "intro": "We are pleased to inform you that you can now conveniently reserve a table with us via OpenTable.",
+    "introSecondLine": "*Please note that reserved seats will be held for a maximum of 20 minutes after the agreed reservation time.",
+    "contactPhone": "Our team is alternatively available during our opening hours by phone at the following number:",
+    "availableLineOne": "Please understand that we may not always be able to answer the phone during peak times due to high demand.",
+    "availableLineTwo": "We recommend making reservations and inquiries outside of these times or online if possible. Thank you for your understanding."
   },
   "contactForm": {
     "subject": "Subject",

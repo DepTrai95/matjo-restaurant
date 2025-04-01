@@ -60,9 +60,13 @@ export default {
    @include for-tablet-portrait-up {
       display: block;
       position: fixed;
-      right: 20px;
+      right: 5px;
       top: 50%;
       z-index: 100;
+   }
+
+   @include for-tablet-landscape-up {
+      right: 20px;
    }
 }
 

@@ -25,14 +25,12 @@
 
 <script>
 import Img from '../../components/img/Img.vue'
-import Dialog from '../../components/dialog/Dialog.vue'
 import StageSeparator from '../../components/stage/StageSeparator.vue'
 
 export default {
   name: 'Menu',
   components: {
     Img,
-    Dialog,
     StageSeparator
   },
   data() {
