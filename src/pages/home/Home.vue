@@ -47,91 +47,90 @@ import Icon from '../../assets/svg/Icon.vue';
 import StageSeparator from '../../components/stage/StageSeparator.vue';
 import InstagramGallery from '../../components/instagram-gallery/InstagramGallery.vue';
 import Img from '../../components/img/Img.vue';
-import Dialog from '../../components/dialog/Dialog.vue';
 
 export default {
-  name: 'Home',
-  components: {
-    SkipLinks,
-    Accordion,
-    Content,
-    IconList,
-    Icon,
-    Img,
-    InstagramGallery,
-    StageSeparator,
-    Dialog,
-  },
-  // mounted() {
-  //   this.$refs.dialogHomeRef.openDialog();
-  // },
-  data() {
-    return {
-      title: 'Homepage',
-      imgGallery: [
-        { id: 'img-bbq', imgSrc: '/img/bbq/bbq.webp' },
-        { id: 'img-bbq-steak', imgSrc: '/img/bbq-steak/bbq-steak.webp' },
-        { id: 'img-porkbelly', imgSrc: '/img/porkbelly/porkbelly.webp' },
-        { id: 'img-streetfood', imgSrc: '/img/streetfood/streetfood.webp' },
-      ],
-      koreanBbqIntro: {
-        id: 'intro',
-        title: 'BBQ und Hotpot',
-        subTitle: 'Unsere Delikatessen',
-        textContent: [
-          'In jedem Restaurant steht das Ziel, eine außergewöhnliche kulinarische Erfahrung zu bieten.',
-          'Bei MATJO werden die Gerichte für euch nach saisonalen Charakteristiken gestaltet und nur die frischesten und hochwertigsten Zutaten verwendet.',
-          'Unsere Atmossphäre ist traditionell, gleichzeitig aber modern. Jedes Gericht ist eine spannende Komposition, die ein zugängliches kulinarisches Abenteuer bietet.',
-          'Besuchen Sie uns und lassen sich verzaubern.',
-        ],
-        reverse: true,
-        callToAction: { to: '/reservation', text: 'Jetzt Reservieren' },
-        images: [
-          { id: 'img-bbq-table', imgSrc: '/img/bbq-table/bbq-table.webp' },
-          { id: 'img-bbq-hotpot', imgSrc: '/img/bbq-hotpot/bbq-hotpot.webp' },
-        ]
+   name: 'Home',
+   components: {
+      SkipLinks,
+      Accordion,
+      Content,
+      IconList,
+      Icon,
+      Img,
+      InstagramGallery,
+      StageSeparator,
+   },
+   data() {
+      return {
+         title: 'Homepage',
+         imgGallery: [
+            { id: 'img-bbq', imgSrc: '/img/bbq/bbq.webp' },
+            { id: 'img-bbq-steak', imgSrc: '/img/bbq-steak/bbq-steak.webp' },
+            { id: 'img-porkbelly', imgSrc: '/img/porkbelly/porkbelly.webp' },
+            { id: 'img-streetfood', imgSrc: '/img/streetfood/streetfood.webp' },
+         ],
+         koreanBbqIntro: {
+         id: 'intro',
+         title: 'BBQ und Hotpot',
+         subTitle: 'Unsere Delikatessen',
+         textContent: [
+            'In jedem Restaurant steht das Ziel, eine außergewöhnliche kulinarische Erfahrung zu bieten.',
+            'Bei MATJO werden die Gerichte für euch nach saisonalen Charakteristiken gestaltet und nur die frischesten und hochwertigsten Zutaten verwendet.',
+            'Unsere Atmossphäre ist traditionell, gleichzeitig aber modern. Jedes Gericht ist eine spannende Komposition, die ein zugängliches kulinarisches Abenteuer bietet.',
+            'Besuchen Sie uns und lassen sich verzaubern.',
+         ],
+         reverse: true,
+         callToAction: { to: '/reservation', text: 'Jetzt Reservieren' },
+         images: [
+            { id: 'img-bbq-table', imgSrc: '/img/bbq-table/bbq-table.webp' },
+            { id: 'img-bbq-hotpot', imgSrc: '/img/bbq-hotpot/bbq-hotpot.webp' },
+         ]
+         },
+      }
+   },
+   computed: {
+      localizedIntroduction() {
+         const currentLocale = this.$i18n.locale;
+         const localizedObject = this.$i18n.getLocaleMessage(currentLocale).home;
+
+         return {
+            id: 'about-us',
+            title: localizedObject.aboutUs.title,
+            subTitle: localizedObject.aboutUs.subTitle,
+            description: localizedObject.aboutUs.description,
+            callToActionOne: {
+               to: '/menu',
+               text: localizedObject.aboutUs.callToActionOne.text
+            },
+            callToActionTwo: {
+               to: '/reservation',
+               text: localizedObject.aboutUs.callToActionTwo.text
+            },
+            images: [
+               { id: 'img-korean-pot', imgSrc: '/img/korean-pot/korean-pot.webp' },
+               { id: 'img-tischgrill', imgSrc: '/img/tischgrill/tischgrill.webp' }
+            ]
+         };
       },
-    }
-  },
-  computed: {
-    localizedIntroduction() {
-      const currentLocale = this.$i18n.locale;
-      const localizedObject = this.$i18n.getLocaleMessage(currentLocale).home;
+      localizedValues() {
+         const currentLocale = this.$i18n.locale;
+         const localizedObject = this.$i18n.getLocaleMessage(currentLocale).home;
 
-      return {
-        id: 'about-us',
-        title: localizedObject.aboutUs.title,
-        subTitle: localizedObject.aboutUs.subTitle,
-        description: localizedObject.aboutUs.description,
-        callToAction: {
-          to: '/menu',
-          text: localizedObject.aboutUs.callToAction.text
-        },
-        images: [
-          { id: 'img-korean-pot', imgSrc: '/img/korean-pot/korean-pot.webp' },
-          { id: 'img-tischgrill', imgSrc: '/img/tischgrill/tischgrill.webp' }
-        ]
-      };
-    },
-    localizedValues() {
-      const currentLocale = this.$i18n.locale;
-      const localizedObject = this.$i18n.getLocaleMessage(currentLocale).home;
+         return {
+            title: localizedObject.ourValues.title,
+            iconList: localizedObject.ourValues.valueList,
+         }
+      },
+      localizedFaq() {
+         const currentLocale = this.$i18n.locale;
+         const localizedObject = this.$i18n.getLocaleMessage(currentLocale).home;
 
-      return {
-        title: localizedObject.ourValues.title,
-        iconList: localizedObject.ourValues.valueList,
+         return {
+            title: localizedObject.faq.title,
+            faqList: localizedObject.faq.faqList,
+         }
       }
-    },
-    localizedFaq() {
-      const currentLocale = this.$i18n.locale;
-      const localizedObject = this.$i18n.getLocaleMessage(currentLocale).home;
-
-      return {
-        title: localizedObject.faq.title,
-        faqList: localizedObject.faq.faqList,
-      }
-    }
-  }
+   }
 }
 </script>
 

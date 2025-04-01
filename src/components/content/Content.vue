@@ -10,7 +10,8 @@
                   </div>
                   <div class="content__text">
                      <p v-for="text in content.description" :key="text.id">{{ text }}</p>
-                     <router-link class="btn--primary" :to="content.callToAction.to">{{ content.callToAction.text}}</router-link>
+                     <router-link class="btn--primary" :to="content.callToActionOne.to">{{ content.callToActionOne.text}}</router-link>
+                     <router-link class="btn--primary" :to="content.callToActionTwo.to">{{ content.callToActionTwo.text}}</router-link>
                   </div>
                </div>
                <div class="grid-item">

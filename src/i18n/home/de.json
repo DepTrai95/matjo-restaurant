@@ -12,8 +12,11 @@
          "Bei uns gestaltest du dein Essen nach deinem Geschmack! Frische Zutaten, authentische Aromen und ein herzlicher Service erwarten dich in entspannter Atmosphäre.",
          "Verbringe hier einen unvergesslichen Abend mit deinen Liebsten und erlebe die Vielfalt von unserer asiatischen Küche!"
       ],
-      "callToAction": {
+      "callToActionOne": {
          "text": "Zum Menü"
+      },
+      "callToActionTwo": {
+         "text": "Jetzt Reservieren"
       }
    },
    "ourValues": {

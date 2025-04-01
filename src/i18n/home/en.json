@@ -12,8 +12,11 @@
          "With us, you create your meal according to your taste! Fresh ingredients, authentic flavors, and warm service await you in a relaxed atmosphere.",
          "Spend an unforgettable evening here with your loved ones and experience the variety of our Asian cuisine!"
       ],
-      "callToAction": {
+      "callToActionOne": {
          "text": "Our Menu"
+      },
+      "callToActionTwo": {
+         "text": "Make a reservation"
       }
   },
    "ourValues": {
