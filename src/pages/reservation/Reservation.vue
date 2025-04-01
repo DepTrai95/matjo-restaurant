@@ -51,7 +51,7 @@ export default {
       loadOpenTableScript() {
          const script = document.createElement("script");
          const language = this.$i18n.locale === 'de' ? 'de-DE' : 'en-US';
-         script.src = `http://www.opentable.de/widget/reservation/loader?rid=400416&type=standard&theme=wide&color=1&iframe=false&domain=de&lang=${language}&newtab=false&ot_source=Restaurant%20website`;
+         script.src = `https://www.opentable.de/widget/reservation/loader?rid=400416&type=standard&theme=wide&color=1&iframe=false&domain=de&lang=${language}&newtab=false&ot_source=Restaurant%20website`;
          script.async = true;
 
          script.onload = () => {
