@@ -60,13 +60,6 @@ const router = createRouter({
         showBackground: true,
       }
     },
-    { path: "/reservation", 
-      component: Reservation, 
-      meta: { 
-        headline: 'routes.reservation.headline',
-        showBackground: true,
-      }
-    },
     { path: "/impressum", 
       component: Imprint, 
       meta: { 

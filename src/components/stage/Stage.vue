@@ -14,7 +14,8 @@
       <hgroup class="stage__headline">
          <div class="stage__cta__wrapper" v-if="!isMobile && showSubHeader">
             <router-link class="btn--primary" to="/menu">{{ $t('home.home.menuButton') }}</router-link>
-            <router-link class="btn--primary" to="/reservation">{{ $t('home.home.reserveButton') }}</router-link>
+            <OpenTableButton id="opentable__stage" />
+
          </div>
          <h1>{{ headline }}</h1>
          <h2 v-if="showSubHeader">MATJO</h2>
@@ -27,7 +28,12 @@
 </template>
  
 <script>
+import OpenTableButton from "@/components/button/OpenTableButton.vue";
+
 export default {
+   components: {
+      OpenTableButton
+   },
    props: {
       headerHeightMax: {
          type: Boolean,
@@ -80,7 +86,7 @@ export default {
             headerDescr?.classList.add('visible');
             arrow?.classList.add('visible');
          }, 400);
-      }
+      },
    },
 }
 </script>
@@ -162,14 +168,16 @@ export default {
 .stage__cta__wrapper {
    display: flex;
    flex-direction: row;
+   gap: 1rem;
    justify-content: center;
    margin-block-start: 1.5rem;
    
-   .btn--primary {
+   .btn--primary,
+   .ot-button {
       @include responsive-font-size(1.6rem, 1.7rem);
-      box-shadow: 0px 5px 15px 8px rgba(150, 150, 150, 0.3);
-      min-width: 150px;
-      text-align: center;
+      box-shadow: 0px 5px 15px 8px rgba(150, 150, 150, 0.3) !important;
+      min-width: 150px !important;
+      text-align: center !important;
    }
 
    .btn--primary + .btn--primary{

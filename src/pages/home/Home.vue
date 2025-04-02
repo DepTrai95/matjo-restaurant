@@ -80,7 +80,6 @@ export default {
             'Besuchen Sie uns und lassen sich verzaubern.',
          ],
          reverse: true,
-         callToAction: { to: '/reservation', text: 'Jetzt Reservieren' },
          images: [
             { id: 'img-bbq-table', imgSrc: '/img/bbq-table/bbq-table.webp' },
             { id: 'img-bbq-hotpot', imgSrc: '/img/bbq-hotpot/bbq-hotpot.webp' },
@@ -129,7 +128,26 @@ export default {
             title: localizedObject.faq.title,
             faqList: localizedObject.faq.faqList,
          }
-      }
+      },
+   },
+   methods: {
+      loadOpenTableScript() {
+         const script = document.createElement("script");
+         const language = this.$i18n.locale === 'de' ? 'de-DE' : 'en-US';
+         script.src = `https://www.opentable.de/widget/reservation/loader?rid=400416&type=button&theme=wide&color=1&iframe=iframe&domain=de&lang=${language}&newtab=false&ot_source=Restaurant%20website`;
+         script.async = true;
+
+         script.onload = () => {
+            this.opentableLoaded = true;
+            this.initializeOpenTable();
+         };
+
+         const container = document.getElementById("opentable-widget-container__header");
+         container.appendChild(script);
+      },
+   },
+   mounted() {
+      // this.loadOpenTableScript();
    }
 }
 </script>

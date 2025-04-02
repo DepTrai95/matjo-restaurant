@@ -10,8 +10,10 @@
                   </div>
                   <div class="content__text">
                      <p v-for="text in content.description" :key="text.id">{{ text }}</p>
-                     <router-link class="btn--primary" :to="content.callToActionOne.to">{{ content.callToActionOne.text}}</router-link>
-                     <router-link class="btn--primary" :to="content.callToActionTwo.to">{{ content.callToActionTwo.text}}</router-link>
+                     <div class="flex">
+                        <router-link class="btn--primary" :to="content.callToActionOne.to">{{ content.callToActionOne.text}}</router-link>
+                        <OpenTableButton id="opentable__content"/>
+                     </div>
                   </div>
                </div>
                <div class="grid-item">
@@ -26,15 +28,17 @@
 </template>
  
 <script>
-import LinkRouter from '../link/LinkRouter.vue';
-import StageSeparator from '../stage/StageSeparator.vue';
-import Img from '../../components/img/Img.vue';
+import Img from '@/components/img/Img.vue';
+import LinkRouter from '@/components/link/LinkRouter.vue';
+import StageSeparator from '@/components/stage/StageSeparator.vue';
+import OpenTableButton from '@/components/button/OpenTableButton.vue';
 
 export default {
    components: {
+      Img,
       LinkRouter,
       StageSeparator,
-      Img,
+      OpenTableButton,
    },
    props: {
       content: {
@@ -224,6 +228,11 @@ export default {
 
 .content__text {
 
+}
+
+.flex {
+   display: flex;
+   gap: 1rem;
 }
 
 </style>

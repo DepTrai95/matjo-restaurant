@@ -31,13 +31,13 @@
          </div>
 
          <div class="nav-cta__wrapper" v-if="!isMobile">
-            <router-link class="btn--primary" to="/reservation">{{ $t('navigation.reservation') }}</router-link>
+            <OpenTableButton id="opentable__header"/>
          </div>
 
          <div class="mobile-navigation" v-if="isMobile">
             <button id="mobile-navigation-button" type="button" class="navigation__button--mobile menu-toggle"
-               :aria-expanded="isMenuExpanded ? 'true' : 'false'" aria-haspopup="true" 
-               aria-controls="mobile-navigation" aria-owns="mobile-navigation" @click="toggleMenu">
+               :aria-expanded="isMenuExpanded ? 'true' : 'false'" aria-haspopup="true" aria-controls="mobile-navigation"
+               aria-owns="mobile-navigation" @click="toggleMenu">
                <span class="sr-only">{{ isMenuExpanded ? $t('navigation.close') : $t('navigation.open') }}</span>
                <span class="hamburger" :class="{ 'is-open': isMenuExpanded }">
                   <span></span>
@@ -94,23 +94,25 @@
 <script>
 import LinkRouter from "@/components/link/LinkRouter.vue";
 import BaseButton from "@/components/button/BaseButton.vue";
+import OpenTableButton from "@/components/button/OpenTableButton.vue";
 import Icon from '@/assets/svg/Icon.vue';
 
 export default {
-  components: {
-     LinkRouter,
-     BaseButton,
-     Icon,
-  },
-  data() {
-     return {
-        isInverted: false,
-        isMobile: "",
-        isMenuExpanded: false,
-        throttleTimeout: null,
-     };
-  },
-  methods: {
+   components: {
+      LinkRouter,
+      BaseButton,
+      OpenTableButton,
+      Icon,
+   },
+   data() {
+      return {
+         isInverted: false,
+         isMobile: "",
+         isMenuExpanded: false,
+         throttleTimeout: null,
+      };
+   },
+   methods: {
       toggleMenu() {
          this.isMenuExpanded = !this.isMenuExpanded;
          window.addEventListener('keydown', this.handleKeydown);
