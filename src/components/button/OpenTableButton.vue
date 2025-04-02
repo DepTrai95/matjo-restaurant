@@ -23,7 +23,6 @@ export default {
          script.async = true;
          script.id = this.id;
 
-         script.onload = () => console.log("OpenTable-Skript erfolgreich geladen.");
          document.getElementById(this.id).appendChild(script);
       }
    }
@@ -46,8 +45,7 @@ dialog:-internal-dialog-in-top-layer {
    border-color: $color-primary !important;
    border-radius: 50px !important;
    box-shadow: 0px 5px 20px 5px rgba(80, 80, 80, 0.2) !important;
-   // font-family: 'Roboto' !important;
-   // font-weight: 400 !important;
+
    transition: background-color 0.2s ease-in, border-color 0.2s ease-in, box-shadow 0.3s ease-in;
 
    &:hover,

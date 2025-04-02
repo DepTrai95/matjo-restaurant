@@ -31,7 +31,7 @@
          </div>
 
          <div class="nav-cta__wrapper" v-if="!isMobile">
-            <OpenTableButton id="opentable__header"/>
+            <OpenTableButton id="opentable__header" />
          </div>
 
          <div class="mobile-navigation" v-if="isMobile">
@@ -55,7 +55,10 @@
                      <LinkRouter link="/bbq" :label="$t('navigation.bbq')" @click="closeMenu" />
                      <LinkRouter link="/hotpot" :label="$t('navigation.hotpot')" @click="closeMenu" />
                      <LinkRouter link="/career" :label="$t('navigation.career')" @click="closeMenu" />
-                     <li class=" form-group form-select">
+                     <li>
+                        <OpenTableButton class="nav-main__reservation" id="opentable__header__mobile" />
+                     </li>
+                     <li class="form-group form-select">
                         <label class="sr-only" for="language">Sprache wechseln</label>
                         <select class="form-control" id="language" name="language" aria-label="Sprache ändern"
                            v-model="$i18n.locale">
@@ -302,7 +305,7 @@ export default {
 
          &.is-open {
             border: 1px solid rgba(255, 255, 255, 0.3);
-            height: 45vh;
+            height: 55vh;
          }
       }
 
@@ -315,33 +318,39 @@ export default {
 
   }
 
-  .nav-main {
-     display: flex;
-     flex-direction: column;
+   .nav-main {
+      display: flex;
+      flex-direction: column;
 
-     li {
-        @include responsive-font-size(1.8rem, 2rem);
-        color: $color-white;
-        justify-content: center;
-        gap: 1rem;
-        padding: 5px;
-        text-transform: uppercase;
-        width: 100%;
+      li {
+         @include responsive-font-size(1.8rem, 2rem);
+         color: $color-white;
+         justify-content: center;
+         gap: 1rem;
+         padding: 5px;
+         text-transform: uppercase;
+         width: 100%;
 
-        @include for-phone-only {
-         color: $color-black;
-        }
+         @include for-phone-only {
+            color: $color-black;
+         }
 
-        .icon {
-           height: 2rem;
-           width: 2rem;
-        }
-     }
+         .icon {
+            height: 2rem;
+            width: 2rem;
+         }
+      }
+
+      .nav-main__reservation {
+         display: flex;
+         justify-content: center;
+         margin-block: 1rem
+      }
 
       .social-media-menu__item {
          width: auto;
       }
-  }
+   }
 }
 
 .menu-toggle {

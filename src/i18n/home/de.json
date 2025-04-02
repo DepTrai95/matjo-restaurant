@@ -1,7 +1,7 @@
 {
    "home": {
       "menuButton": "Menü",
-      "reserveButton": "Reservieren"
+      "reserveButton": "Jetzt Reservieren"
    },
    "aboutUs": {
       "title": "ÜBER UNS",
@@ -23,12 +23,12 @@
       "title": "Unsere Werte",
       "valueList": [
          {
-            "icon": "dish",
+            "icon": "dish-alt",
             "heading": "Qualität",
             "description": "Wir setzen auf frische, hochwertige Zutaten, um ein erstklassiges Geschmackserlebnis zu garantieren"
          },
          {
-            "icon": "food-menu",
+            "icon": "food-menu-alt",
             "heading": "Authentizität",
             "description": "Wir legen Wert auf traditionelle Zubereitungsmethoden und Rezepte, um dir ein authentisches Erlebnis zu bieten."
          },
@@ -38,7 +38,7 @@
             "description": "Herzlichkeit und Freundlichkeit sind das Herzstück unseres Services, damit du dich bei uns wie zu Hause fühlst."
          },
          {
-            "icon": "group",
+            "icon": "group-alt",
             "heading": "Gemeinschaft",
             "description": "Essen verbindet Menschen, und bei MATJO steht das gemeinsame Genießen im Mittelpunkt."
          }

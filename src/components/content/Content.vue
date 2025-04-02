@@ -10,10 +10,8 @@
                   </div>
                   <div class="content__text">
                      <p v-for="text in content.description" :key="text.id">{{ text }}</p>
-                     <div class="flex">
-                        <router-link class="btn--primary" :to="content.callToActionOne.to">{{ content.callToActionOne.text}}</router-link>
-                        <OpenTableButton id="opentable__content"/>
-                     </div>
+                     <router-link class="btn--primary" :to="content.callToActionOne.to">{{ content.callToActionOne.text}}</router-link>
+                     <a class="btn--primary" @click.prevent="clickOpenTableButton">{{ content.callToActionTwo.text}}</a>
                   </div>
                </div>
                <div class="grid-item">
@@ -45,6 +43,11 @@ export default {
          type: Object,
          required: true
       },
+   },
+   data() {
+      return {
+         openTableLink: 'https://www.opentable.de/booking/restref/availability?rid=400416&lang=de-DE&r3uid=7mA93nD3C&color=1&correlationId=fb1aaf3b-3b61-4f72-8ac6-35cc08a92f06&restRef=400416&otSource=Restaurant%20website'
+      }
    },
    methods: {
       observeElement(entries, observer) {
@@ -91,6 +94,9 @@ export default {
       },
       handleResize() {
          this.createObserver();
+      },
+      clickOpenTableButton() {
+         document.querySelector('.ot-button').click();
       }
    },
    mounted() {

@@ -136,7 +136,14 @@ li {
          transition-delay: 0s;
          transform: scale3d(1, 1, 1);
          width: 100%;
-      }  
+      }
+   }
+   
+   a.ot-button {
+      &:hover::before,
+      &:focus::before {
+         width: 0 !important;
+      }
    }
 }
 

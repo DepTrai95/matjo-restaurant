@@ -14,8 +14,7 @@
       <hgroup class="stage__headline">
          <div class="stage__cta__wrapper" v-if="!isMobile && showSubHeader">
             <router-link class="btn--primary" to="/menu">{{ $t('home.home.menuButton') }}</router-link>
-            <OpenTableButton id="opentable__stage" />
-
+            <a class="btn--primary" @click.prevent="clickOpenTableButton">{{ $t('home.home.reserveButton') }}</a>
          </div>
          <h1>{{ headline }}</h1>
          <h2 v-if="showSubHeader">MATJO</h2>
@@ -52,6 +51,11 @@ export default {
          default: false,
       },
    },
+   data() {
+      return {
+         openTableLink: 'https://www.opentable.de/booking/restref/availability?rid=400416&lang=de-DE&r3uid=7mA93nD3C&color=1&correlationId=fb1aaf3b-3b61-4f72-8ac6-35cc08a92f06&restRef=400416&otSource=Restaurant%20website'
+      }
+   },
    watch: {
       '$route': {
          immediate: true,
@@ -87,6 +91,9 @@ export default {
             arrow?.classList.add('visible');
          }, 400);
       },
+      clickOpenTableButton() {
+         document.querySelector('.ot-button').click();
+      }
    },
 }
 </script>

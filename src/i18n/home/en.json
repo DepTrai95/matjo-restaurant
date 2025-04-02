@@ -1,7 +1,7 @@
 {
    "home": {
       "menuButton": "Menu",
-      "reserveButton": "Reserve"
+      "reserveButton": "Make a reservation"
    },
    "aboutUs": {
       "title": "ABOUT US",
@@ -23,12 +23,12 @@
       "title": "Our Values",
       "valueList": [
          {
-            "icon": "dish",
+            "icon": "dish-alt",
             "heading": "Quality",
             "description": "We focus on fresh, high-quality ingredients to guarantee an exceptional taste experience."
          },
          {
-            "icon": "food-menu",
+            "icon": "food-menu-alt",
             "heading": "Authenticity",
             "description": "We value traditional preparation methods and recipes to offer you an authentic experience."
          },
@@ -38,7 +38,7 @@
             "description": "Warmth and friendliness are the heart of our service, so you feel right at home with us."
          },
          {
-            "icon": "group",
+            "icon": "group-alt",
             "heading": "Community",
             "description": "Food brings people together, and at MATJO, sharing and enjoying is at the core of our experience."
          }
