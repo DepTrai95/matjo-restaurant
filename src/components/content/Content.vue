@@ -11,7 +11,7 @@
                   <div class="content__text">
                      <p v-for="text in content.description" :key="text.id">{{ text }}</p>
                      <router-link class="btn--primary" :to="content.callToActionOne.to">{{ content.callToActionOne.text}}</router-link>
-                     <a class="btn--primary" @click.prevent="clickOpenTableButton">{{ content.callToActionTwo.text}}</a>
+                     <a class="btn--primary" href="/" @click.prevent="clickOpenTableButton">{{ content.callToActionTwo.text}}</a>
                   </div>
                </div>
                <div class="grid-item">

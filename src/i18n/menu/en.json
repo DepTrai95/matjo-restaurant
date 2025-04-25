@@ -1,13 +1,14 @@
 {
-  "menuIntro": {
-    "headline": "MENU",
-    "paragraphOne": "To give you a glimpse into our delicious dishes, here is our food and drinks menu.",
-    "paragraphTwo": "Take a look at our menu or let yourself be surprised and advised on-site.",
-    "paragraphThree": "If you have any intolerances or special requests, let us know – we always do our best!"
-  },
-  "menuButtons": {
-    "mainDishes": "Main Dishes",
-    "bbq": "BBQ",
-    "hotpot": "Hotpot"
-  }
+   "menuIntro": {
+      "headline": "MENU",
+      "paragraphOne": "To give you a glimpse into our delicious dishes, here is our food and drinks menu.",
+      "paragraphTwo": "Take a look at our menu or let yourself be surprised and advised on-site.",
+      "paragraphThree": "If you have any intolerances or special requests, let us know – we always do our best!"
+   },
+   "menuButtons": {
+      "dishes": "Our Dishes",
+      "mainDishes": "Main Dishes",
+      "bbq": "BBQ",
+      "hotpot": "Hotpot"
+   }
 }
