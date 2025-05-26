@@ -96,8 +96,10 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-   background-color: transparent;
-   color: $color-white;
+   // background-color: transparent;
+   // color: $color-white;
+   background-color: rgba(255, 255, 255, 0.9);
+   color: $color-header;
    inset-inline: 0;
    position: fixed;
    transition: background-color 0.25s ease-in-out, inset 0.25s ease-in-out, border-radius 0.25s;

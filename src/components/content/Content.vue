@@ -245,53 +245,49 @@ export default {
 
 <style lang="scss">
 .content__images {
-   height: 300px;
+   height: 400px;
    padding: 1rem;
    position: relative;
-
-   @include for-tablet-portrait-up {
-      height: 450px;
-   }
 
    @include for-tablet-landscape-up {
       height: 500px;
    }
 
    .img:first-child {
+      bottom: 0;
       position: absolute;
-      left: 0;
-      top: 0;
-      transform: translate(5%, -5%);
-
-      @include for-tablet-landscape-up {
-         transform: translate(25px, 25px)
+      right: 0;
+      
+      @include for-phone-only {
+         transform: translate(5%, -15%);
       }
 
-      @include for-desktop-up {
-         transform: translate(75px, 0%);
+      @include for-tablet-landscape-up {
+         bottom: unset;
+         top: 0;
+         transform: translate(50px, 0%);
       }
 
       img {
-         max-width: 400px;
+         max-width: 300px;
       }
    }
 
    .img:last-child {
       position: absolute;
-      right: 0;
+      left: 0;
       bottom: 0;
-      transform: translate(-25px, 0%);
-      
-      @include for-tablet-landscape-up {
-         transform: translate(-25px, -50px);
+   
+      @include for-phone-only {
+         transform: translate(-5%, 10%);
       }
 
-      @include for-desktop-up {
-         transform: translate(-50px, 0%);
+      @include for-tablet-landscape-up {
+         transform: translate(-25px, 0%);
       }
 
       img {
-         max-width: 400px;
+         max-width: 300px;
       }
    }
 }

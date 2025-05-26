@@ -106,8 +106,8 @@ export default {
                text: localizedObject.aboutUs.callToActionTwo.text
             },
             images: [
-               { id: 'img-korean-pot', imgSrc: '/img/korean-pot/korean-pot.webp' },
-               { id: 'img-tischgrill', imgSrc: '/img/tischgrill/tischgrill.webp' }
+               { id: 'img-cucumber-salad', imgSrc: '/img/cucumber-salad/cucumber-salad.webp' },
+               { id: 'img-mandu', imgSrc: '/img/mandu/mandu.webp' },
             ]
          };
       },

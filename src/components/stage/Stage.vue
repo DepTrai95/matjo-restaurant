@@ -106,8 +106,17 @@ export default {
 
    &.stage__full-height {
       .stage__headline {
+         background-image: url("../../assets/img/stage-img/blob.svg");
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: 600px;
+
          @include for-tablet-landscape-up {
-            width: 50%;
+            // width: 50%;
+         }
+
+         @include for-desktop-up {
+            background-size: 700px;
          }
       }
    }
@@ -116,6 +125,10 @@ export default {
 .stage__half-height {
    min-height: 50vh;
    // min-height: 50dvh;
+
+   .blur {
+      background: linear-gradient(to right, rgb(151 150 150 / 60%), rgb(51 50 50 / 30%));
+   }
 }
  
 .stage__background {
@@ -134,8 +147,8 @@ export default {
    inset: 0;
    position: absolute;
    // background: linear-gradient(to right, rgba(243, 231, 233, 0.5), rgba(243, 231, 233, 0));
-   background: linear-gradient(to right, rgb(163 163 163 / 50%), rgb(35 35 35 / 40%));
-   background: linear-gradient(to right, rgb(151 150 150 / 50%), rgb(51 50 50 / 40%));
+   background: linear-gradient(to right, rgb(163 163 163 / 50%), rgb(35 35 35 / 30%));
+   background: linear-gradient(to right, rgb(151 150 150 / 50%), rgb(51 50 50 / 30%));
 }
  
 .stage__headline {
@@ -147,7 +160,7 @@ export default {
    position: absolute;
 
    h1 {
-      color: $color-white;
+      color: $color-white;      
       font-family: "JosefinSans", "Calibri", sans-serif;
       margin: 0;
       margin-block-start: -1.5rem;
@@ -158,7 +171,7 @@ export default {
    }
 
    h2 {
-   @include responsive-font-size(8rem, 9rem);
+      @include responsive-font-size(8rem, 9rem);
       color: $color-primary;
       font-family: "Baron", "Calibri", sans-serif;
       font-weight: 400;

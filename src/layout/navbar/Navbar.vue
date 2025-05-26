@@ -4,10 +4,7 @@
          <div class="logo__container">
             <div class="logo">
                <router-link to="/">
-                  <img v-if="!isInverted" src="../../assets/img/logo.webp" alt="zur Startseite" height="70"
-                     width="70" />
-                  <img v-else src="../../assets/img/logo-transparent.webp" alt="zur Startseite" height="70"
-                     width="70" />
+                  <img src="../../assets/img/logo-transparent.webp" alt="zur Startseite" height="70" width="70" />
                </router-link>
             </div>
          </div>
@@ -109,7 +106,6 @@ export default {
    },
    data() {
       return {
-         isInverted: false,
          isMobile: "",
          isMenuExpanded: false,
          throttleTimeout: null,
@@ -138,23 +134,6 @@ export default {
       },
       checkIsMobile() {
             this.isMobile = window.innerWidth <= 599;
-            this.isInverted = window.innerWidth <= 599;
-      },
-      handleHeaderVisibility (currentScrollPos) {
-         let prevScrollPos = window.pageYOffset;
-
-         if (currentScrollPos < 150) {
-            this.isInverted = false;
-            return;
-         }
-
-         if (prevScrollPos > currentScrollPos) {
-            this.isInverted = false;
-         } else {
-            this.isInverted = true;
-         }
-
-         prevScrollPos = currentScrollPos;
       },
    },
    mounted() {
@@ -165,12 +144,6 @@ export default {
          if (this.isMobile) {
             document.querySelector(".header").classList.remove('header--inverted');
          }
-      });
-      window.addEventListener("scroll", () => {
-         if (!this.isMobile) {
-            let currentScrollPos = window.pageYOffset;
-            this.handleHeaderVisibility(currentScrollPos);
-            }
       });
    },
    destroyed() {
