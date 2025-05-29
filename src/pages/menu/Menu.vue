@@ -1,27 +1,30 @@
 <template>
-  <div id="menu">
-    <stage-separator class="stage__separator"></stage-separator>
-    <section class="content-area">
-      <div class="inner">
-        <div class="menu grid--default grid-2--tablet-landscape-up">
-            <div class="grid-item">
-               <h2>{{ $t('menu.menuIntro.headline') }}</h2>
-               <p>{{ $t('menu.menuIntro.paragraphOne') }}</p>
-               <p>{{ $t('menu.menuIntro.paragraphTwo') }}</p>
-               <p>{{ $t('menu.menuIntro.paragraphThree') }}</p>
-            </div>
-            <div class="grid-item">
-               <div class="menu-item">
-                  <a href="/fileadmin/matjo-menu.pdf" title="Stand 25.04.2024">
-                     <img src="/img/lunch/lunch-large.webp" height alt="Repräsentatives Bild für Speisen">
-                     <span class="menu-category">{{ $t('menu.menuButtons.dishes') }}</span>
-                  </a>
+   <div id="menu">
+      <stage-separator class="stage__separator"></stage-separator>
+      <section class="content-area">
+         <div class="inner">
+            <div class="menu grid--default grid-2--tablet-landscape-up">
+               <div class="grid-item">
+                  <h2>{{ $t('menu.menuIntro.headline') }}</h2>
+                  <p>{{ $t('menu.menuIntro.paragraphOne') }}</p>
+                  <p>{{ $t('menu.menuIntro.paragraphTwo') }}</p>
+                  <p>{{ $t('menu.menuIntro.paragraphThree') }}</p>
+                  <p>{{ $t('menu.menuIntro.paragraphFour') }}</p>
+                  <a href="https://www.lieferando.de/speisekarte/matjo-bbq-hotpot" class="btn btn--primary">{{
+                     $t('menu.menuDelivery') }}</a>
+               </div>
+               <div class="grid-item">
+                  <div class="menu-item">
+                     <a href="/fileadmin/matjo-menu.pdf" title="Stand 25.04.2024">
+                        <img src="/img/lunch/lunch-large.webp" height alt="Repräsentatives Bild für Speisen">
+                        <span class="menu-category">{{ $t('menu.menuButtons.dishes') }}</span>
+                     </a>
+                  </div>
                </div>
             </div>
-        </div>
-      </div>
-    </section>
-  </div>
+         </div>
+      </section>
+   </div>
 </template>
 
 <script>
@@ -123,5 +126,9 @@ export default {
          transform: translate(-50%, -50%);
          transition: transform 0.4s ease-in-out;
       }
+   }
+
+   .btn--primary {
+      align-self: flex-start;
    }
 </style>

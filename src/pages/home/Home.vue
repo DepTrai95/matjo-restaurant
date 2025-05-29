@@ -98,7 +98,7 @@ export default {
             subTitle: localizedObject.aboutUs.subTitle,
             description: localizedObject.aboutUs.description,
             callToActionOne: {
-               to: '/menu',
+               to: '/reservation',
                text: localizedObject.aboutUs.callToActionOne.text
             },
             callToActionTwo: {

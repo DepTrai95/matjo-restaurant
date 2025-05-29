@@ -2,9 +2,11 @@
    "menuIntro": {
       "headline": "MENÜ",
       "paragraphOne": "Um dir einen Einblick in unsere köstlichen Gerichte zu geben, findest du hier unsere Speise- und Getränkekarte.",
-      "paragraphTwo": "Schau dir unser Menü an oder lass dich einfach vor Ort überraschen und beraten.",
-      "paragraphThree": "Wenn du Unverträglichkeiten oder besondere Wünsche hast, lass es uns wissen – wir geben immer unser Bestes!"
+      "paragraphTwo": "Du willst dich überraschen lassen? Kein Problem! Komm vorbei, und lass dich von unserem Team persönlich beraten – wir helfen dir gern bei der Auswahl.",
+      "paragraphThree": "Falls du Unverträglichkeiten hast oder besondere Wünsche, sprich uns einfach an. Wir finden fast immer eine leckere Lösung – versprochen!",
+      "paragraphFour": "Egal ob du bei uns im Restaurant Platz nimmst oder dir den Geschmack direkt nach Hause liefern lässt – wir sorgen dafür, dass es dir schmeckt! Unsere Speisen kannst du bequem auch zur Lieferung bestellen."
    },
+   "menuDelivery": "Jetzt nach Hause liefern lassen",
    "menuButtons": {
       "dishes": "Unsere Speisen",
       "mainDishes": "Hauptgerichte",

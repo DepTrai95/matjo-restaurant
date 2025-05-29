@@ -1,7 +1,7 @@
 {
    "home": {
-      "menuButton": "Menü",
-      "reserveButton": "Jetzt Reservieren"
+      "reserveButton": "Jetzt Reservieren",
+      "deliveryButton": "Nach Hause bestellen"
    },
    "aboutUs": {
       "title": "ÜBER UNS",
@@ -10,13 +10,13 @@
          "Willkommen bei MATJO - BBQ & HOTPOT in der Dresdner Neustadt.",
          "Unser Restaurant vereint die besten Traditionen des BBQ und Hotpots, um dir ein einzigartiges kulinarisches Erlebnis zu bieten.",
          "Bei uns gestaltest du dein Essen nach deinem Geschmack! Frische Zutaten, authentische Aromen und ein herzlicher Service erwarten dich in entspannter Atmosphäre.",
-         "Verbringe hier einen unvergesslichen Abend mit deinen Liebsten und erlebe die Vielfalt von unserer asiatischen Küche!"
+         "Verbringe hier einen unvergesslichen Abend mit deinen Liebsten oder bestelle unsere Speisen zu dir und erlebe die Vielfalt unserer Küche!"
       ],
       "callToActionOne": {
-         "text": "Zum Menü"
+         "text": "Jetzt Reservieren"
       },
       "callToActionTwo": {
-         "text": "Jetzt Reservieren"
+         "text": "Nach Hause bestellen"
       }
    },
    "ourValues": {

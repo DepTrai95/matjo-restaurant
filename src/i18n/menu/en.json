@@ -1,10 +1,12 @@
 {
    "menuIntro": {
       "headline": "MENU",
-      "paragraphOne": "To give you a glimpse into our delicious dishes, here is our food and drinks menu.",
-      "paragraphTwo": "Take a look at our menu or let yourself be surprised and advised on-site.",
-      "paragraphThree": "If you have any intolerances or special requests, let us know – we always do our best!"
+      "paragraphOne": "To give you a taste of what we have to offer, here's our food and drinks menu filled with delicious options.",
+      "paragraphTwo": "Want to be surprised? No problem! Just drop by and let our team help you find the perfect dish – we're happy to advise you.",
+      "paragraphThree": "If you have any allergies or special requests, don’t hesitate to let us know. We’ll always do our best to find a tasty solution – promise!",
+      "paragraphFour": "Whether you're dining with us at the restaurant or enjoying our dishes from the comfort of your home – we've got you covered! You can easily order our meals for delivery as well."
    },
+   "menuDelivery": "Enjoy it at home – order now",
    "menuButtons": {
       "dishes": "Our Dishes",
       "mainDishes": "Main Dishes",

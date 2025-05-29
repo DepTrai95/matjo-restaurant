@@ -13,8 +13,8 @@
       </div>
       <hgroup class="stage__headline">
          <div class="stage__cta__wrapper" v-if="!isMobile && showSubHeader">
-            <router-link class="btn--primary" to="/menu">{{ $t('home.home.menuButton') }}</router-link>
             <a class="btn--primary" href="/" @click.prevent="clickOpenTableButton">{{ $t('home.home.reserveButton') }}</a>
+            <a class="btn--primary" href="https://www.lieferando.de/speisekarte/matjo-bbq-hotpot">{{ $t('home.home.deliveryButton') }}</a>
          </div>
          <h1>{{ headline }}</h1>
          <h2 v-if="showSubHeader">MATJO</h2>
