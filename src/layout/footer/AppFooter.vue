@@ -26,7 +26,12 @@
          <div class="footer__opening-hours">
             <h3>{{ localizedFooter.footer.openingHours }}:</h3>
             <p>
-               {{ localizedFooter.footer.monday }} - {{ localizedFooter.footer.friday }}:<br>
+               {{ localizedFooter.footer.monday }} - {{ localizedFooter.footer.thursday }}:<br>
+               12:00 - 15:00 {{ localizedFooter.footer.hours }}<br>
+               17:30 - 22:30 {{ localizedFooter.footer.hours }}
+            </p>
+            <p>
+               {{ localizedFooter.footer.friday }}<br>
                12:00 - 15:00 {{ localizedFooter.footer.hours }}<br>
                17:00 - 23:00 {{ localizedFooter.footer.hours }}
             </p>
