@@ -37,7 +37,7 @@
             </p>
             <p>{{ localizedFooter.footer.saturday }}, {{ localizedFooter.footer.sunday }} {{ $t('and') }}
                {{ localizedFooter.footer.holiday }}:<br>
-               12:00 - 23:00 {{ localizedFooter.footer.hours }}
+               12:00 - 22:30 {{ localizedFooter.footer.hours }}
             </p>
          </div>
          <div v-if="isMobile" class="footer__social-media">
