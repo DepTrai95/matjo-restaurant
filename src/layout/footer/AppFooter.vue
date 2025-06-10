@@ -35,8 +35,11 @@
                12:00 - 15:00 {{ localizedFooter.footer.hours }}<br>
                17:00 - 23:00 {{ localizedFooter.footer.hours }}
             </p>
-            <p>{{ localizedFooter.footer.saturday }}, {{ localizedFooter.footer.sunday }} {{ $t('and') }}
-               {{ localizedFooter.footer.holiday }}:<br>
+            <p>
+               {{ localizedFooter.footer.saturday }}<br>
+               12:00 - 23:00 {{ localizedFooter.footer.hours }}<br>
+            </p>
+            <p>{{ localizedFooter.footer.sunday }} {{ $t('and') }} {{ localizedFooter.footer.holiday }}:<br>
                12:00 - 22:30 {{ localizedFooter.footer.hours }}
             </p>
          </div>
