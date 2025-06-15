@@ -8,7 +8,7 @@
             <p class="discount-message">{{ $t('discountDialog.message') }}</p>
             <p class="discount-message">{{ $t('discountDialog.message2') }}</p>
             <p class="discount-validity">{{ $t('discountDialog.validUntil') }}</p>
-            <img :src="sixMonthsHighlightsImg" height="500" width alt="MATJO 6 Monate Highlights">
+            <img :src="sixMonthsHighlightsImg" :height="imageHeight" alt="MATJO 6 Monate Highlights">
          </div>
       </template>
    </Dialog>
@@ -27,6 +27,16 @@ export default {
     return {
       sixMonthsHighlightsImg
     };
+  },
+  computed: {
+    imageHeight() {
+      // Check if we're on mobile (you can adjust this logic)
+      if (window.innerWidth < 600) {
+        return 400;
+      } else {
+        return 500;
+      }
+    }
   },
   methods: {
     showDialog() {
@@ -72,6 +82,16 @@ export default {
 
    img {
       width: unset;
+      height: 400px; // Default height for mobile
+      
+      @media (min-width: 600px) {
+         height: 500px; // Height for tablets and desktop
+      }
+      
+      // Alternative: Falls du deine Mixins wieder aktivierst
+      // @include for-tablet-portrait-up {
+      //    height: 500px;
+      // }
    }
 }
 </style> 
