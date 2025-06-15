@@ -29,6 +29,13 @@
     "thirdLine": "Please note that the reservation is only considered confirmed once we respond."
   },
 
+  "discountDialog": {
+    "title": "🎉 MATJO celebrates 6-month anniversary!",
+    "message": "As a special offer, you get 20% off on all your orders!",
+    "message2": "Furthermore in the first week we have additional offers/specials for you",
+    "validUntil": "This offer is valid for 2 weeks until 30th June 2025."
+  },
+
   "navigation": {
     "home": "Home",
     "menu": "Menu",

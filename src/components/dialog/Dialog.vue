@@ -19,7 +19,7 @@
                <slot name="dialogBody"></slot>
             </p>
          </div>
-         <base-button mode="btn--primary" @click="closeDialog">{{ $t('close') }}</base-button>
+         <base-button v-if="closeButtonText" mode="btn--primary" @click="closeDialog">{{ closeButtonText }}</base-button>
       </dialog>
    </Teleport>
 </template>
@@ -31,14 +31,25 @@ export default {
    components: {
       BaseButton,
    },
+   props: {
+      closeButtonText: {
+         type: String,
+         required: false,
+         default: null
+      }
+   },
    methods: {
       openDialog() {
-         this.$refs.dialog.showModal();
-         window.addEventListener('keydown', this.handleKeydown);
+         if (this.$refs.dialog) {
+            this.$refs.dialog.showModal();
+            window.addEventListener('keydown', this.handleKeydown);
+         }
       },
       closeDialog() {
-         this.$refs.dialog.close();
-         window.removeEventListener('keydown', this.handleKeydown);
+         if (this.$refs.dialog) {
+            this.$refs.dialog.close();
+            window.removeEventListener('keydown', this.handleKeydown);
+         }
       },
       handleKeydown(event) {
          if (event.key === 'Escape') { 

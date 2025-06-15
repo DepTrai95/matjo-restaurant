@@ -13,6 +13,7 @@
   <SocialMedia></SocialMedia>
   <AppFooter></AppFooter>
   <Toast></Toast>
+  <DiscountDialog ref="discountDialog" />
 </template>
 
 <script>
@@ -24,6 +25,7 @@ import SVGList from './assets/svg/SVGList.vue';
 import LogoScreen from './components/logoscreen/LogoScreen.vue';
 import SocialMedia from './components/socialmedia/SocialMedia.vue';
 import Toast from './components/toast/Toast.vue';
+import DiscountDialog from './components/dialog/DiscountDialog.vue';
 
 export default {
   components: {
@@ -33,7 +35,16 @@ export default {
     LogoScreen,
     SocialMedia,
     Toast,
+    DiscountDialog,
   },
+  mounted() {
+    // Show discount dialog once when app loads
+    setTimeout(() => {
+      if (this.$refs.discountDialog) {
+        this.$refs.discountDialog.showDialog();
+      }
+    }, 1000);
+  }
 };
 </script>
 

@@ -2,6 +2,6 @@
 // = Global scss imported in vite-config
 // ==========================================================================
 
-@import "_base.scss";
-@import "_functions";
-@import "_mixins";
+@forward "./_base.scss";
+@forward "./_functions.scss";
+@forward "./_mixins.scss";

@@ -144,7 +144,7 @@ export default {
 
          const container = document.getElementById("opentable-widget-container__header");
          container.appendChild(script);
-      },
+      }
    },
    mounted() {
       // this.loadOpenTableScript();

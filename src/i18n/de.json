@@ -29,6 +29,13 @@
     "thirdLine": "Bitte beachtet, dass bei Reservierungen, diese erst bei Rückmeldung von uns als bestätigt gilt."
   },
 
+  "discountDialog": {
+    "title": "🎉 Wir feiern 6 Monate MATJO!",
+    "message": "Zu diesem Anlass erhalten Sie 20% Rabatt auf BBQ & Hotpot!",
+    "message2": "Außerdem haben wir die erste Woche zusätzliche Angebote für euch",
+    "validUntil": "Dieses Angebot ist gültig für 2 Wochen und gilt bis 30.06.2025"
+  },
+
   "navigation": {
     "home": "Home",
     "menu": "Menü",
