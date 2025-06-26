@@ -10,8 +10,10 @@
                   </div>
                   <div class="content__text">
                      <p v-for="text in content.description" :key="text.id">{{ text }}</p>
-                     <a class="btn--primary" href="/" @click.prevent="clickOpenTableButton">{{ content.callToActionOne.text}}</a>
-                     <a class="btn--primary" href="https://www.lieferando.de/speisekarte/matjo-bbq-hotpot">{{ content.callToActionTwo.text}}</a>
+                     <div class="btn-container">
+                        <a class="btn--primary" href="/" @click.prevent="clickOpenTableButton">{{ content.callToActionOne.text}}</a>
+                        <a class="btn--primary" href="https://www.lieferando.de/speisekarte/matjo-bbq-hotpot">{{ content.callToActionTwo.text}}</a>
+                     </div>
                   </div>
                </div>
                <div class="grid-item">
@@ -168,6 +170,10 @@ export default {
       }
    }
    
+   .btn-container {
+      display: flex;
+      gap: 1rem;
+   }
 
    .grid-2--tablet-landscape-up > .grid-item {
       opacity: 0;
