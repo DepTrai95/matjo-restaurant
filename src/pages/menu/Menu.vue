@@ -93,6 +93,10 @@ export default {
          margin-block-end: 2.5rem;
       }
 
+      &:last-child {
+         flex-wrap: wrap;
+      }
+
       h2 {
          margin-block-end: 1rem;
       }
@@ -109,6 +113,10 @@ export default {
       justify-content: center;
       overflow: hidden;
       position: relative;
+
+      @include for-phone-only {
+         width: fit-content;
+      }
       
       a {
          vertical-align: bottom;

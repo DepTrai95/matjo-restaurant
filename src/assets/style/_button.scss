@@ -21,12 +21,17 @@ a {
   min-height: 3rem;
   outline: 1px solid transparent;
   padding: 1rem 1.5rem;
+  text-align: center;
   text-decoration: none;
   transition: background-color 0.2s ease-in, border-color 0.2s ease-in, box-shadow 0.3s ease-in, color 0.3s ease-in-out;
 
-  +.btn--primary {
-     margin-inline: 2rem;
-  }
+   @media (width < 600px) {
+      font-size: 1.4rem;
+   }
+
+   +.btn--primary {
+      margin-inline: 1rem;
+   }
 }
 
 .btn--primary {
