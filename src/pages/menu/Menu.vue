@@ -15,9 +15,23 @@
                </div>
                <div class="grid-item">
                   <div class="menu-item">
-                     <a href="/fileadmin/matjo-menu.pdf" title="Stand 25.04.2024">
+                     <a href="/fileadmin/matjo-mittagsangebot.pdf" title="Stand 18.06.2025">
                         <img src="/img/lunch/lunch-large.webp" height alt="Repräsentatives Bild für Speisen">
-                        <span class="menu-category">{{ $t('menu.menuButtons.dishes') }}</span>
+                        <span class="menu-category">{{ $t('menu.menuButtons.lunch') }}</span>
+                     </a>
+                  </div>
+                  <div class="menu-item">
+                     <a href="/fileadmin/matjo-menu.pdf" title="Stand 18.06.2025">
+                        <img src="/img/streetfood/streetfood-large.webp" height alt="Repräsentatives Bild für Speisen">
+                        <span class="menu-category">{{ $t('menu.menuButtons.mainDishes') }}</span>
+                     </a>
+                  </div>
+                  <div class="menu-item">
+                     <a href="/fileadmin/matjo-bbq-and-hotpot.pdf" title="Stand 18.06.2025">
+                        <img src="/img/bbq-menu/bbq-menu-large.webp" height alt="Repräsentatives Bild für Speisen">
+                        <span class="menu-category">
+                           {{ $t('menu.menuButtons.bbq') }} {{ $t('and') }} {{ $t('menu.menuButtons.hotpot') }}
+                        </span>
                      </a>
                   </div>
                </div>
@@ -50,13 +64,21 @@ export default {
 <style lang="scss" scoped>
    .menu.grid--default {
       @include for-tablet-landscape-up {
-         >.grid-item:first-child {
+         align-items: center;
+
+         >.grid-item:last-child {
             width: calc(100% / 1.5); //66.66%
          }
-   
-         >.grid-item:last-child {
+      }
+
+      @include for-desktop-up {
+         >.grid-item:first-child {
             margin-top: 50px;
             width: calc(100% / 3); //33.33%
+         }
+
+         >.grid-item:last-child {
+            width: calc(100% / 1.5); //66.66%
          }
       }
    }
@@ -103,8 +125,10 @@ export default {
       }
       
       img {
+         aspect-ratio: 0.75;
          border-radius: 4px;
          display: block;
+         max-height: 300px;
          padding: 1rem;
          transition: padding 0.4s ease-in-out;
          
@@ -120,9 +144,11 @@ export default {
          bottom: 0;
          color: $color-white;
          left: 50%;
+         min-width: 155px;
          // padding: 5px 10px;
          padding: 1rem 1.5rem;
          position: absolute;
+         text-align: center;
          transform: translate(-50%, -50%);
          transition: transform 0.4s ease-in-out;
       }
