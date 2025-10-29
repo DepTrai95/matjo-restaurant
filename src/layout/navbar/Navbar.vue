@@ -297,11 +297,11 @@ export default {
          backdrop-filter: blur(10px);
          border: 0px solid rgba(255, 255, 255, 0.3);
 
-         &::before {
-            position: absolute;
-            inset: 0;
-            content: "";
-         }
+         // &::before {
+         //    position: absolute;
+         //    inset: 0;
+         //    content: "";
+         // }
 
          &.is-open {
             border: 1px solid rgba(255, 255, 255, 0.3);

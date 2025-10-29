@@ -1,5 +1,5 @@
 <template>
-   <div :id="id"></div>
+   <div :id="id" class="opentable"></div>
 </template>
 
 <script>
@@ -19,7 +19,7 @@ export default {
          const script = document.createElement("script");
          const language = this.$i18n?.locale === "de" ? "de-DE" : "en-US";
 
-         script.src = `https://www.opentable.de/widget/reservation/loader?rid=400416&type=button&theme=wide&color=1&iframe=iframe&domain=de&lang=${language}&newtab=false&ot_source=Restaurant%20website`;
+         script.src = `https://www.opentable.de/widget/reservation/loader?rid=400416&type=button&theme=standard&color=1&iframe=true&domain=de&lang=${language}&newtab=false&ot_source=Restaurant%20website`;
          script.async = true;
          script.id = this.id;
 
@@ -39,6 +39,9 @@ dialog:-internal-dialog-in-top-layer {
    padding: 0 !important; 
 }
 
+.opentable iframe {
+   height: 70px;
+}
 // OpenTable
 .ot-button {
    background-color: $color-primary !important;

@@ -13,7 +13,7 @@
       </div>
       <hgroup class="stage__headline">
          <div class="stage__cta__wrapper" v-if="!isMobile && showSubHeader">
-            <a class="btn--primary" href="/" @click.prevent="clickOpenTableButton">{{ $t('home.home.reserveButton') }}</a>
+            <a class="btn--primary" :href="this.openTableLink">{{ $t('home.home.reserveButton') }}</a>
             <a class="btn--primary" href="https://www.lieferando.de/speisekarte/matjo-bbq-hotpot">{{ $t('home.home.deliveryButton') }}</a>
          </div>
          <h1>{{ headline }}</h1>
@@ -53,7 +53,7 @@ export default {
    },
    data() {
       return {
-         openTableLink: 'https://www.opentable.de/booking/restref/availability?rid=400416&lang=de-DE&r3uid=7mA93nD3C&color=1&correlationId=fb1aaf3b-3b61-4f72-8ac6-35cc08a92f06&restRef=400416&otSource=Restaurant%20website'
+         openTableLink: 'https://www.opentable.de/booking/restref/availability?rid=400416&lang=de-DE'
       }
    },
    watch: {
@@ -91,9 +91,6 @@ export default {
             arrow?.classList.add('visible');
          }, 400);
       },
-      clickOpenTableButton() {
-         document.querySelector('.ot-button').click();
-      }
    },
 }
 </script>
