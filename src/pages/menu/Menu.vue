@@ -15,18 +15,24 @@
                </div>
                <div class="grid-item">
                   <div class="menu-item">
+                     <a href="/fileadmin/matjo-menu-nov-2025.pdf" title="Stand 10.11.2025">
+                        <img src="/img/bbq-menu/bbq-menu-large.webp" height alt="Repräsentatives Bild für Speisen">
+                        <span class="menu-category">{{ $t('menu.menuButtons.dishes') }}</span>
+                     </a>
+                  </div>
+                  <div v-if="1 === 0" class="menu-item">
                      <a href="/fileadmin/matjo-mittagsangebot.pdf" title="Stand 18.06.2025">
                         <img src="/img/lunch/lunch-large.webp" height alt="Repräsentatives Bild für Speisen">
                         <span class="menu-category">{{ $t('menu.menuButtons.lunch') }}</span>
                      </a>
                   </div>
-                  <div class="menu-item">
+                  <div v-if="1 === 0" class="menu-item">
                      <a href="/fileadmin/matjo-menu.pdf" title="Stand 18.06.2025">
                         <img src="/img/streetfood/streetfood-large.webp" height alt="Repräsentatives Bild für Speisen">
                         <span class="menu-category">{{ $t('menu.menuButtons.mainDishes') }}</span>
                      </a>
                   </div>
-                  <div class="menu-item">
+                  <div v-if="1 === 0" class="menu-item">
                      <a href="/fileadmin/matjo-bbq-and-hotpot.pdf" title="Stand 18.06.2025">
                         <img src="/img/bbq-menu/bbq-menu-large.webp" height alt="Repräsentatives Bild für Speisen">
                         <span class="menu-category">
@@ -62,26 +68,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-   .menu.grid--default {
-      @include for-tablet-landscape-up {
-         align-items: center;
+   // .menu.grid--default {
+   //    @include for-tablet-landscape-up {
+   //       align-items: center;
 
-         >.grid-item:last-child {
-            width: calc(100% / 1.5); //66.66%
-         }
-      }
+   //       >.grid-item:last-child {
+   //          width: calc(100% / 1.5); //66.66%
+   //       }
+   //    }
 
-      @include for-desktop-up {
-         >.grid-item:first-child {
-            margin-top: 50px;
-            width: calc(100% / 3); //33.33%
-         }
+   //    @include for-desktop-up {
+   //       >.grid-item:first-child {
+   //          margin-top: 50px;
+   //          width: calc(100% / 3); //33.33%
+   //       }
 
-         >.grid-item:last-child {
-            width: calc(100% / 1.5); //66.66%
-         }
-      }
-   }
+   //       >.grid-item:last-child {
+   //          width: calc(100% / 1.5); //66.66%
+   //       }
+   //    }
+   // }
 
    .grid-item {
       display: flex;
@@ -136,7 +142,8 @@ export default {
          aspect-ratio: 0.75;
          border-radius: 4px;
          display: block;
-         max-height: 300px;
+         // max-height: 300px;
+         max-width: 400px;
          padding: 1rem;
          transition: padding 0.4s ease-in-out;
          
