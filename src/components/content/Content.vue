@@ -101,6 +101,7 @@ export default {
          this.createObserver();
       },
       clickOpenTableButton() {
+         debugger
          document.querySelector('.ot-button').click();
       },
       openDeliveryDialog() {

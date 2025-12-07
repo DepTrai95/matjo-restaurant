@@ -19,7 +19,7 @@ export default {
          const script = document.createElement("script");
          const language = this.$i18n?.locale === "de" ? "de-DE" : "en-US";
 
-         script.src = `https://www.opentable.de/widget/reservation/loader?rid=400416&type=button&theme=standard&color=1&iframe=true&domain=de&lang=${language}&newtab=false&ot_source=Restaurant%20website`;
+         script.src = `https://www.opentable.de/widget/reservation/loader?rid=400416&type=button&theme=standard&color=1&iframe=false&domain=de&lang=${language}&newtab=false&ot_source=Restaurant%20website`;
          script.async = true;
          script.id = this.id;
 
@@ -31,12 +31,13 @@ export default {
 
 <style lang="scss">
 dialog:-internal-dialog-in-top-layer {
-   max-height: 100% ;
+   max-height: 100%;
    max-width: 100%;
 }
 
 #ot-reservation-widget {
    padding: 0 !important; 
+   width: 100% !important;
 }
 
 .opentable iframe {
@@ -46,9 +47,8 @@ dialog:-internal-dialog-in-top-layer {
 .ot-button {
    background-color: $color-primary !important;
    border-color: $color-primary !important;
-   border-radius: 50px !important;
    box-shadow: 0px 5px 20px 5px rgba(80, 80, 80, 0.2) !important;
-
+   padding: 1.5rem 3rem !important;
    transition: background-color 0.2s ease-in, border-color 0.2s ease-in, box-shadow 0.3s ease-in;
 
    &:hover,
