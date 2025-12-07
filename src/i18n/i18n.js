@@ -33,7 +33,7 @@ const messages = {
     contact: deContact,
     imprint: deImprint,
     privacy: dePrivacy,
-    contactInfo: deDialog,
+    dialog: deDialog,
   },
   en: {
     ...en, 
@@ -45,7 +45,7 @@ const messages = {
     contact: enContact,
     imprint: enImprint,
     privacy: enPrivacy,
-    contactInfo: enDialog,
+    dialog: enDialog,
   }
 };
 

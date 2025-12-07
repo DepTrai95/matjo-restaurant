@@ -14,24 +14,29 @@
       <hgroup class="stage__headline">
          <div class="stage__cta__wrapper" v-if="!isMobile && showSubHeader">
             <a class="btn--primary" :href="this.openTableLink">{{ $t('home.home.reserveButton') }}</a>
-            <a class="btn--primary" href="https://www.lieferando.de/speisekarte/matjo-bbq-hotpot">{{ $t('home.home.deliveryButton') }}</a>
+            <button class="btn--primary" @click="openDeliveryDialog">{{ $t('home.home.deliveryButton') }}</button>
          </div>
          <h1>{{ headline }}</h1>
          <h2 v-if="showSubHeader">MATJO</h2>
+         <h2 class="sr-only">{{ $t('home.home.invisibleTagOne') }}</h2>
+         <h2 class="sr-only">{{ $t('home.home.invisibleTagTwo') }}</h2>
       </hgroup>
       <div v-if="showSubHeader" class="stage__arrow-down" @click="scrollToNextSection">
          <div class="arrow"></div>
          <div class="arrow arrow__second"></div>
       </div>
+      <DeliveryDialog ref="deliveryDialog" />
    </div>
 </template>
  
 <script>
 import OpenTableButton from "@/components/button/OpenTableButton.vue";
+import DeliveryDialog from "@/components/dialog/DeliveryDialog.vue";
 
 export default {
    components: {
-      OpenTableButton
+      OpenTableButton,
+      DeliveryDialog
    },
    props: {
       headerHeightMax: {
@@ -90,6 +95,11 @@ export default {
             headerDescr?.classList.add('visible');
             arrow?.classList.add('visible');
          }, 400);
+      },
+      openDeliveryDialog() {
+         if (this.$refs.deliveryDialog) {
+            this.$refs.deliveryDialog.showDialog();
+         }
       },
    },
 }

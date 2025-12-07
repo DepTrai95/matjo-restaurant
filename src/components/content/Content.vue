@@ -12,7 +12,7 @@
                      <p v-for="text in content.description" :key="text.id">{{ text }}</p>
                      <div class="btn-container">
                         <a class="btn--primary" href="/" @click.prevent="clickOpenTableButton">{{ content.callToActionOne.text}}</a>
-                        <a class="btn--primary" href="https://www.lieferando.de/speisekarte/matjo-bbq-hotpot">{{ content.callToActionTwo.text}}</a>
+                        <button class="btn--primary" @click="openDeliveryDialog">{{content.callToActionTwo.text}}</button>
                      </div>
                   </div>
                </div>
@@ -24,6 +24,7 @@
             </div>
          </div>
       </article>
+      <DeliveryDialog ref="deliveryDialog" />
    </section>
 </template>
  
@@ -32,6 +33,7 @@ import Img from '@/components/img/Img.vue';
 import LinkRouter from '@/components/link/LinkRouter.vue';
 import StageSeparator from '@/components/stage/StageSeparator.vue';
 import OpenTableButton from '@/components/button/OpenTableButton.vue';
+import DeliveryDialog from "@/components/dialog/DeliveryDialog.vue";
 
 export default {
    components: {
@@ -39,6 +41,7 @@ export default {
       LinkRouter,
       StageSeparator,
       OpenTableButton,
+      DeliveryDialog,
    },
    props: {
       content: {
@@ -99,7 +102,12 @@ export default {
       },
       clickOpenTableButton() {
          document.querySelector('.ot-button').click();
-      }
+      },
+      openDeliveryDialog() {
+         if (this.$refs.deliveryDialog) {
+            this.$refs.deliveryDialog.showDialog();
+         }
+      },
    },
    mounted() {
       this.createObserver();

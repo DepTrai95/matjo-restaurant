@@ -2,39 +2,13 @@
   <div>
     <skip-links></skip-links>
     <stage-separator class="stage__separator stage__separator--tinted"></stage-separator>
+    <h2 class="sr-only">{{ localizedIntroduction.invisibleTagOne }}</h2>
     <Content class="content-area--tinted" :content="localizedIntroduction"></Content>
     <stage-separator class="stage__separator "></stage-separator>
     <IconList :heading="localizedValues.title" :iconList="localizedValues.iconList"></IconList>
 
-    <div v-if="1 == 0">
-      <stage-separator class="stage__separator--tinted"></stage-separator>
-      <section class="content-area content-area--tinted">
-        <div class="img-gallery">
-          <div class="inner">
-            <h2 class="text-center">{{ $t('imageGalleryHeader') }}</h2>
-            <div class="grid--default grid-2 grid-4--tablet-landscape-up">
-              <div class="grid-item" v-for="img in imgGallery" :key="img.id">
-                <Img :img="img"></Img>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-
     <stage-separator class="stage__separator--tinted"></stage-separator>
     <InstagramGallery id="instagram" class="content-area--tinted"></InstagramGallery>
-
-    <div v-if="1 == 0">
-      <!-- hide this block -->
-      <stage-separator class="stage__separator stage__separator--tinted"></stage-separator>
-      <section id="faq" class="content-area content-area--tinted">
-        <div class="inner">
-          <h2 class="text-center">{{ localizedFaq.title }}</h2>
-          <Accordion :items="localizedFaq.faqList"></Accordion>
-        </div>
-      </section>
-    </div>
   </div>
 </template>
 
@@ -60,33 +34,6 @@ export default {
       InstagramGallery,
       StageSeparator,
    },
-   data() {
-      return {
-         title: 'Homepage',
-         imgGallery: [
-            { id: 'img-bbq', imgSrc: '/img/bbq/bbq.webp' },
-            { id: 'img-bbq-steak', imgSrc: '/img/bbq-steak/bbq-steak.webp' },
-            { id: 'img-porkbelly', imgSrc: '/img/porkbelly/porkbelly.webp' },
-            { id: 'img-streetfood', imgSrc: '/img/streetfood/streetfood.webp' },
-         ],
-         koreanBbqIntro: {
-         id: 'intro',
-         title: 'BBQ und Hotpot',
-         subTitle: 'Unsere Delikatessen',
-         textContent: [
-            'In jedem Restaurant steht das Ziel, eine außergewöhnliche kulinarische Erfahrung zu bieten.',
-            'Bei MATJO werden die Gerichte für euch nach saisonalen Charakteristiken gestaltet und nur die frischesten und hochwertigsten Zutaten verwendet.',
-            'Unsere Atmossphäre ist traditionell, gleichzeitig aber modern. Jedes Gericht ist eine spannende Komposition, die ein zugängliches kulinarisches Abenteuer bietet.',
-            'Besuchen Sie uns und lassen sich verzaubern.',
-         ],
-         reverse: true,
-         images: [
-            { id: 'img-bbq-table', imgSrc: '/img/bbq-table/bbq-table.webp' },
-            { id: 'img-bbq-hotpot', imgSrc: '/img/bbq-hotpot/bbq-hotpot.webp' },
-         ]
-         },
-      }
-   },
    computed: {
       localizedIntroduction() {
          const currentLocale = this.$i18n.locale;
@@ -97,6 +44,8 @@ export default {
             title: localizedObject.aboutUs.title,
             subTitle: localizedObject.aboutUs.subTitle,
             description: localizedObject.aboutUs.description,
+            invisibleTagOne: localizedObject.aboutUs.invisibleTagOne,
+            invisibleTagTwo: localizedObject.aboutUs.invisibleTagTwo,
             callToActionOne: {
                to: '/reservation',
                text: localizedObject.aboutUs.callToActionOne.text
