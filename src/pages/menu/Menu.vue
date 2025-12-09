@@ -10,8 +10,9 @@
                   <p>{{ $t('menu.menuIntro.paragraphTwo') }}</p>
                   <p>{{ $t('menu.menuIntro.paragraphThree') }}</p>
                   <p>{{ $t('menu.menuIntro.paragraphFour') }}</p>
-                  <a href="https://www.lieferando.de/speisekarte/matjo-bbq-hotpot" class="btn btn--primary">{{
-                     $t('menu.menuDelivery') }}</a>
+                  <button class="btn btn--primary" @click="openDeliveryDialog">
+                     {{$t('menu.menuDelivery') }}
+                  </button>
                </div>
                <div class="grid-item">
                   <div class="menu-item">
@@ -44,6 +45,7 @@
             </div>
          </div>
       </section>
+      <DeliveryDialog ref="deliveryDialog" />
    </div>
 </template>
 
@@ -51,19 +53,28 @@
 import Img from '../../components/img/Img.vue'
 import Dialog from '../../components/dialog/Dialog.vue'
 import StageSeparator from '../../components/stage/StageSeparator.vue'
+import DeliveryDialog from "@/components/dialog/DeliveryDialog.vue";
 
 export default {
-  name: 'Menu',
-  components: {
-    Img,
-    Dialog,
-    StageSeparator
-  },
-  data() {
-    return {
-      title: 'Menüseite',
-    }
-  }
+   name: 'Menu',
+   components: {
+      Img,
+      Dialog,
+      StageSeparator,
+      DeliveryDialog
+   },
+   data() {
+      return {
+         title: 'Menüseite',
+      }
+   }, 
+   methods: {
+      openDeliveryDialog() {
+         if (this.$refs.deliveryDialog) {
+            this.$refs.deliveryDialog.showDialog();
+         }
+      },
+   }
 }
 </script>
 
