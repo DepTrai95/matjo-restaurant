@@ -51,7 +51,7 @@ export default {
    },
    data() {
       return {
-         openTableLink: 'https://www.opentable.de/booking/restref/availability?rid=400416&lang=de-DE&r3uid=7mA93nD3C&color=1&correlationId=fb1aaf3b-3b61-4f72-8ac6-35cc08a92f06&restRef=400416&otSource=Restaurant%20website'
+         openTableLink: 'https://www.opentable.de/booking/restref/availability?rid=400416&lang=de-DE'
       }
    },
    methods: {
