@@ -16,6 +16,7 @@
                <ul class="list--unstyled">
                   <LinkRouter link="/" :label="$t('navigation.home')" />
                   <LinkRouter link="/menu" :label="$t('navigation.menu')" />
+                  <LinkRouter link="/voucher" :label="$t('navigation.voucher')" />
                   <LinkRouter link="/bbq" :label="$t('navigation.bbq')" />
                   <LinkRouter link="/hotpot" :label="$t('navigation.hotpot')" />
                   <LinkRouter link="/career" :label="$t('navigation.career')" />
@@ -52,6 +53,7 @@
                   <ul class="list--unstyled">
                      <LinkRouter link="/" :label="$t('navigation.home')" @click="closeMenu" />
                      <LinkRouter link="/menu" :label="$t('navigation.menu')" @click="closeMenu" />
+                     <LinkRouter link="/voucher" :label="$t('navigation.voucher')" @click="closeMenu" />
                      <LinkRouter link="/bbq" :label="$t('navigation.bbq')" @click="closeMenu" />
                      <LinkRouter link="/hotpot" :label="$t('navigation.hotpot')" @click="closeMenu" />
                      <LinkRouter link="/career" :label="$t('navigation.career')" @click="closeMenu" />
@@ -137,8 +139,8 @@ export default {
          }
       },
       checkIsMobile() {
-            this.isMobile = window.innerWidth <= 599;
-            this.isInverted = window.innerWidth <= 599;
+            this.isMobile = window.innerWidth <= 899;
+            this.isInverted = window.innerWidth <= 899;
       },
       handleHeaderVisibility (currentScrollPos) {
          let prevScrollPos = window.pageYOffset;
@@ -206,7 +208,7 @@ export default {
       position: relative;
    
       
-      @include for-phone-only {
+      @include for-tablet-portrait-down {
          height: $header-height-mobile;
          border: 1px solid rgba(255, 255, 255, 0.3);
          border-radius: 30px;
@@ -224,7 +226,7 @@ export default {
          }
       }
 
-      @include for-tablet-portrait-up {
+      @include for-tablet-landscape-up {
          flex-direction: row;
          justify-content: space-between;
          min-height: var(--navbar-height);
@@ -240,7 +242,7 @@ export default {
    align-items: center;
    display: flex;
   
-   @include for-phone-only {
+   @include for-tablet-portrait-down {
       left: 50%;
       position: absolute;
       top: 50%;
@@ -263,7 +265,7 @@ export default {
       img {
          width: unset;
          
-         @include for-phone-only {
+         @include for-tablet-portrait-down {
             height: 50px;
             width: 50px;
          }
@@ -272,14 +274,14 @@ export default {
 }
 
 .mobile-navigation {
-  @include for-phone-only {
+  @include for-tablet-portrait-down {
      align-items: center;
      display: flex;
      margin-inline-end: 2rem;
   }
 
   .nav-main__wrapper {
-      @include for-phone-only {
+      @include for-tablet-portrait-down {
          justify-content: center;
          height: 0;
          left: 0;
@@ -331,7 +333,7 @@ export default {
          text-transform: uppercase;
          width: 100%;
 
-         @include for-phone-only {
+         @include for-tablet-portrait-down {
             color: $color-black;
          }
 
@@ -419,7 +421,7 @@ export default {
   display: flex;
   flex-direction: row;
 
-  @include for-tablet-portrait-up {
+  @include for-tablet-landscape-up {
      ul {
         align-items: center;
         display: flex;
@@ -429,7 +431,7 @@ export default {
 
 
   li {
-     @include responsive-font-size(1.3rem, 1.5rem);
+     @include responsive-font-size(1.2rem, 1.4rem);
      font-weight: 500;
      letter-spacing: 1px;
      text-align: center;

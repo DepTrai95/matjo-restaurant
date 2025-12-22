@@ -12,6 +12,7 @@ import Privacy from "./pages/privacy/Privacy.vue";
 import Success from "./pages/success/Success.vue";
 import NotFound from "./pages/NotFound.vue";
 import Reservation from "./pages/reservation/Reservation.vue";
+import Voucher from "./pages/voucher/Voucher.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -29,6 +30,13 @@ const router = createRouter({
       component: Menu, 
       meta: { 
         headline: 'routes.menu.headline',
+        showBackground: true,
+      }
+    },
+    { path: "/voucher", 
+      component: Voucher, 
+      meta: { 
+        headline: 'routes.voucher.headline',
         showBackground: true,
       }
     },

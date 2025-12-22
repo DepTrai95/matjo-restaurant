@@ -19,6 +19,9 @@ import enImprint from './imprint/en.json';
 import dePrivacy from './privacy/de.json';
 import enPrivacy from './privacy/en.json';
 
+import deVoucher from './voucher/de.json';
+import enVoucher from './voucher/en.json';
+
 import deDialog from './dialog/de.json';
 import enDialog from './dialog/en.json';
 
@@ -33,6 +36,7 @@ const messages = {
     contact: deContact,
     imprint: deImprint,
     privacy: dePrivacy,
+    voucher: deVoucher,
     dialog: deDialog,
   },
   en: {
@@ -45,6 +49,7 @@ const messages = {
     contact: enContact,
     imprint: enImprint,
     privacy: enPrivacy,
+    voucher: enVoucher,
     dialog: enDialog,
   }
 };

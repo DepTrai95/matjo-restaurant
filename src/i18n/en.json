@@ -1,80 +1,84 @@
-{
-  "German": "German",
-  "English": "English",
-  "About": "About",
-  "Policy": "Policy",
-  "Imprint": "Imprint",
-  "privacy": "Data Privacy",
-  "Contact": "Contact",
-  "Address": "Address",
-  "Language": "Language",
-  "Explore": "Explore",
-  "Learn more": "Learn more",
-  "Get started": "Get started",
-  "Submit": "Submit",
-  "Message" : "Message",
-  "Your Message": "Your Message",
-  "Name" : "Name",
-  "Your Name": "Your Name",
-  "Email" : "Email",
-  "Your Email": "Your Email",
-  "and": "and",
-  "close": "Close",
-  "imageGalleryHeader": "Our Masterpieces",
-  "instagram": "Follow us on Instagram",
-  "goBack": "Back to Homepage",
-  "successMessage": {
-    "firstLine": "Your reservation/request has been successfully submitted.",
-    "secondLine": "We will get back to you as soon as possible!",
-    "thirdLine": "Please note that the reservation is only considered confirmed once we respond."
-  },
+   {  
+   "German": "German",
+   "English": "English",
+   "About": "About",
+   "Policy": "Policy",
+   "Imprint": "Imprint",
+   "privacy": "Data Privacy",
+   "Contact": "Contact",
+   "Address": "Address",
+   "Language": "Language",
+   "Explore": "Explore",
+   "Learn more": "Learn more",
+   "Get started": "Get started",
+   "Submit": "Submit",
+   "Message" : "Message",
+   "Your Message": "Your Message",
+   "Name" : "Name",
+   "Your Name": "Your Name",
+   "Email" : "Email",
+   "Your Email": "Your Email",
+   "and": "and",
+   "close": "Close",
+   "imageGalleryHeader": "Our Masterpieces",
+   "instagram": "Follow us on Instagram",
+   "goBack": "Back to Homepage",
+   "successMessage": {
+      "firstLine": "Your reservation/request has been successfully submitted.",
+      "secondLine": "We will get back to you as soon as possible!",
+      "thirdLine": "Please note that the reservation is only considered confirmed once we respond."
+   },
 
-  "discountDialog": {
-    "title": "🎉 MATJO celebrates 6-month anniversary!",
-    "message": "As a special offer, you get 20% off on all your orders!",
-    "message2": "Furthermore in the first week we have additional offers/specials for you",
-    "validUntil": "This offer is valid for 2 weeks from 16th June 2025 until 30th June 2025."
-  },
+   "discountDialog": {
+      "title": "🎉 MATJO celebrates 6-month anniversary!",
+      "message": "As a special offer, you get 20% off on all your orders!",
+      "message2": "Furthermore in the first week we have additional offers/specials for you",
+      "validUntil": "This offer is valid for 2 weeks from 16th June 2025 until 30th June 2025."
+   },
 
-  "navigation": {
-    "home": "Home",
-    "menu": "Menu",
-    "bbq": "BBQ",
-    "hotpot": "Hotpot",
-    "career": "Career",
-    "reservation": "Reserve",
-    "open": "Open Menu",
-    "close": "Close Menu"
-  },
-  
-  "routes": {
-    "menu": {
-      "headline": "Menu"
-    },
-    "bbq": {
-      "headline": "What is Korean BBQ"
-    },
-    "hotpot": {
-      "headline": "What is HOTPOT"
-    },
-    "career": {
-      "headline": "Career"
-    },
-    "contact": {
-      "headline": "Contact"
-    },
-    "reservation": {
-      "headline": "Reservation"
-    },
-    "imprint": {
-      "headline": "Imprint"
-    },
-    "privacy": {
-      "headline": "Data Privacy"
-    },
-    "success": {
-      "headline": "Formular sent"
-    }
-  },
-  "MATJO": "MATJO"
+   "navigation": {
+      "home": "Home",
+      "menu": "Menu",
+      "voucher": "Vouchers",
+      "bbq": "BBQ",
+      "hotpot": "Hotpot",
+      "career": "Career",
+      "reservation": "Reserve",
+      "open": "Open Menu",
+      "close": "Close Menu"
+   },
+   
+   "routes": {
+      "menu": {
+         "headline": "Menu"
+      },
+      "bbq": {
+         "headline": "What is Korean BBQ"
+      },
+      "hotpot": {
+         "headline": "What is HOTPOT"
+      },
+      "career": {
+         "headline": "Career"
+      },
+      "contact": {
+         "headline": "Contact"
+      },
+      "reservation": {
+         "headline": "Reservation"
+      },
+      "voucher": {
+         "headline": "Vouchers"
+      },
+      "imprint": {
+         "headline": "Imprint"
+      },
+      "privacy": {
+         "headline": "Data Privacy"
+      },
+      "success": {
+         "headline": "Formular sent"
+      }
+   },
+   "MATJO": "MATJO"
 }

@@ -103,7 +103,7 @@ export default {
    transition: background-color 0.25s ease-in-out, inset 0.25s ease-in-out, border-radius 0.25s;
    z-index: 101;
 
-  @include for-phone-only {
+  @include for-tablet-portrait-down {
      color: $color-black;
      inset-block-start: 10px;
      inset-inline: 0px;

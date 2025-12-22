@@ -1,81 +1,85 @@
 {
-  "German": "Deutsch",
-  "English": "Englisch",
-  "About": "Über uns",
-  "Policy": "Richtlinien",
-  "Imprint": "Impressum",
-  "Privacy": "Datenschutz",
-  "Contact": "Kontakt",
-  "Address": "Adresse",
-  "Language": "Sprache",
-  "Explore": "Entdecken",
-  "Learn more": "Erfahren Sie mehr",
-  "Get started": "Loslegen",
-  "Submit": "Absenden",
-  "Message": "Nachricht",
-  "Your Message": "Ihre Nachricht",
-  "Name": "Name",
-  "Your Name": "Ihr Name",
-  "Email": "E-Mail",
-  "Your Email": "Ihre E-Mail",
-  "and": "und",
-  "close": "Schließen",
-  "imageGalleryHeader": "Unsere Meisterwerke",
-  "instagram": "Folge uns auf Instagram",
-  "goBack": "Zurück zur Homepage",
-  "successMessage": {
-    "firstLine": "Ihre Anfrage wurde erfolgreich abgeschickt.",
-    "secondLine": "Wir melden uns bei Ihnen so schnell es geht!",
-    "thirdLine": "Bitte beachtet, dass bei Reservierungen, diese erst bei Rückmeldung von uns als bestätigt gilt."
-  },
+   "German": "Deutsch",
+   "English": "Englisch",
+   "About": "Über uns",
+   "Policy": "Richtlinien",
+   "Imprint": "Impressum",
+   "Privacy": "Datenschutz",
+   "Contact": "Kontakt",
+   "Address": "Adresse",
+   "Language": "Sprache",
+   "Explore": "Entdecken",
+   "Learn more": "Erfahren Sie mehr",
+   "Get started": "Loslegen",
+   "Submit": "Absenden",
+   "Message": "Nachricht",
+   "Your Message": "Ihre Nachricht",
+   "Name": "Name",
+   "Your Name": "Ihr Name",
+   "Email": "E-Mail",
+   "Your Email": "Ihre E-Mail",
+   "and": "und",
+   "close": "Schließen",
+   "imageGalleryHeader": "Unsere Meisterwerke",
+   "instagram": "Folge uns auf Instagram",
+   "goBack": "Zurück zur Homepage",
+   "successMessage": {
+      "firstLine": "Ihre Anfrage wurde erfolgreich abgeschickt.",
+      "secondLine": "Wir melden uns bei Ihnen so schnell es geht!",
+      "thirdLine": "Bitte beachtet, dass bei Reservierungen, diese erst bei Rückmeldung von uns als bestätigt gilt."
+   },
 
-  "discountDialog": {
-    "title": "🎉 Wir feiern 6 Monate MATJO!",
-    "message": "Zu diesem Anlass erhalten Sie 20% Rabatt auf BBQ & Hotpot!",
-    "message2": "Außerdem haben wir die erste Woche zusätzliche Angebote für euch",
-    "validUntil": "Dieses Angebot ist gültig für 2 Wochen ab dem 16.06.2025 und gilt bis 30.06.2025"
-  },
+   "discountDialog": {
+      "title": "🎉 Wir feiern 6 Monate MATJO!",
+      "message": "Zu diesem Anlass erhalten Sie 20% Rabatt auf BBQ & Hotpot!",
+      "message2": "Außerdem haben wir die erste Woche zusätzliche Angebote für euch",
+      "validUntil": "Dieses Angebot ist gültig für 2 Wochen ab dem 16.06.2025 und gilt bis 30.06.2025"
+   },
 
-  "navigation": {
-    "home": "Home",
-    "menu": "Menü",
-    "bbq": "BBQ",
-    "hotpot": "Hotpot",
-    "career": "Karriere",
-    "reservation": "Reservieren",
-    "open": "Menu öffnen",
-    "close": "Menu schließen"
-  },
+   "navigation": {
+      "home": "Home",
+      "menu": "Menü",
+      "voucher": "Gutscheine",
+      "bbq": "BBQ",
+      "hotpot": "Hotpot",
+      "career": "Karriere",
+      "reservation": "Reservieren",
+      "open": "Menu öffnen",
+      "close": "Menu schließen"
+   },
 
-  "routes": {
-    "menu": {
-      "headline": "Menü"
-    },
-    "career": {
-      "headline": "Karriere"
-    },
-    "bbq": {
-      "headline": "Was ist Korean BBQ"
-    },
-    "hotpot": {
-      "headline": "Was ist HOTPOT"
-    },
-    "contact": {
-      "headline": "Kontakt"
-    },
-    "reservation": {
-      "headline": "Reservierung"
-    },
-    "imprint": {
-      "headline": "Impressum"
-    },
-    "privacy": {
-      "headline": "Datenschutz"
-    },
-    "success": {
-      "headline": "Formular abgeschickt"
-    }
-  },
+   "routes": {
+      "menu": {
+         "headline": "Menü"
+      },
+      "career": {
+         "headline": "Karriere"
+      },
+      "bbq": {
+         "headline": "Was ist Korean BBQ"
+      },
+      "hotpot": {
+         "headline": "Was ist HOTPOT"
+      },
+      "contact": {
+         "headline": "Kontakt"
+      },
+      "reservation": {
+         "headline": "Reservierung"
+      },
+      "voucher": {
+         "headline": "Gutscheine"
+      },
+      "imprint": {
+         "headline": "Impressum"
+      },
+      "privacy": {
+         "headline": "Datenschutz"
+      },
+      "success": {
+         "headline": "Formular abgeschickt"
+      }
+   },
 
-  "MATJO": "MATJO"
+   "MATJO": "MATJO"
 }
