@@ -1,9 +1,9 @@
 {
-  "voucherIntro": {
-    "headline": "VOUCHERS",
-    "paragraphOne": "At the moment, our vouchers can only be purchased directly at the restaurant.",
-    "paragraphTwo": "Simply visit us during our opening hours and speak to our team – you can freely choose the voucher amount and use it for all food and drinks at MATJO."
-  }
+   "voucherIntro": {
+     "headline": "Gift Cards",
+     "paragraphOne": "Not sure what to give as a gift? Give the gift of time, flavor, and shared moments.",
+     "paragraphTwo": "Whether it’s a birthday, anniversaries, Christmas, or just because – our vouchers give the gift of a true culinary experience.",
+     "paragraphThree": "Simply visit us during our opening hours and speak to our on-site team.",
+     "paragraphFour": "MATJO vouchers are available directly at the restaurant. The voucher amount can be chosen freely."
+   }
 }
-
-

@@ -31,18 +31,33 @@
       </svg>
     </div>
     <div class="inner">
-      <div class="voucher-info">
-        <h1 class="sr-only">{{ $t('voucher.voucherIntro.headline') }}</h1>
-        <p>{{ $t('voucher.voucherIntro.paragraphOne') }}</p>
-        <p>{{ $t('voucher.voucherIntro.paragraphTwo') }}</p>
+      <div class="grid--default grid-2--tablet-landscape-up">
+         <div class="grid-item">
+            <div class="voucher-info">
+              <h1>{{ $t('MATJO') }} {{ $t('voucher.voucherIntro.headline') }}</h1>
+              <p>{{ $t('voucher.voucherIntro.paragraphOne') }}</p>
+              <p>{{ $t('voucher.voucherIntro.paragraphTwo') }}</p>
+              <p>{{ $t('voucher.voucherIntro.paragraphThree') }}</p>
+              <p>{{ $t('voucher.voucherIntro.paragraphFour') }}</p>
+            </div>
+         </div>
+         <div class="grid-item">
+            <img :src="voucherImg" alt="">
+         </div>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import voucherImg from '@/assets/img/voucher.webp'
 export default {
-  name: 'Voucher',
+   name: 'Voucher',
+   data() {
+      return {
+         voucherImg
+      }
+   }
 };
 </script>
 
@@ -56,11 +71,15 @@ export default {
 }
 
 .voucher-info {
-   align-items: center;
-   display: flex;
-   flex-direction: column;
-   flex-wrap: wrap;
-   text-align: center;
+   h1 {
+      @include responsive-font-size(2.5rem, 3rem);
+      text-align: unset;
+      width: 25ch;
+
+      @include for-tablet-portrait-up {
+         @include responsive-font-size(3.5rem, 4rem);
+      }
+   }
 
    p {
       margin-block: 0 1.5rem;
@@ -83,5 +102,3 @@ export default {
    }
 }
 </style>
-
-

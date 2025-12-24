@@ -307,7 +307,7 @@ export default {
 
          &.is-open {
             border: 1px solid rgba(255, 255, 255, 0.3);
-            height: 55vh;
+            height: 60vh;
          }
       }
 
