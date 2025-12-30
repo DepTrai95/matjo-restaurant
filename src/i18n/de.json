@@ -9,7 +9,7 @@
    "Address": "Adresse",
    "Language": "Sprache",
    "Explore": "Entdecken",
-   "Learn more": "Erfahren Sie mehr",
+   "Learn more": "Erfahre mehr",
    "Get started": "Loslegen",
    "Submit": "Absenden",
    "Message": "Nachricht",
@@ -31,7 +31,7 @@
 
    "discountDialog": {
       "title": "🎉 Wir feiern 6 Monate MATJO!",
-      "message": "Zu diesem Anlass erhalten Sie 20% Rabatt auf BBQ & Hotpot!",
+      "message": "Zu diesem Anlass erhaltet ihr 20% Rabatt auf BBQ & Hotpot!",
       "message2": "Außerdem haben wir die erste Woche zusätzliche Angebote für euch",
       "validUntil": "Dieses Angebot ist gültig für 2 Wochen ab dem 16.06.2025 und gilt bis 30.06.2025"
    },
