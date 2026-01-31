@@ -1,18 +1,18 @@
 import { createRouter } from "vue-router";
 import { createWebHistory } from "vue-router";
 
-import Home from "./pages/home/Home.vue";
-import Menu from "./pages/menu/Menu.vue";
-import BBQ from "./pages/bbq/BBQ.vue";
-import Hotpot from "./pages/hotpot/Hotpot.vue";
-import Career from "./pages/career/Career.vue";
-import Contact from "./pages/contact/Contact.vue";
-import Imprint from "./pages/imprint/Impressum.vue";
-import Privacy from "./pages/privacy/Privacy.vue";
-import Success from "./pages/success/Success.vue";
-import NotFound from "./pages/NotFound.vue";
-import Reservation from "./pages/reservation/Reservation.vue";
-import Voucher from "./pages/voucher/Voucher.vue";
+import Home from "@/pages/home/Home.vue";
+import Menu from "@/pages/menu/Menu.vue";
+import BBQ from "@/pages/bbq/BBQ.vue";
+import Hotpot from "@/pages/hotpot/Hotpot.vue";
+import Career from "@/pages/career/Career.vue";
+import Contact from "@/pages/contact/Contact.vue";
+import Imprint from "@/pages/imprint/Impressum.vue";
+import Privacy from "@/pages/privacy/Privacy.vue";
+import Success from "@/pages/success/Success.vue";
+import NotFound from "@/pages/NotFound.vue";
+import Reservation from "@/pages/reservation/Reservation.vue";
+import Voucher from "@/pages/voucher/Voucher.vue";
 
 const router = createRouter({
   history: createWebHistory(),
