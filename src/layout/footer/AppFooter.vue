@@ -33,7 +33,7 @@
             <p>
                {{ localizedFooter.footer.friday }}<br>
                12:00 - 15:00 {{ localizedFooter.footer.hours }}<br>
-               17:00 - 23:00 {{ localizedFooter.footer.hours }}
+               17:30 - 23:00 {{ localizedFooter.footer.hours }}
             </p>
             <p>
                {{ localizedFooter.footer.saturday }}<br>
