@@ -25,7 +25,7 @@
 
 <script>
 import Icon from '../../assets/svg/Icon.vue'
-import debounce from '../../utils';
+import debounce from '../../utils/utils';
 
 export default {
    components: {

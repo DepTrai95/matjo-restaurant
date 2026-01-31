@@ -21,7 +21,7 @@
 
 <script>
 import { toastStore } from '../../store/store.js';
-import debounce from '../../utils.js';
+import debounce from '../../utils/utils.js';
 import StageSeparator from '../stage/StageSeparator.vue';
 import Icon from '../../assets/svg/Icon.vue';
 
