@@ -34,6 +34,10 @@
           rel="noopener noreferrer">{{ $t('privacy.privacyPolicy.instagramAPI.instagramDataPolicy') }}</a>.
       </p>
 
+      <h3>{{ $t('privacy.privacyPolicy.googleTag.subHeadline') }}</h3>
+      <p>{{ $t('privacy.privacyPolicy.googleTag.paragraphOne') }}</p>
+      <p>{{ $t('privacy.privacyPolicy.googleTag.paragraphTwo') }}</p>
+      <p>{{ $t('privacy.privacyPolicy.googleTag.paragraphThree') }}</p>
 
       <h3>{{ $t('privacy.privacyPolicy.dataRetention.subHeadline') }}</h3>
       <p>{{ $t('privacy.privacyPolicy.dataRetention.paragraphOne') }}</p>

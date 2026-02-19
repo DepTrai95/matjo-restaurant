@@ -8,7 +8,8 @@ const apiKeys = [
   'INSTAGRAM_ACCOUNT_ID',
   'INSTAGRAM_API',
   'SENDGRID_API_KEY',
-  'POSTMARK_API_KEY'
+  'POSTMARK_API_KEY',
+  'GOOGLE_GTAG_KEY'
 ];
 
 // https://vitejs.dev/config/

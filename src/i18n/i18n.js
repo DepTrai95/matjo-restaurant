@@ -25,6 +25,9 @@ import enVoucher from './voucher/en.json';
 import deDialog from './dialog/de.json';
 import enDialog from './dialog/en.json';
 
+import deCookie from './cookie/de.json';
+import enCookie from './cookie/en.json';
+
 const messages = {
   de: {
     ...de, 
@@ -38,6 +41,7 @@ const messages = {
     privacy: dePrivacy,
     voucher: deVoucher,
     dialog: deDialog,
+    cookie: deCookie,
   },
   en: {
     ...en, 
@@ -51,6 +55,7 @@ const messages = {
     privacy: enPrivacy,
     voucher: enVoucher,
     dialog: enDialog,
+    cookie: enCookie,
   }
 };
 

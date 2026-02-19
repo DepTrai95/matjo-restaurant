@@ -28,6 +28,12 @@
       "paragraphThree": "For more information on data processing by Meta Platforms and Instagram, please refer to the ",
       "instagramDataPolicy": "Instagram Privacy Policy"
     },
+    "googleTag": {
+      "subHeadline": "Use of Google Tag (Google Ads)",
+      "paragraphOne": "This website uses Google Tag (gtag.js) provided by Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland.",
+      "paragraphTwo": "Processing only takes place based on your consent in accordance with Art. 6(1)(a) GDPR.",
+      "paragraphThree": "You may withdraw your consent at any time via the cookie settings."
+    },
     "dataRetention": {
       "subHeadline": "Data Retention",
       "paragraphOne": "Your contact form data will be stored for the duration of processing your inquiry. Afterwards, the data will be deleted unless legal retention periods require longer storage."

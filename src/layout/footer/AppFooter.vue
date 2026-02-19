@@ -83,6 +83,11 @@
                <LinkRouter link="/impressum" :label="$t('Imprint')" />
                <LinkRouter link="/privacy" :label="$t('Privacy')" />
                <LinkRouter link="/contact" :label="$t('Contact')" />
+               <li>
+                  <a href="#" @click.prevent="openCookieSettings" class="cookie-settings-link">
+                     {{ $t('cookie.settings') }}
+                  </a>
+               </li>
             </ul>
          </div>
       </div>
@@ -93,6 +98,7 @@
 import LinkRouter from '@/components/link/LinkRouter.vue'
 import StageSeparator from '@/components/stage/StageSeparator.vue';
 import Icon from '@/assets/svg/Icon.vue';
+import { cookieConsentStore } from '@/store/cookieConsentStore';
 
 export default {
   components: {
@@ -108,6 +114,13 @@ export default {
      };
   },
    methods: {
+      /**
+       * Open cookie settings dialog
+       */
+      openCookieSettings() {
+        const store = cookieConsentStore();
+        store.requestShowDialog();
+      },
       handleScroll() {
          if (this.throttleTimeout) {
             return;

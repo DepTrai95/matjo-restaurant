@@ -28,6 +28,12 @@
       "paragraphThree": "Weitere Informationen zur Datenverarbeitung durch Meta Platforms und Instagram finden Sie in der ",
       "instagramDataPolicy": "Instagram-Datenschutzerklärung"
     },
+    "googleTag": {
+      "subHeadline": "Nutzung von Google Tag (Google Ads)",
+      "paragraphOne": "Diese Website nutzt Google Tag (gtag.js) der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.",
+      "paragraphTwo": "Die Verarbeitung erfolgt ausschließlich nach Ihrer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO.",
+      "paragraphThree": "Sie können Ihre Einwilligung jederzeit über die Cookie-Einstellungen widerrufen."
+    },
     "dataRetention": {
       "subHeadline": "Speicherdauer",
       "paragraphOne": "Ihre im Kontaktformular angegebenen Daten werden für die Dauer der Bearbeitung Ihrer Anfrage gespeichert. Danach werden diese gelöscht, es sei denn, gesetzliche Aufbewahrungsfristen verlangen eine längere Speicherung."

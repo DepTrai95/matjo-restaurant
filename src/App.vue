@@ -13,6 +13,7 @@
   <SocialMedia></SocialMedia>
   <AppFooter></AppFooter>
   <Toast></Toast>
+  <CookieConsent ref="cookieConsent" />
 </template>
 
 <script>
@@ -24,6 +25,11 @@ import SVGList from './assets/svg/SVGList.vue';
 import LogoScreen from './components/logoscreen/LogoScreen.vue';
 import SocialMedia from './components/socialmedia/SocialMedia.vue';
 import Toast from './components/toast/Toast.vue';
+import CookieConsent from './components/dialog/CookieConsent.vue';
+// stores
+import { cookieConsentStore } from './store/cookieConsentStore';
+// utils
+import { enableTracking } from './utils/tracking';
 
 export default {
   components: {
@@ -33,8 +39,46 @@ export default {
     LogoScreen,
     SocialMedia,
     Toast,
+    CookieConsent,
+  },
+  data() {
+    return {
+      cookieStore: null,
+    };
   },
   mounted() {
+    // Initialize cookie consent store
+    this.cookieStore = cookieConsentStore();
+    this.cookieStore.initialize();
+    
+    // Check if user has already given consent
+    const consentStatus = this.cookieStore.getConsentStatus();
+    
+    if (consentStatus === 'accepted') {
+      // User previously accepted - enable tracking
+      enableTracking();
+    } else if (consentStatus === null) {
+      // No decision made yet - show cookie dialog
+      // Small delay to let page load first
+      setTimeout(() => {
+        if (this.$refs.cookieConsent) {
+          this.$refs.cookieConsent.showDialog();
+        }
+      }, 1500);
+    }
+    // If rejected, do nothing (tracking stays disabled)
+    
+    // Watch for dialog request from footer (cookie settings link)
+    this.$watch(
+      () => this.cookieStore.shouldShowDialog,
+      (shouldShow) => {
+        if (shouldShow && this.$refs.cookieConsent) {
+          this.$refs.cookieConsent.showDialog();
+          this.cookieStore.clearDialogRequest();
+        }
+      }
+    );
+    
     // Show discount dialog once when app loads
     setTimeout(() => {
       if (this.$refs.discountDialog) {
