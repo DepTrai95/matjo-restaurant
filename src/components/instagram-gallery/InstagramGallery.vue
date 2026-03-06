@@ -26,60 +26,74 @@ import StageSeparator from '../stage/StageSeparator.vue';
 import Icon from '../../assets/svg/Icon.vue';
 
 export default {
-   components: {
-      StageSeparator,
-      Icon,
-   },
-   data() {
-      return {
-         images: [],
-      }
-   },
-   methods: {
-      async getUser () {
-         const url = `https://graph.instagram.com/me?fields=id,username&access_token=${process.env.INSTAGRAM_API}`;
-         const res = await fetch(url);
-         const data = await res.json();
-         return data;
-      },
-      async fetchInstagramImages () {
-         const url = `https://graph.instagram.com/v21.0/${process.env.INSTAGRAM_ACCOUNT_ID}/media?access_token=${process.env.INSTAGRAM_API}`;
-         try {
+    components: {
+        StageSeparator,
+        Icon,
+    },
+    data() {
+        return {
+            images: [],
+        }
+    },
+    methods: {
+        async getUser () {
+            const url = `https://graph.instagram.com/v25.0/me?fields=id,username&access_token=${process.env.INSTAGRAM_API}`;
             const res = await fetch(url);
-            if (!res.ok) throw new Error('Fehler beim Laden der Instagram Bilder');
+
+            if (!res.ok) {
+            console.error('Fehler beim Laden des Instagram Users', await res.text());
+            throw new Error('Fehler beim Laden des Instagram Users');
+            }
+
             const data = await res.json();
-            const details = await Promise.all(
-               data.data.map(async (item) => {
-                  const detailUrl = `https://graph.instagram.com/v21.0/${item.id}?fields=media_url,media_type,permalink,thumbnail_url&access_token=${process.env.INSTAGRAM_API}`;
-                  const detailRes = await fetch(detailUrl);
-                  if (!detailRes.ok) throw new Error("Fehler beim Laden der Bilddetails");
-                  return detailRes.json();
-               })
-            );
-            // const images = details.filter(image => image.media_type === 'IMAGE').slice(0, 10);
-            const images = details.slice(0, 10);
-            this.images = images;
-         } catch (error) {
+            return data; // { id, username }
+        },
+        async fetchInstagramImages () {
+            const baseUrl = 'https://graph.instagram.com/v25.0';
+            const userId = process.env.INSTAGRAM_ACCOUNT_ID; // IG_USER_ID (Business/Creator)
+            const token = process.env.INSTAGRAM_API;         // Instagram User Access Token
+
+            const url = `${baseUrl}/${userId}/media` +
+            `?fields=id,media_type,media_url,permalink,thumbnail_url,timestamp` +
+            `&access_token=${token}`;
+
+            try {
+            const res = await fetch(url);
+            if (!res.ok) {
+                console.error('Instagram API Fehler (media)', await res.text());
+                throw new Error('Fehler beim Laden der Instagram Bilder');
+            }
+
+            const data = await res.json();
+
+            // Optional: Nur bestimmte Medientypen (z.B. Bilder + Reels) zulassen
+            const details = (data.data || [])
+                // z.B. nur IMAGE & VIDEO (oder REELS) nehmen:
+                // .filter(item => ['IMAGE', 'VIDEO', 'CAROUSEL_ALBUM'].includes(item.media_type))
+                .slice(0, 10); // nur die ersten 10
+
+            this.images = details;
+            } catch (error) {
             toastStore().showToast('error', 'Fehler beim Laden der Instagram Bilder');
             console.error(error);
             throw error;
-         }
-      },
-      handleResize: debounce(function() {
-         this.calculateImageHeight();
-      }, 250),
-      calculateImageHeight() {
-         const gridItemWidth = document.querySelector('.instagram-img').offsetWidth;
-         const instagramImages = document.querySelectorAll('.instagram-img');
-         instagramImages.forEach(img => {
-            img.style.height = `${gridItemWidth}px`;
-         });
-      }
-   },
-   mounted() {
-      this.fetchInstagramImages();
-      window.addEventListener('resize', this.handleResize);
-   },
+            }
+        },
+        handleResize: debounce(function() {
+            this.calculateImageHeight();
+        }, 250),
+        calculateImageHeight() {
+            const gridItemWidth = document.querySelector('.instagram-img').offsetWidth;
+            const instagramImages = document.querySelectorAll('.instagram-img');
+            instagramImages.forEach(img => {
+                img.style.height = `${gridItemWidth}px`;
+            });
+        }
+    },
+    mounted() {
+        this.fetchInstagramImages();
+        window.addEventListener('resize', this.handleResize);
+    },
 }
 </script>
 
