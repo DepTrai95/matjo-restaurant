@@ -17,28 +17,8 @@
                <div class="grid-item">
                   <div class="menu-item">
                      <a href="/fileadmin/matjo-menu-nov-2025.pdf" title="Stand 10.11.2025">
-                        <img src="/img/bbq-menu/bbq-menu-large.webp" height alt="Repräsentatives Bild für Speisen">
+                        <img src="/img/bibimbap/bibimbap-large.webp" height alt="Repräsentatives Bild für Speisen">
                         <span class="menu-category">{{ $t('menu.menuButtons.dishes') }}</span>
-                     </a>
-                  </div>
-                  <div v-if="1 === 0" class="menu-item">
-                     <a href="/fileadmin/matjo-mittagsangebot.pdf" title="Stand 18.06.2025">
-                        <img src="/img/lunch/lunch-large.webp" height alt="Repräsentatives Bild für Speisen">
-                        <span class="menu-category">{{ $t('menu.menuButtons.lunch') }}</span>
-                     </a>
-                  </div>
-                  <div v-if="1 === 0" class="menu-item">
-                     <a href="/fileadmin/matjo-menu.pdf" title="Stand 18.06.2025">
-                        <img src="/img/streetfood/streetfood-large.webp" height alt="Repräsentatives Bild für Speisen">
-                        <span class="menu-category">{{ $t('menu.menuButtons.mainDishes') }}</span>
-                     </a>
-                  </div>
-                  <div v-if="1 === 0" class="menu-item">
-                     <a href="/fileadmin/matjo-bbq-and-hotpot.pdf" title="Stand 18.06.2025">
-                        <img src="/img/bbq-menu/bbq-menu-large.webp" height alt="Repräsentatives Bild für Speisen">
-                        <span class="menu-category">
-                           {{ $t('menu.menuButtons.bbq') }} {{ $t('and') }} {{ $t('menu.menuButtons.hotpot') }}
-                        </span>
                      </a>
                   </div>
                </div>

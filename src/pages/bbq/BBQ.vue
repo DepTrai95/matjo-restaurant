@@ -37,7 +37,7 @@ export default {
     return {
       title: 'Menüseite',
       isDialogOpen: false,
-      bbqImg: { id: 'img-bbq', imgSrc: '/img/bbq-table/bbq-table.webp' },
+      bbqImg: { id: 'img-bbq', imgSrc: '/img/bbq/bbq.webp' },
     }
   },
   methods: {

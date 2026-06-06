@@ -55,8 +55,8 @@ export default {
                text: localizedObject.aboutUs.callToActionTwo.text
             },
             images: [
-               { id: 'img-korean-pot', imgSrc: '/img/korean-pot/korean-pot.webp' },
-               { id: 'img-tischgrill', imgSrc: '/img/tischgrill/tischgrill.webp' }
+               { id: 'img-hotpot', imgSrc: '/img/hotpot/hotpot.webp' },
+               { id: 'img-bbq', imgSrc: '/img/bbq/bbq.webp' }
             ]
          };
       },

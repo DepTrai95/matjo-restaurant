@@ -4,11 +4,11 @@
          <div class="blur"></div>
          <picture v-if="showBackground">
             <source type="image/webp" srcset="
-                  ../../assets/img/stage-img/stage-background-small.webp 400w,
-                  ../../assets/img/stage-img/stage-background-medium.webp 600w,
-                  ../../assets/img/stage-img/stage-background-large.webp 1200w
+                  ../../assets/img/stage-img/stage-small.webp 400w,
+                  ../../assets/img/stage-img/stage-medium.webp 600w,
+                  ../../assets/img/stage-img/stage-large.webp 1200w
                " sizes="(max-width: 599px) 400px, (max-width: 899px) 600px, 1200px" />
-            <img src="../../assets/img/stage-img/stage-background-large.webp" width="1920" height="1200" alt="" />
+            <img src="../../assets/img/stage-img/stage-large.webp" width="1920" height="1200" alt="" />
          </picture>
       </div>
       <hgroup class="stage__headline">
@@ -141,8 +141,8 @@ export default {
    inset: 0;
    position: absolute;
    // background: linear-gradient(to right, rgba(243, 231, 233, 0.5), rgba(243, 231, 233, 0));
-   background: linear-gradient(to right, rgb(163 163 163 / 50%), rgb(35 35 35 / 40%));
-   background: linear-gradient(to right, rgb(151 150 150 / 50%), rgb(51 50 50 / 40%));
+   background: linear-gradient(to right, rgb(163 163 163 / 60%), rgb(35 35 35 / 30%));
+   background: linear-gradient(to right, rgb(151 150 150 / 60%), rgb(51 50 50 / 30%));
 }
  
 .stage__headline {
