@@ -6,7 +6,7 @@
             <a class="instagram-img__container" :href="img.permalink" target="_blank" rel="noopener noreferrer">
                <img 
                   class="instagram-img"
-                  :src="img.media_type === 'IMAGE' ? img.media_url : img.thumbnail_url" 
+                  :src="(img.media_type === 'IMAGE' || img.media_type === 'CAROUSEL_ALBUM')  ? img.media_url : img.thumbnail_url" 
                   :id="img.id" 
                   alt="Bild aus Instagram" 
                   height="260" 
