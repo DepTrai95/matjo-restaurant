@@ -1,32 +1,38 @@
 <template>
-   <div id="menu">
-      <stage-separator class="stage__separator"></stage-separator>
-      <section class="content-area">
-         <div class="inner">
-            <div class="menu grid--default grid-2--tablet-landscape-up">
-               <div class="grid-item">
-                  <h2>{{ $t('menu.menuIntro.headline') }}</h2>
-                  <p>{{ $t('menu.menuIntro.paragraphOne') }}</p>
-                  <p>{{ $t('menu.menuIntro.paragraphTwo') }}</p>
-                  <p>{{ $t('menu.menuIntro.paragraphThree') }}</p>
-                  <p>{{ $t('menu.menuIntro.paragraphFour') }}</p>
-                  <button class="btn btn--primary" @click="openDeliveryDialog">
-                     {{$t('menu.menuDelivery') }}
-                  </button>
-               </div>
-               <div class="grid-item">
-                  <div class="menu-item">
-                     <a href="/fileadmin/matjo-menu-nov-2025.pdf" title="Stand 10.11.2025">
-                        <img src="/img/bibimbap/bibimbap-large.webp" height alt="Repräsentatives Bild für Speisen">
-                        <span class="menu-category">{{ $t('menu.menuButtons.dishes') }}</span>
-                     </a>
-                  </div>
-               </div>
+    <div id="menu">
+        <stage-separator class="stage__separator"></stage-separator>
+        <section class="content-area">
+            <div class="inner">
+                <div class="menu grid--default grid-2--tablet-landscape-up">
+                    <div class="grid-item">
+                        <h2>{{ $t('menu.menuIntro.headline') }}</h2>
+                        <p>{{ $t('menu.menuIntro.paragraphOne') }}</p>
+                        <p>{{ $t('menu.menuIntro.paragraphTwo') }}</p>
+                        <p>{{ $t('menu.menuIntro.paragraphThree') }}</p>
+                        <p>{{ $t('menu.menuIntro.paragraphFour') }}</p>
+                        <button class="btn btn--primary" @click="openDeliveryDialog">
+                            {{$t('menu.menuDelivery') }}
+                        </button>
+                    </div>
+                    <div class="grid-item">
+                        <div class="menu-item">
+                            <a href="/fileadmin/matjo-menu-july-2026.pdf" title="Stand 01.07.2026">
+                                <img src="/img/bibimbap/bibimbap-large.webp" height alt="Repräsentatives Bild für Speisen">
+                                <span class="menu-category">{{ $t('menu.menuButtons.dishes') }}</span>
+                            </a>
+                        </div>
+                        <div v-if="1 === 0" class="menu-item">
+                            <a href="/fileadmin/matjo-mittagsangebot.pdf" title="Stand 01.07.2026">
+                                <img src="/img/bibimbap/bibimbap-large.webp" height alt="Repräsentatives Bild für Speisen">
+                                <span class="menu-category">{{ $t('menu.menuButtons.lunch') }}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-      <DeliveryDialog ref="deliveryDialog" />
-   </div>
+        </section>
+        <DeliveryDialog ref="deliveryDialog" />
+    </div>
 </template>
 
 <script>
@@ -91,7 +97,7 @@ export default {
       }
 
       &:last-child {
-         flex-wrap: wrap;
+         //flex-wrap: wrap;
       }
 
       h2 {
@@ -107,6 +113,7 @@ export default {
       border: 2px solid $color-primary;
       border-radius: 5px;
       display: flex;
+      height: fit-content;
       justify-content: center;
       overflow: hidden;
       position: relative;
