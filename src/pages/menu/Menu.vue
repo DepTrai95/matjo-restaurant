@@ -17,14 +17,20 @@
                     <div class="grid-item">
                         <div class="menu-item">
                             <a href="/fileadmin/matjo-menu-july-2026.pdf" title="Stand 01.07.2026">
-                                <img src="/img/bibimbap/bibimbap-large.webp" height alt="Repräsentatives Bild für Speisen">
+                                <img src="/img/bbq/bbq-large.webp" height alt="Repräsentatives Bild für Speisen">
                                 <span class="menu-category">{{ $t('menu.menuButtons.dishes') }}</span>
                             </a>
                         </div>
-                        <div v-if="1 === 0" class="menu-item">
+                        <div class="menu-item">
                             <a href="/fileadmin/matjo-mittagsangebot.pdf" title="Stand 01.07.2026">
                                 <img src="/img/bibimbap/bibimbap-large.webp" height alt="Repräsentatives Bild für Speisen">
                                 <span class="menu-category">{{ $t('menu.menuButtons.lunch') }}</span>
+                            </a>
+                        </div>
+                        <div class="menu-item">
+                            <a href="/fileadmin/matjo-bbq-and-hotpot.pdf" title="Stand 01.08.2025">
+                                <img src="/img/bbq-menu/bbq-menu-large.webp" height alt="Repräsentatives Bild für Speisen">
+                                <span class="menu-category">{{ $t('menu.menuButtons.bbq') }} & {{ $t('menu.menuButtons.hotpot') }}</span>
                             </a>
                         </div>
                     </div>
