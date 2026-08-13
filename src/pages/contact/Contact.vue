@@ -19,7 +19,7 @@
         <div class="grid--default grid-2--tablet-landscape-up">
           <div class="grid-item">
             <div class="reservation-info">
-              <p>MATJO - BBQ & Hotpot</p>
+              <p>MATJO - BBQ & HOTPOT</p>
               <p class="center">{{ $t('contact.reservationInfo.intro') }}</p>
               <p>{{ $t('contact.reservationInfo.otherInquiry') }} <a :href="`mailto:` + mailTo">{{ mailTo }}</a></p>
             </div>
