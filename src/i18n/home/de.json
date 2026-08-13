@@ -2,19 +2,19 @@
    "home": {
       "reserveButton": "Jetzt Reservieren",
       "deliveryButton": "Nach Hause bestellen",
-      "invisibleTagOne": "Wir sind ein koreanisches Restaurant",
-      "invisibleTagTwo": "Wir sind ein asiatisches Restaurant"
+      "invisibleTagOne": "Asiatisches Restaurant in Dresden",
+      "invisibleTagTwo": "Korean BBQ & Chinese Hotpot Dresden"
    },
    "aboutUs": {
       "title": "ÜBER UNS",
       "subTitle": "Unser Versprechen",
-      "invisibleTagOne": "Wir sind ein koreanisches Restaurant",
-      "invisibleTagTwo": "Wir sind ein asiatisches Restaurant",
+      "invisibleTagOne": "Asiatisches Restaurant in Dresden",
+      "invisibleTagTwo": "Korean BBQ & Chinese Hotpot Dresden",
       "description": [
-         "Willkommen bei MATJO - BBQ & HOTPOT in der Dresdner Neustadt. Wir sind ein asiatisches Restaurant am Eingang der Alaunstraße.",
-         "Unser Restaurant vereint die besten Traditionen des Korean BBQ und Chinese Hotpots, um dir ein einzigartiges kulinarisches Erlebnis zu bieten.",
-         "Bei uns gestaltest du dein Essen nach deinem Geschmack! Frische Zutaten, authentische Aromen und ein herzlicher Service erwarten dich in entspannter Atmosphäre.",
-         "Verbringe hier einen unvergesslichen Abend mit deinen Liebsten oder bestelle unsere Speisen zu dir und erlebe die Vielfalt unserer Küche!"
+         "Willkommen bei MATJO – dem asiatischen Restaurant in der Dresdner Neustadt. In der Alaunstraße erleben Sie koreanisches BBQ und chinesischen Hotpot unter einem Dach.",
+         "Wir vereinen die besten Traditionen von Korean BBQ und Chinese Hotpot zu einem einzigartigen kulinarischen Erlebnis in Dresden.",
+         "Bei uns gestalten Sie Ihr Essen nach Ihrem Geschmack: frische Zutaten, authentische Aromen und herzlicher Service in entspannter Atmosphäre.",
+         "Verbringen Sie einen unvergesslichen Abend mit Ihren Liebsten – oder lassen Sie sich BBQ und Hotpot bequem nach Hause liefern."
       ],
       "callToActionOne": {
          "text": "Jetzt Reservieren"
@@ -52,16 +52,16 @@
       "title": "Häufige Fragen",
       "faqList": [
          { 
-            "title": "Wie wird unser BBQ serviert?",
-            "content": "Zu den zahlreichen Fleisch-/Gemüsespeisen und Gerichten werden viele Beilagen serviert, im koreanischen bspw. auch bekannt als 'Banchan', diese schließen ein: Kimchi, eingelegtes Gemüse und Reis. Die gegrillten Speisen werden in Salatblättern gewickelt und mit Saucen und Gewürzen gedipped." 
+            "title": "Wie wird BBQ in Dresden bei MATJO serviert?",
+            "content": "Zu den zahlreichen Fleisch-/Gemüsespeisen und Gerichten werden viele Beilagen serviert, im Koreanischen auch als Banchan bekannt – darunter Kimchi, eingelegtes Gemüse und Reis. Die gegrillten Speisen werden in Salatblättern gewickelt und mit Saucen und Gewürzen getunkt." 
          },
          { 
             "title": "Welche Zutaten sind im Hotpot?", 
-            "content": "Unser Hotpot enthält eine Vielzahl frischer Zutaten wie Gemüse, Fleisch und Nudeln, die Sie nach Belieben kombinieren können." 
+            "content": "Unser chinesischer Hotpot enthält eine Vielzahl frischer Zutaten wie Gemüse, Fleisch und Nudeln, die Sie nach Belieben kombinieren können – ideal für ein gemeinsames Essen in Dresden." 
          },
          { 
             "title": "Gibt es vegetarische Optionen?", 
-            "content": "Ja, wir bieten Auswahl an vegetarischen Zutaten für den Hotpot, so wie spezielle vegetarische BBQ-Gerichte an." 
+            "content": "Ja, wir bieten eine Auswahl vegetarischer Zutaten für den Hotpot sowie spezielle vegetarische BBQ-Gerichte an." 
          },
          { 
             "title": "Können Allergien berücksichtigt werden?", 
@@ -69,7 +69,7 @@
          },
          { 
             "title": "Sind Reservierungen erforderlich?", 
-            "content": "Wir empfehlen Reservierungen, besonders an Wochenenden, um sicherzustellen, dass Sie einen Tisch bekommen. Aber spontane Besuche sind auch willkommen!" 
+            "content": "Wir empfehlen Reservierungen, besonders an Wochenenden, um sicherzustellen, dass Sie einen Tisch in unserem asiatischen Restaurant in Dresden bekommen. Spontane Besuche sind aber ebenso willkommen!" 
          }
       ]
    },

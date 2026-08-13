@@ -3,7 +3,7 @@
       <div class="transition-content">
          <div class="transition-logo-container">
             <img class="logo" src="../../assets/img/logo-transparent-big.webp" alt="" height="300" width="300">
-            <p>Best BBQ & HOTPOT in Town</p>
+            <p>{{ $t('logoScreenTagline') }}</p>
          </div>
       </div>
    </div>

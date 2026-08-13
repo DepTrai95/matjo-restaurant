@@ -2,19 +2,19 @@
    "home": {
       "reserveButton": "Make a reservation",
       "deliveryButton": "Get it delivered",
-      "invisibleTagOne": "We are a korean restaurant",
-      "invisibleTagTwo": "We are an asian Restaurant"
+      "invisibleTagOne": "Asian restaurant in Dresden",
+      "invisibleTagTwo": "Korean BBQ & Chinese Hotpot Dresden"
    },
    "aboutUs": {
       "title": "ABOUT US",
       "subTitle": "Our Promise",
-      "invisibleTagOne": "We are a korean restaurant",
-      "invisibleTagTwo": "We are an asian Restaurant",
+      "invisibleTagOne": "Asian restaurant in Dresden",
+      "invisibleTagTwo": "Korean BBQ & Chinese Hotpot Dresden",
       "description": [
-         "Welcome to MATJO - BBQ & HOTPOT in Dresden Neustadt. We are an asian restaurant directly located at the entrance of the Alaunstraße.",
-         "Our restaurant combines the best traditions of Korean BBQ and hotpots to offer you a unique culinary experience.",
-         "With us, you create your meal according to your taste! Fresh ingredients, authentic flavors, and warm service await you in a relaxed atmosphere.",
-         "Spend an unforgettable evening here with your loved ones or get it delivered to you and experience the variety of our cuisine!"
+         "Welcome to MATJO – the Asian restaurant in Dresden Neustadt. On Alaunstraße you can enjoy Korean BBQ and Chinese Hotpot under one roof.",
+         "We combine the best traditions of Korean BBQ and Chinese Hotpot for a unique culinary experience in Dresden.",
+         "With us, you create your meal to your taste: fresh ingredients, authentic flavours and warm service in a relaxed atmosphere.",
+         "Spend an unforgettable evening with your loved ones – or have BBQ and Hotpot delivered to your door."
       ],
       "callToActionOne": {
          "text": "Make a reservation"
@@ -52,16 +52,16 @@
       "title": "Frequently Asked Questions",
       "faqList": [
          {
-            "title": "How is our BBQ served?",
-            "content": "Alongside the numerous meat/vegetable dishes and other items, many side dishes are served, known in Korean cuisine as 'Banchan'. These include kimchi, pickled vegetables, and rice. The grilled dishes are wrapped in lettuce leaves and dipped in sauces and spices."
+            "title": "How is BBQ served at MATJO in Dresden?",
+            "content": "Alongside numerous meat and vegetable dishes, many side dishes are served – known in Korean cuisine as Banchan. These include kimchi, pickled vegetables and rice. Grilled dishes are wrapped in lettuce leaves and dipped in sauces and spices."
          },
          {
-            "title": "What ingredients are in the hotpot?",
-            "content": "Our hotpot contains a variety of fresh ingredients such as vegetables, meat, and noodles, which you can combine as you like."
+            "title": "What ingredients are in the Hotpot?",
+            "content": "Our Chinese Hotpot contains a variety of fresh ingredients such as vegetables, meat and noodles, which you can combine as you like – perfect for sharing a meal in Dresden."
          },
          {
             "title": "Are there vegetarian options?",
-            "content": "Yes, we offer a selection of vegetarian ingredients for the hotpot, as well as special vegetarian BBQ dishes."
+            "content": "Yes, we offer a selection of vegetarian ingredients for the Hotpot as well as special vegetarian BBQ dishes."
          },
          {
             "title": "Can allergies be accommodated?",
@@ -69,7 +69,7 @@
          },
          {
             "title": "Are reservations required?",
-            "content": "We recommend making reservations, especially on weekends, to ensure you get a table. However, walk-ins are also welcome!"
+            "content": "We recommend making reservations, especially on weekends, to ensure you get a table at our Asian restaurant in Dresden. Walk-ins are also welcome!"
          }
       ]
    },
